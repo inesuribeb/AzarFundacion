@@ -1,22 +1,18 @@
 import { createContext, useState, useContext, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-// Aquí importarías tus traducciones por secciones
-// import { foundationTranslations } from './sections/FoundationContent';
-// import { homeTranslations } from './sections/HomeContent';
-// import { archiveTranslations } from './sections/ArchiveContent';
-// etc.
 
 const translations = {
   es: {
     home: "Inicio",
     foundation: "Fundación Azar",
-    residenciesProgram: "Programa de Residencias",
+    residenciesProgram: "Residencias",
     archive: "Archivo",
     residency: "Residencia",
     exposition: "Exposición",
     artPiece: "Obra Colectiva",
     publication: "Publicación",
+    shop: "Tienda",
     // ...foundationTranslations.es,
     // ...homeTranslations.es,
     // ...archiveTranslations.es,
@@ -24,12 +20,13 @@ const translations = {
   en: {
     home: "Home",
     foundation: "Azar Foundation",
-    residenciesProgram: "Residencies Program",
+    residenciesProgram: "Residencies",
     archive: "Archive",
     residency: "Residency",
     exposition: "Exhibition",
     artPiece: "Collective Art Piece",
     publication: "Publication",
+    shop: "Shop",
     // ...foundationTranslations.en,
     // ...homeTranslations.en,
     // ...archiveTranslations.en,
@@ -37,12 +34,13 @@ const translations = {
   pt: {
     home: "Início",
     foundation: "Fundação Azar",
-    residenciesProgram: "Programa de Residências",
+    residenciesProgram: "Residências",
     archive: "Arquivo",
     residency: "Residência",
     exposition: "Exposição",
     artPiece: "Obra Coletiva",
     publication: "Publicação",
+    shop: "Loja",
     // ...foundationTranslations.pt,
     // ...homeTranslations.pt,
     // ...archiveTranslations.pt,
