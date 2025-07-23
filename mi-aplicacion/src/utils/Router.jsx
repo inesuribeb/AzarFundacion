@@ -7,6 +7,7 @@ import Residency from '../pages/Residency/Residency';
 import Exposition from '../pages/Exposition/Exposition';
 import ArtPiece from '../pages/ArtPiece/ArtPiece';
 import Publication from '../pages/Publication/Publication';
+import Root from "../root/Root";
 
 const router = createBrowserRouter([
     {
