@@ -28,8 +28,9 @@
     margin: 0;
     align-self: flex-end; 
     text-align: right;
-    color: var(--light-color);
+    color: var(--dark-color);
     font-family: var(--serif-font);
+    line-height: 1.2;
 }
 
 .hero-section h1 {
