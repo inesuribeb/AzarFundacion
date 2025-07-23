@@ -18,7 +18,7 @@
   --accent-color: #87ACDD;
 
   --main-font: 'Futura', Helvetica, Arial, sans-serif;
-  --serif--font: 'EB Garamond', serif;
+  --serif-font: 'EB Garamond', serif;
 }
 
 html {
@@ -39,7 +39,7 @@ body {
   background-color: var(--background-color);
   overscroll-behavior-y: none;
   scroll-behavior: smooth;
-  margin-top: 80px; 
+  /* margin-top: 80px;  */
 }
 
 * {
