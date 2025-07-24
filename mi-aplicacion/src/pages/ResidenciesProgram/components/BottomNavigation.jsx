@@ -1,6 +1,6 @@
 import './BottomNavigation.css'
 
-function BottomNavigation() {
+function BottomNavigation({ t }) {
     return (
         <div></div>
     )
