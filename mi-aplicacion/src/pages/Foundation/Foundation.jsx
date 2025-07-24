@@ -1,8 +1,14 @@
+import Vision from './sections/Vision/Vision';
+import Team from './sections/Team/Team';
 import './Foundation.css'
 
 function Foundation() {
     return (
-        <h1>Foundation</h1>
+        <div className='foundation-content'>
+            <Vision />
+            <Team />
+        </div>
+        
     )
 }
 
