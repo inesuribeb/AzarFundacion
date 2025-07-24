@@ -1,5 +1,6 @@
 import { createContext, useState, useContext, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { foundationTranslations } from './sections/FoundationContent';
 
 
 const translations = {
@@ -13,7 +14,7 @@ const translations = {
     artPiece: "Obra Colectiva",
     publication: "Publicación",
     shop: "Tienda",
-    // ...foundationTranslations.es,
+    ...foundationTranslations.es,
     // ...homeTranslations.es,
     // ...archiveTranslations.es,
   },
@@ -27,7 +28,7 @@ const translations = {
     artPiece: "Collective Art Piece",
     publication: "Publication",
     shop: "Shop",
-    // ...foundationTranslations.en,
+    ...foundationTranslations.en,
     // ...homeTranslations.en,
     // ...archiveTranslations.en,
   },
@@ -41,7 +42,7 @@ const translations = {
     artPiece: "Obra Coletiva",
     publication: "Publicação",
     shop: "Loja",
-    // ...foundationTranslations.pt,
+    ...foundationTranslations.pt,
     // ...homeTranslations.pt,
     // ...archiveTranslations.pt,
   }
