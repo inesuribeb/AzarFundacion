@@ -1,29 +1,30 @@
 .finca-section {
     display: flex;
     width: 100%;
-    height: 100dvh;
+    min-height: 100dvh;
     flex-direction: column;
-    padding: 0;
-    margin: 0;
     position: relative;
     background-color: transparent;
     padding: 2rem 2rem;
     flex-direction: column;
-    overflow-y: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
 }
 
-.finca-section::-webkit-scrollbar {
-    display: none;
+.first-line-finca {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    flex: 1; 
 }
 
-.first-line-finca,
 .other-pictures {
     display: flex;
     flex-direction: row;
     background-color: transparent;
+    margin-top: 2rem;
+    justify-content: space-between; 
+    flex-wrap: wrap;
 }
+
 
 .column-left-finca,
 .column-right-finca {
@@ -40,7 +41,7 @@
     flex-direction: column;
     align-items: flex-end; 
     justify-content: space-between; 
-    height: 100%;
+    flex: 1; 
 }
 .finca-section-title {
     text-align: right;
@@ -72,12 +73,6 @@
 
 
 /* Estilos para los thumbnails */
-.other-pictures {
-    margin-top: 3rem;
-    justify-content: space-between; 
-    flex-wrap: wrap;
-}
-
 .thumbnail-container {
     position: relative;
     cursor: pointer;
@@ -107,16 +102,15 @@
 
 .thumbnail-number {
     position: absolute;
-    top: -25px;
+    top: -23px;
     left: 0;
     background-color: transparent;
     color: var(--neutral-color);
     padding: 0;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: 300;
 }
 
 .thumbnail-container.active .thumbnail-number {
     color: var(--dark-color);
 }
-
