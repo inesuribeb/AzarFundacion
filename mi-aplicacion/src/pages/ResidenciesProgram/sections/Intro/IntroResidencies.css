@@ -2,9 +2,43 @@
     display: flex;
     width: 100%;
     height: 100vh;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0;
     margin: 0;
     position: relative;
-    background-color: gainsboro;
+    background-color: transparent;
+    padding: 9rem 2rem;
+    padding-bottom: 0rem;
+}
+
+.left-column-intro,
+.right-column-intro {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.left-column-intro {
+    /* padding: 9rem 2rem; */
+    display: flex;
+    flex-direction: column;
+}
+.intro-titles {
+    margin-bottom: 6rem;
+}
+
+.intro-text {
+    width: 90%;
+}
+
+.right-column-intro {
+    display: flex;
+    justify-content: flex-end; /* Empuja la imagen hacia la derecha */
+    align-items: flex-start; /* Mantiene la imagen arriba */
+}
+
+.right-column-intro img {
+    /* max-width: 400px; */
+    height: auto; 
+    width: 80%;
 }
