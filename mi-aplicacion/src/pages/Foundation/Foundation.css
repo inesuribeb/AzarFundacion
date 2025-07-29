@@ -1,0 +1,32 @@
+.foundation-container {
+    position: relative;
+    width: 100%;
+}
+
+.vision-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.team-container {
+    position: relative;
+    z-index: 2;
+    margin-top: 100vh;
+    background-color: var(--light-color); 
+    min-height: 100vh;
+    padding: 50px 0;
+}
+
+.vision-section {
+    background-color: var(--primary-color); 
+}
+
+.team-container {
+    background-color: white;
+    border-radius: 20px 20px 0 0; 
+}

@@ -1,0 +1,42 @@
+.medium-sans-title {
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    color: inherit; /* Hereda el color del padre */
+    letter-spacing: -0.02em;
+}
+
+/* Variaciones de tamaño si las necesitas */
+.medium-sans-title.large {
+    font-size: 3.5rem;
+}
+
+.medium-sans-title.medium {
+    font-size: 2rem;
+}
+
+.medium-sans-title.small {
+    font-size: 1.5rem;
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+    .medium-sans-title {
+        font-size: 2rem;
+    }
+    
+    .medium-sans-title.large {
+        font-size: 2.5rem;
+    }
+    
+    .medium-sans-title.medium {
+        font-size: 1.8rem;
+    }
+    
+    .medium-sans-title.small {
+        font-size: 1.3rem;
+    }
+}
