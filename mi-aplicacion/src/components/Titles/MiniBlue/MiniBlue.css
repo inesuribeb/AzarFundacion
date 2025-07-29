@@ -1,0 +1,23 @@
+.miniblue-title {
+    font-family: var(--main-font);
+    font-weight: 100;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    color: var(--accent-color);
+    letter-spacing: -0.02em;
+}
+
+.miniblue-title.large {
+    font-size: 3.5rem;
+}
+
+.miniblue-title.medium {
+    font-size: 2rem;
+}
+
+.miniblue-title.small {
+    font-size: 1.5rem;
+}

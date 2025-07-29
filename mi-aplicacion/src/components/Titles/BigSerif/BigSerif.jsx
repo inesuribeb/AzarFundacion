@@ -1,8 +1,12 @@
 import './BigSerif.css'
 
-function BigSerif() {
+function BigSerif({ children, className = '', ...props }) {
     return (
-        <div></div>
+        <h1 
+            className={`big-serif-title ${className}`} 
+            dangerouslySetInnerHTML={{ __html: children }}
+            {...props}
+        />
     )
 }
 

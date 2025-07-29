@@ -1,0 +1,22 @@
+.big-serif-title {
+    font-family: var(--serif-font);
+    font-weight: 500;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-color);
+    letter-spacing: -0.02em;
+}
+
+.big-serif-title.large {
+    font-size: 3.5rem;
+}
+
+.big-serif-title.medium {
+    font-size: 2rem;
+}
+
+.big-serif-title.small {
+    font-size: 1.5rem;
+}

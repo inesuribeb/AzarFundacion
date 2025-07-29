@@ -2,9 +2,9 @@ import './MediumSans.css'
 
 function MediumSans({ children, className = '', ...props }) {
     return (
-        <h1 className={`medium-sans-title ${className}`} {...props}>
+        <h2 className={`medium-sans-title ${className}`} {...props}>
             {children}
-        </h1>
+        </h2>
     )
 }
 

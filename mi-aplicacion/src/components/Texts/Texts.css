@@ -1,0 +1,39 @@
+.text-paragraph {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-family: var(--serif-font);
+    line-height: 1.6;
+}
+
+.text-paragraph.medium {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.text-paragraph.large {
+    font-size: 1.35rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .text-paragraph.medium {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .text-paragraph.large {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-paragraph.medium {
+        font-size: 0.85rem;
+    }
+    
+    .text-paragraph.large {
+        font-size: 1rem;
+    }
+}
