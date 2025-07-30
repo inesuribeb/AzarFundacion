@@ -74,7 +74,7 @@ function Finca({ t }) {
                         className={`thumbnail-container ${index === selectedImageIndex ? 'active' : ''}`}
                         onClick={() => handleImageSelect(index)}
                     >
-                        <div className='thumbnail-number'>{image.id}</div>
+                        {/* <div className='thumbnail-number'>{image.id}</div> */}
                         <img 
                             src={image.image} 
                             alt={`Thumbnail ${image.id}`}

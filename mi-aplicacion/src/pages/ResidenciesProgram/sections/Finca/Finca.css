@@ -114,3 +114,21 @@
 .thumbnail-container.active .thumbnail-number {
     color: var(--dark-color);
 }
+
+
+.thumbnail-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail-container:hover::after,
+.thumbnail-container.active::after {
+    opacity: 0;
+}
