@@ -1,4 +1,5 @@
 import { Outlet, useLocation} from "react-router-dom";
+import { useEffect } from "react";
 import { LanguageProvider } from "../contexts/LanguageContext";
 import { HeaderProvider } from "../contexts/HeaderContext";
 import { ResidenciesProvider } from "../contexts/ResidenciesContext";
@@ -11,6 +12,10 @@ function AppContent() {
   const location = useLocation();
   const { t } = useLanguage();
   const { activeSection, setActiveSection } = useResidencies();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   
   const isResidenciesPage = () => {
     const residenciesRoutes = [
