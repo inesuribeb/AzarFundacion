@@ -1,4 +1,4 @@
-import GenericCard from './GenericCard'
+import GenericCard from '../GenericCard/GenericCard'
 import './Grid.css'
 
 function Grid({ 
@@ -9,7 +9,8 @@ function Grid({
     const getGridColumns = (cardCount) => {
         if (cardCount === 1) return 1
         if (cardCount === 2) return 2
-        return 3 // 3 o más cards = 3 columnas máximo
+        if (cardCount === 3) return 3
+        return 4 // 4 o más cards = 4 columnas máximo
     }
 
     const gridColumns = getGridColumns(cards.length)
@@ -24,7 +25,7 @@ function Grid({
                     key={card.id || index}
                     image={card.image}
                     title={card.title}
-                    subtitle={card.subtitle}
+                    description={card.description}
                     onClick={card.onClick}
                     className={card.className}
                 />

@@ -3,7 +3,7 @@ import './GenericCard.css'
 function GenericCard({ 
     image, 
     title, 
-    subtitle, 
+    description, 
     onClick, 
     className = '' 
 }) {
@@ -21,8 +21,8 @@ function GenericCard({
             </div>
             <div className="card-content">
                 <h3 className="card-title">{title}</h3>
-                {subtitle && (
-                    <p className="card-subtitle">{subtitle}</p>
+                {description && (
+                    <p className="card-subtitle">{description}</p>
                 )}
             </div>
         </div>

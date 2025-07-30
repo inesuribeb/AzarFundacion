@@ -1,9 +1,14 @@
+import { mockResidencias } from '../../../../utils/Data/ResidenciesData';
+import MediumSans from '../../../../components/Titles/MediumSans/MediumSans';
+import Grid from '../../../../components/Grid/Grid';
 import './PastResidencies.css'
 
 function PastResidencies({ t }) {
     return (
         <section className='past-residencies-section'>
-            <h1>ResidenciasPasadas</h1>
+            <MediumSans>{t('previousResidencies')}</MediumSans>
+
+            <Grid cards={mockResidencias} className="past-residencies-grid" />
         </section>
     )
 }

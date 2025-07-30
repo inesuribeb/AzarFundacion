@@ -1,0 +1,56 @@
+/* Grid.css */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 3rem;
+    padding-top: 5rem;
+    border-top: 2px solid var(--dark-color);
+    justify-items: center; 
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+    .grid {
+        gap: 25px;
+    }
+    
+    /* En tablet, máximo 2 columnas */
+    .grid {
+        grid-template-columns: repeat(min(var(--grid-columns), 2), 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        gap: 20px;
+    }
+    
+    /* En móvil, siempre 1 columna */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        gap: 15px;
+    }
+}
+
+/* Variaciones específicas si necesitas diferentes gaps */
+.grid.tight {
+    gap: 20px;
+}
+
+.grid.loose {
+    gap: 40px;
+}
+
+.grid.extra-loose {
+    gap: 50px;
+}
