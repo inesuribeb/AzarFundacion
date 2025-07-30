@@ -37,10 +37,17 @@
 
 // mockPublicationsData.js
 
+// mockPublicationsData.js
+
 export const mockPublicationsData = [
     {
         id: "pub-1",
-        image: "/Images/Publications/Publication01/pub01-01.jpg",
+        number: "01", // ✅ Número de publicación
+        images: [
+            "/Images/Publications/Publication01/pub01-01.jpg",
+            "/Images/Publications/Publication02/pub02-01.png",
+        ],
+        price: "€45.00", // ✅ Precio añadido
         
         // Contenido traducible
         title: {
@@ -76,7 +83,12 @@ export const mockPublicationsData = [
     },
     {
         id: "pub-2", 
-        image: "/Images/Publications/Publication02/pub02-01.png",
+        number: "02", // ✅ Número de publicación
+        images: [
+            "/Images/Publications/Publication02/pub02-01.png",
+            "/Images/Publications/Publication01/pub01-01.jpg",
+        ],
+        price: "€25.00", // ✅ Precio añadido
         
         title: {
             es: "Zine Urbano Madrid",
@@ -107,5 +119,44 @@ export const mockPublicationsData = [
         residencias: ["residencia-2"],
         exposiciones: ["expo-2"],
         collectiveArtPiece: ["artPiece-2"]
-    }
+    },
+    // {
+    //     id: "pub-3", 
+    //     number: "03", 
+    //     images: [
+    //         "/Images/Publications/Publication03/pub03-01.png",
+    //         "/Images/Publications/Publication03/pub03-02.png"
+    //     ],
+    //     price: "€35.00", 
+        
+    //     title: {
+    //         es: "Memorias Rurales",
+    //         en: "Rural Memories",
+    //         pt: "Memórias Rurais"
+    //     },
+    //     subtitle: {
+    //         es: "Libro de artista • 48 páginas",
+    //         en: "Artist book • 48 pages",
+    //         pt: "Livro de artista • 48 páginas"
+    //     },
+    //     type: {
+    //         es: "Libro de artista",
+    //         en: "Artist book",
+    //         pt: "Livro de artista"
+    //     },
+    //     description: {
+    //         es: "Reflexiones sobre la conexión entre arte y naturaleza",
+    //         en: "Reflections on the connection between art and nature",
+    //         pt: "Reflexões sobre a conexão entre arte e natureza"
+    //     },
+        
+    //     onClick: () => console.log("Click en Memorias Rurales"),
+    //     className: "publication-card",
+    //     year: 2025,
+    //     pages: 48,
+    //     format: "17x24 cm",
+    //     residencias: ["residencia-3"],
+    //     exposiciones: ["expo-3"],
+    //     collectiveArtPiece: ["artPiece-3"]
+    // }
 ]

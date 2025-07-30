@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useHeader } from '../../../../contexts/HeaderContext';
 import './Hero.css'
 
-function Hero() {
+function Hero({ t }) {
     // const { setHideTitle } = useHeader();
     
     // useEffect(() => {

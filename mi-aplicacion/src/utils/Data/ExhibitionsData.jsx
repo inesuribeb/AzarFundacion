@@ -81,7 +81,7 @@ export const mockExhibitionsData = [
     },
     {
         id: "expo-2", 
-        image: "/Images/Exhibitions/Exhibition02/exhibition02-01.png",
+        image: "/Images/Residencies/Residency02/prueba4.PNG",
         
         title: {
             es: "Territorios Urbanos",
@@ -120,7 +120,7 @@ export const mockExhibitionsData = [
     },
     {
         id: "expo-3", 
-        image: "/Images/Exhibitions/Exhibition02/exhibition02-01.png",
+        image: "/Images/Residencies/Residency02/prueba5.PNG",
         
         title: {
             es: "Territorios Urbanos",
@@ -159,7 +159,7 @@ export const mockExhibitionsData = [
     },
     {
         id: "expo-4", 
-        image: "/Images/Exhibitions/Exhibition02/exhibition02-01.png",
+        image: "/Images/Residencies/Residency02/prueba6.PNG",
         
         title: {
             es: "Territorios Urbanos",

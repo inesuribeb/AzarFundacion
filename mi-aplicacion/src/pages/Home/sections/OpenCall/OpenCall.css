@@ -7,4 +7,7 @@
     margin: 0;
     position: relative;
     background-color: var(--accent-color);
+    padding: 2rem 2rem;
+    border-top: 1px solid var(--dark-color);
+    border-bottom: 1px solid var(--dark-color);
 }

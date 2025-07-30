@@ -11,7 +11,7 @@ function Navigation({ closeMenu, onHoverChange }) {
         { route: 'foundation', number: '01', text: 'foundation', image: '/Images/Header/HeaderFundacion.jpg', lightColor: true },
         { route: 'residenciesProgram', number: '02', text: 'residenciesProgram', image: '/Images/Header/HeaderResidencia.jpg', lightColor: true },
         { route: 'archive', number: '03', text: 'archive', image: '/Images/Header/HeaderArchivo.png', lightColor: true },
-        { route: 'archive', number: '04', text: 'shop', image: '/Images/Header/HeaderPublication.png', lightColor: true }
+        { route: 'archive', number: '04', text: 'shop', image: '/Images/Header/HeaderPublication.png', lightColor: true, queryParam: 'tab=publications' }
     ];
 
     const handleMouseEnter = (e) => {
@@ -54,13 +54,19 @@ function Navigation({ closeMenu, onHoverChange }) {
         }
     };
 
+    // ✅ Función para construir la URL con query params si es necesario
+    const getLinkTo = (item) => {
+        const baseRoute = getRoute(item.route);
+        return item.queryParam ? `${baseRoute}?${item.queryParam}` : baseRoute;
+    };
+
     return (
         <nav className="main-navigation">
             {navItems.map((item, index) => (
                 <Link 
                     key={index}
                     data-index={index}
-                    to={getRoute(item.route)} 
+                    to={getLinkTo(item)} // ✅ Usar función para construir URL
                     className={`nav-link ${item.lightColor ? 'light-text' : ''}`}
                     onClick={closeMenu}
                     onMouseEnter={handleMouseEnter}

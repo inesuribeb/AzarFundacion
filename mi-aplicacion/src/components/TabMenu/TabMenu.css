@@ -12,14 +12,14 @@
 
 .tab-item {
     flex: 1;
-    padding: 12px 20px;
+    padding: 14px 20px;
     border: none;
     background: var(--light-color);
     color: var(--dark-color);
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 1.45rem;
+    font-weight: 100;
     letter-spacing: 0.05rem;
     border-right: 1px solid var(--dark-color);
     position: relative;

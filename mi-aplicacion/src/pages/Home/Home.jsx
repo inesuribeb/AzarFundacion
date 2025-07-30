@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useHeader } from '../../contexts/HeaderContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 import Hero from './sections/Hero/Hero';
 import Intro from './sections/Intro/Intro';
 import OpenCall from './sections/OpenCall/OpenCall';
@@ -19,6 +20,7 @@ import './Home.css'
 
 function Home() {
     const { setHideTitle } = useHeader();
+    const { t } = useLanguage();
     
     useEffect(() => {
         // Detectar cuándo estamos en la sección Hero
@@ -44,9 +46,9 @@ function Home() {
 
     return (
         <div className='home-content'>
-            <Hero />
-            <Intro />
-            <OpenCall />
+            <Hero t={t}/>
+            <Intro t={t}/>
+            <OpenCall t={t}/>
         </div>
     )
 }
