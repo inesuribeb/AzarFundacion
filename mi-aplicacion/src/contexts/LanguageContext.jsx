@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { foundationTranslations } from './sections/FoundationContent';
 import { residenciesProgramTranslations } from './sections/ResidenciesProgramContent'
 import { archiveTranslations } from './sections/ArchiveContent';
+import { homeTranslations } from './sections/HomeContent';
 
 const translations = {
   es: {
@@ -18,6 +19,7 @@ const translations = {
     ...foundationTranslations.es,
     ...residenciesProgramTranslations.es,
     ...archiveTranslations.es,
+    ...homeTranslations.es,
   },
   en: {
     home: "Home",
@@ -32,6 +34,7 @@ const translations = {
     ...foundationTranslations.en,
     ...residenciesProgramTranslations.en,
     ...archiveTranslations.en,
+    ...homeTranslations.en,
   },
   pt: {
     home: "Início",
@@ -46,6 +49,7 @@ const translations = {
     ...foundationTranslations.pt,
     ...residenciesProgramTranslations.pt,
     ...archiveTranslations.pt,
+    ...homeTranslations.pt,
   }
 };
 
@@ -115,22 +119,18 @@ const routeMap = {
 };
 
 const detectLanguageFromPath = (path) => {
-  // Si empieza con /pt/, es portugués
   if (path.startsWith('/pt/')) {
     return 'pt';
   }
 
-  // Extraer el primer segmento de la ruta
   const firstSegment = '/' + path.split('/')[1];
 
-  // Buscar en rutas de inglés
   for (const route of Object.values(routes.en)) {
     if (route === firstSegment) {
       return 'en';
     }
   }
 
-  // Por defecto, español
   return 'es';
 };
 
@@ -149,23 +149,18 @@ export const LanguageProvider = ({ children }) => {
     let basePath;
     let params = '';
 
-    // Extraer ID si existe
     const pathSegments = currentPath.split('/');
     
     if (currentPath.startsWith('/pt/')) {
-      // Ruta portuguesa: /pt/pagina o /pt/pagina/id
-      basePath = '/' + pathSegments.slice(0, 3).join('/').substring(1); // /pt/pagina
-      params = pathSegments.slice(3).join('/'); // id si existe
+      basePath = '/' + pathSegments.slice(0, 3).join('/').substring(1); 
+      params = pathSegments.slice(3).join('/'); 
     } else {
-      // Ruta española o inglesa: /pagina o /pagina/id
-      basePath = '/' + pathSegments[1]; // /pagina
-      params = pathSegments.slice(2).join('/'); // id si existe
+      basePath = '/' + pathSegments[1]; 
+      params = pathSegments.slice(2).join('/'); 
     }
 
-    // Encontrar la nueva ruta
     let newPath = routeMap[basePath]?.[newLanguage] || routes[newLanguage].home;
 
-    // Agregar parámetros si existen
     const redirectPath = params ? `${newPath}/${params}` : newPath;
 
     navigate(redirectPath);
@@ -184,7 +179,6 @@ export const LanguageProvider = ({ children }) => {
       return routes[language].home;
     }
 
-    // Si hay ID, agregarlo a la ruta
     if (params.id !== undefined) {
       return `${baseRoute}/${params.id}`;
     }

@@ -1,0 +1,76 @@
+.navigation-tabs-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: visible;
+}
+
+.tabs-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.nav-tab {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 100;
+    color: var(--dark-color);
+    transition: color 0.3s ease;
+    overflow: visible;
+    text-align: left;
+    padding: 0 20px;
+    font-family: var(--main-font);
+}
+
+.nav-tab:not(:last-child)::after {
+    content: '—';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--light-neutral-color);
+    font-size: 24px;
+}
+
+.nav-tab::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    width: 140px;
+    /* height: 150px; */
+    aspect-ratio: 4/5;
+    background-image: var(--nav-tab-bg-image);
+    background-size: cover;
+    background-position: center;
+    /* background-color: red;  */
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 999;
+    border-radius: 0px;
+    /* border: 3px solid blue;  */
+}
+
+/* Usar :hover directo en CSS para test */
+.nav-tab:hover {
+    color: var(--corporative-color) !important;
+}
+
+.nav-tab:hover::before {
+    opacity: 1 !important;
+    transform: translateX(-50%) translateY(0) !important;
+}
+
+.nav-tab-label {
+    position: relative;
+    z-index: 1;
+    display: block;
+    transition: color 0.3s ease;
+}

@@ -6,24 +6,11 @@ import Intro from './sections/Intro/Intro';
 import OpenCall from './sections/OpenCall/OpenCall';
 import './Home.css'
 
-// function Home() {
-//     return (
-//         <div className='home-content'>
-//             <Hero />
-//             <Intro />
-//             <OpenCall />
-//         </div>
-//     )
-// }
-
-// export default Home;
-
 function Home() {
     const { setHideTitle } = useHeader();
-    const { t } = useLanguage();
+    const { t , getRoute } = useLanguage();
     
     useEffect(() => {
-        // Detectar cuándo estamos en la sección Hero
         const handleScroll = () => {
             const heroSection = document.querySelector('.hero-section');
             if (!heroSection) return;
@@ -34,20 +21,19 @@ function Home() {
             setHideTitle(isInHero);
         };
         
-        // Inicialmente estamos en Hero
         setHideTitle(true);
         
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            setHideTitle(false); // Resetear al salir de Home
+            setHideTitle(false); 
         };
     }, [setHideTitle]);
 
     return (
         <div className='home-content'>
             <Hero t={t}/>
-            <Intro t={t}/>
+            <Intro t={t} getRoute={getRoute}/>
             <OpenCall t={t}/>
         </div>
     )

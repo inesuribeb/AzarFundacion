@@ -1,5 +1,6 @@
 export const archiveTranslations = {
     es: {
+        residencies: 'Residencias',
         exhibitions: 'Exposiciones',
         collectiveArtPieces: 'Obras Colectivas',
         publications: 'Publicaciones',
@@ -8,6 +9,7 @@ export const archiveTranslations = {
         azarArchive: 'Archivo Azar',
     },
     en: {
+        residencies: 'Residencies',
         exhibitions: 'Exhibitions',
         collectiveArtPieces: 'Collective Art',
         publications: 'Publications',
@@ -16,6 +18,7 @@ export const archiveTranslations = {
         azarArchive: 'Azar Archive',
     },
     pt: {
+        residencies: 'Residencias',
         exhibitions: 'Exposições',
         collectiveArtPieces: 'Obras Coletivas',
         publications: 'Publicações',

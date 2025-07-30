@@ -54,7 +54,6 @@ function Navigation({ closeMenu, onHoverChange }) {
         }
     };
 
-    // ✅ Función para construir la URL con query params si es necesario
     const getLinkTo = (item) => {
         const baseRoute = getRoute(item.route);
         return item.queryParam ? `${baseRoute}?${item.queryParam}` : baseRoute;
