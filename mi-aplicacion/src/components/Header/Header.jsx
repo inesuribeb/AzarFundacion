@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useHeader } from '../../contexts/HeaderContext';
@@ -11,7 +11,37 @@ function Header() {
     const { t, getRoute } = useLanguage();
     const [shouldUseLightColor, setShouldUseLightColor] = useState(false);
     const { hideTitle } = useHeader();
+    const [isScrollingDown, setIsScrollingDown] = useState(false);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            
+            if (Math.abs(currentScrollY - lastScrollY) > 10) {
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    setIsScrollingDown(true);
+                } else if (currentScrollY < lastScrollY) {
+                    setIsScrollingDown(false);
+                }
+                setLastScrollY(currentScrollY);
+            }
+        };
+
+        let ticking = false;
+        const optimizedScroll = () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
+
+        window.addEventListener('scroll', optimizedScroll, { passive: true });
+        return () => window.removeEventListener('scroll', optimizedScroll);
+    }, [lastScrollY]);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -21,9 +51,11 @@ function Header() {
         setShouldUseLightColor(lightColor);
     };
 
+    const shouldHideTitle = (hideTitle && !isMenuOpen) || (isScrollingDown && !isMenuOpen);
+
     return (
         <div className="header">
-            <h1 className={(hideTitle && !isMenuOpen) ? 'hidden-title' : ''}>
+            <h1 className={shouldHideTitle ? 'hidden-title' : ''}>
                 <Link to={getRoute('home')} className="header-home-link">
                     <span className="fundacion">FUNDACIÓN </span>
                     <span className="azar">AZAR</span>
