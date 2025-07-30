@@ -2,7 +2,7 @@ import { createContext, useState, useContext, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { foundationTranslations } from './sections/FoundationContent';
 import { residenciesProgramTranslations } from './sections/ResidenciesProgramContent'
-
+import { archiveTranslations } from './sections/ArchiveContent';
 
 const translations = {
   es: {
@@ -17,6 +17,7 @@ const translations = {
     shop: "Tienda",
     ...foundationTranslations.es,
     ...residenciesProgramTranslations.es,
+    ...archiveTranslations.es,
   },
   en: {
     home: "Home",
@@ -30,6 +31,7 @@ const translations = {
     shop: "Shop",
     ...foundationTranslations.en,
     ...residenciesProgramTranslations.en,
+    ...archiveTranslations.en,
   },
   pt: {
     home: "Início",
@@ -43,6 +45,7 @@ const translations = {
     shop: "Loja",
     ...foundationTranslations.pt,
     ...residenciesProgramTranslations.pt,
+    ...archiveTranslations.pt,
   }
 };
 
