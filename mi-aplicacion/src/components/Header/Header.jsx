@@ -8,6 +8,7 @@ import './Header.css'
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuClosing, setIsMenuClosing] = useState(false);
     const { t, getRoute } = useLanguage();
     const [shouldUseLightColor, setShouldUseLightColor] = useState(false);
     const { hideTitle } = useHeader();
@@ -17,7 +18,7 @@ function Header() {
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
-            
+
             if (Math.abs(currentScrollY - lastScrollY) > 10) {
                 if (currentScrollY > lastScrollY && currentScrollY > 100) {
                     setIsScrollingDown(true);
@@ -43,8 +44,20 @@ function Header() {
         return () => window.removeEventListener('scroll', optimizedScroll);
     }, [lastScrollY]);
 
+    // const toggleMenu = () => {
+    //     setIsMenuOpen(!isMenuOpen);
+    // };
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+        if (isMenuOpen) {
+            // Empezar animación de cierre
+            setIsMenuClosing(true);
+            setTimeout(() => {
+                setIsMenuOpen(false);
+                setIsMenuClosing(false);
+            }, 750); // Duración total de la animación de cierre
+        } else {
+            setIsMenuOpen(true);
+        }
     };
 
     const handleHoverChange = (lightColor) => {
@@ -53,25 +66,57 @@ function Header() {
 
     const shouldHideTitle = (hideTitle && !isMenuOpen) || (isScrollingDown && !isMenuOpen);
 
+    // return (
+    //     <div className="header">
+    //         <h1 className={shouldHideTitle ? 'hidden-title' : ''}>
+    //             <Link to={getRoute('home')} className="header-home-link">
+    //                 <span className="fundacion">FUNDACIÓN </span>
+    //                 <span className="azar">AZAR</span>
+    //             </Link>
+    //         </h1>
+
+    //         <button
+    //             className={`sandwich-toggle ${isMenuOpen ? 'active' : ''} ${shouldUseLightColor ? 'light' : ''}`}
+    //             onClick={toggleMenu}
+    //             aria-label="Toggle menu"
+    //         >
+    //             <span className="line"></span>
+    //             <span className="line"></span>
+    //         </button>
+
+    //         {isMenuOpen && (
+    //             <div className="dropdown-menu">
+    //                 <Navigation
+    //                     closeMenu={() => setIsMenuOpen(false)}
+    //                     onHoverChange={handleHoverChange}
+    //                 />
+    //                 <LanguageToggle />
+    //             </div>
+    //         )}
+    //     </div>
+    // )
+
     return (
-        <div className="header">
-            <h1 className={shouldHideTitle ? 'hidden-title' : ''}>
-                <Link to={getRoute('home')} className="header-home-link">
-                    <span className="fundacion">FUNDACIÓN </span>
-                    <span className="azar">AZAR</span>
-                </Link>
-            </h1>
+        <>
+            <div className="header">
+                <h1 className={shouldHideTitle ? 'hidden-title' : ''}>
+                    <Link to={getRoute('home')} className="header-home-link">
+                        <span className="fundacion">FUNDACIÓN </span>
+                        <span className="azar">AZAR</span>
+                    </Link>
+                </h1>
 
-            <button
-                className={`sandwich-toggle ${isMenuOpen ? 'active' : ''} ${shouldUseLightColor ? 'light' : ''}`}
-                onClick={toggleMenu}
-                aria-label="Toggle menu"
-            >
-                <span className="line"></span>
-                <span className="line"></span>
-            </button>
+                <button
+                    className={`sandwich-toggle ${isMenuOpen ? 'active' : ''} ${shouldUseLightColor ? 'light' : ''}`}
+                    onClick={toggleMenu}
+                    aria-label="Toggle menu"
+                >
+                    <span className="line"></span>
+                    <span className="line"></span>
+                </button>
+            </div>
 
-            {isMenuOpen && (
+            {/* {isMenuOpen && (
                 <div className="dropdown-menu">
                     <Navigation
                         closeMenu={() => setIsMenuOpen(false)}
@@ -79,8 +124,19 @@ function Header() {
                     />
                     <LanguageToggle />
                 </div>
+            )} */}
+
+            {(isMenuOpen || isMenuClosing) && (
+                <div className={`dropdown-menu ${isMenuClosing ? 'closing' : ''}`}>
+                    <Navigation
+                        closeMenu={toggleMenu}
+                        onHoverChange={handleHoverChange}
+                        isClosing={isMenuClosing}
+                    />
+                    <LanguageToggle />
+                </div>
             )}
-        </div>
+        </>
     )
 }
 

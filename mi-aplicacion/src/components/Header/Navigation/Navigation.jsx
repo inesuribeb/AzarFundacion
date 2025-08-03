@@ -3,7 +3,7 @@ import { useLanguage } from '../../../contexts/LanguageContext';
 import { useRef } from 'react';
 import './Navigation.css'
 
-function Navigation({ closeMenu, onHoverChange }) {
+function Navigation({ closeMenu, onHoverChange, isClosing }) {
     const { t, getRoute } = useLanguage();
     const currentActiveRef = useRef(null);
     
@@ -60,12 +60,33 @@ function Navigation({ closeMenu, onHoverChange }) {
     };
 
     return (
-        <nav className="main-navigation">
+        // <nav className="main-navigation">
+        // <nav className={`main-navigation ${isClosing ? 'closing' : ''}`}>
+        //     {navItems.map((item, index) => (
+        //         <Link 
+        //             key={index}
+        //             data-index={index}
+        //             to={getLinkTo(item)} // ✅ Usar función para construir URL
+        //             className={`nav-link ${item.lightColor ? 'light-text' : ''}`}
+        //             onClick={closeMenu}
+        //             onMouseEnter={handleMouseEnter}
+        //             onMouseLeave={handleMouseLeave}
+        //             style={{
+        //                 '--bg-image': `url(${item.image})`,
+        //                 '--translate-y': '100%'
+        //             }}
+        //         >
+        //             <span className="nav-number">{t(item.number)}</span>
+        //             <span className="nav-text">{t(item.text)}</span>
+        //         </Link>
+        //     ))}
+        // </nav>
+        <nav className={`main-navigation ${isClosing ? 'closing' : ''}`}>
             {navItems.map((item, index) => (
                 <Link 
                     key={index}
                     data-index={index}
-                    to={getLinkTo(item)} // ✅ Usar función para construir URL
+                    to={getLinkTo(item)}
                     className={`nav-link ${item.lightColor ? 'light-text' : ''}`}
                     onClick={closeMenu}
                     onMouseEnter={handleMouseEnter}
