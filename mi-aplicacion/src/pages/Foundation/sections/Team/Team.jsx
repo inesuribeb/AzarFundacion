@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import MediumSans from '../../../../components/Titles/MediumSans/MediumSans';
+import Texts from '../../../../components/Texts/Texts';
 import './Team.css';
 
 
@@ -60,10 +61,13 @@ function Team({ t }) {
                     <div className='member-info'>
                         <h3>{selectedMember.name}</h3>
                         <h4>{selectedMember.role}</h4>
-                        <div
+                        {/* <div
                             className='member-bio'
                             dangerouslySetInnerHTML={{ __html: selectedMember.bio }}
-                        />
+                        /> */}
+                        <Texts size="medium" className='member-bio'>
+                            {selectedMember.bio}
+                        </Texts>
                     </div>
                 )}
             </div>
