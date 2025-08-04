@@ -1,0 +1,8 @@
+.outlet-desktop {
+    animation: fadeInDesktop 1s ease-in forwards;
+  }
+  
+  @keyframes fadeInDesktop {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

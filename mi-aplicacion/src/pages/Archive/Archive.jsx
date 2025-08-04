@@ -16,24 +16,20 @@ function Archive() {
     const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState('exhibitions');
 
-    // ✅ Leer query parameter al cargar
     useEffect(() => {
         const searchParams = new URLSearchParams(location.search);
         const tabParam = searchParams.get('tab');
 
-        // Validar que el tab existe
         const validTabs = ['exhibitions', 'collectiveArtPieces', 'publications', 'collaborations'];
         if (tabParam && validTabs.includes(tabParam)) {
             setActiveTab(tabParam);
         }
     }, [location.search]);
 
-    // Localizar todos los datos
     const localizedExhibitions = useLocalizedData(mockExhibitionsData);
     const localizedArtPieces = useLocalizedData(mockArtPiecesData);
     const localizedPublications = useLocalizedData(mockPublicationsData);
 
-    // Función para obtener los datos según la tab activa
     const getCurrentData = () => {
         switch (activeTab) {
             case 'exhibitions':
@@ -43,7 +39,7 @@ function Archive() {
             case 'publications':
                 return localizedPublications;
             case 'collaborations':
-                return []; // Por ahora vacío, puedes añadir datos de colaboraciones después
+                return [];
             default:
                 return localizedExhibitions;
         }
@@ -52,13 +48,12 @@ function Archive() {
     const handleTabChange = (tabId) => {
         setActiveTab(tabId);
 
-        // ✅ Actualizar URL con query parameter
         const currentRoute = getRoute('archive');
         const newUrl = tabId === 'exhibitions'
-            ? currentRoute  // Sin query param para el tab por defecto
+            ? currentRoute
             : `${currentRoute}?tab=${tabId}`;
 
-        navigate(newUrl, { replace: true }); // replace: true evita crear nueva entrada en historial
+        navigate(newUrl, { replace: true });
     };
 
     return (
@@ -72,11 +67,7 @@ function Archive() {
                 />
             </div>
 
-            <div className='render-especific-grid'>
-                {/* <Grid 
-                    cards={getCurrentData()} 
-                    className={`archive-grid ${activeTab}-grid`}
-                /> */}
+            <div className='render-especific-grid' key={activeTab}>
                 <Grid
                     cards={getCurrentData()}
                     className={`archive-grid ${activeTab}-grid`}

@@ -7,12 +7,15 @@ import { useLanguage } from "../contexts/LanguageContext";
 import { useResidencies } from "../contexts/ResidenciesContext";
 import Header from '../components/Header/Header';
 import BottomNavigation from "../pages/ResidenciesProgram/components/BottomNavigation";
+import './Root.css'
 
 function AppContent() {
   const location = useLocation();
   const { t } = useLanguage();
   const { activeSection, setActiveSection } = useResidencies();
   
+  // console.log('🔑 Current pathname:', location.pathname);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
@@ -31,7 +34,7 @@ function AppContent() {
   return (
       <div className="app">
           <Header />
-          <main>
+          <main className="outlet-desktop" key={location.pathname}>
               <Outlet />
           </main>
           {showBottomNavigation && (
