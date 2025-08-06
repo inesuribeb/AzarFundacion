@@ -85,6 +85,7 @@
 
 .thumbnail-container:hover .thumbnail-image {
     filter: grayscale(0%); 
+    /* transform: translateY(-5px); */
 }
 
 .thumbnail-container.active .thumbnail-image {
