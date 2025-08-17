@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { mockExhibitionsData } from '../../utils/Data/ExhibitionsData';
 import { useLocalizedData } from '../../components/Hooks/Hooks';
 import { useLanguage } from '../../contexts/LanguageContext';
+import BackButton from '../../components/Button/BackButton';
 
 function Exposition() {
     const { id } = useParams();
@@ -16,6 +17,8 @@ function Exposition() {
 
     return (
         <div className="exposition-page">
+                        <BackButton variant="floating" />
+
             <h1>{exhibition.title}</h1>
             <p>{exhibition.description}</p>
             {/* Resto del contenido */}

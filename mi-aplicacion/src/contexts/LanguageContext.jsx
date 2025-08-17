@@ -4,6 +4,7 @@ import { foundationTranslations } from './sections/FoundationContent';
 import { residenciesProgramTranslations } from './sections/ResidenciesProgramContent'
 import { archiveTranslations } from './sections/ArchiveContent';
 import { homeTranslations } from './sections/HomeContent';
+import { detailsTranslations } from './sections/DetailsContent';
 
 const translations = {
   es: {
@@ -20,6 +21,7 @@ const translations = {
     ...residenciesProgramTranslations.es,
     ...archiveTranslations.es,
     ...homeTranslations.es,
+    ...detailsTranslations.es,
   },
   en: {
     home: "Home",
@@ -35,6 +37,7 @@ const translations = {
     ...residenciesProgramTranslations.en,
     ...archiveTranslations.en,
     ...homeTranslations.en,
+    ...detailsTranslations.en,
   },
   pt: {
     home: "Início",
@@ -50,6 +53,7 @@ const translations = {
     ...residenciesProgramTranslations.pt,
     ...archiveTranslations.pt,
     ...homeTranslations.pt,
+    ...detailsTranslations.pt,
   }
 };
 

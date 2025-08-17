@@ -1,0 +1,104 @@
+/* BackButton.css */
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    background: none;
+    margin-top: 13rem;
+}
+
+/* Variante por defecto */
+.back-button--default {
+    background: #f8f9fa;
+    color: var(--dark-color);
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #e9ecef;
+}
+
+.back-button--default:hover {
+    background: #e9ecef;
+    border-color: #dee2e6;
+    transform: translateY(-1px);
+}
+
+.back-button--default:active {
+    transform: translateY(0);
+}
+
+/* Variante minimal */
+.back-button--minimal {
+    background: transparent;
+    color: #666;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+}
+
+.back-button--minimal:hover {
+    color: #333;
+    background: #f8f9fa;
+    border-color: #e9ecef;
+}
+
+/* Variante flotante */
+.back-button--floating {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    background: white;
+    color: #333;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e9ecef;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.back-button--floating:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Estados de focus para accesibilidad */
+.back-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .back-button--floating {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .back-button--default,
+    .back-button--minimal {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Animación opcional para el icono de flecha */
+.back-button:hover::before {
+    animation: arrowBounce 0.3s ease;
+}
+
+@keyframes arrowBounce {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}

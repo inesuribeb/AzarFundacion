@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { mockResidencias } from '../../utils/Data/ResidenciesData';
 import { useLocalizedData } from '../../components/Hooks/Hooks';
 import { useLanguage } from '../../contexts/LanguageContext';
+import BackButton from '../../components/Button/BackButton';
 import './Residency.css';
 
 function Residency() {
@@ -29,13 +30,15 @@ function Residency() {
                     className="residency-hero-image"
                 />
             </div>
+            <BackButton variant="floating" />
+
             
             <div className="residency-content">
                 <div className="residency-header">
                     <h1 className="residency-title">{residencia.title}</h1>
                     <p className="residency-subtitle">{residencia.subtitle}</p>
                 </div>
-                
+
                 <div className="residency-info">
                     <div className="residency-details">
                         <h3>{t('location') || 'Ubicación'}</h3>
