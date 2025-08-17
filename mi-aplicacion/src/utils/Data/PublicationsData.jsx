@@ -70,6 +70,11 @@ export const mockPublicationsData = [
             en: "Complete documentation of the January residency at Finca El Azahar",
             pt: "Documentação completa da residência de janeiro na Finca El Azahar"
         },
+        info: {
+            es: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat turpis sit amet lacus facilisis, et fermentum risus pretium. Curabitur accumsan felis vel mauris malesuada, at sodales nunc facilisis. Sed ultricies sapien ut dui luctus, nec dictum mi viverra. Integer at libero vitae justo convallis blandit. Suspendisse potenti, vitae feugiat sapien fringilla ut.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac ligula sit amet risus laoreet ultricies. Sed in porta elit. Quisque et feugiat libero. Integer aliquet, mi sed fermentum luctus, neque lacus venenatis magna, ac pharetra eros felis sed lectus. Suspendisse sagittis nunc eu justo hendrerit tempus vitae.',
+            en: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat turpis sit amet lacus facilisis, et fermentum risus pretium. Curabitur accumsan felis vel mauris malesuada, at sodales nunc facilisis. Sed ultricies sapien ut dui luctus, nec dictum mi viverra. Integer at libero vitae justo convallis blandit. Suspendisse potenti, vitae feugiat sapien fringilla ut.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac ligula sit amet risus laoreet ultricies. Sed in porta elit. Quisque et feugiat libero. Integer aliquet, mi sed fermentum luctus, neque lacus venenatis magna, ac pharetra eros felis sed lectus. Suspendisse sagittis nunc eu justo hendrerit tempus vitae.',
+            pt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat turpis sit amet lacus facilisis, et fermentum risus pretium. Curabitur accumsan felis vel mauris malesuada, at sodales nunc facilisis. Sed ultricies sapien ut dui luctus, nec dictum mi viverra. Integer at libero vitae justo convallis blandit. Suspendisse potenti, vitae feugiat sapien fringilla ut.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac ligula sit amet risus laoreet ultricies. Sed in porta elit. Quisque et feugiat libero. Integer aliquet, mi sed fermentum luctus, neque lacus venenatis magna, ac pharetra eros felis sed lectus. Suspendisse sagittis nunc eu justo hendrerit tempus vitae.'
+        },
         
         // Datos no traducibles
         // onClick: () => console.log("Click en Catálogo Residencia Enero 2025"),
@@ -79,7 +84,12 @@ export const mockPublicationsData = [
         format: "21x29.7 cm",
         residencias: ["residencia-1"],
         exposiciones: ["expo-1"],
-        collectiveArtPiece: ["artPiece-1"]
+        collectiveArtPiece: ["artPiece-1"],
+        detailImages: [
+            "/Images/Publications/Publication01/pub01-01.jpg",
+            "/Images/Publications/Publication02/pub02-01.png",
+            "/Images/Publications/Publication02/pub02-01.png",
+        ],
     },
     {
         id: "pub-2", 

@@ -4,6 +4,7 @@ import { useLocalizedData } from '../../components/Hooks/Hooks';
 import { useLanguage } from '../../contexts/LanguageContext';
 import BackButton from '../../components/Button/BackButton';
 import CoverPublication from './sections/CoverPublication/CoverPublication';
+import Details from './sections/Details/Details';
 import './Publication.css';
 
 function Publication() {
@@ -26,6 +27,7 @@ function Publication() {
         <div className="publication-page">
             <BackButton variant="floating" />
             <CoverPublication publication={publication} />
+            <Details publication={publication}/>
         </div>
     );
 }
