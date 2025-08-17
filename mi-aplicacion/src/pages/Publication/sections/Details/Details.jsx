@@ -12,18 +12,17 @@ function Details({ publication }) {
         <section className='publication-details'>
             <div className="details-content">
                 {/* Texto superior y accordions */}
+                <div className='empty-column'></div>
                 <div className="details-info">
                     <div className="details-text">
-                        {/* Info localizada de la publicación */}
-                        <div 
+                        <div
                             dangerouslySetInnerHTML={{ __html: publication.info }}
                         />
                     </div>
 
                     <div className="details-accordions">
-                        {/* Accordion Detalles */}
                         <div className="accordion-item">
-                            <button 
+                            <button
                                 className={`accordion-header ${openAccordion === 'details' ? 'open' : ''}`}
                                 onClick={() => toggleAccordion('details')}
                             >
@@ -55,7 +54,7 @@ function Details({ publication }) {
 
                         {/* Accordion Envíos */}
                         <div className="accordion-item">
-                            <button 
+                            <button
                                 className={`accordion-header ${openAccordion === 'shipping' ? 'open' : ''}`}
                                 onClick={() => toggleAccordion('shipping')}
                             >
@@ -75,28 +74,50 @@ function Details({ publication }) {
                         </div>
                     </div>
                 </div>
+            </div>
 
-                {/* Grid de imágenes detalle */}
-                <div className="details-images">
+            <div className="details-images">
+                <div className='first-line-gallery'>
                     {publication.detailImages && publication.detailImages.length > 0 ? (
-                        publication.detailImages.map((image, index) => (
-                            <div key={index} className="detail-image-container">
-                                <img 
-                                    src={image} 
-                                    alt={`${publication.title} - detalle ${index + 1}`}
-                                    className="detail-image"
-                                />
-                            </div>
-                        ))
+                        <>
+                            {publication.detailImages[0] && (
+                                <div className="detail-image-container">
+                                    <img
+                                        src={publication.detailImages[0]}
+                                        alt={`${publication.title} - detalle 1`}
+                                        className="detail-image"
+                                    />
+                                </div>
+                            )}
+                            {publication.detailImages[1] && (
+                                <div className="detail-image-container">
+                                    <img
+                                        src={publication.detailImages[1]}
+                                        alt={`${publication.title} - detalle 2`}
+                                        className="detail-image"
+                                    />
+                                </div>
+                            )}
+                        </>
                     ) : (
-                        // Placeholders si no hay detailImages
                         <>
                             <div className="detail-image-placeholder"></div>
                             <div className="detail-image-placeholder"></div>
-                            <div className="detail-image-placeholder large"></div>
-                            <div className="detail-image-placeholder"></div>
-                            <div className="detail-image-placeholder"></div>
                         </>
+                    )}
+                </div>
+
+                <div className='second-line-gallery'>
+                    {publication.detailImages && publication.detailImages[2] ? (
+                        <div className="detail-image-container">
+                            <img
+                                src={publication.detailImages[2]}
+                                alt={`${publication.title} - detalle 3`}
+                                className="detail-image"
+                            />
+                        </div>
+                    ) : (
+                        <div className="detail-image-placeholder"></div>
                     )}
                 </div>
             </div>

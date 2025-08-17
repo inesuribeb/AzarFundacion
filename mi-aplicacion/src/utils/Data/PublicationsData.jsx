@@ -86,9 +86,9 @@ export const mockPublicationsData = [
         exposiciones: ["expo-1"],
         collectiveArtPiece: ["artPiece-1"],
         detailImages: [
-            "/Images/Publications/Publication01/pub01-01.jpg",
+            "/Images/Publications/Publication01/Publicaciones-1.jpg",
             "/Images/Publications/Publication02/pub02-01.png",
-            "/Images/Publications/Publication02/pub02-01.png",
+            "/Images/Publications/Publication01/Residencias-1.jpg",
         ],
     },
     {
