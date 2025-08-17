@@ -1,72 +1,8 @@
-// mockResidencias.js
-
-// export const mockResidencias = [
-//     {
-//         id: "residencia-1",
-//         image: "/Images/Residencies/Residency01/residency01-01.png",
-//         title: "Residencia Enero 2025",
-//         subtitle: "Trujillo, Extremadura • Enero 2025",
-//         onClick: () => console.log("Click en Residencia Finca El Azahar"),
-//         className: "residencia-card",
-//         year: 2025,
-//         location: "Trujillo, Extremadura",
-//         description: "Programa de residencia en agricultura regenerativa y permacultura",
-//         publicaciones: ["pub-1"], 
-//         exposiciones: ["expo-1"],
-//         collectiveArtPiece: ["artPiece-1"],
-//     },
-//     {
-//         id: "residencia-2", 
-//         image: "/Images/Residencies/Residency02/prueba1.PNG",
-//         title: "Residencia Urbana Madrid",
-//         subtitle: "Madrid, España • 2025",
-//         onClick: () => console.log("Click en Residencia Madrid"),
-//         className: "residencia-card",
-//         year: 2025,
-//         location: "Madrid, España", 
-//         description: "Residencia artística en contexto urbano",
-//         publicaciones: ["pub-2"],
-//         exposiciones: ["expo-2"],
-//         collectiveArtPiece: ["artPiece-2"],
-//     },
-//     {
-//         id: "residencia-3", 
-//         image: "/Images/Residencies/Residency02/prueba2.PNG",
-//         title: "Residencia Urbana Madrid",
-//         subtitle: "Madrid, España • 2025",
-//         onClick: () => console.log("Click en Residencia Madrid"),
-//         className: "residencia-card",
-//         year: 2025,
-//         location: "Madrid, España", 
-//         description: "Residencia artística en contexto urbano",
-//         publicaciones: ["pub-2"],
-//         exposiciones: ["expo-2"],
-//         collectiveArtPiece: ["artPiece-2"],
-//     },
-//     {
-//         id: "residencia-4", 
-//         image: "/Images/Residencies/Residency02/prueba3.PNG",
-//         title: "Residencia Urbana Madrid",
-//         subtitle: "Madrid, España • 2025",
-//         onClick: () => console.log("Click en Residencia Madrid"),
-//         className: "residencia-card",
-//         year: 2025,
-//         location: "Madrid, España", 
-//         description: "Residencia artística en contexto urbano",
-//         publicaciones: ["pub-2"],
-//         exposiciones: ["expo-2"],
-//         collectiveArtPiece: ["artPiece-2"],
-//     }
-// ]
-
-// mockResidencias.js
-
 export const mockResidencias = [
     {
         id: "residencia-1",
         image: "/Images/Residencies/Residency01/residency01-01.png",
         
-        // Contenido traducible
         title: {
             es: "Residencia Enero 2025",
             en: "January 2025 Residency",
@@ -88,8 +24,7 @@ export const mockResidencias = [
             pt: "Programa de residência em agricultura regenerativa e permacultura"
         },
         
-        // Datos no traducibles
-        onClick: () => console.log("Click en Residencia Finca El Azahar"),
+        // onClick: () => console.log("Click en Residencia Finca El Azahar"),
         className: "residencia-card",
         year: 2025,
         publicaciones: ["pub-1"], 
@@ -121,7 +56,7 @@ export const mockResidencias = [
             pt: "Residência artística em contexto urbano"
         },
         
-        onClick: () => console.log("Click en Residencia Madrid"),
+        // onClick: () => console.log("Click en Residencia Madrid"),
         className: "residencia-card",
         year: 2025,
         publicaciones: ["pub-2"],
@@ -153,7 +88,7 @@ export const mockResidencias = [
             pt: "Exploração de novas mídias e tecnologias"
         },
         
-        onClick: () => console.log("Click en Residencia Barcelona"),
+        // onClick: () => console.log("Click en Residencia Barcelona"),
         className: "residencia-card",
         year: 2025,
         publicaciones: ["pub-3"],
@@ -185,7 +120,7 @@ export const mockResidencias = [
             pt: "Conexão com a natureza e tradições locais"
         },
         
-        onClick: () => console.log("Click en Residencia Asturias"),
+        // onClick: () => console.log("Click en Residencia Asturias"),
         className: "residencia-card",
         year: 2025,
         publicaciones: ["pub-4"],
