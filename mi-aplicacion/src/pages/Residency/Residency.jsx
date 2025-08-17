@@ -33,7 +33,6 @@ function Residency() {
         <div className="residency-page">
             {/* <BackButton variant="floating" /> */}
             
-            {/* Sección de portada */}
             <CoverResidency residencia={residencia} />
             <DescriptionResidency residencia={residencia} />
             <Jury residencia={residencia} />
