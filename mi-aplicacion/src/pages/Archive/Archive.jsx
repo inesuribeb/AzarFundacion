@@ -30,20 +30,76 @@ function Archive() {
     const localizedArtPieces = useLocalizedData(mockArtPiecesData);
     const localizedPublications = useLocalizedData(mockPublicationsData);
 
+    const createNavigateHandler = (id, type) => {
+        return () => {
+            const currentPath = window.location.pathname;
+            let basePath = '';
+
+            // Detectar idioma y tipo de contenido
+            if (currentPath.startsWith('/pt/')) {
+                if (type === 'exhibitions') basePath = '/pt/exposicao/';
+                else if (type === 'collectiveArtPieces') basePath = '/pt/obra-coletiva/';
+                else if (type === 'publications') basePath = '/pt/publicacao/';
+            } else if (currentPath.includes('/exhibition/') || currentPath.includes('/archive')) {
+                if (type === 'exhibitions') basePath = '/exhibition/';
+                else if (type === 'collectiveArtPieces') basePath = '/collective-art-piece/';
+                else if (type === 'publications') basePath = '/publication/';
+            } else {
+                if (type === 'exhibitions') basePath = '/exposicion/';
+                else if (type === 'collectiveArtPieces') basePath = '/obra-colectiva/';
+                else if (type === 'publications') basePath = '/publicacion/';
+            }
+
+            navigate(`${basePath}${id}`);
+        };
+    };
+
+
+    // const getCurrentData = () => {
+    //     switch (activeTab) {
+    //         case 'exhibitions':
+    //             return localizedExhibitions;
+    //         case 'collectiveArtPieces':
+    //             return localizedArtPieces;
+    //         case 'publications':
+    //             return localizedPublications;
+    //         case 'collaborations':
+    //             return [];
+    //         default:
+    //             return localizedExhibitions;
+    //     }
+    // };
+    // Modifica getCurrentData para agregar navegación:
     const getCurrentData = () => {
+        let data, type;
+
         switch (activeTab) {
             case 'exhibitions':
-                return localizedExhibitions;
+                data = localizedExhibitions;
+                type = 'exhibitions';
+                break;
             case 'collectiveArtPieces':
-                return localizedArtPieces;
+                data = localizedArtPieces;
+                type = 'collectiveArtPieces';
+                break;
             case 'publications':
-                return localizedPublications;
+                data = localizedPublications;
+                type = 'publications';
+                break;
             case 'collaborations':
                 return [];
             default:
-                return localizedExhibitions;
+                data = localizedExhibitions;
+                type = 'exhibitions';
         }
+
+        // Agregar navegación a cada item
+        return data.map(item => ({
+            ...item,
+            onClick: createNavigateHandler(item.id, type)
+        }));
     };
+
 
     const handleTabChange = (tabId) => {
         setActiveTab(tabId);

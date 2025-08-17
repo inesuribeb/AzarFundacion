@@ -29,8 +29,7 @@ export const mockExhibitionsData = [
             pt: "Mostra dos resultados da residência na Finca El Azahar"
         },
         
-        // Datos no traducibles
-        onClick: () => console.log("Click en Raíces Regenerativas"),
+        // onClick: () => console.log("Click en Raíces Regenerativas"),
         className: "exhibition-card",
         year: 2025,
         startDate: "2025-03-15",
@@ -69,7 +68,7 @@ export const mockExhibitionsData = [
             pt: "Exposição sobre intervenções artísticas em contexto urbano"
         },
         
-        onClick: () => console.log("Click en Territorios Urbanos"),
+        // onClick: () => console.log("Click en Territorios Urbanos"),
         className: "exhibition-card",
         year: 2025,
         startDate: "2025-04-10",
@@ -108,7 +107,7 @@ export const mockExhibitionsData = [
             pt: "Exposição sobre intervenções artísticas em contexto urbano"
         },
         
-        onClick: () => console.log("Click en Territorios Urbanos"),
+        // onClick: () => console.log("Click en Territorios Urbanos"),
         className: "exhibition-card",
         year: 2025,
         startDate: "2025-04-10",
@@ -147,7 +146,7 @@ export const mockExhibitionsData = [
             pt: "Exposição sobre intervenções artísticas em contexto urbano"
         },
         
-        onClick: () => console.log("Click en Territorios Urbanos"),
+        // onClick: () => console.log("Click en Territorios Urbanos"),
         className: "exhibition-card",
         year: 2025,
         startDate: "2025-04-10",
