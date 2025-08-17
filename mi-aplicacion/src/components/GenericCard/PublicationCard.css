@@ -1,4 +1,4 @@
-.publication-card {
+/* .publication-card {
     width: 100%;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -31,7 +31,6 @@
     display: block;
 }
 
-/* Flechas de navegación */
 .carousel-arrow {
     position: absolute;
     top: 50%;
@@ -174,6 +173,119 @@
         min-height: 250px;
     }
     
+    .publication-info-bar {
+        height: 60px;
+    }
+    
+    .publication-number {
+        width: 60px;
+        font-size: 1rem;
+    }
+    
+    .publication-title {
+        font-size: 0.8rem;
+        padding: 0 0.5rem;
+    }
+    
+    .publication-price {
+        width: 80px;
+        font-size: 0.9rem;
+    }
+} */
+
+/* PublicationCard.css */
+
+.publication-card {
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.publication-card:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Barra inferior con información */
+.publication-info-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid var(--dark-color);
+    background: var(--light-color);
+    height: 65px;
+    margin-top: 3rem;
+}
+
+.publication-number {
+    flex: 0 0 auto;
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: var(--neutral-color);
+    border-right: 1px solid var(--dark-color);
+    background: var(--light-color);
+}
+
+.publication-title {
+    flex: 1;
+    font-family: var(--serif-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: var(--dark-color);
+}
+
+.publication-price {
+    flex: 0 0 auto;
+    width: 120px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 200;
+    color: var(--neutral-color);
+    border-left: 1px solid var(--dark-color);
+    background: var(--light-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .publication-info-bar {
+        height: 70px;
+    }
+    
+    .publication-number {
+        width: 80px;
+        font-size: 1.2rem;
+    }
+    
+    .publication-title {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+    
+    .publication-price {
+        width: 100px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
     .publication-info-bar {
         height: 60px;
     }

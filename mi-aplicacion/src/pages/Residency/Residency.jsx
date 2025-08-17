@@ -3,6 +3,13 @@ import { mockResidencias } from '../../utils/Data/ResidenciesData';
 import { useLocalizedData } from '../../components/Hooks/Hooks';
 import { useLanguage } from '../../contexts/LanguageContext';
 import BackButton from '../../components/Button/BackButton';
+import CoverResidency from './sections/CoverResidency/CoverResidency';
+import DescriptionResidency from './sections/DescriptionResidency/DescriptionResidency';
+import Jury from './sections/Jury/Jury';
+import Participants from './sections/Participants/Participants';
+import PublicationMention from './sections/PublicationMention/PublicationMention';
+import ArtPieceMention from './sections/ArtPieceMention/ArtPieceMention';
+import ExhibitionMention from './sections/ExhibitionMention/ExhibitionMention';
 import './Residency.css';
 
 function Residency() {
@@ -16,6 +23,7 @@ function Residency() {
     if (!residencia) {
         return (
             <div className="residency-page">
+                <BackButton variant="floating" />
                 <h1>{t('residencyNotFound') || 'Residencia no encontrada'}</h1>
             </div>
         );
@@ -23,37 +31,22 @@ function Residency() {
 
     return (
         <div className="residency-page">
-            <div className="residency-hero">
-                <img 
-                    src={residencia.image} 
-                    alt={residencia.title}
-                    className="residency-hero-image"
-                />
-            </div>
             <BackButton variant="floating" />
-
             
-            <div className="residency-content">
-                <div className="residency-header">
-                    <h1 className="residency-title">{residencia.title}</h1>
-                    <p className="residency-subtitle">{residencia.subtitle}</p>
-                </div>
-
-                <div className="residency-info">
-                    <div className="residency-details">
-                        <h3>{t('location') || 'Ubicación'}</h3>
-                        <p>{residencia.location}</p>
-                        
-                        <h3>{t('description') || 'Descripción'}</h3>
-                        <p>{residencia.description}</p>
-                        
-                        <h3>{t('year') || 'Año'}</h3>
-                        <p>{residencia.year}</p>
-                    </div>
-                    
-                    {/* Aquí puedes agregar más secciones como galería, participantes, etc. */}
-                </div>
-            </div>
+            {/* Sección de portada */}
+            <CoverResidency residencia={residencia} />
+            <DescriptionResidency residencia={residencia} />
+            <Jury residencia={residencia} />
+            <Participants residencia={residencia} />
+            <PublicationMention residencia={residencia} />
+            <ArtPieceMention residencia={residencia} />
+            <ExhibitionMention residencia={residencia} />
+            
+            {/* Aquí irán las siguientes secciones */}
+            {/* <IntroResidency residencia={residencia} /> */}
+            {/* <JuradoSection residencia={residencia} /> */}
+            {/* <ParticipantsSection residencia={residencia} /> */}
+            {/* <GallerySection residencia={residencia} /> */}
         </div>
     );
 }

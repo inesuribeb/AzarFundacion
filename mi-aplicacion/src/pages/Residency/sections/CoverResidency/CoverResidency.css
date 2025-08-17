@@ -1,0 +1,237 @@
+/* .cover-residency {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.cover-residency-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.cover-residency-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.cover-residency-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover-residency-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 2rem;
+    position: relative;
+}
+
+.cover-residency-title {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.cover-residency-title h1 {
+    font-size: clamp(2rem, 4vw, 4.5rem);
+    font-weight: 100;
+    line-height: 1.1;
+    color: var(--dark-color);
+    margin: 0;
+    text-align: right;
+    max-width: 100%;
+    text-transform: uppercase;
+    font-family: var(--serif-font);
+}
+
+@media (max-width: 1024px) {
+    .cover-residency-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    .cover-residency-content {
+        order: 2;
+        padding: 2rem;
+    }
+    
+    .cover-residency-image {
+        order: 1;
+    }
+    
+    .cover-residency-title h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        text-align: left;
+    }
+    
+    .cover-residency-logo {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .cover-residency {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .cover-residency-container {
+        grid-template-rows: 60vh auto;
+    }
+    
+    .cover-residency-content {
+        padding: 1.5rem;
+        min-height: 40vh;
+    }
+    
+    .cover-residency-title h1 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+    
+    .cover-residency::before {
+        top: 1rem;
+        right: 1rem;
+        width: 25px;
+        height: 15px;
+    }
+} */
+
+/* CoverResidency.css */
+
+.cover-residency {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.cover-residency-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.cover-residency-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.cover-residency-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover-residency-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 2rem;
+    position: relative;
+}
+
+.cover-residency-title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    gap: 1rem; /* Espacio entre title y title2 */
+}
+
+.cover-residency-title h1,
+.cover-residency-title h2 {
+    font-size: clamp(2rem, 4vw, 4.5rem);
+    font-weight: 100;
+    line-height: 1.1;
+    color: var(--dark-color);
+    margin: 0;
+    text-align: right;
+    max-width: 100%;
+    text-transform: uppercase;
+    font-family: var(--serif-font);
+}
+
+/* .cover-residency-title h2 {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-size: clamp(2rem, 4vw, 4.5rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--dark-color);
+    margin: 0;
+    text-align: right;
+    max-width: 100%;
+    font-family: var(--serif-font);
+} */
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .cover-residency-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    .cover-residency-content {
+        order: 2;
+        padding: 2rem;
+    }
+    
+    .cover-residency-image {
+        order: 1;
+    }
+    
+    .cover-residency-title {
+        align-items: flex-start;
+    }
+    
+    .cover-residency-title h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        text-align: left;
+    }
+    
+    .cover-residency-title h2 {
+        font-size: clamp(1.2rem, 4vw, 2rem);
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .cover-residency {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .cover-residency-container {
+        grid-template-rows: 60vh auto;
+    }
+    
+    .cover-residency-content {
+        padding: 1.5rem;
+        min-height: 40vh;
+    }
+    
+    .cover-residency-title h1 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+    
+    .cover-residency-title h2 {
+        /* font-size: clamp(1rem, 5vw, 1.8rem); */
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+}

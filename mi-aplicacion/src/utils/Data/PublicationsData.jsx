@@ -51,7 +51,7 @@ export const mockPublicationsData = [
         
         // Contenido traducible
         title: {
-            es: "Catálogo Residencia Enero 2025",
+            es: "Una residencia narrada por: Ivan Floro",
             en: "January 2025 Residency Catalog",
             pt: "Catálogo Residência Janeiro 2025"
         },
@@ -72,7 +72,7 @@ export const mockPublicationsData = [
         },
         
         // Datos no traducibles
-        onClick: () => console.log("Click en Catálogo Residencia Enero 2025"),
+        // onClick: () => console.log("Click en Catálogo Residencia Enero 2025"),
         className: "publication-card",
         year: 2025,
         pages: 64,
