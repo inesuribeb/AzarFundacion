@@ -63,7 +63,7 @@ function Finca({ t }) {
                 </div>
                 <div className='column-right-finca'>
                     <MediumSans className='finca-section-title'>{t('finca')}</MediumSans>
-                    <Texts size="medium" className='finca-text'>{t('fincaText')}</Texts>
+                    <Texts size="large" className='finca-text'>{t('fincaText')}</Texts>
                 </div>
             </div>
 

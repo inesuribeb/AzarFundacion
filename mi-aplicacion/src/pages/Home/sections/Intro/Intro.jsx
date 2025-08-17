@@ -21,7 +21,7 @@ import './Intro.css'
 function Intro({ t , getRoute }) {
     return (
         <section className='intro-section'>
-            <Texts size="extra-large">{t('introHomeText')}</Texts>
+            <Texts size="extra-large">{t('visionText')}</Texts>
             <div className='navigation-tabs'>
             <NavigationTabs 
                     t={t}
