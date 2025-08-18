@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import ModalShop from '../../../pages/Publication/components/ModalShop';
+import { useCart } from '../../../contexts/CartContext';
 import './ShoppingBasket.css';
 
-function ShoppingBasket({ cartItems = [], onUpdateCart, shouldUseLightColor }) {
+function ShoppingBasket({ shouldUseLightColor }) {
     const [showModal, setShowModal] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const [shouldAnimate, setShouldAnimate] = useState(false);
+    const { cartItems, updateCartItem, removeFromCart } = useCart();
 
-    // Calcular total de items en el carrito
     const totalCartItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
     // console.log('🎯 ShoppingBasket render:', { 
@@ -16,7 +17,7 @@ function ShoppingBasket({ cartItems = [], onUpdateCart, shouldUseLightColor }) {
     //     totalCartItems, 
     //     isVisible 
     // });
-    // Mostrar/ocultar el componente basado en si hay items
+
     useEffect(() => {
         if (totalCartItems > 0 && !isVisible) {
             setIsVisible(true);
@@ -27,7 +28,6 @@ function ShoppingBasket({ cartItems = [], onUpdateCart, shouldUseLightColor }) {
         }
     }, [totalCartItems, isVisible]);
 
-    // Animación cuando se añade un item
     useEffect(() => {
         if (totalCartItems > 0 && isVisible) {
             setShouldAnimate(true);
@@ -46,14 +46,9 @@ function ShoppingBasket({ cartItems = [], onUpdateCart, shouldUseLightColor }) {
         setShowModal(false);
     };
 
-    // Si no hay items, no renderizar nada
     if (!isVisible || totalCartItems === 0) {
         return null;
     }
-
-    // Para el modal, necesitamos un producto "resumen" o el último añadido
-    // Por ahora, tomaremos el primer producto del carrito
-    const firstProduct = cartItems[0];
 
     return (
         <>
@@ -70,19 +65,13 @@ function ShoppingBasket({ cartItems = [], onUpdateCart, shouldUseLightColor }) {
                 )}
             </button>
 
-            {showModal && firstProduct && (
+            {showModal && (
                 <ModalShop
                     isOpen={showModal}
                     onClose={handleCloseModal}
-                    product={{
-                        id: firstProduct.id,
-                        title: firstProduct.title || 'Producto',
-                        price: firstProduct.price || '€0.00',
-                        cover: firstProduct.cover || '',
-                        quantity: firstProduct.quantity
-                    }}
                     cartItems={cartItems}
-                    onUpdateCart={onUpdateCart}
+                    onUpdateCart={updateCartItem}
+                    onRemoveItem={removeFromCart}
                 />
             )}
         </>

@@ -6,7 +6,7 @@
 // function CoverPublication({ publication }) {
 //     const [showModal, setShowModal] = useState(false);
 //     const [selectedQuantity, setSelectedQuantity] = useState(1);
-    
+
 //     const [cartItems, setCartItems] = useState([
 //     ]);
 
@@ -17,9 +17,9 @@
 //             id: publication.id,
 //             quantity: selectedQuantity
 //         };
-        
+
 //         const existingItemIndex = cartItems.findIndex(item => item.id === publication.id);
-        
+
 //         if (existingItemIndex >= 0) {
 //             const updatedItems = [...cartItems];
 //             updatedItems[existingItemIndex].quantity += selectedQuantity;
@@ -27,7 +27,7 @@
 //         } else {
 //             setCartItems([...cartItems, newItem]);
 //         }
-        
+
 //         setShowModal(true);
 //     };
 
@@ -37,7 +37,7 @@
 
 //     const handleUpdateCart = (productId, newQuantity) => {
 //         const existingItemIndex = cartItems.findIndex(item => item.id === productId);
-        
+
 //         if (existingItemIndex >= 0) {
 //             const updatedItems = [...cartItems];
 //             updatedItems[existingItemIndex].quantity = newQuantity;
@@ -129,37 +129,32 @@ import './CoverPublication.css';
 function CoverPublication({ publication }) {
     const [showModal, setShowModal] = useState(false);
     const [selectedQuantity, setSelectedQuantity] = useState(1);
-    const { cartItems, addToCart, updateCartItem } = useCart();
+    const { cartItems, addToCart, updateCartItem, removeFromCart } = useCart();
+
+    // console.log('🔧 CartContext functions:', { 
+    //     addToCart: typeof addToCart === 'function',
+    //     updateCartItem: typeof updateCartItem === 'function', 
+    //     removeFromCart: typeof removeFromCart === 'function'
+    // });
 
     if (!publication) return null;
 
-    // const handleAddToCart = () => {
-    //     addToCart({
-    //         id: publication.id,
-    //         title: publication.title,
-    //         price: publication.price,
-    //         cover: publication.cover
-    //     }, selectedQuantity);
-        
-    //     setShowModal(true);
-    // };
     const handleAddToCart = () => {
-        console.log('🛒 Añadiendo al carrito:', {
-            id: publication.id,
-            title: publication.title,
-            price: publication.price,
-            quantity: selectedQuantity
-        });
-        
+        // console.log('🛒 Añadiendo al carrito:', 
+        //     {
+        //     id: publication.id,
+        //     title: publication.title,
+        //     price: publication.price,
+        //     quantity: selectedQuantity
+        // });
+
         addToCart({
             id: publication.id,
             title: publication.title,
             price: publication.price,
             cover: publication.cover
         }, selectedQuantity);
-        
-        // console.log('🛒 CartItems después de añadir:', cartItems);
-        
+
         setShowModal(true);
     };
 
@@ -184,10 +179,10 @@ function CoverPublication({ publication }) {
                 <ImageCarousel
                     images={publication.images}
                     title={publication.title}
-                    showCounter={true}    
-                    showDots={false}       
-                    showArrows={false}     
-                    clickNavigation={true}  
+                    showCounter={true}
+                    showDots={false}
+                    showArrows={false}
+                    clickNavigation={true}
                     className="publication-viewer-carousel"
                 />
             </div>
@@ -200,7 +195,7 @@ function CoverPublication({ publication }) {
                 <div className="pub-page-spacer"></div>
 
                 <div className="pub-page-quantity">
-                    <select 
+                    <select
                         className="pub-quantity-selector"
                         value={selectedQuantity}
                         onChange={handleQuantityChange}
@@ -213,7 +208,7 @@ function CoverPublication({ publication }) {
                     </select>
                 </div>
 
-                <button 
+                <button
                     className="pub-page-cart-btn"
                     onClick={handleAddToCart}
                 >
@@ -225,15 +220,9 @@ function CoverPublication({ publication }) {
                 <ModalShop
                     isOpen={showModal}
                     onClose={handleCloseModal}
-                    product={{
-                        id: publication.id,
-                        title: publication.title,
-                        price: publication.price,
-                        cover: publication.cover,
-                        quantity: selectedQuantity
-                    }}
                     cartItems={cartItems}
                     onUpdateCart={updateCartItem}
+                    onRemoveItem={removeFromCart}
                 />
             )}
         </section>

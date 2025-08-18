@@ -117,10 +117,6 @@ function Header() {
     const { hideTitle } = useHeader();
     const [isScrollingDown, setIsScrollingDown] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
-    const { cartItems, updateCartItem } = useCart();
-
-    // console.log('🔍 Header cartItems:', cartItems);
-
 
     useEffect(() => {
         const handleScroll = () => {
@@ -181,8 +177,6 @@ function Header() {
 
                 <div className="header-right">
                     <ShoppingBasket 
-                        cartItems={cartItems}
-                        onUpdateCart={updateCartItem}
                         shouldUseLightColor={shouldUseLightColor}
                     />
                     <button

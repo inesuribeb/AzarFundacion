@@ -1,0 +1,81 @@
+/* CartFooter.css */
+
+.cart-footer {
+    background: white;
+    border-top: 1px solid #e0e0e0;
+    padding: 1.5rem 2rem;
+    flex-shrink: 0;
+}
+
+.cart-footer-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-footer-total-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.cart-footer-total-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.cart-footer-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.cart-footer-btn {
+    padding: 0.875rem 1.5rem;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.cart-footer-btn-view {
+    background: transparent;
+    border: 2px solid #333;
+    color: #333;
+}
+
+.cart-footer-btn-view:hover {
+    background: #333;
+    color: white;
+}
+
+.cart-footer-btn-checkout {
+    background: #333;
+    color: white;
+    border: 2px solid #333;
+}
+
+.cart-footer-btn-checkout:hover {
+    background: #555;
+    border-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cart-footer {
+        padding: 1rem 1.5rem;
+    }
+    
+    .cart-footer-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+}

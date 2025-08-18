@@ -1,5 +1,4 @@
-/* ModalShop.css */
-
+/* 
 .modal-shop-overlay {
     position: fixed;
     top: 0;
@@ -73,7 +72,7 @@
 
 .modal-shop-right {
     flex: 1;
-    background: #a8c5e8; /* Color azul similar al de la imagen */
+    background: #a8c5e8; 
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -222,7 +221,6 @@
     color: #333;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .modal-shop-container {
         flex-direction: column;
@@ -242,5 +240,49 @@
     
     .modal-shop-right {
         padding: 30px 20px 20px;
+    }
+} */
+
+/* ModalShop.css - Refactorizado para sidebar */
+
+.modal-shop-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.modal-shop-sidebar {
+    width: 450px;
+    max-width: 90vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    animation: slideInRight 0.3s ease-out forwards;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-shop-sidebar {
+        width: 100vw;
+        max-width: 100vw;
     }
 }

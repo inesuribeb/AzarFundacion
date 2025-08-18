@@ -35,6 +35,10 @@ export const CartProvider = ({ children }) => {
         }
     };
 
+    const removeFromCart = (productId) => {
+        setCartItems(cartItems.filter(item => item.id !== productId));
+    };
+
     const updateCartItem = (productId, newQuantity) => {
         if (newQuantity <= 0) {
             removeFromCart(productId);
@@ -48,10 +52,6 @@ export const CartProvider = ({ children }) => {
             updatedItems[existingItemIndex].quantity = newQuantity;
             setCartItems(updatedItems);
         }
-    };
-
-    const removeFromCart = (productId) => {
-        setCartItems(cartItems.filter(item => item.id !== productId));
     };
 
     const clearCart = () => {
