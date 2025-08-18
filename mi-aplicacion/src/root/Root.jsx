@@ -3,6 +3,7 @@
 // import { LanguageProvider } from "../contexts/LanguageContext";
 // import { HeaderProvider } from "../contexts/HeaderContext";
 // import { ResidenciesProvider } from "../contexts/ResidenciesContext";
+// import { CartProvider } from "../contexts/CartContext";
 // import { useLanguage } from "../contexts/LanguageContext";
 // import { useResidencies } from "../contexts/ResidenciesContext";
 // import Header from '../components/Header/Header';
@@ -51,7 +52,9 @@
 //       <LanguageProvider>
 //           <HeaderProvider>
 //               <ResidenciesProvider>
-//                   <AppContent />
+//                   <CartProvider>
+//                       <AppContent />
+//                   </CartProvider>
 //               </ResidenciesProvider>
 //           </HeaderProvider>
 //       </LanguageProvider>
@@ -66,6 +69,8 @@ import { LanguageProvider } from "../contexts/LanguageContext";
 import { HeaderProvider } from "../contexts/HeaderContext";
 import { ResidenciesProvider } from "../contexts/ResidenciesContext";
 import { CartProvider } from "../contexts/CartContext";
+// import { CartModalProvider } from "../components/GlobalCartModal";
+import { CartModalProvider } from "../components/GlobalCartModal/GlobalCartModal";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useResidencies } from "../contexts/ResidenciesContext";
 import Header from '../components/Header/Header';
@@ -117,7 +122,9 @@ function Root() {
           <HeaderProvider>
               <ResidenciesProvider>
                   <CartProvider>
-                      <AppContent />
+                      <CartModalProvider>
+                          <AppContent />
+                      </CartModalProvider>
                   </CartProvider>
               </ResidenciesProvider>
           </HeaderProvider>

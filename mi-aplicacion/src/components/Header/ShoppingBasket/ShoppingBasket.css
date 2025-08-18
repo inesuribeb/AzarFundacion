@@ -1,5 +1,5 @@
 /* ShoppingBasket.css */
-
+/* 
 .shopping-basket {
     position: relative;
     background: transparent;
@@ -27,7 +27,7 @@
 .shopping-basket-icon {
     color: var(--dark-color);
     transition: color 0.3s ease;
-    font-size: 1.8rem !important;
+    font-size: 1.6rem !important;
 }
 
 .shopping-basket.light .shopping-basket-icon {
@@ -41,11 +41,11 @@
     right: -2px;
     background-color: var(--corporative-color);
     color: var(--light-color);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 300;
     border-radius: 50%;
-    min-width: 1.2rem;
-    height: 1.2rem;
+    min-width: 1.1rem;
+    height: 1.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,7 +53,6 @@
     transition: all 0.2s ease;
 }
 
-/* Animación de entrada */
 @keyframes basketFadeIn {
     from {
         opacity: 0;
@@ -63,6 +62,102 @@
         opacity: 1;
         transform: scale(1) translateY(0);
     }
+}
+
+.shopping-basket.animate {
+    animation: basketPulse 0.6s ease-out;
+}
+
+@keyframes basketPulse {
+    0% { 
+        transform: scale(1); 
+    }
+    25% { 
+        transform: scale(1.15); 
+    }
+    50% { 
+        transform: scale(1.05); 
+    }
+    100% { 
+        transform: scale(1); 
+    }
+}
+
+.shopping-basket.animate .shopping-basket-badge {
+    animation: badgeBounce 0.6s ease-out;
+}
+
+@keyframes badgeBounce {
+    0% { 
+        transform: scale(1); 
+    }
+    30% { 
+        transform: scale(1.3); 
+    }
+    60% { 
+        transform: scale(0.9); 
+    }
+    100% { 
+        transform: scale(1); 
+    }
+}
+ */
+/* ShoppingBasket.css */
+
+.shopping-basket {
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0.6; /* Más sutil cuando no hay productos */
+}
+
+.shopping-basket:has(.shopping-basket-badge) {
+    opacity: 1; /* Totalmente visible cuando hay productos */
+}
+
+.shopping-basket:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.shopping-basket:focus {
+    outline: none;
+}
+
+.shopping-basket-icon {
+    color: var(--dark-color);
+    transition: color 0.3s ease;
+    font-size: 1.6rem !important;
+}
+
+.shopping-basket.light .shopping-basket-icon {
+    color: var(--light-color);
+    transition-delay: 0.2s;
+}
+
+.shopping-basket-badge {
+    position: absolute;
+    top: -1px;
+    right: -2px;
+    background-color: var(--corporative-color);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 500;
+    border-radius: 50%;
+    min-width: 1.05rem;
+    height: 1.05rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: all 0.2s ease;
 }
 
 /* Animación cuando se añade un producto */
@@ -105,7 +200,7 @@
 }
 
 /* Responsive */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .shopping-basket {
         padding: 0.4rem;
     }
@@ -121,4 +216,4 @@
         top: -1px;
         right: -1px;
     }
-} */
+}
