@@ -7,7 +7,7 @@ function Vision({ t }) {
     return (
         <section className='section-vision'>
             {/* <MediumSans>{t('visionTitle')}</MediumSans> */}
-            <Texts size="extra-large" >{t('visionText')}</Texts>
+            {/* <Texts size="extra-large" >{t('visionText')}</Texts> */}
 
         </section>
     )
