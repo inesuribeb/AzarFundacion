@@ -111,7 +111,7 @@
 
 .sandwich-toggle.active.light .line {
     background-color: var(--light-color);
-    transition-delay: 0.2s;
+    /* transition-delay: 0.2s; */
 }
 
 /* Responsive */

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useHeader } from '../../contexts/HeaderContext';
 import { useCart } from '../../contexts/CartContext';
-import Navigation from './Navigation/Navigation';
+import Navigation2 from './Navigation/Navigation2';
 import LanguageToggle from './LanguageToggle/LanguageToggle';
 import ShoppingBasket from './ShoppingBasket/ShoppingBasket';
 import './Header.css'
@@ -103,7 +103,7 @@ function Header() {
             {(isMenuOpen || isMenuClosing) && (
                 <div className={`dropdown-menu ${isMenuClosing ? 'closing' : ''}`}>
                     <LanguageToggle closeMenu={toggleMenu} />
-                    <Navigation
+                    <Navigation2
                         closeMenu={toggleMenu}
                         onHoverChange={handleHoverChange}
                         isClosing={isMenuClosing}

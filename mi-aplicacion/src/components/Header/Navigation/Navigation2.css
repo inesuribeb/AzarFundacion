@@ -1,0 +1,139 @@
+/* Navigation2.css */
+
+.main-navigation-2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: stretch; 
+    pointer-events: none;
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.nav-link-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 100;
+    border-right: 1px solid var(--light-neutral-color);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    background-color: var(--light-header-color);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.1rem;
+    font-family: var(--main-font);
+    animation: slideDownNavLink 0.6s cubic-bezier(0.11, 0, 0.5, 0) both;
+    pointer-events: auto;
+}
+
+@keyframes slideDownNavLink {
+    0% {
+        height: 0;
+        padding: 0; 
+        border-width: 0;
+    }
+    100% {
+        height: 100vh;
+        padding-bottom: 2rem; 
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 0;
+        border-right-width: 1px; 
+    }
+}
+
+.nav-link-2:last-child {
+    border-right: none;
+}
+
+.nav-link-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.nav-link-2.show-image::before {
+    opacity: 1;
+}
+
+.nav-text-2,
+.nav-number-2 {
+    position: relative;
+    z-index: 2;
+    animation: fadeInContent 0.3s ease 0.7s both;
+}
+
+.nav-text-2 {
+    transition: color 0.3s ease;
+}
+
+.nav-number-2 {
+    font-size: 4rem;
+    color: var(--light-neutral-color);
+    font-family: 'EB Garamond';
+}
+
+.nav-link-2.light-text.show-image .nav-text-2 {
+    color: var(--light-color);
+}
+
+/* Animaciones de cierre para texto */
+.main-navigation-2.closing .nav-text-2 {
+    animation: fadeOutContent 0.3s ease forwards;
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+}
+
+.main-navigation-2.closing .nav-number-2 {
+    animation: fadeOutContent 0.3s ease forwards;
+    position: absolute;
+    bottom: 5rem; 
+    left: 2rem;
+}
+
+@keyframes fadeOutContent {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Animaciones de cierre para columnas */
+.main-navigation-2.closing .nav-link-2 {
+    animation: slideUpNavLink 0.4s cubic-bezier(0.5, 0, 0.89, 1) 0.3s forwards;
+}
+
+@keyframes slideUpNavLink {
+    0% {
+        height: 100vh;
+    }
+    100% {
+        height: 0;
+    }
+}
