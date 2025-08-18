@@ -8,7 +8,8 @@ function CartHeader({ totalItems, onClose }) {
                 TU CESTA ({totalItems})
             </h2>
             <button className="cart-header-close" onClick={onClose}>
-                ×
+                <span className="close-line close-line-1"></span>
+                <span className="close-line close-line-2"></span>
             </button>
         </div>
     );

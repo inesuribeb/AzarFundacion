@@ -95,6 +95,7 @@ export const mockPublicationsData = [
     {
         id: "pub-2", 
         number: "02", // ✅ Número de publicación
+        cover: "/Images/Publications/Publication02/pub02-01.png",
         images: [
             "/Images/Publications/Publication02/pub02-01.png",
             "/Images/Publications/Publication01/pub01-01.jpg",
