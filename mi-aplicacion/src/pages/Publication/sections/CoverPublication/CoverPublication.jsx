@@ -4,7 +4,7 @@ import { useCartModal } from '../../../../components/GlobalCartModal/GlobalCartM
 import ImageCarousel from '../../../../components/ImageCarousel/ImageCarousel';
 import './CoverPublication.css';
 
-function CoverPublication({ publication }) {
+function CoverPublication({ publication, t }) {
     const [selectedQuantity, setSelectedQuantity] = useState(1);
     const { addToCart } = useCart();
     const { openModal } = useCartModal();
@@ -72,7 +72,8 @@ function CoverPublication({ publication }) {
                     className="pub-page-cart-btn"
                     onClick={handleAddToCart}
                 >
-                    Añadir a la cesta
+                    {/* Añadir a la cesta */}
+                    {t('addToCart')}
                 </button>
             </div>
         </section>

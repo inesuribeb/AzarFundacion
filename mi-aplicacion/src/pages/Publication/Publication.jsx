@@ -9,7 +9,7 @@ import './Publication.css';
 
 function Publication() {
     const { id } = useParams();
-    const { t } = useLanguage();
+    const { t, currentLanguage } = useLanguage();
     const localizedPublications = useLocalizedData(mockPublicationsData);
     
     const publication = localizedPublications.find(pub => pub.id === id);
@@ -26,8 +26,16 @@ function Publication() {
     return (
         <div className="publication-page">
             <BackButton variant="floating" />
-            <CoverPublication publication={publication} />
-            <Details publication={publication}/>
+            <CoverPublication 
+                publication={publication} 
+                t={t}
+                currentLanguage={currentLanguage}
+            />
+            <Details 
+                publication={publication}
+                t={t}
+                currentLanguage={currentLanguage}
+            />
         </div>
     );
 }

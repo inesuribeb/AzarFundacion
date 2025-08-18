@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Details.css';
 
-function Details({ publication }) {
+function Details({ publication, t }) {
     const [openAccordion, setOpenAccordion] = useState(null);
 
     const toggleAccordion = (accordionName) => {
