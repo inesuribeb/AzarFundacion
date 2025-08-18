@@ -1,6 +1,4 @@
-/* Details.css */
-
-.publication-details {
+/* .publication-details {
     padding: 2rem 2rem;
     width: 100%;
     margin: 0 auto;
@@ -13,12 +11,10 @@
     display: flex;
 }
 .details-content {
-    /* display: flex; */
     flex-direction: row;
     gap: 4rem;
 }
 
-/* Sección superior: texto + accordions */
 .empty-column,
 .details-info {
     flex: 1;
@@ -35,11 +31,7 @@
     text-align: justify;
 }
 
-/* .details-text p:last-child {
-    margin-bottom: 2rem;
-} */
 
-/* Accordions */
 .details-accordions {
     margin-top: 2rem;
     margin-bottom: 0rem;
@@ -55,6 +47,7 @@
     border-top: 1px solid #ddd;
     border-right: 1px solid #ddd;
     border-left: 1px solid #ddd;
+
 }
 
 .accordion-header {
@@ -71,13 +64,139 @@
     transition: background-color 0.2s;
 }
 
-/* .accordion-header:hover {
-    background: #f8f9fa;
+.accordion-icon {
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
-.accordion-header.open {
-    background: #f8f9fa;
+.accordion-content {
+    padding: 1.5rem;
+    background: var(--light-color);
+    border-top: 1px solid #ddd;
+
+    
+}
+
+.accordion-content p {
+    margin: 0 0 0.5rem 0;
+    color: var(--neutral-color);
+    font-size: 0.9rem;
+}
+
+.accordion-content p:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-content strong {
+    color: var(--dark-color);
+}
+
+.details-images {
+    flex-direction: column; 
+    gap: 10rem;
+    margin-top: -1rem;
+}
+
+.detail-image {
+    width: 100%;
+    height: 100%;
+}
+
+.first-line-gallery,
+.second-line-gallery {
+    display: flex;
+}
+
+
+.first-line-gallery {
+    flex-direction: row;
+    align-items: flex-end; 
+    justify-content: space-between;
+}
+
+.first-line-gallery .detail-image-container:nth-child(1) {
+    width: 500px;
+}
+
+.first-line-gallery .detail-image-container:nth-child(2) {
+    width: 700px;
+    align-self: flex-end;
+}
+
+.second-line-gallery {
+justify-content: center;
 } */
+
+.publication-details {
+    padding: 2rem 2rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+.details-content,
+.details-images {
+    display: flex;
+}
+
+.details-content {
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.empty-column,
+.details-info {
+    flex: 1;
+}
+
+.details-text {
+    line-height: 1.7;
+}
+
+.details-text p {
+    margin: 0 0 1.5rem 0;
+    color: var(--dark-color);
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/* Accordions */
+.details-accordions {
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 100px; /* Altura fija para contener los accordions */
+    /* overflow: hidden;  */
+    position: relative;
+}
+
+.accordion-item {
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.accordion-item:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: var(--light-color);
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
 
 .accordion-icon {
     font-size: 1.2rem;
@@ -88,6 +207,22 @@
     padding: 1.5rem;
     background: var(--light-color);
     border-top: 1px solid #ddd;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 200px;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
 }
 
 .accordion-content p {
@@ -106,8 +241,7 @@
 
 /* Grid de imágenes - Layout específico como en la imagen */
 .details-images {
-    /* display: flex; */
-    flex-direction: column; /* ← ESTO es lo que falta */
+    flex-direction: column; 
     gap: 10rem;
     margin-top: -1rem;
 }
@@ -115,7 +249,6 @@
 .detail-image {
     width: 100%;
     height: 100%;
-    /* flex-direction: column; */
 }
 
 .first-line-gallery,
@@ -123,23 +256,21 @@
     display: flex;
 }
 
-
 .first-line-gallery {
     flex-direction: row;
-    /* gap: 6rem; */
     align-items: flex-end; 
     justify-content: space-between;
 }
 
 .first-line-gallery .detail-image-container:nth-child(1) {
-    width:500px;
+    width: 500px;
 }
 
 .first-line-gallery .detail-image-container:nth-child(2) {
-    width:700px;
+    width: 700px;
     align-self: flex-end;
 }
 
 .second-line-gallery {
-justify-content: center;
+    justify-content: center;
 }
