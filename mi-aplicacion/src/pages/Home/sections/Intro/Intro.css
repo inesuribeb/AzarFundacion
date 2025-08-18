@@ -7,9 +7,15 @@
     margin: 0;
     position: relative;
     background-color: transparent;
-    padding: 4rem 2rem;
+    padding: 6rem 2rem 3rem 2rem;
     /* margin-top: 7rem;
     margin-bottom: 7rem; */
     background-color: transparent;
     justify-content: space-between; 
+    align-items: center;
+
+}
+
+.intro-text-home {
+    text-align: center;
 }

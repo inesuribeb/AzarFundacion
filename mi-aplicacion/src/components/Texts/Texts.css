@@ -17,9 +17,10 @@
 }
 
 .text-paragraph.extra-large {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     line-height: 1.15;
     letter-spacing: 0.05rem;
+    font-weight: 400;
 }
 
 @media (max-width: 768px) {
