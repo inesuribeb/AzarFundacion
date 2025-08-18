@@ -58,6 +58,12 @@ function Header() {
         }
     };
 
+    const closeMenu = () => {
+        if (isMenuOpen) {
+            toggleMenu();
+        }
+    };
+
     const handleHoverChange = (lightColor) => {
         setShouldUseLightColor(lightColor);
     };
@@ -68,7 +74,11 @@ function Header() {
         <>
             <div className="header">
                 <h1 className={shouldHideTitle ? 'hidden-title' : ''}>
-                    <Link to={getRoute('home')} className="header-home-link">
+                    <Link 
+                        to={getRoute('home')} 
+                        className="header-home-link"
+                        onClick={closeMenu}
+                    >
                         <span className="fundacion">FUNDACIÓN </span>
                         <span className="azar">AZAR</span>
                     </Link>
@@ -89,17 +99,6 @@ function Header() {
                 </div>
             </div>
 
-            {/* {(isMenuOpen || isMenuClosing) && (
-                <div className={`dropdown-menu ${isMenuClosing ? 'closing' : ''}`}>
-                    <LanguageToggle />
-                    <Navigation
-                        closeMenu={toggleMenu}
-                        onHoverChange={handleHoverChange}
-                        isClosing={isMenuClosing}
-                    />
-                    
-                </div>
-            )} */}
             {(isMenuOpen || isMenuClosing) && (
                 <div className={`dropdown-menu ${isMenuClosing ? 'closing' : ''}`}>
                     <LanguageToggle closeMenu={toggleMenu} />
