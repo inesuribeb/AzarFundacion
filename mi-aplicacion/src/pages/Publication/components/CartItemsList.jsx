@@ -1,14 +1,14 @@
 import CartItem from './CartItem';
 import './CartItemsList.css';
 
-function CartItemsList({ cartItems, onUpdateCart, onRemoveItem }) {
+function CartItemsList({ cartItems, onUpdateCart, onRemoveItem, t }) {
 
     // console.log('📋 CartItemsList props:', { onUpdateCart, onRemoveItem, isFunction: typeof onRemoveItem === 'function' });
 
     if (cartItems.length === 0) {
         return (
             <div className="cart-items-empty">
-                <p>Tu cesta está vacía</p>
+                <p>{t('emptyCart')}</p>
             </div>
         );
     }
@@ -21,6 +21,7 @@ function CartItemsList({ cartItems, onUpdateCart, onRemoveItem }) {
                     item={item}
                     onUpdateQuantity={onUpdateCart}
                     onRemove={onRemoveItem}
+                    t={t}
                 />
             ))}
         </div>

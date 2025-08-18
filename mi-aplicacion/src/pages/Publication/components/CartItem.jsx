@@ -1,6 +1,6 @@
 import './CartItem.css';
 
-function CartItem({ item, onUpdateQuantity, onRemove }) {
+function CartItem({ item, onUpdateQuantity, onRemove, t }) {
     // console.log('🛍️ CartItem props:', { onUpdateQuantity, onRemove, isFunction: typeof onRemove === 'function' });
 
     const handleQuantityChange = (newQuantity) => {
@@ -65,7 +65,7 @@ function CartItem({ item, onUpdateQuantity, onRemove }) {
                         className="cart-item-remove"
                         onClick={handleRemove}
                     >
-                        Borrar
+                        {t('delete')}
                     </button>
                 </div>
             </div>

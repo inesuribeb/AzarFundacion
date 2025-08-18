@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
+import { useLanguage } from '../../../contexts/LanguageContext';
 import CartHeader from './CartHeader';
 import CartItemsList from './CartItemsList';
 import CartFooter from './CartFooter';
 import './ModalShop.css';
 
 function ModalShop({ isOpen, onClose, cartItems = [], onUpdateCart, onRemoveItem }) {
-    // console.log('📦 ModalShop props:', { onUpdateCart, onRemoveItem, isFunction: typeof onRemoveItem === 'function' });
+    const { t } = useLanguage();
 
     useEffect(() => {
         const handleEscape = (e) => {
@@ -16,7 +17,6 @@ function ModalShop({ isOpen, onClose, cartItems = [], onUpdateCart, onRemoveItem
 
         if (isOpen) {
             document.addEventListener('keydown', handleEscape);
-            // Prevenir scroll en el body
             document.body.style.overflow = 'hidden';
         }
 
@@ -59,12 +59,14 @@ function ModalShop({ isOpen, onClose, cartItems = [], onUpdateCart, onRemoveItem
                 <CartHeader 
                     totalItems={totalItems}
                     onClose={onClose}
+                    t={t}
                 />
                 
                 <CartItemsList 
                     cartItems={cartItems}
                     onUpdateCart={onUpdateCart}
                     onRemoveItem={onRemoveItem}
+                    t={t}
                 />
                 
                 {cartItems.length > 0 && (
@@ -72,6 +74,7 @@ function ModalShop({ isOpen, onClose, cartItems = [], onUpdateCart, onRemoveItem
                         totalPrice={totalPrice}
                         onViewCart={handleViewCart}
                         onCheckout={handleCheckout}
+                        t={t}
                     />
                 )}
             </div>

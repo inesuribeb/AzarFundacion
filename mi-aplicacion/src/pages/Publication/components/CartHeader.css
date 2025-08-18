@@ -20,6 +20,7 @@
     letter-spacing: 0.5px;
     flex: 1;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .cart-header-close {

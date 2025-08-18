@@ -26,7 +26,7 @@ function Details({ publication, t }) {
                                 className={`accordion-header ${openAccordion === 'details' ? 'open' : ''}`}
                                 onClick={() => toggleAccordion('details')}
                             >
-                                <span>Detalles</span>
+                                <span>{t('details')}</span>
                                 <span className="accordion-icon">
                                     {openAccordion === 'details' ? '−' : '+'}
                                 </span>
@@ -34,20 +34,20 @@ function Details({ publication, t }) {
                             {openAccordion === 'details' && (
                                 <div className="accordion-content">
                                     {publication.pages && (
-                                        <p><strong>Páginas:</strong> {publication.pages}</p>
+                                        <p><strong>{t('pages')}:</strong> {publication.pages}</p>
                                     )}
                                     {publication.format && (
-                                        <p><strong>Formato:</strong> {publication.format}</p>
+                                        <p><strong>{t('format')}:</strong> {publication.format}</p>
                                     )}
                                     {publication.year && (
-                                        <p><strong>Año:</strong> {publication.year}</p>
+                                        <p><strong>{t('year')}:</strong> {publication.year}</p>
                                     )}
                                     {publication.type && (
-                                        <p><strong>Tipo:</strong> {publication.type}</p>
+                                        <p><strong>{t('type')}:</strong> {publication.type}</p>
                                     )}
-                                    {publication.subtitle && (
+                                    {/* {publication.subtitle && (
                                         <p><strong>Subtítulo:</strong> {publication.subtitle}</p>
-                                    )}
+                                    )} */}
                                 </div>
                             )}
                         </div>
@@ -58,17 +58,17 @@ function Details({ publication, t }) {
                                 className={`accordion-header ${openAccordion === 'shipping' ? 'open' : ''}`}
                                 onClick={() => toggleAccordion('shipping')}
                             >
-                                <span>Envíos</span>
+                                <span>{t('shipping')}</span>
                                 <span className="accordion-icon">
                                     {openAccordion === 'shipping' ? '−' : '+'}
                                 </span>
                             </button>
                             {openAccordion === 'shipping' && (
                                 <div className="accordion-content">
-                                    <p><strong>España:</strong> 3-5 días laborables</p>
-                                    <p><strong>Europa:</strong> 7-10 días laborables</p>
-                                    <p><strong>Internacional:</strong> 15-20 días laborables</p>
-                                    <p><strong>Envío gratuito</strong> en pedidos superiores a €50</p>
+                                    <p><strong>{t('spain')}:</strong> {t('spainDetails')}</p>
+                                    <p><strong>{t('europe')}:</strong> {t('europeDetails')}</p>
+                                    <p><strong>{t('international')}:</strong> {t('internationalDetails')}</p>
+                                    <p><strong>{t('freeShipping')}:</strong> {t('freeDetails')}</p>
                                 </div>
                             )}
                         </div>

@@ -72,7 +72,6 @@ function CoverPublication({ publication, t }) {
                     className="pub-page-cart-btn"
                     onClick={handleAddToCart}
                 >
-                    {/* Añadir a la cesta */}
                     {t('addToCart')}
                 </button>
             </div>
