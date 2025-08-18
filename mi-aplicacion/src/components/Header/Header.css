@@ -1,106 +1,3 @@
-/* .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 2rem;
-    background-color: transparent;
-    z-index: 1000;
-}
-
-.header-home-link {
-    text-decoration: none;
-    color: inherit;
-    display: inline;
-}
-
-.header-home-link:hover {
-    text-decoration: none;
-    color: inherit;
-}
-
-.header h1 {
-    z-index: 1002;
-    position: relative;
-    color: var(--corporative-color);
-    font-size: 2.2rem;
-    margin: 0;
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.header h1.hidden-title {
-    opacity: 0;
-    transform: translateY(-20px);
-    pointer-events: none;
-}
-
-.fundacion {
-    font-weight: 100; 
-    letter-spacing: 0.1rem;
-}
-
-.azar {
-    font-weight: 600;
-    letter-spacing: 0.2rem;
-}
-
-.sandwich-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 3rem;
-    height: 0.7rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 1001;
-}
-
-.sandwich-toggle:focus {
-    outline: none;
-}
-
-.line {
-    width: 100%;
-    height: 2px;
-    background-color: var(--dark-color);
-    transition: all 0.3s ease;
-    transform-origin: center;
-}
-
-.sandwich-toggle.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(3px, 3px);
-}
-
-.sandwich-toggle.active .line:nth-child(2) {
-    transform: rotate(-45deg) translate(3px, -3px);
-}
-
-.dropdown-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: transparent; 
-    padding: 0rem;
-    z-index: 999;
-}
-
-
-.sandwich-toggle.active.light .line {
-    background-color: var(--light-color);
-    transition-delay: 0.2s;
-} */
-
-/* Header.css - Actualizado */
-
 .header {
     position: fixed;
     top: 0;
@@ -112,6 +9,15 @@
     padding: 0.5rem 2rem;
     background-color: transparent;
     z-index: 1000;
+
+    pointer-events: none; 
+}
+
+.header h1,
+.header-right,
+.sandwich-toggle,
+.shopping-basket {
+    pointer-events: auto;
 }
 
 .header-home-link {

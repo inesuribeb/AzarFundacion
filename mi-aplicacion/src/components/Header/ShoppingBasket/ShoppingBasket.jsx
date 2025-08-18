@@ -67,13 +67,7 @@ function ShoppingBasket({ shouldUseLightColor }) {
     // Calcular total de items en el carrito
     const totalCartItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
-    // DEBUG: Ver qué está pasando
-    console.log('🔍 ShoppingBasket debug:', { 
-        totalCartItems, 
-        isVisible, 
-        cartItemsLength: cartItems.length,
-        cartItems: cartItems.map(item => `${item.title}: ${item.quantity}`)
-    });
+
 
     // Mostrar/ocultar el componente basado en si hay items
     useEffect(() => {
