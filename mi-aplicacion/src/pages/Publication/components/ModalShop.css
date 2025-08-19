@@ -15,7 +15,8 @@
     width: 530px;
     max-width: 90vw;
     height: 100vh;
-    background: var(--accent-color);
+    /* background: var(--accent-color); */
+    background-color: var(--light-header-color);
     display: flex;
     flex-direction: column;
     transform: translateX(100%);

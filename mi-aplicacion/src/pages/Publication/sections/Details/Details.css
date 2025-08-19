@@ -152,7 +152,9 @@ justify-content: center;
 }
 
 .details-text {
-    line-height: 1.7;
+    line-height: 1.5;
+    font-family: var(--serif-font);
+    font-size: 1.3rem;
 }
 
 .details-text p {
