@@ -10,6 +10,9 @@
     grid-template-areas: "numbers image info";
 
     margin: 0 auto; 
+
+    /* border-top: 1.5px solid var(--dark-color);
+    border-bottom: 1.5px solid var(--dark-color); */
 }
 
 .numbers-column {

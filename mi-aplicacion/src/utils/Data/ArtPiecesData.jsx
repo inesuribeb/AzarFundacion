@@ -1,7 +1,7 @@
 export const mockArtPiecesData = [
     {
         id: "artPiece-1",
-        image: "/Images/ArtPieces/ArtPiece01/artpiece01-01.png",
+        image: "/Images/ArtPieces/ArtPiece01/obraColectiva1.png",
         
         introduction: 'Residencia Enero 2025:',
         title: {
