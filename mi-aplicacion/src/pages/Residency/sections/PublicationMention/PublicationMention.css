@@ -1,6 +1,5 @@
 .section-publication-mention {
     width: 100%;
-    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -9,25 +8,58 @@
 
 .residency-publication {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 4rem;
     width: 100%;
     justify-content: center;
     align-items: flex-end;
     gap: 3rem;
 }
+.pictures-mention {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3rem;
+}
+
+
 
 .publication-cover,
 .publication-detail {
-    height: auto; /* Mantener proporción original */
+    height: auto; 
     max-height: 120vh; 
     object-fit: contain; 
 }
 
-/* .publication-cover {
-    flex: 1; 
+.publication-titleM {
+    text-align: center;
+    width: 100%;
 }
 
-.publication-detail {
-    flex: 1; 
-} */
+.publication-titleM h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--dark-color);
+    font-family: var(--serif-font);
+    font-style: italic;
+    font-weight: 300;
+}
+
+.publication-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    align-items: flex-end;
+}
+
+
+.publication-link:hover h3 {
+    color: var(--corporative-color);
+    transition: color 0.3s ease;
+}

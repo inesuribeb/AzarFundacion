@@ -33,3 +33,13 @@
     font-style: italic;
     font-weight: 300;
 }
+
+.artpiece-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.artpiece-link:hover h3 {
+    color: var(--corporative-color); /* O el color que uses para hover */
+    transition: color 0.3s ease;
+}

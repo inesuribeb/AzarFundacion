@@ -4,9 +4,9 @@ export const mockExhibitionsData = [
         image: "/Images/Exhibitions/Exhibition01/HeaderArchivo.png",
         
         title: {
-            es: "Raíces Regenerativas",
-            en: "Regenerative Roots",
-            pt: "Raízes Regenerativas"
+            es: "Expo Residencia 2025",
+            en: "Residency Expo 2025",
+            pt: "Expo Residência 2025"
         },
         subtitle: {
             es: "Exposición • Marzo 2025",

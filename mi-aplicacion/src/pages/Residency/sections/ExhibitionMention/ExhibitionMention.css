@@ -22,3 +22,28 @@
     object-fit: cover; 
     margin-bottom: 1rem; 
 }
+
+.residency-exhibitionM h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--dark-color);
+    font-family: var(--serif-font);
+    font-style: italic;
+    font-weight: 300;
+}
+
+.exhibition-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.exhibition-link:hover h3 {
+    color: var(--corporative-color);
+    transition: color 0.3s ease;
+}

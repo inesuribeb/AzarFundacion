@@ -4,7 +4,7 @@ export const mockResidencias = [
         image: "/Images/Residencies/Residency01/residency01-01.png",
 
         title: {
-            es: "Residencia Enero 2025",
+            es: "Residencia Enero '25",
             en: "January 2025 Residency",
             pt: "Residência Janeiro 2025"
         },
