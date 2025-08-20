@@ -130,7 +130,10 @@ function Team({ t }) {
 
     return (
         <section className='section-team'>
-            <MediumSans>{t('teamTitle')}</MediumSans>
+            <MediumSans
+                className="team-title">
+                {t('teamTitle')}
+            </MediumSans>
 
             <div className='team-pictures'>
                 {teamMembers.map((member) => (
@@ -164,11 +167,11 @@ function Team({ t }) {
                     <MediumSans
                         className="member-name"
                         dangerouslySetInnerHTML={{ __html: activeMember.name }}
-                    />   
+                    />
                     <MediumSans
                         className="member-role"
                         dangerouslySetInnerHTML={{ __html: activeMember.role }}
-                    />                  
+                    />
 
                     {activeMember.quote &&
                         activeMember.quote.trim() !== '' &&

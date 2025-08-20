@@ -80,6 +80,10 @@
     align-items: center;
 }
 
+.team-title {
+    align-self: flex-start;
+}
+
 .team-pictures {
     display: flex;
     flex-direction: row;
