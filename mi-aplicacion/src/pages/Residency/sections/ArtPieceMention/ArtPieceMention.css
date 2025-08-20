@@ -7,3 +7,29 @@
     /* padding-left: 4rem; */
     align-items: center;
 }
+
+.artPM-picture{
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+    width: 90%;
+}
+
+.artpiece-image {
+    width: 100%;
+    /* align-self: center; */
+    /* max-width: 600px; */
+    height: auto; /* Mantener proporción */
+    object-fit: cover; /* Para que se ajuste bien */
+    margin-bottom: 1rem; /* Espacio con el título */
+}
+
+.artPM-picture h3 {
+    /* text-align: center; */
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--dark-color);
+    font-family: var(--serif-font);
+    font-style: italic;
+    font-weight: 300;
+}

@@ -19,7 +19,8 @@ function ArtPieceMention({ residencia, t, currentLanguage }) {
                     className='residency-texts'
                     dangerouslySetInnerHTML={{ __html: residencia.textCAP }}
                 />
-
+            </div>
+            <div className='artPM-picture'>
                 <img
                     src={artPiece.image}
                     alt={artPiece.title[currentLanguage] || artPiece.title.es}

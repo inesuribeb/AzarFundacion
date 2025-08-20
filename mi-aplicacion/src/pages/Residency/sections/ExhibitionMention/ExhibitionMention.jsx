@@ -17,7 +17,7 @@ function ExhibitionMention({ residencia, t, currentLanguage }) {
                 />
             </div>
 
-            <div className='residency-exhibition'>
+            <div className='residency-exhibitionM'>
                 {exhibition && (
                     <img 
                         src={exhibition.image} 

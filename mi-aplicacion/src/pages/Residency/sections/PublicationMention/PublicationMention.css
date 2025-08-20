@@ -6,3 +6,28 @@
     padding: 2rem;
     align-items: center;
 }
+
+.residency-publication {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4rem;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3rem;
+}
+
+.publication-cover,
+.publication-detail {
+    height: auto; /* Mantener proporción original */
+    max-height: 120vh; 
+    object-fit: contain; 
+}
+
+/* .publication-cover {
+    flex: 1; 
+}
+
+.publication-detail {
+    flex: 1; 
+} */
