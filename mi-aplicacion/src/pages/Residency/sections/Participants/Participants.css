@@ -82,7 +82,7 @@
     width: 100%;
 }
 
-.resident-name {
+.resident-name h2 {
     font-size: 1.9rem;
     font-weight: 400;
     margin-bottom: 0rem;
@@ -91,15 +91,15 @@
     text-transform: uppercase;
 }
 
-.resident-origin {
+.resident-origin p{
     font-size: 1rem;
     margin-top: 0rem;
     color: var(--dark-color);
     margin-bottom: 2rem;
-    font-style: italic;
+    /* font-style: italic; */
 }
 
-.art-piece-title {
+.art-piece-title h3{
     font-size: 1.1rem;
     font-family: var(--serif-font);
     font-weight: 500;
@@ -108,10 +108,10 @@
     color: var(--dark-color);
 }
 
-.art-piece-type {
+.art-piece-type p{
     font-size: 1.1rem;
     font-family: var(--serif-font);
-    color: var(--neutral-color);
+    color: var(--dark-color);
     margin-bottom: 1.5rem;
     font-weight: 300;
     margin-top: 0rem;
@@ -122,7 +122,7 @@
     font-size: 1.4rem;
     line-height: 1.4;
     color: var(--dark-color);
-    text-align: center;
+    text-align: left;
     width: 100%;
     margin: 0 auto; 
 }

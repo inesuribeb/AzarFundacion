@@ -72,7 +72,7 @@ function Participants({ residencia, isActive }) {
                 </div>
             </div>
 
-            <div className='info-column'>
+            {/* <div className='info-column'>
                 <div className='resident-info'>
                     <h2 className='resident-name'>
                         {residents[activeResident]?.name}
@@ -86,6 +86,40 @@ function Participants({ residencia, isActive }) {
                     <p className='art-piece-type'>
                         {residents[activeResident]?.artPieceType[language] || residents[activeResident]?.artPiecetype.es}
                     </p>
+                    <div
+                        className='art-piece-description'
+                        dangerouslySetInnerHTML={{
+                            __html: residents[activeResident]?.artPieceDescription[language] || residents[activeResident]?.artPieceDescription.es
+                        }}
+                    />
+                </div>
+            </div> */}
+            <div className='info-column'>
+                <div className='resident-info'>
+                    <div
+                        className='resident-name'
+                        dangerouslySetInnerHTML={{
+                            __html: `<h2>${residents[activeResident]?.name}</h2>`
+                        }}
+                    />
+                    <div
+                        className='resident-origin'
+                        dangerouslySetInnerHTML={{
+                            __html: `<p>${residents[activeResident]?.origin[language] || residents[activeResident]?.origin.es}</p>`
+                        }}
+                    />
+                    <div
+                        className='art-piece-title'
+                        dangerouslySetInnerHTML={{
+                            __html: `<h3>${residents[activeResident]?.artPieceName[language] || residents[activeResident]?.artPieceName.es}</h3>`
+                        }}
+                    />
+                    <div
+                        className='art-piece-type'
+                        dangerouslySetInnerHTML={{
+                            __html: `<p>${residents[activeResident]?.artPieceType[language] || residents[activeResident]?.artPiecetype.es}</p>`
+                        }}
+                    />
                     <div
                         className='art-piece-description'
                         dangerouslySetInnerHTML={{
