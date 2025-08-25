@@ -48,7 +48,6 @@ function NavigationTabs({ t, getRoute, onTabChange, onHoverStateChange }) {
         },
     ];
 
-    // Función para construir la URL con query params si es necesario
     const getNavigationPath = (item) => {
         const baseRoute = getRoute(item.route);
         return item.queryParam ? `${baseRoute}?${item.queryParam}` : baseRoute;
@@ -73,13 +72,11 @@ function NavigationTabs({ t, getRoute, onTabChange, onHoverStateChange }) {
             onHoverStateChange(item.lightText);
         }
 
-        // Limpiar hover anterior
         if (currentHoverRef.current && currentHoverRef.current !== tabElement) {
             currentHoverRef.current.classList.remove('tab-hover-active');
             currentHoverRef.current.classList.add('tab-hover-exit');
         }
 
-        // Resetear y aplicar nuevo hover
         tabElement.classList.remove('tab-hover-active', 'tab-hover-exit');
         tabElement.classList.add('tab-hover-reset');
 

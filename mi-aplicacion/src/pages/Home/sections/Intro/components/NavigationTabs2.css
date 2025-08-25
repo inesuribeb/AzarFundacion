@@ -1,0 +1,95 @@
+.navigation-tabs2-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px 20px; */
+    position: relative;
+    overflow: visible;
+}
+
+.tabs2-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.nav-tab2-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.nav-tab2-image {
+    width: 120px;
+    aspect-ratio: 4/5;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.nav-tab2 {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.9rem;
+    font-weight: 100;
+    color: var(--dark-color);
+    transition: color 0.3s ease;
+    text-align: center;
+    padding: 10px 15px;
+    font-family: var(--main-font);
+    /* cursor: pointer; */
+
+}
+
+.nav-tab2:not(:last-child) .nav-tab2-group:not(:last-child) {
+    position: relative;
+}
+
+/* Separadores entre tabs */
+/* .nav-tab2-group:not(:last-child)::after {
+    content: '—';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--light-neutral-color);
+    font-size: 24px;
+    z-index: 1;
+} */
+
+.nav-tab2:hover {
+    color: var(--corporative-color);
+    cursor: pointer;
+}
+
+.nav-tab2-group:hover .nav-tab2-image {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* .nav-tab2-active {
+    color: var(--corporative-color) !important;
+} */
+
+.nav-tab2-active + .nav-tab2-image,
+.nav-tab2-group:has(.nav-tab2-active) .nav-tab2-image {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+.nav-tab2-label {
+    position: relative;
+    z-index: 1;
+    display: block;
+    transition: color 0.3s ease;
+}
+/* 
+.nav-tab2-light-text {
+} */

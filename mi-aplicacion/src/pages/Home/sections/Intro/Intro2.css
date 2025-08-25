@@ -1,0 +1,26 @@
+.section-intro2 {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.intro2-info,
+.intro2-links {
+    display: flex;
+}
+
+.intro2-info {
+    flex-direction: row;
+}
+
+.intro2-title,
+.intro2-text {
+    flex: 1;
+}
+
+.intro2-links {
+    flex-direction: row;
+}
