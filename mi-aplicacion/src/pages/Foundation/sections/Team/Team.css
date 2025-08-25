@@ -189,6 +189,9 @@
     margin-top: 4rem;
     width: 100%;
     text-align: justify;
+
+    font-family: var(--futura-font);
+    font-weight: var(--futura-medium);
 }
 
 .member-bio {

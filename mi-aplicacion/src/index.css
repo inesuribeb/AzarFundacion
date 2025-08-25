@@ -41,6 +41,9 @@
   /* Book (400) - Nueva */
   --futura-book: 400;
   --futura-book-style: 400 normal "futura-pt", sans-serif;
+
+  --futura-medium: 500;
+  --futura-medium-style: 500 normal "futura-pt", sans-serif;
   
   --futura-normal: normal;
 }
