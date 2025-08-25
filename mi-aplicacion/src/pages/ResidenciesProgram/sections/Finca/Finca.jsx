@@ -7,42 +7,66 @@ function Finca({ t }) {
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
     const fincaImages = [
+        // {
+        //     id: '01',
+        //     image: '/Images/Finca/finca01.jpg',
+        // },
+        // {
+        //     id: '02',
+        //     image: '/Images/Finca/finca02.jpg',
+        // },
+        // {
+        //     id: '03',
+        //     image: '/Images/Finca/finca03.jpg',
+        // },
+        // {
+        //     id: '04',
+        //     image: '/Images/Finca/finca04.jpg',
+        // },
+        // {
+        //     id: '05',
+        //     image: '/Images/Finca/finca05.jpg',
+        // },
+        // {
+        //     id: '06',
+        //     image: '/Images/Finca/finca06.jpg',
+        // },
+        // {
+        //     id: '07',
+        //     image: '/Images/Finca/finca07.jpg',
+        // },
+        // {
+        //     id: '08',
+        //     image: '/Images/Finca/finca08.jpg',
+        // },
+        // {
+        //     id: '09',
+        //     image: '/Images/Finca/finca09.jpg',
+        // }
         {
             id: '01',
-            image: '/Images/Finca/finca01.jpg',
+            image: '/Images/Finca/Nuevas/fincaNew-1.jpg',
         },
         {
             id: '02',
-            image: '/Images/Finca/finca02.jpg',
+            image: '/Images/Finca/Nuevas/fincaNew-2.jpg',
         },
         {
             id: '03',
-            image: '/Images/Finca/finca03.jpg',
+            image: '/Images/Finca/Nuevas/fincaNew-3.jpg',
         },
         {
             id: '04',
-            image: '/Images/Finca/finca04.jpg',
+            image: '/Images/Finca/Nuevas/fincaNew-4.jpg',
         },
         {
             id: '05',
-            image: '/Images/Finca/finca05.jpg',
+            image: '/Images/Finca/Nuevas/fincaNew-5.jpg',
         },
         {
             id: '06',
-            image: '/Images/Finca/finca06.jpg',
+            image: '/Images/Finca/Nuevas/fincaNew-6.jpg',
         },
-        {
-            id: '07',
-            image: '/Images/Finca/finca07.jpg',
-        },
-        {
-            id: '08',
-            image: '/Images/Finca/finca08.jpg',
-        },
-        {
-            id: '09',
-            image: '/Images/Finca/finca09.jpg',
-        }
     ];
 
     const handleImageSelect = (index) => {
@@ -63,7 +87,7 @@ function Finca({ t }) {
                 </div>
                 <div className='column-right-finca'>
                     <MediumSans className='finca-section-title'>{t('finca')}</MediumSans>
-                    <Texts size="large" className='finca-text'>{t('fincaText')}</Texts>
+                    <Texts  className='finca-text'>{t('fincaText')}</Texts>
                 </div>
             </div>
 

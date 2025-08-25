@@ -1,9 +1,11 @@
+import MediumSans from '../../../../components/Titles/MediumSans/MediumSans';
 import './Jurado.css'
 
 function Jurado({ t }) {
     return (
         <div className='jurado-section'>
-            <h1>Jurado</h1>
+            <MediumSans>{t('juryR')}</MediumSans>
+
         </div>
     )
 }

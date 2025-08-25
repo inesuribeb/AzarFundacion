@@ -8,10 +8,10 @@ function Navigation2({ closeMenu, onHoverChange, isClosing }) {
     const currentActiveRef = useRef(null);
     
     const navItems = [
-        { route: 'foundation', number: '01', text: 'foundation', image: '/Images/Header/HeaderFundacion.jpg', lightColor: true },
-        { route: 'residenciesProgram', number: '02', text: 'residenciesProgram', image: '/Images/Header/HeaderResidencia.jpg', lightColor: true },
-        { route: 'archive', number: '03', text: 'archive', image: '/Images/Header/HeaderArchivo.png', lightColor: true },
-        { route: 'archive', number: '04', text: 'shop', image: '/Images/Header/HeaderPublication.png', lightColor: true, queryParam: 'tab=publications' }
+        { route: 'foundation', number: '01', text: 'foundation', image: '/Images/Header/Nuevas/Nav-fundacion.jpg', lightColor: true },
+        { route: 'residenciesProgram', number: '02', text: 'residenciesProgram', image: '/Images/Header/Nuevas/Nav-residencias.jpg', lightColor: true },
+        { route: 'archive', number: '03', text: 'archive', image: '/Images/Header/Nuevas/Nav-actividades.jpg', lightColor: true },
+        { route: 'archive', number: '04', text: 'shop', image: '/Images/Header/Nuevas/Nav-tienda.jpg', lightColor: true, queryParam: 'tab=publications' }
     ];
 
     const handleMouseEnter = (e) => {

@@ -55,8 +55,9 @@
 
 /* Estilos para la imagen principal */
 .main-image-container {
-    width: 65%;
-    aspect-ratio: 0.9/1;
+    width: 90%;
+    /* aspect-ratio: 0.9/1; */
+    aspect-ratio: 4/3;
     overflow: hidden;
 }
 
@@ -93,8 +94,10 @@
 }
 
 .thumbnail-image {
-    width: 140px;
-    aspect-ratio: 0.85/1;
+    /* width: 140px; */
+    width: 210px;
+    /* aspect-ratio: 0.85/1; */
+    aspect-ratio: 4/3;
     object-fit: cover;
     display: block;
     filter: grayscale(100%); 

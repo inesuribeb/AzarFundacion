@@ -1,6 +1,6 @@
 import Texts from '../../../../components/Texts/Texts';
 import MediumSans from '../../../../components/Titles/MediumSans/MediumSans';
-import NavigationTabs2 from './components/NavigationTabs2'; 
+import NavigationTabs from './components/NavigationTabs'; 
 import './Intro.css'
 
 function Intro({ t, getRoute }) {
@@ -10,7 +10,7 @@ function Intro({ t, getRoute }) {
             <MediumSans className='intro-text-home2'>{t('heroSubtitle')}</MediumSans>
             <Texts className='intro-text-home'>{t('visionText')}</Texts>
             <div className='navigation-tabs'>
-                <NavigationTabs2
+                <NavigationTabs
                     t={t}
                     getRoute={getRoute}
                     onTabChange={(item) => console.log('Tab selected:', item)}

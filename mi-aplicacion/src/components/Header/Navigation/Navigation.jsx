@@ -11,7 +11,7 @@ function Navigation({ closeMenu, onHoverChange, isClosing }) {
         { route: 'foundation', number: '01', text: 'foundation', image: '/Images/Header/HeaderFundacion.jpg', lightColor: true },
         { route: 'residenciesProgram', number: '02', text: 'residenciesProgram', image: '/Images/Header/HeaderResidencia.jpg', lightColor: true },
         { route: 'archive', number: '03', text: 'archive', image: '/Images/Header/HeaderArchivo.png', lightColor: true },
-        { route: 'archive', number: '04', text: 'shop', image: '/Images/Header/HeaderPublication.png', lightColor: true, queryParam: 'tab=publications' }
+        { route: 'archive', number: '04', text: 'shop', image: '/Images/Header/HeaderArchivo.png', lightColor: true, queryParam: 'tab=publications' }
     ];
 
     const handleMouseEnter = (e) => {

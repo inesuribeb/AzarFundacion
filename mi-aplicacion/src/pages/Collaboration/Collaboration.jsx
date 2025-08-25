@@ -5,6 +5,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import BackButton from '../../components/Button/BackButton';
 import CoverCollab from './sections/CoverCollab/CoverColab';
 import DetailsColab from './sections/Details/DetailsColab';
+import GalleryColab from './sections/GalleryColab/GalleryColab';
 import './Collaboration.css';
 
 function Collaboration() {
@@ -29,6 +30,7 @@ function Collaboration() {
             
             <CoverCollab collaboration={collaboration} t={t} currentLanguage={currentLanguage}/>
             <DetailsColab collaboration={collaboration} t={t} currentLanguage={currentLanguage}/>
+            <GalleryColab collaboration={collaboration} t={t} currentLanguage={currentLanguage}/>
 
         </div>
     );

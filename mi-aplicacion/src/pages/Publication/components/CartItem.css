@@ -7,6 +7,9 @@
     padding-right: 2rem;
     border-bottom: 1px solid var(--dark-color);
     transition: background-color 0.2s ease;
+
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
 }
 .cart-item:first-child {
     border-top: 1px solid var(--dark-color);
@@ -60,7 +63,7 @@
 
 .cart-item-price {
     padding-top: 1rem;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: var(--dark-color);
     white-space: nowrap;
@@ -117,17 +120,22 @@
     background: transparent;
     border-left: 1px solid var(--dark-color);
     border-right: 1px solid var(--dark-color);
+
+    
 }
 
 .cart-item-remove {
     background: none;
     border: none;
     color: var(--dark-color);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
     /* text-decoration: underline; */
     transition: color 0.2s ease;
+
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
 }
 
 /* .cart-item-remove:hover {

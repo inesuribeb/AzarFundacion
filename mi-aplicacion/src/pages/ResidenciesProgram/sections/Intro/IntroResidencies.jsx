@@ -122,9 +122,11 @@ function IntroResidencies({ t }) {
                             <Texts size="large" className="intro-text">{t('introText')}</Texts>
                         </div> */}
                         <div className="details-text">
-                            <div
+                            {/* <div
                                 dangerouslySetInnerHTML={{ __html: t('introText') }}
-                            />
+                            /> */}
+                            <Texts>{t('introText')}</Texts>
+
                         </div>
                     </div>
                 </div>

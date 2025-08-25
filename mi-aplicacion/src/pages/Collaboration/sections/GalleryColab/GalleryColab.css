@@ -1,0 +1,19 @@
+.galley-colab-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    /* gap: 3rem; */
+    align-items: flex-end; /* ← Centra las imágenes verticalmente */
+    justify-content: space-between;
+    background-color: transparent; /* ← Temporal para ver el padding */
+    margin-top: 4rem;
+}
+
+.colab-image-g {
+    max-width: 40%;
+    height: auto; /* ← Mantiene proporción original */
+    object-fit: contain; /* ← Mantiene imagen completa sin recortar */
+    border-radius: 0px;
+}

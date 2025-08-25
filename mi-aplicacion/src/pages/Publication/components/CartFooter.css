@@ -13,17 +13,20 @@
     align-items: center;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
+
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
     /* border-bottom: 1px solid var(--light-neutral-color); */
 }
 
 .cart-footer-total-label {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: var(--dark-color);
 }
 
 .cart-footer-total-price {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--dark-color);
 }
@@ -38,13 +41,16 @@
     flex: 1;
     padding: 0.875rem 1.5rem;
     border: none;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 400;
     cursor: pointer;
     letter-spacing: 0.5px;
     transition: all 0.2s ease;
     text-transform: uppercase;
     border-radius: 0px;
+
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
 }
 
 .cart-footer-btn-view {
