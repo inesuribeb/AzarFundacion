@@ -22,7 +22,7 @@
 }
 
 .nav-tab2-image {
-    width: 120px;
+    width: 100px;
     aspect-ratio: 4/5;
     background-size: cover;
     background-position: center;
@@ -44,6 +44,9 @@
     text-align: center;
     padding: 10px 15px;
     font-family: var(--main-font);
+
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
     /* cursor: pointer; */
 
 }

@@ -1,3 +1,5 @@
+@import url('https://use.typekit.net/vzo1ixs.css');
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -21,6 +23,25 @@
 
   --main-font: 'Futura', Helvetica, Arial, sans-serif;
   --serif-font: 'EB Garamond', serif;
+
+  /* --futura-font: "futura-pt", sans-serif;
+  --futura-light: 300;
+  --futura-normal: normal;
+
+  --futura-light-style: 300 normal "futura-pt", sans-serif; */
+
+  /* Variables de Futura PT */
+  --futura-font: "futura-pt", sans-serif;
+  
+  /* Light (300) */
+  --futura-light: 300;
+  --futura-light-style: 300 normal "futura-pt", sans-serif;
+  
+  /* Book (400) - Nueva */
+  --futura-book: 400;
+  --futura-book-style: 400 normal "futura-pt", sans-serif;
+  
+  --futura-normal: normal;
 }
 
 html {
@@ -49,5 +70,6 @@ body {
 }
 
 b {
-  font-weight: 600; /* Menos grueso que el bold normal */
+  font-weight: 600;
+  /* Menos grueso que el bold normal */
 }
