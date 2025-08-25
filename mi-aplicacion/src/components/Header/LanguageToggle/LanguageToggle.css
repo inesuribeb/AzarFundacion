@@ -44,7 +44,7 @@
 .language-option {
     background: transparent;
     border: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
     border-radius: 10px;
@@ -53,6 +53,9 @@
     min-width: 50px;
     text-align: center;
     letter-spacing: 0.5px;
+
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
 }
 
 .language-option:hover {
@@ -62,6 +65,7 @@
 .language-option.active {
     color: var(--dark-color);
     font-weight: 600;
+    font-weight: var(--futura-medium);
 }
 
 .language-option:focus {
