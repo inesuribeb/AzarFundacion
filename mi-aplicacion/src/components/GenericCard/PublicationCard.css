@@ -1,200 +1,3 @@
-/* .publication-card {
-    width: 100%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-bottom: 3rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.publication-card:hover {
-    transform: translateY(-2px);
-}
-
-.publication-carousel {
-    position: relative;
-    width: 100%;
-    height: 70vh; 
-    max-height: 600px;
-    min-height: 400px;
-    overflow: hidden;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.publication-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; 
-    display: block;
-}
-
-.carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 0px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    z-index: 10;
-    padding: 0;
-}
-
-.carousel-arrow-left {
-    left: 20px;
-}
-.carousel-arrow-left:hover {
-    transform: translateY(-50%) translateX(-5px);
-}
-
-.carousel-arrow-right {
-    right: 20px;
-}
-.carousel-arrow-right:hover {
-    transform: translateY(-50%) translateX(5px); 
-}
-
-.arrow-icon {
-    width: 45px;
-    height: 45px;
-    transition: all 0.3s ease;
-}
-
-.arrow-icon-right {
-    transform: rotate(180deg); 
-}
-
-
-.publication-info-bar {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border: 1px solid var(--dark-color);
-    background: var(--light-color);
-    height: 80px;
-    margin-top: 2rem;
-}
-
-.publication-number {
-    flex: 0 0 auto;
-    width: 100px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    font-weight: 200;
-    color: var(--neutral-color);
-    border-right: 1px solid var(--dark-color);
-    background: var(--light-color);
-}
-
-.publication-title {
-    flex: 1;
-    font-family: var(--serif-font);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 2rem;
-    font-size: 1.2rem;
-    font-weight: 300;
-    letter-spacing: 0.05rem;
-    text-transform: uppercase;
-    color: var(--dark-color);
-}
-
-.publication-price {
-    flex: 0 0 auto;
-    width: 120px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    font-weight: 200;
-    color: var(--neutral-color);
-    border-left: 1px solid var(--dark-color);
-    background: var(--light-color);
-}
-
-@media (max-width: 768px) {
-    .publication-carousel {
-        height: 50vh;
-        min-height: 300px;
-    }
-    
-    .carousel-arrow {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
-    
-    .carousel-arrow-left {
-        left: 10px;
-    }
-    
-    .carousel-arrow-right {
-        right: 10px;
-    }
-    
-    .publication-info-bar {
-        height: 70px;
-    }
-    
-    .publication-number {
-        width: 80px;
-        font-size: 1.2rem;
-    }
-    
-    .publication-title {
-        font-size: 0.9rem;
-        padding: 0 1rem;
-    }
-    
-    .publication-price {
-        width: 100px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .publication-carousel {
-        height: 40vh;
-        min-height: 250px;
-    }
-    
-    .publication-info-bar {
-        height: 60px;
-    }
-    
-    .publication-number {
-        width: 60px;
-        font-size: 1rem;
-    }
-    
-    .publication-title {
-        font-size: 0.8rem;
-        padding: 0 0.5rem;
-    }
-    
-    .publication-price {
-        width: 80px;
-        font-size: 0.9rem;
-    }
-} */
-
-/* PublicationCard.css */
-
 .publication-card {
     width: 100%;
     cursor: pointer;
@@ -232,6 +35,9 @@
     color: var(--neutral-color);
     border-right: 1px solid var(--dark-color);
     background: var(--light-color);
+
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
 }
 
 .publication-title {
@@ -261,6 +67,9 @@
     color: var(--neutral-color);
     border-left: 1px solid var(--dark-color);
     background: var(--light-color);
+
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
 }
 
 /* Responsive */

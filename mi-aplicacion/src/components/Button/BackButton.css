@@ -5,7 +5,7 @@
     align-items: center;
     gap: 0.6rem;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 300;
     border: none;
     cursor: pointer;
@@ -13,6 +13,9 @@
     text-decoration: none;
     background: none;
     margin-top: 4rem;
+
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
 }
 
 /* Variante por defecto */

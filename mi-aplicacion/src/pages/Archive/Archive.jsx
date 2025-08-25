@@ -5,6 +5,7 @@ import { useLocalizedData } from '../../components/Hooks/Hooks';
 import { mockExhibitionsData } from '../../utils/Data/ExhibitionsData';
 import { mockArtPiecesData } from '../../utils/Data/ArtPiecesData';
 import { mockPublicationsData } from '../../utils/Data/PublicationsData';
+import { mockCollabsData } from '../../utils/Data/CollabsData';
 import MiniBlue from '../../components/Titles/MiniBlue/MiniBlue';
 import TabMenu from '../../components/TabMenu/TabMenu';
 import Grid from '../../components/Grid/Grid';
@@ -29,6 +30,8 @@ function Archive() {
     const localizedExhibitions = useLocalizedData(mockExhibitionsData);
     const localizedArtPieces = useLocalizedData(mockArtPiecesData);
     const localizedPublications = useLocalizedData(mockPublicationsData);
+    const localizedCollaborations = useLocalizedData(mockCollabsData);
+
 
     const createNavigateHandler = (id, type) => {
         return () => {
@@ -36,40 +39,41 @@ function Archive() {
             let basePath = '';
 
             // Detectar idioma y tipo de contenido
+            // if (currentPath.startsWith('/pt/')) {
+            //     if (type === 'exhibitions') basePath = '/pt/exposicao/';
+            //     else if (type === 'collectiveArtPieces') basePath = '/pt/obra-coletiva/';
+            //     else if (type === 'publications') basePath = '/pt/publicacao/';
+            // } else if (currentPath.includes('/exhibition/') || currentPath.includes('/archive')) {
+            //     if (type === 'exhibitions') basePath = '/exhibition/';
+            //     else if (type === 'collectiveArtPieces') basePath = '/collective-art-piece/';
+            //     else if (type === 'publications') basePath = '/publication/';
+            // } else {
+            //     if (type === 'exhibitions') basePath = '/exposicion/';
+            //     else if (type === 'collectiveArtPieces') basePath = '/obra-colectiva/';
+            //     else if (type === 'publications') basePath = '/publicacion/';
+            // }
+
             if (currentPath.startsWith('/pt/')) {
                 if (type === 'exhibitions') basePath = '/pt/exposicao/';
                 else if (type === 'collectiveArtPieces') basePath = '/pt/obra-coletiva/';
                 else if (type === 'publications') basePath = '/pt/publicacao/';
+                else if (type === 'collaborations') basePath = '/pt/colaboracao/'; // ← Ruta PT
             } else if (currentPath.includes('/exhibition/') || currentPath.includes('/archive')) {
                 if (type === 'exhibitions') basePath = '/exhibition/';
                 else if (type === 'collectiveArtPieces') basePath = '/collective-art-piece/';
                 else if (type === 'publications') basePath = '/publication/';
+                else if (type === 'collaborations') basePath = '/collaboration/'; // ← Ruta EN
             } else {
                 if (type === 'exhibitions') basePath = '/exposicion/';
                 else if (type === 'collectiveArtPieces') basePath = '/obra-colectiva/';
                 else if (type === 'publications') basePath = '/publicacion/';
+                else if (type === 'collaborations') basePath = '/colaboracion/'; // ← Ruta ES
             }
 
             navigate(`${basePath}${id}`);
         };
     };
 
-
-    // const getCurrentData = () => {
-    //     switch (activeTab) {
-    //         case 'exhibitions':
-    //             return localizedExhibitions;
-    //         case 'collectiveArtPieces':
-    //             return localizedArtPieces;
-    //         case 'publications':
-    //             return localizedPublications;
-    //         case 'collaborations':
-    //             return [];
-    //         default:
-    //             return localizedExhibitions;
-    //     }
-    // };
-    // Modifica getCurrentData para agregar navegación:
     const getCurrentData = () => {
         let data, type;
 
@@ -87,7 +91,9 @@ function Archive() {
                 type = 'publications';
                 break;
             case 'collaborations':
-                return [];
+                data = localizedCollaborations;
+                type = 'collaborations';
+                break;
             default:
                 data = localizedExhibitions;
                 type = 'exhibitions';

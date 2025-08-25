@@ -84,7 +84,7 @@
 
 /* OPCIÓN 1: Cambiar el content para incluir espacio después */
 .tab-item:not(:last-child)::after {
-    content: " / ";
+    content: " | ";
     color: var(--neutral-color);
     font-weight: 100;
     pointer-events: none;

@@ -17,6 +17,7 @@ const translations = {
     exposition: "Exposición",
     artPiece: "Obra Colectiva",
     publication: "Publicación",
+    collaboration: "Colaboración", 
     shop: "Tienda",
     ...foundationTranslations.es,
     ...residenciesProgramTranslations.es,
@@ -34,6 +35,7 @@ const translations = {
     exposition: "Exhibition",
     artPiece: "Collective Art Piece",
     publication: "Publication",
+    collaboration: "Collaboration", 
     shop: "Shop",
     ...foundationTranslations.en,
     ...residenciesProgramTranslations.en,
@@ -51,6 +53,7 @@ const translations = {
     exposition: "Exposição",
     artPiece: "Obra Coletiva",
     publication: "Publicação",
+    collaboration: "Colaboração", 
     shop: "Loja",
     ...foundationTranslations.pt,
     ...residenciesProgramTranslations.pt,
@@ -70,7 +73,8 @@ const routes = {
     residency: "/residencia",
     exposition: "/exposicion",
     artPiece: "/obra-colectiva",
-    publication: "/publicacion"
+    publication: "/publicacion",
+    collaboration: "/colaboracion" 
   },
   en: {
     home: "/home",
@@ -80,7 +84,8 @@ const routes = {
     residency: "/residency",
     exposition: "/exhibition",
     artPiece: "/collective-art-piece",
-    publication: "/publication"
+    publication: "/publication",
+    collaboration: "/collaboration"
   },
   pt: {
     home: "/pt/inicio",
@@ -90,7 +95,8 @@ const routes = {
     residency: "/pt/residencia",
     exposition: "/pt/exposicao",
     artPiece: "/pt/obra-coletiva",
-    publication: "/pt/publicacao"
+    publication: "/pt/publicacao",
+    collaboration: "/pt/colaboracao"
   }
 };
 
@@ -104,6 +110,7 @@ const routeMap = {
   "/exposicion": { es: "/exposicion", en: "/exhibition", pt: "/pt/exposicao" },
   "/obra-colectiva": { es: "/obra-colectiva", en: "/collective-art-piece", pt: "/pt/obra-coletiva" },
   "/publicacion": { es: "/publicacion", en: "/publication", pt: "/pt/publicacao" },
+  "/colaboracion": { es: "/colaboracion", en: "/collaboration", pt: "/pt/colaboracao" }, 
 
   // Inglés
   "/home": { es: "/inicio", en: "/home", pt: "/pt/inicio" },
@@ -114,6 +121,7 @@ const routeMap = {
   "/exhibition": { es: "/exposicion", en: "/exhibition", pt: "/pt/exposicao" },
   "/collective-art-piece": { es: "/obra-colectiva", en: "/collective-art-piece", pt: "/pt/obra-coletiva" },
   "/publication": { es: "/publicacion", en: "/publication", pt: "/pt/publicacao" },
+  "/collaboration": { es: "/colaboracion", en: "/collaboration", pt: "/pt/colaboracao" }, 
 
   // Portugués
   "/pt/inicio": { es: "/inicio", en: "/home", pt: "/pt/inicio" },
@@ -123,7 +131,8 @@ const routeMap = {
   "/pt/residencia": { es: "/residencia", en: "/residency", pt: "/pt/residencia" },
   "/pt/exposicao": { es: "/exposicion", en: "/exhibition", pt: "/pt/exposicao" },
   "/pt/obra-coletiva": { es: "/obra-colectiva", en: "/collective-art-piece", pt: "/pt/obra-coletiva" },
-  "/pt/publicacao": { es: "/publicacion", en: "/publication", pt: "/pt/publicacao" }
+  "/pt/publicacao": { es: "/publicacion", en: "/publication", pt: "/pt/publicacao" },
+  "/pt/colaboracao": { es: "/colaboracion", en: "/collaboration", pt: "/pt/colaboracao" } 
 };
 
 const detectLanguageFromPath = (path) => {

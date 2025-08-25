@@ -36,7 +36,7 @@ function ArtPieceMention({ residencia, t, currentLanguage }) {
                     className="artpiece-link"
                 >
                     <img
-                        src={artPiece.image}
+                        src={artPiece.image2}
                         alt={artPiece.title[currentLanguage] || artPiece.title.es}
                         className="artpiece-image"
                     />

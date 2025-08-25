@@ -11,6 +11,8 @@ function ExhibitionMention({ residencia, t, currentLanguage }) {
         ? mockExhibitionsData.find(expo => expo.id === residencia.exposiciones[0])
         : null;
 
+        
+
     return (
         <section className='section-exhibition-mention'>
             <div className='description-info'>

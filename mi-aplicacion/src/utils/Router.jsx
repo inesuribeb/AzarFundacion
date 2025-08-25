@@ -7,6 +7,7 @@ import Residency from '../pages/Residency/Residency';
 import Exposition from '../pages/Exposition/Exposition';
 import ArtPiece from '../pages/ArtPiece/ArtPiece';
 import Publication from '../pages/Publication/Publication';
+import Collaboration from "../pages/Collaboration/Collaboration";
 import Root from "../root/Root";
 
 const router = createBrowserRouter([
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
                 path: "/publicacion/:id",
                 element: <Publication />
             },
+            {
+                path: "/colaboracion/:id", 
+                element: <Collaboration />
+            },
 
 
             {
@@ -84,6 +89,10 @@ const router = createBrowserRouter([
                 path: "/publication/:id",
                 element: <Publication />
             },
+            {
+                path: "/collaboration/:id", 
+                element: <Collaboration />
+            },
 
 
             {
@@ -117,6 +126,10 @@ const router = createBrowserRouter([
             {
                 path: "/pt/publicacao/:id",
                 element: <Publication />
+            },
+            {
+                path: "/pt/colaboracao/:id",
+                element: <Collaboration />
             },
         ]
     }])

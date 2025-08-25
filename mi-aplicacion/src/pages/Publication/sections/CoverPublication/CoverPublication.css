@@ -53,11 +53,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 300;
     color: var(--neutral-color);
     border-right: 1px solid var(--dark-color);
     background: var(--light-color);
+
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
 }
 
 /* Espacio flexible entre precio/quantity y botón */
@@ -78,13 +81,16 @@
     border-right: 1px solid var(--dark-color);
     background: var(--light-color);
     position: relative;
+
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
 }
 
 .pub-quantity-selector {
     padding: 0;
     border: none;
     background: var(--light-color);
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 400;
     cursor: pointer;
     height: 100%;
@@ -92,6 +98,9 @@
     text-align: center;
     appearance: none;
     color: var(--dark-color);
+
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
 }
 
 .pub-page-quantity::after {
@@ -117,12 +126,15 @@
     color: var(--light-color);
     border: none;
     height: 100%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400;
     cursor: pointer;
     transition: background-color 0.2s;
     letter-spacing: 0.5px;
     padding: 0 3rem; /* Padding horizontal para el texto */
+
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
 }
 
 .pub-page-cart-btn:hover {

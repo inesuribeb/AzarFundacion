@@ -8,7 +8,7 @@ function CoverArtPiece({ artPiece }) {
             {/* Imagen de fondo que ocupa todo el viewport */}
             <div className="cover-artpiece-background">
                 <img 
-                    src={artPiece.image} 
+                    src={artPiece.image2} 
                     alt={artPiece.title}
                 />
             </div>

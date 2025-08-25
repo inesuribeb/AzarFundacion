@@ -1,0 +1,21 @@
+.gallery-preview {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.gallery-preview-image {
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Cuando hay una sola imagen, hazla más grande */
+.gallery-preview-image.single-image {
+    width: 100%; /* O el tamaño que prefieras */
+    /* max-width: 500px; */
+}
+

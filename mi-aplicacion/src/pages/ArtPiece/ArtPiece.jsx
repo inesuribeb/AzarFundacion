@@ -4,14 +4,13 @@ import { useLocalizedData } from '../../components/Hooks/Hooks';
 import { useLanguage } from '../../contexts/LanguageContext';
 import BackButton from '../../components/Button/BackButton';
 import CoverArtPiece from './sections/CoverArtPiece/CoverArtPiece';
+import IntroArtPiece from './sections/IntroArtPiece/IntroArtPiece';
 import './ArtPiece.css';
 
 function ArtPiece() {
     const { id } = useParams();
-    const { t } = useLanguage();
-    const localizedArtPieces = useLocalizedData(mockArtPiecesData);
-    
-    // Buscar la obra por ID
+    const { t , currentLanguage, language } = useLanguage();
+    const localizedArtPieces = useLocalizedData(mockArtPiecesData); 
     const artPiece = localizedArtPieces.find(piece => piece.id === id);
 
     if (!artPiece) {
@@ -31,7 +30,7 @@ function ArtPiece() {
             <CoverArtPiece artPiece={artPiece} />
             
             {/* Aquí irán las siguientes secciones */}
-            {/* <IntroArtPiece artPiece={artPiece} /> */}
+            <IntroArtPiece artPiece={artPiece} t={t} currentLanguage={currentLanguage}  />
             {/* <DetailsSection artPiece={artPiece} /> */}
             {/* <GallerySection artPiece={artPiece} /> */}
         </div>

@@ -1,0 +1,56 @@
+.intro-art-piece {
+    width: 100%;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    /* padding-left: 4rem; */
+    align-items: center;
+}
+
+.description-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin-top: 4rem;
+}
+
+.artpiece-title-year {
+    align-self: flex-start;
+    font-family: var(--serif-font);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.authors-ap {
+    margin: 0;
+    align-self: flex-start;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
+    font-size: 1.2rem;
+    /* width: 80%; */
+    margin-bottom: 3rem;
+}
+
+.intro-artpiece-texts {
+    width: 80%;
+    margin-bottom: 3rem;
+}
+
+/* .gallery-preview {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.gallery-preview-image {
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+} */

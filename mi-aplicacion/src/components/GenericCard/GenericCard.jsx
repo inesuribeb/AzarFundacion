@@ -5,11 +5,13 @@ function GenericCard({
     title,
     description,
     onClick,
-    className = ''
+    className = '',
+    isSingle = false
 }) {
     return (
         <div
-            className={`generic-card ${className}`}
+            // className={`generic-card ${className}`}
+            className={`generic-card ${className} ${isSingle ? 'single-card' : ''}`}
             onClick={onClick}
         >
             <div className="card-image-container">
