@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useHeader } from '../../contexts/HeaderContext';
 import { useLanguage } from '../../contexts/LanguageContext';
-import Hero from './sections/Hero/Hero';
+import Hero2 from './sections/Hero/Hero2';
 import Intro from './sections/Intro/Intro';
 import OpenCall from './sections/OpenCall/OpenCall';
 import './Home.css'
@@ -32,7 +32,7 @@ function Home() {
 
     return (
         <div className='home-content'>
-            <Hero t={t}/>
+            <Hero2 t={t}/>
             <Intro t={t} getRoute={getRoute}/>
             <OpenCall t={t}/>
         </div>
