@@ -13,7 +13,13 @@
     pointer-events: none; 
 }
 
-.header h1,
+/* .header h1,
+.header-right,
+.sandwich-toggle,
+.shopping-basket {
+    pointer-events: auto;
+} */
+.header-logo,
 .header-right,
 .sandwich-toggle,
 .shopping-basket {
@@ -31,7 +37,7 @@
     color: inherit;
 }
 
-.header h1 {
+/* .header h1 {
     z-index: 1002;
     position: relative;
     color: var(--corporative-color);
@@ -46,9 +52,23 @@
     opacity: 0;
     transform: translateY(-20px);
     pointer-events: none;
+} */
+.header-logo {
+    z-index: 1002;
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.fundacion {
+.header-logo.hidden-title {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+
+
+/* .fundacion {
     font-weight: 100; 
     letter-spacing: 0.1rem;
 }
@@ -56,7 +76,18 @@
 .azar {
     font-weight: 600;
     letter-spacing: 0.2rem;
+} */
+
+.header-logo img {
+    height: 2.8rem; /* Equivalente al font-size del h1 */
+    width: auto;
+    margin-top: 0.5rem;
+    transition: transform 0.2s ease;
 }
+
+/* .header-logo img:hover {
+    transform: scale(1.05);
+} */
 
 /* Nuevo contenedor para los elementos de la derecha */
 .header-right {

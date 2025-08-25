@@ -73,7 +73,7 @@ function Header() {
     return (
         <>
             <div className="header">
-                <h1 className={shouldHideTitle ? 'hidden-title' : ''}>
+                {/* <h1 className={shouldHideTitle ? 'hidden-title' : ''}>
                     <Link 
                         to={getRoute('home')} 
                         className="header-home-link"
@@ -82,7 +82,16 @@ function Header() {
                         <span className="fundacion">FUNDACIÓN </span>
                         <span className="azar">AZAR</span>
                     </Link>
-                </h1>
+                </h1> */}
+                <div className={`header-logo ${shouldHideTitle ? 'hidden-title' : ''}`}>
+                    <Link
+                        to={getRoute('home')}
+                        className="header-home-link"
+                        onClick={closeMenu}
+                    >
+                        <img src="/Images/Logo/LogoAzul2.png" alt="Fundación Azar" />
+                    </Link>
+                </div>
 
                 <div className="header-right">
                     <ShoppingBasket
