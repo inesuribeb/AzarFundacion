@@ -1,7 +1,7 @@
 export const mockResidencias = [
     {
         id: "residencia-1",
-        image: "/Images/Residencies/Residency01/residency01-01.png",
+        image: "/Images/Header/HeaderResidencia.jpg",
 
         title: {
             es: "Residencia Enero 2025",
