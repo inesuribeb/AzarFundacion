@@ -119,7 +119,8 @@ function IntroResidencies({ t }) {
                     </div>
                 </div>
                 <div className='right-column-intro'>
-                    <img src="/Images/ResidenciesProgram/Intro/bodegon-ivan.png" alt="" />
+                    {/* <img src="/Images/ResidenciesProgram/Intro/bodegon-ivan.png" alt="" /> */}
+                    <img src="/Images/Publications/Publication01/Residencias-1.jpg" alt="" />
                 </div>
             </div>
         </section>

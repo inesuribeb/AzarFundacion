@@ -12,7 +12,8 @@ function IntroRPhone({ t }) {
                     <MediumSans>{t('introTitle')}</MediumSans>
                 </div>
                 <div className='introR-image'>
-                    <img src="/Images/ResidenciesProgram/Intro/bodegon-ivan.png" alt="" />
+                    {/* <img src="/Images/ResidenciesProgram/Intro/bodegon-ivan.png" alt="" /> */}
+                    <img src="/Images/Publications/Publication01/Residencias-1.jpg" alt="" />
                 </div>
                 <div className='introR-text'>
                     <Texts>{t('introText')}</Texts>
