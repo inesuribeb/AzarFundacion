@@ -1,3 +1,120 @@
+// import { useState, useEffect } from 'react';
+// import { Link } from 'react-router-dom';
+// import { useLanguage } from '../../contexts/LanguageContext';
+// import { useHeader } from '../../contexts/HeaderContext';
+// import { useCart } from '../../contexts/CartContext';
+// import Navigation2 from './Navigation/Navigation2';
+// import LanguageToggle from './LanguageToggle/LanguageToggle';
+// import ShoppingBasket from './ShoppingBasket/ShoppingBasket';
+// import './Header.css'
+
+// function Header() {
+//     const [isMenuOpen, setIsMenuOpen] = useState(false);
+//     const [isMenuClosing, setIsMenuClosing] = useState(false);
+//     const { t, getRoute } = useLanguage();
+//     const [shouldUseLightColor, setShouldUseLightColor] = useState(false);
+//     const { hideTitle } = useHeader();
+//     const [isScrollingDown, setIsScrollingDown] = useState(false);
+//     const [lastScrollY, setLastScrollY] = useState(0);
+
+//     useEffect(() => {
+//         const handleScroll = () => {
+//             const currentScrollY = window.scrollY;
+
+//             if (Math.abs(currentScrollY - lastScrollY) > 10) {
+//                 if (currentScrollY > lastScrollY && currentScrollY > 100) {
+//                     setIsScrollingDown(true);
+//                 } else if (currentScrollY < lastScrollY) {
+//                     setIsScrollingDown(false);
+//                 }
+//                 setLastScrollY(currentScrollY);
+//             }
+//         };
+
+//         let ticking = false;
+//         const optimizedScroll = () => {
+//             if (!ticking) {
+//                 requestAnimationFrame(() => {
+//                     handleScroll();
+//                     ticking = false;
+//                 });
+//                 ticking = true;
+//             }
+//         };
+
+//         window.addEventListener('scroll', optimizedScroll, { passive: true });
+//         return () => window.removeEventListener('scroll', optimizedScroll);
+//     }, [lastScrollY]);
+
+//     const toggleMenu = () => {
+//         if (isMenuOpen) {
+//             setIsMenuClosing(true);
+//             setTimeout(() => {
+//                 setIsMenuOpen(false);
+//                 setIsMenuClosing(false);
+//             }, 750);
+//         } else {
+//             setIsMenuOpen(true);
+//         }
+//     };
+
+//     const closeMenu = () => {
+//         if (isMenuOpen) {
+//             toggleMenu();
+//         }
+//     };
+
+//     const handleHoverChange = (lightColor) => {
+//         setShouldUseLightColor(lightColor);
+//     };
+
+//     const shouldHideTitle = (hideTitle && !isMenuOpen) || (isScrollingDown && !isMenuOpen);
+
+//     return (
+//         <>
+//             <div className="header">
+//                 <div className={`header-logo ${shouldHideTitle ? 'hidden-title' : ''}`}>
+//                     <Link
+//                         to={getRoute('home')}
+//                         className="header-home-link"
+//                         onClick={closeMenu}
+//                     >
+//                         <img src="/Images/Logo/LogoAzul2.png" alt="Fundación Azar" />
+//                     </Link>
+//                 </div>
+
+//                 <div className="header-right">
+//                     <ShoppingBasket
+//                         shouldUseLightColor={shouldUseLightColor}
+//                     />
+//                     <button
+//                         className={`sandwich-toggle ${isMenuOpen ? 'active' : ''} ${shouldUseLightColor ? 'light' : ''}`}
+//                         onClick={toggleMenu}
+//                         aria-label="Toggle menu"
+//                     >
+//                         <span className="line"></span>
+//                         <span className="line"></span>
+//                     </button>
+//                 </div>
+//             </div>
+
+//             {(isMenuOpen || isMenuClosing) && (
+//                 <div className={`dropdown-menu ${isMenuClosing ? 'closing' : ''}`}>
+//                     <LanguageToggle closeMenu={toggleMenu} />
+//                     <Navigation2
+//                         closeMenu={toggleMenu}
+//                         onHoverChange={handleHoverChange}
+//                         isClosing={isMenuClosing}
+//                     />
+//                 </div>
+//             )}
+//         </>
+//     )
+// }
+
+// export default Header;
+
+
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
@@ -13,7 +130,10 @@ function Header() {
     const [isMenuClosing, setIsMenuClosing] = useState(false);
     const { t, getRoute } = useLanguage();
     const [shouldUseLightColor, setShouldUseLightColor] = useState(false);
-    const { hideTitle } = useHeader();
+    
+    // CAMBIO: Ahora también obtenemos las nuevas variables del context
+    const { hideTitle, useLightLogo, useLightHamburger } = useHeader();
+    
     const [isScrollingDown, setIsScrollingDown] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -70,26 +190,27 @@ function Header() {
 
     const shouldHideTitle = (hideTitle && !isMenuOpen) || (isScrollingDown && !isMenuOpen);
 
+    // CAMBIO: Decidir qué logo mostrar
+    const logoSrc = useLightLogo 
+        ? "/Images/Logo/LogoBlanco2.png" 
+        : "/Images/Logo/LogoAzul2.png";
+
+    // CAMBIO: La hamburguesa puede ser light por context O por hover (como antes)
+    // const hamburgerShouldBeLight = useLightHamburger || shouldUseLightColor;
+    const hamburgerShouldBeLight = (useLightHamburger && !isMenuOpen) || shouldUseLightColor;
+
+
     return (
         <>
             <div className="header">
-                {/* <h1 className={shouldHideTitle ? 'hidden-title' : ''}>
-                    <Link 
-                        to={getRoute('home')} 
-                        className="header-home-link"
-                        onClick={closeMenu}
-                    >
-                        <span className="fundacion">FUNDACIÓN </span>
-                        <span className="azar">AZAR</span>
-                    </Link>
-                </h1> */}
                 <div className={`header-logo ${shouldHideTitle ? 'hidden-title' : ''}`}>
                     <Link
                         to={getRoute('home')}
                         className="header-home-link"
                         onClick={closeMenu}
                     >
-                        <img src="/Images/Logo/LogoAzul2.png" alt="Fundación Azar" />
+                        {/* CAMBIO: Ahora usa la variable logoSrc */}
+                        <img src={logoSrc} alt="Fundación Azar" />
                     </Link>
                 </div>
 
@@ -98,7 +219,7 @@ function Header() {
                         shouldUseLightColor={shouldUseLightColor}
                     />
                     <button
-                        className={`sandwich-toggle ${isMenuOpen ? 'active' : ''} ${shouldUseLightColor ? 'light' : ''}`}
+                        className={`sandwich-toggle ${isMenuOpen ? 'active' : ''} ${hamburgerShouldBeLight ? 'light' : ''}`}
                         onClick={toggleMenu}
                         aria-label="Toggle menu"
                     >

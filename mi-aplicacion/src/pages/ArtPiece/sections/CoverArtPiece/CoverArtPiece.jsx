@@ -28,13 +28,17 @@
 // export default CoverArtPiece;
 
 import { useEffect, useRef, useState } from 'react';
+import { useHeader } from '../../../../contexts/HeaderContext';
 import './CoverArtPiece.css';
 
-function CoverArtPiece({ artPiece }) {
+function CoverArtPiece({ artPiece, lightHeader = {} }) {
     const sectionRef = useRef(null);
     const imageRef = useRef(null);
     const containerRef = useRef(null);
     const [sectionHeight, setSectionHeight] = useState('200vh');
+    const { setUseLightLogo, setUseLightHamburger } = useHeader();
+
+    const { logo = false, hamburger = false } = lightHeader;
 
     if (!artPiece) return null;
 
@@ -63,6 +67,33 @@ function CoverArtPiece({ artPiece }) {
             window.removeEventListener('resize', calculateHeight);
         };
     }, [artPiece]);
+
+    useEffect(() => {
+        if (!logo && !hamburger) return; 
+
+        const handleScroll = () => {
+            if (!sectionRef.current || !containerRef.current) return;
+
+            const section = sectionRef.current;
+            const rect = section.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            const isInSection = rect.top <= 0 && rect.bottom > 0;
+
+            if (logo) setUseLightLogo(isInSection);
+            if (hamburger) setUseLightHamburger(isInSection);
+        };
+
+        if (logo) setUseLightLogo(true);
+        if (hamburger) setUseLightHamburger(true);
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            if (logo) setUseLightLogo(false);
+            if (hamburger) setUseLightHamburger(false);
+        };
+    }, [logo, hamburger, setUseLightLogo, setUseLightHamburger]);
 
     useEffect(() => {
         const handleScroll = () => {

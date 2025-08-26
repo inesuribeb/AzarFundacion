@@ -11,21 +11,24 @@
 // export default Hero2;
 
 import { useEffect, useRef, useState } from 'react';
+import { useHeader } from '../../../../contexts/HeaderContext';
 import './Hero2.css';
 
-function Hero2({ t }) {
+function Hero2({ t, lightHeader = {} }) {
     const sectionRef = useRef(null);
     const backgroundRef = useRef(null);
     const containerRef = useRef(null);
     const [sectionHeight, setSectionHeight] = useState('200vh');
+    const { setUseLightLogo, setUseLightHamburger } = useHeader();
+
+    // Extraer configuración de lightHeader
+    const { logo = false, hamburger = false } = lightHeader;
 
     useEffect(() => {
         const calculateHeight = () => {
             if (backgroundRef.current) {
-                // Para background-image, simulamos una altura mayor para el efecto
                 const viewportHeight = window.innerHeight;
-                // Asumimos que queremos un efecto de parallax moderado
-                const totalHeight = viewportHeight * 1.5; // 150% de altura extra para el scroll
+                const totalHeight = viewportHeight * 1.5;
                 setSectionHeight(`${totalHeight}px`);
             }
         };
@@ -39,6 +42,35 @@ function Hero2({ t }) {
         };
     }, []);
 
+    // useEffect para manejar el header light
+    useEffect(() => {
+        if (!logo && !hamburger) return;
+
+        const handleScroll = () => {
+            if (!sectionRef.current || !containerRef.current) return;
+
+            const section = sectionRef.current;
+            const rect = section.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            const isInSection = rect.top <= 0 && rect.bottom > 0;
+
+            if (logo) setUseLightLogo(isInSection);
+            if (hamburger) setUseLightHamburger(isInSection);
+        };
+
+        // Activar al inicio si está en la sección
+        if (logo) setUseLightLogo(true);
+        if (hamburger) setUseLightHamburger(true);
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            if (logo) setUseLightLogo(false);
+            if (hamburger) setUseLightHamburger(false);
+        };
+    }, [logo, hamburger, setUseLightLogo, setUseLightHamburger]);
+
     useEffect(() => {
         const handleScroll = () => {
             if (!sectionRef.current || !backgroundRef.current || !containerRef.current) return;
@@ -49,11 +81,9 @@ function Hero2({ t }) {
             const rect = section.getBoundingClientRect();
             const windowHeight = window.innerHeight;
 
-            // Para background-image, simulamos el movimiento cambiando background-position
-            const maxScroll = windowHeight * 0.3; // 30% de movimiento del background
+            const maxScroll = windowHeight * 0.3;
 
             if (rect.top <= 0 && rect.bottom > windowHeight) {
-                // Fase activa: fixed con scroll interno
                 container.style.display = 'flex';
                 container.style.position = 'fixed';
                 container.style.top = '0px';
@@ -66,7 +96,6 @@ function Hero2({ t }) {
                 background.style.backgroundPosition = `center ${-backgroundOffset}px`;
 
             } else if (rect.bottom <= windowHeight && rect.bottom > 0) {
-                // Fase final: absolute al final
                 container.style.display = 'flex';
                 container.style.position = 'absolute';
                 container.style.top = `${rect.height - windowHeight}px`;
@@ -75,7 +104,6 @@ function Hero2({ t }) {
                 background.style.backgroundPosition = `center ${-maxScroll}px`;
 
             } else if (rect.top > 0) {
-                // Antes de la sección: mostrar en posición inicial
                 container.style.display = 'flex';
                 container.style.position = 'fixed';
                 container.style.top = '0px';
@@ -83,7 +111,6 @@ function Hero2({ t }) {
                 background.style.backgroundPosition = 'center center';
 
             } else {
-                // Después de la sección: ocultar
                 container.style.display = 'none';
             }
         };

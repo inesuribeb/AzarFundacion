@@ -26,7 +26,7 @@ function Collaboration() {
 
     return (
         <div className="collaboration-page">
-            <BackButton variant="floating" />
+            {/* <BackButton variant="floating" /> */}
             
             <CoverCollab collaboration={collaboration} t={t} currentLanguage={currentLanguage}/>
             <DetailsColab collaboration={collaboration} t={t} currentLanguage={currentLanguage}/>

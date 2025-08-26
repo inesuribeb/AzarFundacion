@@ -1,12 +1,11 @@
 import { useParams } from 'react-router-dom';
-import { useState, useRef, useEffect } from 'react'; 
+import { useState, useRef, useEffect } from 'react';
 import { mockResidencias } from '../../utils/Data/ResidenciesData';
 import { useLocalizedData } from '../../components/Hooks/Hooks';
 import { useLanguage } from '../../contexts/LanguageContext';
 import BackButton from '../../components/Button/BackButton';
 import CoverResidency from './sections/CoverResidency/CoverResidency';
 import DescriptionResidency from './sections/DescriptionResidency/DescriptionResidency';
-import Jury from './sections/Jury/Jury';
 import Participants from './sections/Participants/Participants';
 import PublicationMention from './sections/PublicationMention/PublicationMention';
 import ArtPieceMention from './sections/ArtPieceMention/ArtPieceMention';
@@ -20,7 +19,7 @@ function Residency() {
     const [isParticipantsActive, setIsParticipantsActive] = useState(false);
     const [isAutoScrolling, setIsAutoScrolling] = useState(false); // ← AQUÍ, no dentro del useEffect
     const participantsRef = useRef(null);
-    
+
     const residencia = localizedResidencias.find(res => res.id === id);
 
     useEffect(() => {
@@ -30,21 +29,20 @@ function Residency() {
                 const entry = entries[0];
                 const ratio = entry.intersectionRatio;
                 const isFullyVisible = ratio >= 0.95;
-                
-                // Enganche automático
+
                 if (ratio >= 0.9 && ratio < 0.99 && !isAutoScrolling) {
                     console.log('🧲 Enganche automático activado');
                     setIsAutoScrolling(true);
-                    participantsRef.current?.scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'center' 
+                    participantsRef.current?.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
                     });
-                    
+
                     setTimeout(() => {
                         setIsAutoScrolling(false);
                     }, 1000);
                 }
-                
+
                 setIsParticipantsActive(isFullyVisible);
                 console.log('Participants active:', isFullyVisible, 'ratio:', ratio);
             },
@@ -63,7 +61,7 @@ function Residency() {
                 observer.unobserve(participantsRef.current);
             }
         };
-    }, [isAutoScrolling]); 
+    }, [isAutoScrolling]);
 
     if (!residencia) {
         return (
@@ -76,21 +74,42 @@ function Residency() {
 
     return (
         <div className="residency-page">
-            <CoverResidency residencia={residencia} t={t} currentLanguage={currentLanguage}/>
-            <DescriptionResidency residencia={residencia} t={t} currentLanguage={currentLanguage}/>
-            
+            <CoverResidency
+                residencia={residencia}
+                t={t}
+                currentLanguage={currentLanguage}
+                lightHeader={{ logo: true }}
+            />
+            <DescriptionResidency
+                residencia={residencia}
+                t={t}
+                currentLanguage={currentLanguage}
+            />
+
             <div ref={participantsRef}>
-                <Participants 
-                    residencia={residencia} 
-                    t={t} 
+                <Participants
+                    residencia={residencia}
+                    t={t}
                     currentLanguage={currentLanguage}
                     isActive={isParticipantsActive}
                 />
             </div>
-            
-            <ArtPieceMention residencia={residencia} t={t} currentLanguage={currentLanguage}/>
-            <PublicationMention residencia={residencia} t={t} currentLanguage={currentLanguage}/>
-            <ExhibitionMention residencia={residencia} t={t} currentLanguage={currentLanguage}/>
+
+            <ArtPieceMention
+                residencia={residencia}
+                t={t}
+                currentLanguage={currentLanguage}
+            />
+            <PublicationMention
+                residencia={residencia}
+                t={t}
+                currentLanguage={currentLanguage}
+            />
+            <ExhibitionMention
+                residencia={residencia}
+                t={t}
+                currentLanguage={currentLanguage}
+            />
         </div>
     );
 }

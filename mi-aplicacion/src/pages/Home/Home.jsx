@@ -6,13 +6,48 @@ import Intro2 from './sections/Intro/Intro2';
 import OpenCall from './sections/OpenCall/OpenCall';
 import './Home.css'
 
+// function Home() {
+//     const { setHideTitle } = useHeader();
+//     const { t , getRoute } = useLanguage();
+    
+//     useEffect(() => {
+//         const handleScroll = () => {
+//             const heroSection = document.querySelector('.hero-section');
+//             if (!heroSection) return;
+            
+//             const heroRect = heroSection.getBoundingClientRect();
+//             const isInHero = heroRect.top <= 0 && heroRect.bottom > 0;
+            
+//             setHideTitle(isInHero);
+//         };
+        
+//         setHideTitle(true);
+        
+//         window.addEventListener('scroll', handleScroll);
+//         return () => {
+//             window.removeEventListener('scroll', handleScroll);
+//             setHideTitle(false); 
+//         };
+//     }, [setHideTitle]);
+
+//     return (
+//         <div className='home-content'>
+//             <Hero2 t={t}/>
+//             <Intro2 t={t} getRoute={getRoute}/>
+//             <OpenCall t={t}/>
+//         </div>
+//     )
+// }
+
+// export default Home;
+
 function Home() {
     const { setHideTitle } = useHeader();
     const { t , getRoute } = useLanguage();
     
     useEffect(() => {
         const handleScroll = () => {
-            const heroSection = document.querySelector('.hero-section');
+            const heroSection = document.querySelector('.hero2-section');
             if (!heroSection) return;
             
             const heroRect = heroSection.getBoundingClientRect();
@@ -26,13 +61,16 @@ function Home() {
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            setHideTitle(false); 
+            setHideTitle(false);
         };
     }, [setHideTitle]);
 
     return (
         <div className='home-content'>
-            <Hero2 t={t}/>
+            <Hero2 
+                t={t} 
+                lightHeader={{ hamburger: true }}
+            />
             <Intro2 t={t} getRoute={getRoute}/>
             <OpenCall t={t}/>
         </div>

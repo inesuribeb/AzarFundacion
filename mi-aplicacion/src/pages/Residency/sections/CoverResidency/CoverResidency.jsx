@@ -33,13 +33,18 @@
 // export default CoverResidency;
 
 import { useEffect, useRef, useState } from 'react';
+import { useHeader } from '../../../../contexts/HeaderContext';
 import './CoverResidency.css';
 
-function CoverResidency({ residencia }) {
+function CoverResidency({ residencia, lightHeader = {} }) {
     const sectionRef = useRef(null);
     const imageRef = useRef(null);
     const containerRef = useRef(null);
     const [sectionHeight, setSectionHeight] = useState('200vh');
+    const { setUseLightLogo, setUseLightHamburger } = useHeader();
+
+    // Extraer configuración de lightHeader
+    const { logo = false, hamburger = false } = lightHeader;
 
     if (!residencia) return null;
 
@@ -69,6 +74,35 @@ function CoverResidency({ residencia }) {
         };
     }, [residencia]);
 
+    // useEffect para manejar el header light
+    useEffect(() => {
+        if (!logo && !hamburger) return;
+
+        const handleScroll = () => {
+            if (!sectionRef.current || !containerRef.current) return;
+
+            const section = sectionRef.current;
+            const rect = section.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            const isInSection = rect.top <= 0 && rect.bottom > 0;
+
+            if (logo) setUseLightLogo(isInSection);
+            if (hamburger) setUseLightHamburger(isInSection);
+        };
+
+        // Activar al inicio si está en la sección
+        if (logo) setUseLightLogo(true);
+        if (hamburger) setUseLightHamburger(true);
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            if (logo) setUseLightLogo(false);
+            if (hamburger) setUseLightHamburger(false);
+        };
+    }, [logo, hamburger, setUseLightLogo, setUseLightHamburger]);
+
     useEffect(() => {
         const handleScroll = () => {
             if (!sectionRef.current || !imageRef.current || !containerRef.current) return;
@@ -84,7 +118,6 @@ function CoverResidency({ residencia }) {
             const maxScroll = Math.max(0, imageHeight - availableHeight);
 
             if (rect.top <= 0 && rect.bottom > windowHeight) {
-                // Fase activa: fixed con scroll interno
                 container.style.display = 'grid';
                 container.style.position = 'fixed';
                 container.style.top = '0px';
@@ -97,7 +130,6 @@ function CoverResidency({ residencia }) {
                 image.style.transform = `translateY(${translateY}px)`;
 
             } else if (rect.bottom <= windowHeight && rect.bottom > 0) {
-                // Fase final: absolute al final
                 container.style.display = 'grid';
                 container.style.position = 'absolute';
                 container.style.top = `${rect.height - windowHeight}px`;
@@ -106,7 +138,6 @@ function CoverResidency({ residencia }) {
                 image.style.transform = `translateY(-${maxScroll}px)`;
 
             } else if (rect.top > 0) {
-                // Antes de la sección: mostrar en posición inicial
                 container.style.display = 'grid';
                 container.style.position = 'fixed';
                 container.style.top = '0px';
@@ -114,7 +145,6 @@ function CoverResidency({ residencia }) {
                 image.style.transform = 'translateY(0px)';
 
             } else {
-                // Después de la sección: ocultar
                 container.style.display = 'none';
             }
         };
