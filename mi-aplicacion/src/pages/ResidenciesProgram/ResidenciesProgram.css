@@ -2,21 +2,12 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    /* padding: 2rem 2rem; */
-
-    /* padding-bottom: 60px; */
 }
 
 .RP-sections {
     width: 100%;
-    /* gap:3rem; */
 }
 
-/* .RP-sections > div {
-    min-height: 100vh;
-} */
-
-/* Asegurar que la navegación no interfiera con el contenido */
 .bottom-navigation {
     position: fixed;
     bottom: 0;
@@ -25,7 +16,6 @@
     z-index: 1000;
 }
 
-/* Media queries */
 @media (max-width: 768px) {
     .residencies-program-content {
         padding-bottom: 50px;

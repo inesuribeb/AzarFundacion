@@ -26,7 +26,7 @@
 
 .carrusel-image {
     width: 100%;
-    height: 300px;
+    aspect-ratio: 3/4;
     object-fit: cover;
     border-radius: 0px;
 }
@@ -38,11 +38,8 @@
 
 .carrusel-name {
     font-size: 1.4rem;
-    /* font-weight: 600; */
     color: var(--dark-color);
     margin: 0 0 0.1rem 0;
-    /* font-family: var(--main-font); */
-
     font-family: var(--futura-font);
     font-weight: var(--futura-medium);
 }
@@ -51,8 +48,6 @@
     font-size: 1.1rem;
     color: var(--dark-color);
     margin: 0;
-    /* font-family: var(--main-font); */
-
     font-family: var(--futura-font);
     font-weight: var(--futura-book);
 }

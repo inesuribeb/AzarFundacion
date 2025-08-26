@@ -14,9 +14,6 @@ function Foundation() {
             <section className="vision-section">
                 <Vision t={t} />
             </section>
-            {/* <section className="team-container">
-                <Team t={t} />
-            </section> */}
             <section className="team-container">
                 {isMobile ? (
                     <TeamPhone t={t} />

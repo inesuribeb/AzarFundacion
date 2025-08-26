@@ -1,10 +1,8 @@
-/* 1. Contenedor principal */
 .intro-residencies-section {
     position: relative;
     width: 100%;
 }
 
-/* 2. Contenedor único que cambia de fixed a absolute */
 .intro-viewport-container {
     position: fixed;
     top: 0;
@@ -13,18 +11,15 @@
     height: 100vh;
     display: flex;
     flex-direction: row;
-    /* padding: 9rem 2rem 0rem; */
     overflow: hidden;
     will-change: transform, top;
     z-index: -1; 
 }
 
-/* Alternativa: aplicar clip-path para corte limpio en top */
 .intro-viewport-container.clipped {
     clip-path: inset(0 0 0 0); 
 }
 
-/* 3. Columna izquierda */
 .left-column-intro {
     flex: 1;
     min-width: 0;
@@ -34,10 +29,8 @@
     overflow: hidden;
 }
 
-/* 4. Contenido que se mueve */
 .intro-content-wrapper {
     padding: 9rem 2rem 0rem;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -45,7 +38,6 @@
     will-change: transform;
 }
 
-/* 5. Columna derecha */
 .right-column-intro {
     flex: 1;
     min-width: 0;
@@ -68,3 +60,84 @@
     object-fit: contain;
     padding-bottom: 3rem;
 }
+
+/* @media (max-width: 1024px) {
+    .intro-viewport-container {
+        position: static;
+        height: auto;
+        flex-direction: column;
+        padding: 0;
+        overflow: visible;
+        z-index: auto;
+    }
+
+    .left-column-intro {
+        position: static;
+        overflow: visible;
+        order: 1;
+    }
+
+    .intro-content-wrapper {
+        position: static;
+        padding: 6rem 3rem 0rem;
+        transform: none !important;
+    }
+
+    .right-column-intro {
+        order: 2;
+        padding: 2rem 3rem 4rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right-column-intro img {
+        width: 70%;
+        max-height: 60vh;
+        padding-bottom: 0;
+    }
+
+    .intro-titles {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+  
+    .intro-viewport-container {
+        position: static;
+        height: auto;
+        flex-direction: column;
+        padding: 0;
+        overflow: visible;
+        z-index: auto;
+    }
+
+    .left-column-intro {
+        position: static;
+        overflow: visible;
+        order: 1;
+    }
+
+    .intro-content-wrapper {
+        position: static;
+        padding: 4rem 1.5rem 0rem;
+        transform: none !important;
+    }
+
+    .right-column-intro {
+        order: 2;
+        padding: 2rem 1.5rem 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right-column-intro img {
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .intro-titles {
+        margin-bottom: 2.5rem;
+    }
+}
+ */

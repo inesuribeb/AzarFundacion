@@ -22,7 +22,6 @@
     margin-top: 90vh;
     background-color: var(--light-color); 
     min-height: 100vh;
-    /* padding: 50px 0; */
     padding: 1rem 2rem;
 
 }
@@ -33,8 +32,42 @@
 
 .team-container {
     background-color: white;
-    /* border-radius: 20px 20px 0 0;  */
-    /* margin-left: 2rem;
-    margin-right: 2rem; */
     border-top: 2px solid var(--dark-color);
+    /* border-radius: 10px; */
 }
+
+@media (max-width: 768px) {
+    .foundation-container {
+        position: relative;
+        width: 100%;
+    }
+ 
+    .vision-section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        overflow: hidden;
+        padding: 0.5rem 1rem; 
+    }
+ 
+    .team-container {
+        position: relative;
+        z-index: 2;
+        margin-top: 90vh;
+        background-color: var(--light-color); 
+        min-height: 100vh;
+        padding: 1rem; 
+    }
+ 
+    .vision-section {
+        background-color: var(--primary-color); 
+    }
+ 
+    .team-container {
+        background-color: white;
+        border-top: 2px solid var(--dark-color);
+    }
+ }

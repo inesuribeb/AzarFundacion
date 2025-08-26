@@ -1,0 +1,43 @@
+.introR-phone {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem 0rem 3rem;
+    padding-bottom: 0rem;
+}
+
+.introR-content {
+    order: 1;
+    margin-bottom: 0rem;
+    
+}
+
+.introR-titles {
+    margin-bottom: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.introR-text {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.introR-image {
+    /* order: 2; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.introR-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}

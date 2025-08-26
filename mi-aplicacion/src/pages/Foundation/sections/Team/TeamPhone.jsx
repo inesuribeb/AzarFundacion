@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Carrusel from './components/Carrusel';
+import MediumSans from '../../../../components/Titles/MediumSans/MediumSans';
 import Texts from '../../../../components/Texts/Texts';
 import './TeamPhone.css';
 
@@ -43,6 +44,10 @@ function TeamPhone({ t }) {
 
     return (
         <div className="team-phone">
+            <MediumSans                >
+                {t('teamTitle')}
+            </MediumSans>
+
             <div className="team-phone-intro">
                 <p dangerouslySetInnerHTML={{ __html: t('knowUs') }}></p>
             </div>

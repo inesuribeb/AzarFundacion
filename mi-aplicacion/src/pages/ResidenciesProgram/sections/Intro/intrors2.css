@@ -1,11 +1,8 @@
-/* 1. Contenedor principal */
-.intro-residencies-section {
+/* .intro-residencies-section {
     position: relative;
     width: 100%;
-    /* Altura calculada dinámicamente */
 }
 
-/* 2. Contenedor único que cambia de fixed a absolute */
 .intro-viewport-container {
     position: fixed;
     top: 0;
@@ -16,17 +13,14 @@
     flex-direction: row;
     padding: 9rem 2rem 0rem;
     overflow: hidden;
-    /* Transición suave para el cambio de posición */
     will-change: transform, top;
-    z-index: -1; /* Envía el contenedor detrás del header */
+    z-index: -1; 
 }
 
-/* Alternativa: aplicar clip-path para corte limpio en top */
 .intro-viewport-container.clipped {
-    clip-path: inset(0 0 0 0); /* Corta en los bordes del contenedor */
+    clip-path: inset(0 0 0 0); 
 }
 
-/* 3. Columna izquierda */
 .left-column-intro {
     flex: 1;
     min-width: 0;
@@ -36,7 +30,6 @@
     overflow: hidden;
 }
 
-/* 4. Contenido que se mueve */
 .intro-content-wrapper {
     position: absolute;
     top: 0;
@@ -45,7 +38,6 @@
     will-change: transform;
 }
 
-/* 5. Columna derecha */
 .right-column-intro {
     flex: 1;
     min-width: 0;
@@ -53,7 +45,7 @@
     justify-content: flex-end;
     align-items: flex-start;
     position: relative;
-    padding-top: 9rem; /* ✅ También aquí para mantener alineación */
+    padding-top: 9rem; 
 }
 
 .intro-titles {
@@ -76,14 +68,11 @@
 
 
 
-/* 1. Contenedor principal */
 .intro-residencies-section {
     position: relative;
     width: 100%;
-    /* Altura calculada dinámicamente */
 }
 
-/* 2. Contenedor único que cambia de fixed a absolute */
 .intro-viewport-container {
     position: fixed;
     top: 0;
@@ -92,19 +81,15 @@
     height: 100vh;
     display: flex;
     flex-direction: row;
-    /* padding: 9rem 2rem 0rem; */
     overflow: hidden;
-    /* Transición suave para el cambio de posición */
     will-change: transform, top;
-    z-index: -1; /* Envía el contenedor detrás del header */
+    z-index: -1; 
 }
 
-/* Alternativa: aplicar clip-path para corte limpio en top */
 .intro-viewport-container.clipped {
-    clip-path: inset(0 0 0 0); /* Corta en los bordes del contenedor */
+    clip-path: inset(0 0 0 0); 
 }
 
-/* 3. Columna izquierda */
 .left-column-intro {
     flex: 1;
     min-width: 0;
@@ -114,7 +99,6 @@
     overflow: hidden;
 }
 
-/* 4. Contenido que se mueve */
 .intro-content-wrapper {
     padding: 9rem 2rem 0rem;
 
@@ -125,7 +109,6 @@
     will-change: transform;
 }
 
-/* 5. Columna derecha */
 .right-column-intro {
     flex: 1;
     min-width: 0;
@@ -133,7 +116,7 @@
     justify-content: flex-end;
     align-items: flex-start;
     position: relative;
-    padding-top: 9rem; /* ✅ También aquí para mantener alineación */
+    padding-top: 9rem; 
 }
 
 .intro-titles {
@@ -151,4 +134,4 @@
     width: 80%;
     max-height: calc(100vh - 9rem);
     object-fit: contain;
-}
+} */

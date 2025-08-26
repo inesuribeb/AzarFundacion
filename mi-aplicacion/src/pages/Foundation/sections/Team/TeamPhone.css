@@ -1,23 +1,21 @@
 .team-phone {
-    padding: 2rem 0rem;
+    padding: 0rem 0rem;
     background-color: var(--light-color);
 }
 
 .team-phone-intro {
     text-align: left;
+    margin-top: 1rem;
     margin-bottom: 2rem;
     padding-left: 0;
 }
 
 .team-phone-intro p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--dark-color);
-    /* font-family: var(--main-font); */
-    /* font-weight: 300; */
     line-height: 1.4;
     margin: 0;
     padding: 0 0rem;
-
     font-family: var(--futura-font);
     font-weight: var(--futura-medium);
 }
@@ -25,7 +23,6 @@
 .team-phone-bio {
     padding: 2rem 0rem;
     margin-top: 0rem;
-    /* background-color: rgba(0, 0, 0, 0.02); */
     border-radius: 0px;
     animation: fadeIn 0.3s ease-in-out;
 }
@@ -37,7 +34,6 @@
     font-family: var(--futura-font);
     font-weight: var(--futura-medium);
     line-height: 1.4;
-    /* text-align: justify; */
 }
 
 .team-phone-bio blockquote::before,
@@ -51,7 +47,6 @@
     font-family: var(--main-font);
     font-weight: 300;
     line-height: 1.5;
-    /* text-align: justify; */
     margin-bottom: 1.5rem;
 }
 
