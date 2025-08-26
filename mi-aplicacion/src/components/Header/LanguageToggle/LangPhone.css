@@ -1,0 +1,30 @@
+.lang-toggle-phone {
+    display: flex;
+    /* align-self: center; */
+}
+
+.language-option-phone {
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    color: var(--light-neutral-color);
+    min-width: 50px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
+}
+
+.language-option-phone:hover {
+    color: var(--dark-color);
+}
+
+.language-option-phone.active {
+    color: var(--dark-color);
+    font-weight: 600;
+    font-weight: var(--futura-medium);
+}

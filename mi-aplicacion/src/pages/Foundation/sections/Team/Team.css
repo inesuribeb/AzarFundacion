@@ -135,9 +135,7 @@
 
 .team-intro {
     text-align: center;
-    /* margin-top: 0rem; */
     animation: fadeIn 0.5s ease-in-out;
-    /* margin-bottom: 4rem; */
 }
 
 .team-intro p {
@@ -147,7 +145,6 @@
     font-weight: 300;
     line-height: 1.4;
     margin: 0;
-    /* margin-bottom: 4rem; */
 }
 
 .team-bio,
@@ -179,7 +176,6 @@
 
 .team-bio blockquote {
     font-size: 1.6rem;
-    /* font-style: italic; */
     color: var(--dark-color);
     margin: 0 0 1rem 0;
     font-family: var(--main-font);
@@ -189,7 +185,6 @@
     margin-top: 4rem;
     width: 100%;
     text-align: justify;
-
     font-family: var(--futura-font);
     font-weight: var(--futura-medium);
 }

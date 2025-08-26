@@ -73,15 +73,17 @@
 /* Responsive */
 @media (max-width: 768px) {
     .card-content {
-        padding: 15px;
+        padding: 0px;
+        padding-top: 1rem;
+        margin-bottom: 2rem;
     }
     
     .card-title {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
     
     .card-subtitle {
-        font-size: 0.85rem;
+        font-size: 1rem;
     }
 }
 

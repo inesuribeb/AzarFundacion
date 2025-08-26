@@ -11,6 +11,7 @@
 // export default Hero2;
 
 import { useEffect, useRef, useState } from 'react';
+// import { useMobile } from '../../../../components/Hooks/useMobile';
 import { useHeader } from '../../../../contexts/HeaderContext';
 import './Hero2.css';
 

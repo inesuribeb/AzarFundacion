@@ -94,6 +94,7 @@
         width: 80%;
         margin-top: -8rem;
         margin-left: -4rem;
+        display: none;
     }
 }
 
@@ -102,5 +103,11 @@
         width: 85%;
         margin-top: -6rem;
         margin-left: -2rem;
+        display: none;
+    }
+
+    .hero2-section {
+        height: 100svh;
+        overflow: hidden;
     }
 }

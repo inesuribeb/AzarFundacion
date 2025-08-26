@@ -7,7 +7,9 @@ import { CartProvider } from "../contexts/CartContext";
 import { CartModalProvider } from "../components/GlobalCartModal/GlobalCartModal";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useResidencies } from "../contexts/ResidenciesContext";
+import { useMobile } from "../components/Hooks/useMobile";
 import Header from '../components/Header/Header';
+import HeaderPhone from "../components/Header/HeaderPhone";
 import BottomNavigation from "../pages/ResidenciesProgram/components/BottomNavigation";
 import './Root.css'
 
@@ -15,6 +17,7 @@ function AppContent() {
   const location = useLocation();
   const { t } = useLanguage();
   const { activeSection, setActiveSection } = useResidencies();
+  const isMobile = useMobile();
   
 
   useEffect(() => {
@@ -34,7 +37,9 @@ function AppContent() {
 
   return (
       <div className="app">
-          <Header />
+          {/* <Header /> */}
+          {isMobile ? <HeaderPhone /> : <Header />}
+
           <main className="outlet-desktop" key={location.pathname}>
               <Outlet />
           </main>
