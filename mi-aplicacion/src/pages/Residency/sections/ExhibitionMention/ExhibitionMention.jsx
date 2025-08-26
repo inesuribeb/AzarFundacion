@@ -40,7 +40,7 @@ function ExhibitionMention({ residencia, t, currentLanguage }) {
                         className="exhibition-link"
                     >
                         <img
-                            src={exhibition.image}
+                            src={exhibition.imageRef}
                             alt={exhibition.title[currentLanguage] || exhibition.title.es}
                             className="exhibition-image"
                         />

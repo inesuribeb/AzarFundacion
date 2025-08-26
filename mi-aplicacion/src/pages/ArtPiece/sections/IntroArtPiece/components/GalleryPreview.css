@@ -10,7 +10,7 @@
     width: 45%;
     height: auto;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 0px;
 }
 
 /* Cuando hay una sola imagen, hazla más grande */

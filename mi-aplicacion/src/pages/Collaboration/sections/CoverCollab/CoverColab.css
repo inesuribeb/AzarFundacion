@@ -72,6 +72,7 @@
     min-width: 0;
 }
 
+
 /* 4. Columna de imagen */
 .cover-colab-image {
     align-items: center;
@@ -120,6 +121,7 @@
     width: 100%;
     text-transform: uppercase;
     font-family: var(--serif-font);
+    width: 90%;
 }
 
 /* Responsive */

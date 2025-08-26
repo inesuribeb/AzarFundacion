@@ -5,8 +5,8 @@ export const residenciesProgramTranslations = {
         previousResidencies: 'Residencias Anteriores',
 
         residenciesProgramMini: 'Programa de Residencias',
-        introTitle: 'TIEMPO,<br/>ESPACIO +<br/>EXPERIMENTACIÓN',
-        introText:  'El programa de residencias es uno de los pilares principales de las actividades de Fundación Azar. Cada año, se propone una combinación distinta de disciplinas para que estas convivan, converjan y cocreen. A través de la experimentación conjunta, se impulsa la creación de una obra colectiva.Está es presentada al finalizar la residencia y pasa a formar parte del patrimonio de la Fundación Azar. <br/><br/>A través de la experimentación conjunta, se impulsa la creación de una obra colectiva. Ésta es presentada al finalizar la residencia y pasa a formar parte del patrimonio de la Fundación Azar.',
+        introTitle: 'TIEMPO,<br/>ESPACIO Y<br/>EXPERIMENTACIÓN',
+        introText:  'El programa de residencias es uno de los pilares principales de las actividades de Fundación Azar. Cada año se propone una combinación distinta de disciplinas para que convivan, converjan y cocreen. El objetivo es abrir un espacio de diálogo y colaboración donde las distintas prácticas se entrelacen, generando procesos que transformen tanto la creación individual como la colectiva.<br/><br/>En cada edición se impulsa la realización de una obra colectiva, fruto de la experimentación conjunta. Las residencias culminan en exposiciones, publicaciones y encuentros que buscan dar visibilidad al trabajo de los participantes y ofrecer al público una mirada más cercana y amplia sobre los procesos creativos y las obras que allí se desarrollan. ',
 
         finca: 'Finca El Azahar',
         fincaText: 'Las residencias de Fundación Azar tienen lugar en la Finca El Azahar, un antiguo lagar rodeado de alcornoques, olivos y frutales, cerca de Trujillo (Extremadura). La finca, dedicada a la agricultura regenerativa y la permacultura, ofrece a los residentes una habitación individual, espacios comunes y áreas al aire libre, así como zonas de trabajo que se adaptan a las necesidades de cada proyecto. <br/><br/>El silencio, la luz y los paseos por el campo crean un entorno que invita a la reflexión y a la creación. Al caer el día, la mesa y la chimenea se convierten en lugares de encuentro y colaboración.',
@@ -20,8 +20,8 @@ export const residenciesProgramTranslations = {
         previousResidencies: 'Previous Residencies',
 
         residenciesProgramMini: 'Residencies Program',
-        introTitle: 'TIME,<br/>SPACE +<br/>EXPERIMENTATION',
-        introText: 'The residency program is one of the main pillars of Fundación Azar’s activities. Each year, a different combination of disciplines is proposed so that they coexist, converge, and co-create. <br/><br/> Through joint experimentation, the creation of a collective work is encouraged. This is presented at the end of the residency and becomes part of Fundación Azar’s heritage.',
+        introTitle: 'TIME,<br/>SPACE AND<br/>EXPERIMENTATION',
+        introText: 'The residency program is one of the main pillars of Fundación Azar’s activities. Each year, a different combination of disciplines is proposed to coexist, converge, and co-create. The goal is to open a space for dialogue and collaboration where diverse practices intertwine, generating processes that transform both individual and collective creation.<br/><br/>Each edition encourages the production of a collective work as a result of joint experimentation. The residencies culminate in exhibitions, publications, and gatherings aimed at giving visibility to the participants’ work and offering the public a closer and broader insight into the creative processes and the works developed there.',
 
         finca: 'Finca El Azahar',
         fincaText: 'The residencies of Fundación Azar take place at Finca El Azahar, a former wine press surrounded by cork oaks, olive trees, and fruit trees near Trujillo (Extremadura). The estate, dedicated to regenerative agriculture and permaculture, offers residents a private room, common areas, and outdoor spaces, as well as workspaces that adapt to the needs of each project. <br/><br/>Silence, light, and countryside walks create an environment that inspires reflection and creativity. As evening falls, the table and fireplace become places for gathering and collaboration.',
@@ -35,8 +35,8 @@ export const residenciesProgramTranslations = {
         previousResidencies: 'Residências Anteriores',
 
         residenciesProgramMini: 'Programa de Residencias',
-        introTitle: 'TEMPO,<br/>ESPAÇO +<br/>EXPERIMENTAÇÃO',
-        introText: 'O programa de residências é um dos pilares principais das atividades da Fundação Azar. A cada ano, é proposta uma combinação diferente de disciplinas para que estas coexistam, converjam e cocriem. <br/><br/> Através da experimentação conjunta, é incentivada a criação de uma obra coletiva. Esta é apresentada ao final da residência e passa a fazer parte do patrimônio da Fundação Azar.',
+        introTitle: 'TEMPO,<br/>ESPAÇO E<br/>EXPERIMENTAÇÃO',
+        introText: 'O programa de residências é um dos principais pilares das atividades da Fundação Azar. A cada ano, propõe-se uma combinação diferente de disciplinas para que convivam, converjam e cocriem. O objetivo é abrir um espaço de diálogo e colaboração onde diferentes práticas se entrelacem, gerando processos que transformem tanto a criação individual quanto a coletiva.<br/><br/>Cada edição incentiva a realização de uma obra coletiva, fruto da experimentação conjunta. As residências culminam em exposições, publicações e encontros que buscam dar visibilidade ao trabalho dos participantes e oferecer ao público uma visão mais próxima e ampla sobre os processos criativos e as obras ali desenvolvidas.',
 
         finca: 'Finca El Azahar',
         fincaText: 'As residências da Fundação Azar têm lugar na Finca El Azahar, um antigo lagar rodeado por sobreiros, oliveiras e árvores de fruto, perto de Trujillo (Extremadura). A propriedade, dedicada à agricultura regenerativa e à permacultura, oferece aos residentes um quarto individual, espaços comuns e áreas ao ar livre, bem como locais de trabalho adaptados às necessidades de cada projeto. <br/><br/>O silêncio, a luz e os passeios pelo campo criam um ambiente que convida à reflexão e à criação. Ao cair da noite, a mesa e a lareira tornam-se pontos de encontro e colaboração.',

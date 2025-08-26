@@ -40,7 +40,7 @@ function ArtPieceMention({ residencia, t, currentLanguage }) {
                         alt={artPiece.title[currentLanguage] || artPiece.title.es}
                         className="artpiece-image"
                     />
-                    <h3>{artPiece.title[currentLanguage] || artPiece.title.es}</h3>
+                    <h3>{artPiece.title[currentLanguage] || artPiece.title.es} ({artPiece.year})</h3>
                 </Link>
 
                 {/* <h3>{artPiece.title[currentLanguage] || artPiece.title.es}</h3> */}

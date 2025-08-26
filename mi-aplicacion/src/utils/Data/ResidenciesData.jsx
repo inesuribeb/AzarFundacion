@@ -1,17 +1,21 @@
 export const mockResidencias = [
     {
         id: "residencia-1",
-        image: "/Images/Header/HeaderResidencia.jpg",
+        // imageR: "/Images/Header/HeaderResidencia.jpg",
+        imageR: "/Images/Residencies/Residency01/PortadaResi.jpg",
+
+        image: "/Images/Residencies/Residency01/CartelResidencia1.jpg",
+
 
         title: {
-            es: "Residencia Enero 2025",
-            en: "January 2025 Residency",
-            pt: "Residência Janeiro 2025"
+            es: "Residencia2025",
+            en: "2025Residency",
+            pt: "Residência2025"
         },
         title2: {
-            es: 'Fotografía,<br/> Escritura,<br/> y Cocina',
-            en: 'Photography,<br/> Writing,<br/> and Cooking',
-            pt: 'Fotografia,<br/> Escrita,<br/> e Culinária'
+            es: 'Escritura,<br/>Fotografía, <br/> y Cocina',
+            en: 'Writing,<br/>Photography, <br/> and Cooking',
+            pt: 'Escrita,<br/>Fotografia, <br/> e Culinária'
         },
         subtitle: {
             es: "Trujillo, Extremadura • Enero 2025",
@@ -24,9 +28,9 @@ export const mockResidencias = [
             pt: "Trujillo, Extremadura"
         },
         description: {
-            es: "Programa de residencia en agricultura regenerativa y permacultura",
-            en: "Residency program in regenerative agriculture and permaculture",
-            pt: "Programa de residência em agricultura regenerativa e permacultura"
+            es: "Primera edición del programa de residencias, que reunió la escritura, la fotografía y la cocina.",
+            en: "First edition of the residency program, which brought together writing, photography, and cooking.",
+            pt: "Primeira edição do programa de residências, que reuniu a escrita, a fotografia e a culinária."
         },
         textR: {
             es: 'El pasado enero de 2025, Fundación Azar celebró su <b>primera residencia</b> artística en la Finca El Azahar. Durante <b>tres semanas, seis residentes</b> — Florencia del Campo, María Esteve, Maria Gallemí, Mireya Hernández, Manuel Nieto y Gonzalo Quincoces— compartieron un espacio de creación, diálogo y convivencia. El proceso de selección comenzó con una <b>convocatoria abierta a nivel nacional</b>, dirigida a quienes trabajaran desde o a través de la escritura, la fotografía o la cocina.<br/><br/>',
@@ -46,7 +50,7 @@ export const mockResidencias = [
         residents: [
             {
                 id: 1,
-                image: '/Images/ResidenciesProgram/Intro/bodegon-ivan.png',
+                image: '/Images/Residencies/Residency01/Participants/Florencia.jpg',
                 name: 'Florencia del Campo',
                 origin: {
                     es: 'Buenos Aires, Argentina',
@@ -71,7 +75,7 @@ export const mockResidencias = [
             },
             {
                 id: 2,
-                image: '/Images/Publications/Publication01/portada.png',
+                image: '/Images/Residencies/Residency01/Participants/MariaEsteve.jpg',
                 name: 'María Esteve',
                 origin: {
                     es: 'Valencia, España',
@@ -96,7 +100,7 @@ export const mockResidencias = [
             },
             {
                 id: 3,
-                image: '/Images/ResidenciesProgram/Intro/bodegon-ivan.png',
+                image: '/Images/Residencies/Residency01/Participants/Mireya.jpg',
                 name: 'Mireya Hernández',
                 origin: {
                     es: 'Madrid, España',
@@ -121,7 +125,7 @@ export const mockResidencias = [
             },
             {
                 id: 4,
-                image: '/Images/Publications/Publication01/portada.png',
+                image: '/Images/Residencies/Residency01/Participants/MariaGallemi.jpg',
                 name: 'Maria Gallemí',
                 origin: {
                     es: 'Barcelona, España',
@@ -146,7 +150,7 @@ export const mockResidencias = [
             },
             {
                 id: 5,
-                image: '/Images/ResidenciesProgram/Intro/bodegon-ivan.png',
+                image: '/Images/Residencies/Residency01/Participants/ManuelNieto.jpg',
                 name: 'Manuel Nieto',
                 origin: {
                     es: 'Montevideo, Uruguay',
@@ -171,7 +175,7 @@ export const mockResidencias = [
             },
             {
                 id: 6,
-                image: '/Images/Publications/Publication01/portada.png',
+                image: '/Images/Residencies/Residency01/Participants/GonzaloQuincoces.jpg',
                 name: 'Gonzalo Quincoces',
                 origin: {
                     es: 'Bilbao, España',

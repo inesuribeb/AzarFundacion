@@ -194,6 +194,9 @@
     max-width: 100%;
     text-transform: uppercase;
     font-family: var(--serif-font);
+
+    /* font-family: var(--futura-font);
+    font-weight: var(--futura-book); */
 }
 
 /* Responsive */

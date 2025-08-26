@@ -176,7 +176,7 @@ function CoverResidency({ residencia, lightHeader = {} }) {
                 <div className="cover-residency-image">
                     <div ref={imageRef} className="image-wrapper">
                         <img 
-                            src={residencia.image} 
+                            src={residencia.imageR} 
                             alt={residencia.title}
                         />
                     </div>

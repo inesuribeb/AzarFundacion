@@ -117,7 +117,7 @@ function IntroResidencies({ t }) {
                             <MiniBlue>{t('residenciesProgramMini')}</MiniBlue>
                             <MediumSans>{t('introTitle')}</MediumSans>
                         </div>
-                        <div className="details-text">
+                        <div >
                             <Texts>{t('introText')}</Texts>
                         </div>
                     </div>

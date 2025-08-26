@@ -2,14 +2,14 @@ export const mockCollabsData = [
     {
         id: "collab-1",
         title: {
-            es: "Colaboración Circulo de Bellas Artes",
-            en: "Collaboration with Círculo de Bellas Artes",
-            pt: "Colaboração com o Círculo de Belas Artes"
+            es: "<em>Blanco</em>, una colaboración con el Circulo de Bellas Artes",
+            en: "<em>Blanco</em>, a collaboration with Círculo de Bellas Artes",
+            pt: "<em>Blanco</em>, uma colaboração com o Círculo de Belas Artes"
         },
         description: {
-            es: "Colaboración con César Borja y el Círculo BBAA en la exposición Blanco, en la que son protagonistas las fotografías de Nacho Criado ",
-            en: "Collaboration with César Borja and the Círculo de Bellas Artes in the exhibition Blanco, featuring photographs by Nacho Criado",
-            pt: "Colaboração com César Borja e o Círculo de Bellas Artes na exposição Blanco, que apresenta fotografias de Nacho Criado"        
+            es: "Una exposición de las fotografías del artista experimental español Nacho Criado",
+            en: "An exhibition of photographs by the Spanish experimental artist Nacho Criado",
+            pt: "Uma exposição das fotografias do artista experimental espanhol Nacho Criado"
         },
         textC: {
             es: "Fundación Azar tiene el placer de haber colaborado junto al comisario César Borja y el Círculo de Bellas Artes en la exposición Blanco, en la que son protagonistas las fotografías de Nacho Criado (Mengíbar, Jaén, 1943 - Madrid, 2010).<br/><br/>La exposición Blanco, articula una conjunción de acontecimientos que trascienden el propio concepto de la fotografía. Es el resultado de múltiples trabajos comprendidos en la primera mitad de los años setenta que discurren en torno a el lenguaje y la acción desde la fotografía, donde el objeto representado, se hace presente en el tiempo y en el espacio.<br/><br/>Abierta al público en la Sala Minerva del 4 de junio de 2025 al 28 de septiembre de 2025.",
@@ -21,7 +21,7 @@ export const mockCollabsData = [
             "/Images/Collaborations/Collab01/Collab01-1.jpg",
             "/Images/Collaborations/Collab01/Collab01-2.jpg",
             "/Images/Collaborations/Collab01/Collab01-3.jpg",
-            "/Images/Collaborations/Collab01/Collab01-4.jpg",    
+            "/Images/Collaborations/Collab01/Collab01-4.jpg",
         ]
     }
 ]

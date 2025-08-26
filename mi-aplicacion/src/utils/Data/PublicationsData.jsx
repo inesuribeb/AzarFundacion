@@ -1,13 +1,17 @@
 export const mockPublicationsData = [
     {
         id: "pub-1",
-        number: "01", 
+        number: "01",
         cover: "/Images/Publications/Publication01/portada.png",
         images: [
             "/Images/Publications/Publication01/pub01-01.jpg",
             "/Images/Publications/Publication02/pub02-01.png",
         ],
-        price: "€45.00", 
+        imageRef: [
+            "/Images/Publications/Publication01/MencionPubli1.jpg",
+            "/Images/Publications/Publication01/MencionPubli2.jpg",
+        ],
+        price: "€45.00",
 
         title: {
             es: "Una residencia narrada por: Ivan Floro",
