@@ -13,9 +13,9 @@ function Header() {
     const [isMenuClosing, setIsMenuClosing] = useState(false);
     const { t, getRoute } = useLanguage();
     const [shouldUseLightColor, setShouldUseLightColor] = useState(false);
-    
+
     const { hideTitle, useLightLogo, useLightHamburger } = useHeader();
-    
+
     const [isScrollingDown, setIsScrollingDown] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -72,8 +72,10 @@ function Header() {
 
     const shouldHideTitle = (hideTitle && !isMenuOpen) || (isScrollingDown && !isMenuOpen);
 
-    const logoSrc = useLightLogo 
-        ? "/Images/Logo/LogoBlanco2.png" 
+    const logoShouldBeLight = (useLightLogo && !isMenuOpen);
+
+    const logoSrc = logoShouldBeLight
+        ? "/Images/Logo/LogoBlanco2.png"
         : "/Images/Logo/LogoAzul2.png";
 
 
