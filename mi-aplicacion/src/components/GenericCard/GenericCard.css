@@ -35,6 +35,11 @@
     transition: transform 0.3s ease;
 }
 
+.exhibition-card .card-image,
+.artpiece-card .card-image {
+    object-position: center bottom;
+}
+
 /* .generic-card:hover .card-image {
     transform: scale(1.05);
 } */

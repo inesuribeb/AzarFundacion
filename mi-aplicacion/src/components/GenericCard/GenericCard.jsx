@@ -27,9 +27,6 @@ function GenericCard({
                     className="card-title"
                     dangerouslySetInnerHTML={{ __html: title }}
                 />
-                {/* {description && (
-                    <p className="card-subtitle">{description}</p>
-                )} */}
                 {description && (
                     <p
                         className="card-subtitle"
