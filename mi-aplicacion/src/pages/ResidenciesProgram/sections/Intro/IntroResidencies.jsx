@@ -115,18 +115,10 @@ function IntroResidencies({ t }) {
                     <div ref={contentRef} className='intro-content-wrapper'>
                         <div className='intro-titles'>
                             <MiniBlue>{t('residenciesProgramMini')}</MiniBlue>
-                            {/* <BigSerif>{t('introTitle')}</BigSerif> */}
                             <MediumSans>{t('introTitle')}</MediumSans>
                         </div>
-                        {/* <div className='intro-info'>
-                            <Texts size="large" className="intro-text">{t('introText')}</Texts>
-                        </div> */}
                         <div className="details-text">
-                            {/* <div
-                                dangerouslySetInnerHTML={{ __html: t('introText') }}
-                            /> */}
                             <Texts>{t('introText')}</Texts>
-
                         </div>
                     </div>
                 </div>
