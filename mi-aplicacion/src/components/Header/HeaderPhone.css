@@ -37,7 +37,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 35px;
-    height: 8px;
+    height: 7px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -76,3 +76,7 @@
     flex-direction: column;
 }
 
+
+.menu-toggle-phone.light span {
+    background-color: var(--light-color); 
+}

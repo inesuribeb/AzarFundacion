@@ -1,4 +1,3 @@
-// hooks/useMobile.js
 import { useState, useEffect } from 'react';
 
 export function useMobile() {
@@ -6,15 +5,12 @@ export function useMobile() {
 
     useEffect(() => {
         const checkMobile = () => {
-            // Detectar por ancho de pantalla (más confiable)
             const width = window.innerWidth;
             setIsMobile(width <= 768);
         };
 
-        // Verificar al montar
         checkMobile();
 
-        // Escuchar cambios de tamaño
         window.addEventListener('resize', checkMobile);
 
         return () => {

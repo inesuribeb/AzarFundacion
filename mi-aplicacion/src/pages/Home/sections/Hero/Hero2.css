@@ -64,7 +64,7 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .hero2-background img {
         width: 90%;
         margin-top: -12rem;
@@ -75,7 +75,8 @@
 @media (max-width: 768px) {
     .hero2-section {
         height: auto;
-        min-height: 100vh;
+        height: 80dvh;
+        overflow: hidden;
     }
     
     .hero2-container {
@@ -110,4 +111,4 @@
         height: 100svh;
         overflow: hidden;
     }
-}
+} */

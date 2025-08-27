@@ -1,17 +1,5 @@
-// import './Hero2.css'
-
-// function Hero2({ t }) {
-//     return (
-//         <section className='hero2-section'>
-//             <img src="/Images/Logo/Logo blanco.png" alt="logo-fundacion-azar" />
-//         </section>
-//     );
-// }
-
-// export default Hero2;
-
 import { useEffect, useRef, useState } from 'react';
-// import { useMobile } from '../../../../components/Hooks/useMobile';
+import { useMobile } from '../../../../components/Hooks/useMobile';
 import { useHeader } from '../../../../contexts/HeaderContext';
 import './Hero2.css';
 
@@ -22,7 +10,6 @@ function Hero2({ t, lightHeader = {} }) {
     const [sectionHeight, setSectionHeight] = useState('200vh');
     const { setUseLightLogo, setUseLightHamburger } = useHeader();
 
-    // Extraer configuración de lightHeader
     const { logo = false, hamburger = false } = lightHeader;
 
     useEffect(() => {
@@ -43,7 +30,6 @@ function Hero2({ t, lightHeader = {} }) {
         };
     }, []);
 
-    // useEffect para manejar el header light
     useEffect(() => {
         if (!logo && !hamburger) return;
 
@@ -60,7 +46,6 @@ function Hero2({ t, lightHeader = {} }) {
             if (hamburger) setUseLightHamburger(isInSection);
         };
 
-        // Activar al inicio si está en la sección
         if (logo) setUseLightLogo(true);
         if (hamburger) setUseLightHamburger(true);
 
