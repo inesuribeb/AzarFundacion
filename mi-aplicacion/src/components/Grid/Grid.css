@@ -60,8 +60,9 @@
 @media (max-width: 768px) {
 .grid {
     gap: 1rem;
-    margin-top: 1rem;
-    padding: 2rem 0rem;
+    margin-top: 0rem;
+    border-top: none;
+    padding: 3rem 0rem;
 }
 
 .grid.publications-grid {

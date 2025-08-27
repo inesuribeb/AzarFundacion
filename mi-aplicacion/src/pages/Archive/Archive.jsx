@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { useHeader } from '../../contexts/HeaderContext';
 import { useMobile } from '../../components/Hooks/useMobile';
 import { useLocalizedData } from '../../components/Hooks/Hooks';
 import { mockExhibitionsData } from '../../utils/Data/ExhibitionsData';
@@ -120,6 +121,7 @@ function Archive() {
                         t={t}
                         onTabChange={handleTabChange}
                         activeTab={activeTab}
+                        lightHeader={{ hamburger: true, logo: true }}
                     />
                 ) : (
                     <TabMenu

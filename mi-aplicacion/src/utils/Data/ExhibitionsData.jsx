@@ -5,7 +5,7 @@ export const mockExhibitionsData = [
         imageRef: "/Images/Residencies/Residency01/Expo1.jpg",
         title: {
             es: "Expo Residencia2025",
-            en: "2025Residency Expo",
+            en: "Residency2025 Expo",
             pt: "Expo Residência2025"
         },
         subtitle: {

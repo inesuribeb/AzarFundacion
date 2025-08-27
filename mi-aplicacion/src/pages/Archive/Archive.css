@@ -10,7 +10,7 @@
 
 @media (max-width: 768px) {
     .archive-container {
-        padding: 5rem 1rem;
+        padding: 0rem 1rem;
     }
 
     .azar-archive {
@@ -21,6 +21,12 @@
 /* Móvil pequeño */
 @media (max-width: 480px) {
     .archive-container {
-        padding: 4rem 0.75rem;
+        /* padding: 4rem 0.75rem; */
+        padding: 0;
+    }
+
+    .render-especific-grid{
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
