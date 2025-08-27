@@ -5,6 +5,7 @@ export const archiveTranslations = {
         collectiveArtPieces: 'Obras Colectivas',
         publications: 'Publicaciones',
         collaborations: 'Colaboraciones',
+        otherActivities: 'Otras actividades',
 
         azarArchive: 'Archivo Azar',
     },
@@ -14,6 +15,7 @@ export const archiveTranslations = {
         collectiveArtPieces: 'Collective Art',
         publications: 'Publications',
         collaborations: 'Collaborations',
+        otherActivities: 'Other activities',
 
         azarArchive: 'Azar Archive',
     },
@@ -23,6 +25,7 @@ export const archiveTranslations = {
         collectiveArtPieces: 'Obras Coletivas',
         publications: 'Publicações',
         collaborations: 'Colaborações',
+        otherActivities: 'Outras atividades',
 
         azarArchive: 'Arquivo Azar',
     }

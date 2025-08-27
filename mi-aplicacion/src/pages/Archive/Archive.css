@@ -7,3 +7,20 @@
 .azar-archive {
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .archive-container {
+        padding: 5rem 1rem;
+    }
+
+    .azar-archive {
+        display: none;
+    }
+}
+
+/* Móvil pequeño */
+@media (max-width: 480px) {
+    .archive-container {
+        padding: 4rem 0.75rem;
+    }
+}
