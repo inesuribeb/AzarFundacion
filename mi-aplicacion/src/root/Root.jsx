@@ -11,6 +11,7 @@ import { useMobile } from "../components/Hooks/useMobile";
 import Header from '../components/Header/Header';
 import HeaderPhone from "../components/Header/HeaderPhone";
 import BottomNavigation from "../pages/ResidenciesProgram/components/BottomNavigation";
+import Footer from "../components/Footer/Footer";
 import './Root.css'
 
 function AppContent() {
@@ -50,6 +51,7 @@ function AppContent() {
                   onNavigate={setActiveSection}
               />
           )}
+          <Footer />
       </div>
   );
 }

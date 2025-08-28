@@ -12,7 +12,6 @@
 }
 
 
-/* Barra inferior con información */
 .publication-info-bar {
     display: flex;
     align-items: center;
@@ -72,7 +71,6 @@
     font-weight: var(--futura-book);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .publication-info-bar {
         height: 70px;

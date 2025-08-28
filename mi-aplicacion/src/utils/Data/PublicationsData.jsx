@@ -2,10 +2,12 @@ export const mockPublicationsData = [
     {
         id: "pub-1",
         number: "01",
-        cover: "/Images/Publications/Publication01/portada.png",
+        // cover: "/Images/Publications/Publication01/portada.png",
+        cover: "/Images/Publications/Publication01/portadalibro.jpg",
         images: [
-            "/Images/Publications/Publication01/pub01-01.jpg",
-            "/Images/Publications/Publication02/pub02-01.png",
+            // "/Images/Publications/Publication01/pub01-01.jpg",
+            "/Images/Publications/Publication01/portadalibro.jpg",
+            "/Images/Publications/Publication01/pubMas1.jpg",
         ],
         imageRef: [
             "/Images/Publications/Publication01/MencionPubli1.jpg",
@@ -47,7 +49,7 @@ export const mockPublicationsData = [
         collectiveArtPiece: ["artPiece-1"],
         detailImages: [
             "/Images/Publications/Publication01/Publicaciones-1.jpg",
-            "/Images/Publications/Publication02/pub02-01.png",
+            "/Images/Publications/Publication01/pubMas.jpg",
             "/Images/Publications/Publication01/Residencias-1.jpg",
         ],
     },

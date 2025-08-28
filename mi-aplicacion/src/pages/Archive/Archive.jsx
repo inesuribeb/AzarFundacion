@@ -88,7 +88,6 @@ function Archive() {
                 type = 'exhibitions';
         }
 
-        // Agregar navegación a cada item
         return data.map(item => ({
             ...item,
             onClick: createNavigateHandler(item.id, type)
@@ -111,11 +110,6 @@ function Archive() {
         <div className='archive-container'>
             <div className='filter-archive'>
                 <MiniBlue className='azar-archive'>{t('azarArchive')}</MiniBlue>
-                {/* <TabMenu
-                    t={t}
-                    onTabChange={handleTabChange}
-                    activeTab={activeTab}
-                /> */}
                 {isMobile ? (
                     <TabMenuPhone
                         t={t}

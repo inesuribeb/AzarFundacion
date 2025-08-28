@@ -7,7 +7,7 @@ export const foundationTranslations = {
         knowUs: 'Descubre la historia detrás de cada miembro',
 
             paulaName: 'Paula G. Gener',
-            paulaRole: 'Directora de programa y archivo',
+            paulaRole: 'Directora',
             paulaBio: 'Paula, nacida en Bilbao en 1997, dirige el programa de Fundación Azar con el fin de contribuir al desarrollo y consolidación de las iniciativas y trayectorias de artistas, artesanos y pensadores.<br/><br/>Comenzó su camino acádemico en IE University, donde cursó una doble licenciatura en Administración de Empresas y Derecho en inglés, con la intención de aplicar sus conocimientos a proyectos dentro del ámbito cultural. Durante este periodo, también trabajó en desarrollo de negocio para la startup InovRetail y accedió a University of British Columbia, Canadá, donde realizó formaciones en cine y fotografía. Su interés por representar a artistas de manera justa e informada, le llevó a formarse como abogada de propiedad intelectual, realizando un doble máster de Acceso a la Abogacía y Propiedad Intelectual y Nuevas Tecnologías en ESADE. <br/><br/>Tras un periodo en el prestigioso despacho de abogados Cuatrecasas, Paula se mudó a Londres para especializarse en comisariado, gestión de negocios artísticos, historia del arte y arte contemporáneo en Sotheby’s Institute of Art. Posteriormente, trabajó en Galería Pedro Cera durante su apertura en Madrid. <br/><br/>Paralelamente, su interés y devoción por las artes y el panorama cultural contemporáneo le ha llevado a realizar otros proyectos como la promoción del sello discográfico independiente Quinoa Records y la edición y publicación de su primer relato de fotografía analógica La señal prometida (2024).',
             paulaQuote: "",
         
@@ -30,7 +30,7 @@ export const foundationTranslations = {
         knowUs: 'Discover the story behind each member',
 
             paulaName: 'Paula G. Gener',
-            paulaRole: 'Program and Archive Director',
+            paulaRole: 'Director',
             paulaBio: "Paula, born in Bilbao in 1997, directs the Azar Foundation program, which aims to contribute to the development and consolidation of the initiatives and careers of artists, artisans, and thinkers. <br/><br/>She began her academic career at IE University, where she pursued a double degree in Business Administration and Law in English, with the intention of applying her knowledge to projects within the cultural field. During this period, she also worked in business development for the startup InovRetail and gained admission to the University of British Columbia, Canada, where she studied film and photography. Her interest in representing artists in a fair and informed manner led her to train as an intellectual property lawyer, completing a double master's degree in Access to the Bar and Intellectual Property and New Technologies at ESADE.<br/><br/>After a period at the prestigious law firm Cuatrecasas, Paula moved to London to specialize in curating, art business management, art history, and contemporary art at Sotheby's Institute of Art. She subsequently worked at Galería Pedro Cera during its opening in Madrid.<br/><br/>At the same time, his interest and devotion to the arts and the contemporary cultural scene has led him to carry out other projects such as the promotion of the independent record label Quinoa Records and the editing and publication of his first analog photography story The Promised Signal (2024).",
             paulaQuote: "",
 
@@ -53,7 +53,7 @@ export const foundationTranslations = {
         knowUs: 'Descubra a história por trás de cada membro',
 
             paulaName: 'Paula G. Gener',
-            paulaRole: 'Diretora do programa e arquivo',
+            paulaRole: 'Diretora',
             paulaBio: 'Paula, nascida em Bilbao em 1997, dirige o programa da Fundação Azar com o objetivo de contribuir para o desenvolvimento e consolidação das iniciativas e trajetórias de artistas, artesãos e pensadores.<br/><br/>Iniciou seu percurso acadêmico na IE University, onde cursou uma dupla graduação em Administração de Empresas e Direito em inglês, com a intenção de aplicar seus conhecimentos a projetos na área cultural. Durante esse período, também trabalhou no desenvolvimento de negócios para a startup InovRetail e foi aceita na University of British Columbia, no Canadá, onde realizou formações em cinema e fotografia. Seu interesse em representar artistas de forma justa e informada a levou a se formar como advogada de propriedade intelectual, realizando um duplo mestrado em Acesso à Advocacia e Propriedade Intelectual e Novas Tecnologias na ESADE.<br/><br/>Após um período no prestigiado escritório de advocacia Cuatrecasas, Paula mudou-se para Londres para se especializar em curadoria, gestão de negócios artísticos, história da arte e arte contemporânea no Sotheby’s Institute of Art. Posteriormente, trabalhou na Galería Pedro Cera durante sua abertura em Madrid.<br/><br/>Paralelamente, seu interesse e devoção pelas artes e pelo panorama cultural contemporâneo a levaram a realizar outros projetos, como a promoção do selo discográfico independente Quinoa Records e a edição e publicação de seu primeiro relato de fotografia analógica, O Sinal Prometido (2024).',
             paulaQuote: "",
 

@@ -1,31 +1,3 @@
-// import './CoverColab.css';
-
-// function CoverColab({ collaboration, t, currentLanguage }) {
-//     if (!collaboration) return null;
-
-//     return (
-//         <section className='section-cover-colab'>
-//             <div className='cover-colab-container'>
-//                 <div className='cover-colab-content'>
-//                     <h1 dangerouslySetInnerHTML={{ 
-//                             __html: collaboration.title
-//                         }} />
-//                 </div>
-                
-//                 <div className='cover-colab-image'>
-//                     <img 
-//                         src={collaboration.gallery[2]} 
-//                         alt={collaboration.title}
-//                         className='colab-image'
-//                     />
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// }
-
-// export default CoverColab;
-
 import { useEffect, useRef, useState } from 'react';
 import './CoverColab.css';
 
@@ -34,6 +6,7 @@ function CoverColab({ collaboration, t, currentLanguage }) {
     const imageRef = useRef(null);
     const containerRef = useRef(null);
     const [sectionHeight, setSectionHeight] = useState('200vh');
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
 
     if (!collaboration) return null;
 
@@ -62,6 +35,15 @@ function CoverColab({ collaboration, t, currentLanguage }) {
             window.removeEventListener('resize', calculateHeight);
         };
     }, [collaboration]);
+
+    // Efecto para activar la animación de zoom-out
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsImageLoaded(true);
+        }, 100);
+
+        return () => clearTimeout(timer);
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -148,7 +130,8 @@ function CoverColab({ collaboration, t, currentLanguage }) {
                         <img 
                             src={collaboration.gallery[2]} 
                             alt={collaboration.title}
-                            className='colab-image'
+                            // className='colab-image'
+                            className={isImageLoaded ? 'loaded' : ''}
                         />
                     </div>
                 </div>

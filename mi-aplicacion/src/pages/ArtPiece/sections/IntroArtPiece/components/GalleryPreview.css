@@ -13,9 +13,6 @@
     border-radius: 0px;
 }
 
-/* Cuando hay una sola imagen, hazla más grande */
 .gallery-preview-image.single-image {
-    width: 100%; /* O el tamaño que prefieras */
-    /* max-width: 500px; */
+    width: 100%; 
 }
-

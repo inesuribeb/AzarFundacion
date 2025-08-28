@@ -3,6 +3,7 @@ export const mockExhibitionsData = [
         id: "expo-1",
         image: "/Images/Exhibitions/Exhibition01/HeaderArchivo.png",
         imageRef: "/Images/Residencies/Residency01/Expo1.jpg",
+        imagesAuthor: "Nerea Moreno",
         title: {
             es: "Expo Residencia2025",
             en: "Residency2025 Expo",

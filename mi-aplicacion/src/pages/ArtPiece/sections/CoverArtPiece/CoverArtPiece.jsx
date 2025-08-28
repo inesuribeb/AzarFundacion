@@ -1,32 +1,3 @@
-// import './CoverArtPiece.css';
-
-// function CoverArtPiece({ artPiece }) {
-//     if (!artPiece) return null;
-
-//     return (
-//         <section className='cover-artpiece'>
-//             <div className="cover-artpiece-background">
-//                 <img 
-//                     src={artPiece.image2} 
-//                     alt={artPiece.title}
-//                 />
-//             </div>
-//             <div className="cover-artpiece-content">
-//                 {artPiece.introduction && (
-//                     <div className="cover-artpiece-introduction">
-//                         {artPiece.introduction}
-//                     </div>
-//                 )}
-//                 <div className="cover-artpiece-title">
-//                     <h1>{artPiece.title}</h1>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// }
-
-// export default CoverArtPiece;
-
 import { useEffect, useRef, useState } from 'react';
 import { useHeader } from '../../../../contexts/HeaderContext';
 import './CoverArtPiece.css';
@@ -37,6 +8,7 @@ function CoverArtPiece({ artPiece, lightHeader = {} }) {
     const containerRef = useRef(null);
     const [sectionHeight, setSectionHeight] = useState('200vh');
     const { setUseLightLogo, setUseLightHamburger } = useHeader();
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
 
     const { logo = false, hamburger = false } = lightHeader;
 
@@ -68,8 +40,17 @@ function CoverArtPiece({ artPiece, lightHeader = {} }) {
         };
     }, [artPiece]);
 
+    // Efecto para activar la animación de zoom-out
     useEffect(() => {
-        if (!logo && !hamburger) return; 
+        const timer = setTimeout(() => {
+            setIsImageLoaded(true);
+        }, 100);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    useEffect(() => {
+        if (!logo && !hamburger) return;
 
         const handleScroll = () => {
             if (!sectionRef.current || !containerRef.current) return;
@@ -110,7 +91,6 @@ function CoverArtPiece({ artPiece, lightHeader = {} }) {
             const maxScroll = Math.max(0, imageHeight - availableHeight);
 
             if (rect.top <= 0 && rect.bottom > windowHeight) {
-                // Fase activa: fixed con scroll interno
                 container.style.display = 'block';
                 container.style.position = 'fixed';
                 container.style.top = '0px';
@@ -123,7 +103,6 @@ function CoverArtPiece({ artPiece, lightHeader = {} }) {
                 image.style.transform = `translateY(${translateY}px)`;
 
             } else if (rect.bottom <= windowHeight && rect.bottom > 0) {
-                // Fase final: absolute al final
                 container.style.display = 'block';
                 container.style.position = 'absolute';
                 container.style.top = `${rect.height - windowHeight}px`;
@@ -132,7 +111,6 @@ function CoverArtPiece({ artPiece, lightHeader = {} }) {
                 image.style.transform = `translateY(-${maxScroll}px)`;
 
             } else if (rect.top > 0) {
-                // Antes de la sección: mostrar en posición inicial
                 container.style.display = 'block';
                 container.style.position = 'fixed';
                 container.style.top = '0px';
@@ -140,7 +118,6 @@ function CoverArtPiece({ artPiece, lightHeader = {} }) {
                 image.style.transform = 'translateY(0px)';
 
             } else {
-                // Después de la sección: ocultar
                 container.style.display = 'none';
             }
         };
@@ -171,9 +148,10 @@ function CoverArtPiece({ artPiece, lightHeader = {} }) {
             <div ref={containerRef} className="cover-artpiece-container">
                 <div className="cover-artpiece-background">
                     <div ref={imageRef} className="image-wrapper-artpiece">
-                        <img 
-                            src={artPiece.image2} 
+                        <img
+                            src={artPiece.image2}
                             alt={artPiece.title}
+                            className={isImageLoaded ? 'loaded' : ''}
                         />
                     </div>
                 </div>

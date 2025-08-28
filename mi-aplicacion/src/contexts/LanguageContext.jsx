@@ -6,6 +6,7 @@ import { archiveTranslations } from './sections/ArchiveContent';
 import { homeTranslations } from './sections/HomeContent';
 import { detailsTranslations } from './sections/DetailsContent';
 import { publicationTranslations } from './sections/PublicationContent';
+import { exhibitionTranslations } from './sections/ExpositionContent';
 
 const translations = {
   es: {
@@ -25,6 +26,7 @@ const translations = {
     ...homeTranslations.es,
     ...detailsTranslations.es,
     ...publicationTranslations.es,
+    ...exhibitionTranslations.es,
   },
   en: {
     home: "Home",
@@ -43,6 +45,7 @@ const translations = {
     ...homeTranslations.en,
     ...detailsTranslations.en,
     ...publicationTranslations.en,
+    ...exhibitionTranslations.en,
   },
   pt: {
     home: "Início",
@@ -61,6 +64,7 @@ const translations = {
     ...homeTranslations.pt,
     ...detailsTranslations.pt,
     ...publicationTranslations.pt,
+    ...exhibitionTranslations.pt,
   }
 };
 

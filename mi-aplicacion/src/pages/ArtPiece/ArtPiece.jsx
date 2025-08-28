@@ -1,9 +1,7 @@
 import { useParams } from 'react-router-dom';
-// import { useEffect } from 'react';
 import { mockArtPiecesData } from '../../utils/Data/ArtPiecesData';
 import { useLocalizedData } from '../../components/Hooks/Hooks';
 import { useLanguage } from '../../contexts/LanguageContext';
-// import { useHeader } from '../../contexts/HeaderContext';
 import BackButton from '../../components/Button/BackButton';
 import CoverArtPiece from './sections/CoverArtPiece/CoverArtPiece';
 import IntroArtPiece from './sections/IntroArtPiece/IntroArtPiece';
@@ -12,7 +10,6 @@ import './ArtPiece.css';
 function ArtPiece() {
     const { id } = useParams();
     const { t, currentLanguage, language } = useLanguage();
-    // const { setUseLightLogo, setUseLightHamburger } = useHeader(); 
     const localizedArtPieces = useLocalizedData(mockArtPiecesData);
     const artPiece = localizedArtPieces.find(piece => piece.id === id);
 
@@ -28,8 +25,6 @@ function ArtPiece() {
 
     return (
         <div className="artpiece-page">
-            {/* <BackButton variant="floating" /> */}
-            {/* <CoverArtPiece artPiece={artPiece} /> */}
             <CoverArtPiece
                 artPiece={artPiece}
                 lightHeader={{ logo: true, hamburger: true }}

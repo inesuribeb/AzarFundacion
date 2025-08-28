@@ -28,8 +28,8 @@ function ResidenciesProgram() {
 
             const sections = [
                 { ref: introRef.current, id: 'intro' },
-                { ref: openCallRef.current, id: 'opencall' },
                 { ref: fincaRef.current, id: 'finca' },
+                { ref: openCallRef.current, id: 'opencall' },
                 { ref: pastResidenciesRef.current, id: 'pastresidencies' }
             ];
 
@@ -80,17 +80,16 @@ function ResidenciesProgram() {
                     )}
                 </div>
 
-                <div ref={openCallRef} id="opencall-section">
-                    <OpenCallR t={t} />
-                </div>
-
                 <div ref={fincaRef} id="finca-section">
-                    {/* <Finca t={t} /> */}
                     {isMobile ? (
                         <FincaPhone t={t} />
                     ) : (
                         <Finca t={t} />
                     )}
+                </div>
+
+                <div ref={openCallRef} id="opencall-section">
+                    <OpenCallR t={t} />
                 </div>
 
                 <div ref={pastResidenciesRef} id="pastresidencies-section">

@@ -9,11 +9,11 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    opacity: 0.6; /* Más sutil cuando no hay productos */
+    opacity: 0.6;
 }
 
 .shopping-basket:has(.shopping-basket-badge) {
-    opacity: 1; /* Totalmente visible cuando hay productos */
+    opacity: 1;
 }
 
 .shopping-basket:hover {
@@ -54,7 +54,6 @@
     transition: all 0.2s ease;
 }
 
-/* Animación cuando se añade un producto */
 .shopping-basket.animate {
     animation: basketPulse 0.6s ease-out;
 }
@@ -93,7 +92,6 @@
     }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .shopping-basket {
         padding: 0.4rem;

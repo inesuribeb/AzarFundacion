@@ -17,7 +17,6 @@
     justify-items: stretch; 
 }
 
-
 @media (max-width: 1024px) {
     .grid {
         gap: 25px;
@@ -56,7 +55,6 @@
     gap: 50px;
 }
 
-/* Mobile (hasta 768px) */
 @media (max-width: 768px) {
 .grid {
     gap: 1rem;

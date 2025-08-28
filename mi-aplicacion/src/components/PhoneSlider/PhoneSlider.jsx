@@ -11,14 +11,12 @@ function PhoneSlider({ images = [] }) {
 
     const totalImages = images.length;
 
-    // Handle touch start
     const handleTouchStart = (e) => {
         setIsDragging(true);
         setStartX(e.touches[0].clientX);
         setCurrentX(e.touches[0].clientX);
     };
 
-    // Handle touch move
     const handleTouchMove = (e) => {
         if (!isDragging) return;
         
@@ -28,46 +26,39 @@ function PhoneSlider({ images = [] }) {
         setTranslateX(newTranslateX);
     };
 
-    // Handle touch end
     const handleTouchEnd = () => {
         if (!isDragging) return;
         
         setIsDragging(false);
         const diffX = currentX - startX;
-        const threshold = window.innerWidth * 0.2; // Reducir threshold para más sensibilidad
+        const threshold = window.innerWidth * 0.2;
 
         let newIndex = currentIndex;
         
         if (diffX > threshold && currentIndex > 0) {
-            // Swipe right - previous image
             newIndex = currentIndex - 1;
         } else if (diffX < -threshold && currentIndex < totalImages - 1) {
-            // Swipe left - next image
             newIndex = currentIndex + 1;
         }
 
-        // Actualizar índice solo si cambió
         if (newIndex !== currentIndex) {
             setCurrentIndex(newIndex);
         }
         
-        // Siempre resetear a la posición correcta
         setTranslateX(-(newIndex * 100));
     };
 
-    // Update translateX when currentIndex changes
     useEffect(() => {
         if (!isDragging) {
             setTranslateX(-(currentIndex * 100));
         }
     }, [currentIndex, isDragging]);
 
-    // Handle mouse events for desktop testing
     const handleMouseDown = (e) => {
         setIsDragging(true);
         setStartX(e.clientX);
         setCurrentX(e.clientX);
-        e.preventDefault(); // Prevenir selección de texto
+        e.preventDefault();
     };
 
     const handleMouseMove = (e) => {
@@ -79,7 +70,6 @@ function PhoneSlider({ images = [] }) {
         const diffX = newCurrentX - startX;
         const newTranslateX = -(currentIndex * 100) + (diffX / window.innerWidth) * 100;
         
-        // Limitar el arrastre para evitar ir más allá de los límites
         const maxTranslate = 0;
         const minTranslate = -((totalImages - 1) * 100);
         const clampedTranslate = Math.max(minTranslate, Math.min(maxTranslate, newTranslateX));

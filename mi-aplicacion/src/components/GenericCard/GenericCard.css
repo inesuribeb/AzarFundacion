@@ -62,7 +62,6 @@
     font-weight: var(--futura-book);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .card-content {
         padding: 0px;

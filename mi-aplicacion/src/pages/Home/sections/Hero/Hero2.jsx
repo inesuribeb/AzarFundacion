@@ -126,7 +126,9 @@ function Hero2({ t, lightHeader = {} }) {
         >
             <div ref={containerRef} className='hero2-container'>
                 <div ref={backgroundRef} className='hero2-background'>
-                    <img src="/Images/Logo/Logo blanco.png" alt="logo-fundacion-azar" />
+                    <img src="/Images/Logo/Logo blanco.png"
+                    alt="logo-fundacion-azar" 
+                    />
                 </div>
             </div>
         </section>

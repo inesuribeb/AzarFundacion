@@ -1,0 +1,139 @@
+.weird-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weird-overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); 
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+    justify-content: flex-start;
+}
+
+.weird-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    text-align: left;
+}
+
+
+
+.weird-nav-item {
+    color: var(--light-color);
+    font-size: clamp(1rem, 2vw, 3rem);
+    font-family: var(--serif-font);
+    font-weight: 300;
+    cursor: pointer;
+    padding: 0rem 2rem;
+    border-radius: 0px;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    opacity: 0.4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: transparent;
+    margin-right: 1rem;
+    border: 1px solid var(--light-color);
+    opacity: 1;
+}
+
+
+
+.weird-navigation.dark-theme .weird-nav-item {
+    color: var(--dark-color);
+}
+
+.weird-navigation.dark-theme .circle {
+    border-color: var(--dark-color);
+}
+
+.weird-nav-item:hover {
+    opacity: 1;
+}
+
+.weird-nav-item.active {
+    opacity: 1;
+}
+
+.weird-content.bg-residencias {
+    background-position: center;
+    background-size: cover;
+    /* background-position: right top;
+    background-size: 40%; */
+}
+.weird-content.bg-residencias::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+
+.weird-content.bg-exposiciones {
+    /* background-position: right center;
+    background-size: contain; */
+    background-position: 70% 20%;
+    background-size: 40%;
+}
+
+.weird-content.bg-obras-colectivas {
+    background-position: left center;
+    background-size: 120%;
+}
+.weird-content.bg-obras-colectivas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.weird-content.bg-publicaciones {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.weird-content.bg-publicaciones::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.weird-content.bg-colaboraciones {
+    background-position: 70% 20%;
+    background-size: 40%;
+}

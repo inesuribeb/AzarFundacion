@@ -50,7 +50,6 @@ function ImageCarousel({
         const clickX = e.clientX - rect.left;
         const carouselWidth = rect.width;
         
-        // Si el click es en la mitad derecha, ir adelante; si es en la izquierda, ir atrás
         if (clickX > carouselWidth / 2) {
             goToNext();
         } else {
@@ -59,7 +58,7 @@ function ImageCarousel({
     };
 
     const handleArrowClick = (e, direction) => {
-        e.stopPropagation(); // Evitar que se active el onClick del carousel
+        e.stopPropagation(); 
         if (direction === 'next') {
             goToNext();
         } else {
@@ -77,14 +76,12 @@ function ImageCarousel({
 
     return (
         <div className={`image-carousel ${className}`}>
-            {/* Contador fijo arriba a la derecha - solo si no hay clickNavigation */}
             {showCounter && !clickNavigation && (
                 <div className="image-carousel-counter">
                     {currentIndex + 1} / {images.length}
                 </div>
             )}
 
-            {/* Contenedor principal */}
             <div 
                 className={`image-carousel-container ${clickNavigation ? 'click-nav' : ''}`}
                 ref={carouselRef}
@@ -105,7 +102,6 @@ function ImageCarousel({
                     ))}
                 </div>
 
-                {/* Flechas de navegación */}
                 {showArrows && images.length > 1 && (
                     <>
                         <button 
@@ -133,7 +129,6 @@ function ImageCarousel({
                     </>
                 )}
 
-                {/* Overlay para navegación por click */}
                 {clickNavigation && (
                     <>
                         <div 
@@ -145,7 +140,6 @@ function ImageCarousel({
                             <div className="nav-area nav-next"></div>
                         </div>
                         
-                        {/* Contador que sigue al ratón - FUERA del overlay */}
                         <span 
                             className="nav-counter"
                             style={{

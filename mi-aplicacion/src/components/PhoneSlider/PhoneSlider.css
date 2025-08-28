@@ -50,15 +50,13 @@
     pointer-events: none;
     user-select: none;
     border-radius: 8px;
-    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
 }
 
 .slider-slide img {
-    width: auto; /* Mantén esto */
-    height: 27vh; /* Altura fija para todas las imágenes */
-    max-width: none; /* Quita la limitación de ancho */
+    width: auto; 
+    height: 27vh; 
+    max-width: none; 
     min-height: 27vh; 
-    /* max-width: 90%;  */
     object-fit: contain;
     pointer-events: none;
     user-select: none;
@@ -70,11 +68,9 @@
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    /* font-family: var(--serif-font); */
     font-family: var(--futura-font);
     font-weight: var(--futura-book);
     font-size: 1rem;
-    /* font-weight: normal; */
     color: #333;
     z-index: 10;
     letter-spacing: 2px;

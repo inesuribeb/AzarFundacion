@@ -10,7 +10,6 @@ function GenericCard({
 }) {
     return (
         <div
-            // className={`generic-card ${className}`}
             className={`generic-card ${className} ${isSingle ? 'single-card' : ''}`}
             onClick={onClick}
         >
@@ -22,7 +21,6 @@ function GenericCard({
                 />
             </div>
             <div className="card-content">
-                {/* <h3 className="card-title">{title}</h3> */}
                 <h3
                     className="card-title"
                     dangerouslySetInnerHTML={{ __html: title }}

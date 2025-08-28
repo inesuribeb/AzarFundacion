@@ -4,14 +4,14 @@ import './BottomNavigation.css';
 function BottomNavigation({ t, activeSection, onNavigate }) {
     const sections = [
         { 
-            id: 'opencall', 
-            label: t('openCall'),
-            ref: 'opencall-section' 
-        },
-        { 
             id: 'finca', 
             label: t('theEspace'),
             ref: 'finca-section' 
+        },
+        { 
+            id: 'opencall', 
+            label: t('openCall'),
+            ref: 'opencall-section' 
         },
         { 
             id: 'pastresidencies', 

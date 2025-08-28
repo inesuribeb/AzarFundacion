@@ -12,22 +12,6 @@
     flex-direction: column;
 }
 
-/* Contador */
-/* .image-carousel-counter {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    z-index: 10;
-    pointer-events: none;
-} */
-
-/* Contenedor principal */
 .image-carousel-container {
     position: relative;
     width: 100%;
@@ -43,7 +27,6 @@
     cursor: pointer;
 }
 
-/* Slides */
 .image-carousel-slides {
     display: flex;
     width: 100%;
@@ -67,7 +50,6 @@
     display: block;
 }
 
-/* Flechas de navegación - usando los estilos exactos de PublicationCard */
 .image-carousel-arrow {
     position: absolute;
     top: 50%;
@@ -112,7 +94,6 @@
     transform: rotate(180deg); 
 }
 
-/* Overlay de navegación por click */
 .image-carousel-nav-overlay {
     position: absolute;
     top: 0;
@@ -154,36 +135,6 @@
     font-weight: var(--futura-book);
 }
 
-/* Indicadores de puntos */
-/* .image-carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 1rem 0;
-    margin-top: auto;
-}
-
-.carousel-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: none;
-    background: #ccc;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.carousel-dot:hover {
-    background: #888;
-    transform: scale(1.1);
-}
-
-.carousel-dot.dot-active {
-    background: #333;
-    transform: scale(1.2);
-} */
-
-/* Placeholder */
 .image-carousel-placeholder {
     display: flex;
     align-items: center;
@@ -196,7 +147,6 @@
     font-size: 1rem;
 }
 
-/* Responsive - usando exactamente los breakpoints de PublicationCard */
 @media (max-width: 768px) {
     .image-carousel {
         height: 50vh;

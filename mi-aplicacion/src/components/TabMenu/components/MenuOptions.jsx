@@ -3,7 +3,6 @@ import './MenuOptions.css';
 function MenuOptions({ tabs, activeTab, onOptionSelect, onClose }) {
     return (
         <>
-            {/* Overlay para cerrar al hacer click fuera */}
             <div className="menu-overlay" onClick={onClose}></div>
             
             <div className="menu-options">

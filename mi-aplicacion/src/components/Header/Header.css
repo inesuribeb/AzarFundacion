@@ -9,7 +9,6 @@
     padding: 0.5rem 2rem;
     background-color: transparent;
     z-index: 1000;
-
     pointer-events: none; 
 }
 
@@ -108,14 +107,10 @@
 }
 
 
-
-
-/* Hamburguesa light cuando NO está activa */
 .sandwich-toggle.light .line {
     background-color: var(--light-color);
 }
 
-/* Hamburguesa light cuando SÍ está activa (ya la tienes) */
 .sandwich-toggle.active.light .line {
     background-color: var(--light-color);
 }

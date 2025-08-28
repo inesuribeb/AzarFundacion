@@ -105,9 +105,6 @@
 .nav-link.light-text.show-image .nav-text {
     color: var(--light-color);
 }
-
-
-/* Animaciones de cierre para texto */
 .main-navigation.closing .nav-text {
     animation: fadeOutContent 0.3s ease forwards;
     position: absolute;
@@ -131,7 +128,6 @@
     }
 }
 
-/* Animaciones de cierre para columnas */
 .main-navigation.closing .nav-link {
     animation: slideUpNavLink 0.4s cubic-bezier(0.5, 0, 0.89, 1) 0.3s forwards;
 }

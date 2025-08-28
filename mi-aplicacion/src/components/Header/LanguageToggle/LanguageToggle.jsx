@@ -3,16 +3,11 @@ import './LanguageToggle.css';
 
 function LanguageToggle({ closeMenu }) {
     const { language, changeLanguage, availableLanguages } = useLanguage();
-
-    // const handleLanguageChange = (newLanguage) => {
-    //     if (newLanguage !== language) {
-    //         changeLanguage(newLanguage);
-    //     }
-    // };
+    
     const handleLanguageChange = (newLanguage) => {
         if (newLanguage !== language) {
             changeLanguage(newLanguage);
-            closeMenu(); // ← Cerrar el menú después del cambio
+            closeMenu(); 
         }
     };
 

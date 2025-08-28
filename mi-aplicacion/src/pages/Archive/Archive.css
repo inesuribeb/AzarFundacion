@@ -18,10 +18,8 @@
     }
 }
 
-/* Móvil pequeño */
 @media (max-width: 480px) {
     .archive-container {
-        /* padding: 4rem 0.75rem; */
         padding: 0;
     }
 

@@ -2,13 +2,14 @@ import { useParams } from 'react-router-dom';
 import { mockExhibitionsData } from '../../utils/Data/ExhibitionsData';
 import { useLocalizedData } from '../../components/Hooks/Hooks';
 import { useLanguage } from '../../contexts/LanguageContext';
+import ExpoCover from './sections/ExpoCover/ExpoCover';
 import BackButton from '../../components/Button/BackButton';
 
 function Exposition() {
     const { id } = useParams();
-    const { t } = useLanguage();
+    const { t, currentLanguage } = useLanguage();
     const localizedExhibitions = useLocalizedData(mockExhibitionsData);
-    
+
     const exhibition = localizedExhibitions.find(expo => expo.id === id);
 
     if (!exhibition) {
@@ -17,11 +18,14 @@ function Exposition() {
 
     return (
         <div className="exposition-page">
-                        <BackButton variant="floating" />
+            {/* <h1>{exhibition.title}</h1>
+            <p>{exhibition.description}</p> */}
 
-            <h1>{exhibition.title}</h1>
-            <p>{exhibition.description}</p>
-            {/* Resto del contenido */}
+            <ExpoCover
+                exhibition={exhibition}
+                t={t}
+                currentLanguage={currentLanguage}
+            />
         </div>
     );
 }

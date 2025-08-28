@@ -1,135 +1,8 @@
-/* .cover-artpiece {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
-
-.cover-artpiece-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.cover-artpiece-background img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.cover-artpiece-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: var(--light-color);
-}
-
-.cover-artpiece-introduction {
-    align-self: flex-start;
-    font-size: 2rem;
-    font-family: var(--serif-font);
-    font-weight: 100;
-    letter-spacing: 1px;
-    text-transform: none;
-    margin-bottom: 0rem;
-    padding: 2rem;
-}
-
-.cover-artpiece-title {
-    align-self: center;
-    margin-bottom: 2rem;
-}
-
-.cover-artpiece-title h1 {
-    font-size: clamp(3rem, 8vw, 8rem);
-    font-weight: 300;
-    line-height: 0.9;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    max-width: 100%;
-}
-
-.cover-artpiece::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        135deg, 
-        rgba(0, 0, 0, 0.3) 0%, 
-        rgba(0, 0, 0, 0.1) 50%, 
-        rgba(0, 0, 0, 0.2) 100%
-    );
-    z-index: 1.5;
-    pointer-events: none;
-}
-
-@media (max-width: 1024px) {
-    .cover-artpiece-content {
-        padding: 2rem;
-    }
-    
-    .cover-artpiece-title h1 {
-        font-size: clamp(2.5rem, 7vw, 4.5rem);
-        max-width: 90%;
-    }
-    
-    .cover-artpiece-introduction {
-        font-size: 1rem;
-        margin-top: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .cover-artpiece-content {
-        padding: 1.5rem;
-    }
-    
-    .cover-artpiece-title h1 {
-        font-size: clamp(2rem, 8vw, 3.5rem);
-        max-width: 95%;
-        letter-spacing: 1px;
-    }
-    
-    .cover-artpiece-introduction {
-        font-size: 0.9rem;
-        margin-top: 0.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .cover-artpiece-content {
-        padding: 1rem;
-    }
-    
-    .cover-artpiece-title h1 {
-        font-size: clamp(1.8rem, 9vw, 2.8rem);
-    }
-    
-    .cover-artpiece-introduction {
-        font-size: 0.8rem;
-    }
-} */
-
-/* 1. Contenedor principal */
 .cover-artpiece {
     position: relative;
     width: 100%;
 }
 
-/* 2. Contenedor único que cambia de fixed a absolute */
 .cover-artpiece-container {
     position: fixed;
     top: 0;
@@ -141,7 +14,6 @@
     z-index: -1;
 }
 
-/* 3. Background con imagen */
 .cover-artpiece-background {
     position: absolute;
     top: 0;
@@ -152,7 +24,6 @@
     overflow: hidden;
 }
 
-/* 4. Wrapper de imagen que se mueve */
 .image-wrapper-artpiece {
     position: absolute;
     top: 0;
@@ -168,9 +39,16 @@
     min-height: 100vh;
     object-fit: cover;
     display: block;
+
+    transform: scale(1.05);
+    transition: transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center center;
 }
 
-/* 5. Contenido fijo */
+.image-wrapper-artpiece img.loaded {
+    transform: scale(1); /* Vuelve al tamaño normal */
+}
+
 .cover-artpiece-content {
     position: absolute;
     top: 0;
@@ -208,9 +86,10 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     max-width: 100%;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
 }
 
-/* 6. Overlay con gradiente */
 .cover-artpiece-container::before {
     content: '';
     position: absolute;
@@ -228,7 +107,6 @@
     pointer-events: none;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
     .cover-artpiece-content {
         padding: 2rem;

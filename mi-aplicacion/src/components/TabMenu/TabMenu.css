@@ -1,47 +1,3 @@
-/* .tab-menu {
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    border: none;
-    border-radius: 0px;
-    overflow: visible;
-    background: transparent;
-    font-size: 2.4rem;
-    font-weight: 100;
-}
-
-.tab-item {
-    padding: 0;
-    border: none;
-    background: transparent;
-    color: var(--neutral-color); 
-    cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: 0.02rem;
-    position: relative;
-    font-family: var(--main-font);
-    font-weight: 100;
-    font-size: 2.2rem;
-}
-
-.tab-item:hover {
-    color: var(--dark-color);
-}
-
-.tab-item.active {
-    background: transparent;
-    color: var(--dark-color); 
-}
-
-.tab-item:not(:last-child)::after {
-    content: " / ";
-    color: var(--neutral-color);
-    font-weight: 100;
-    pointer-events: none; 
-} */
-
 .tab-menu {
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
@@ -64,13 +20,9 @@
     transition: all 0.3s ease;
     letter-spacing: 0.04rem;
     position: relative;
-    /* font-family: var(--main-font); */
-    /* font-size: 2.2rem; */
     font-size: 2.5rem;
-    /* font-weight: 100; */
     font-family: var(--futura-font);
     font-weight: var(--futura-book);
-    /* font-style: var(--futura-normal); */
 }
 
 .tab-item:hover {
@@ -82,16 +34,14 @@
     color: var(--dark-color); 
 }
 
-/* OPCIÓN 1: Cambiar el content para incluir espacio después */
 .tab-item:not(:last-child)::after {
-    content: " | ";
+    content: " - ";
     color: var(--neutral-color);
     font-weight: 100;
     pointer-events: none;
-    margin-right: 0.5rem; /* Añadir margen derecho */
+    margin-right: 0.5rem;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .tab-menu {
         font-size: 1.8rem;

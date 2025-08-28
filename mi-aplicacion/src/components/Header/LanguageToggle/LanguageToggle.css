@@ -23,11 +23,8 @@
     }
 }
 
-/* Animación de salida */
 .dropdown-menu.closing .language-toggle {
-    /* animation: fadeOutSlideUp 0.3s ease forwards; */
     animation: fadeOutSlideUp 0.3s ease 0.2s both;
-
 }
 
 @keyframes fadeOutSlideUp {

@@ -24,16 +24,6 @@ function IntroArtPiece({ artPiece, t, currentLanguage }) {
                     className='intro-artpiece-texts'
                     dangerouslySetInnerHTML={{ __html: artPiece.textAP1 }}
                 />
-                {/* <div className="gallery-preview">
-                    {artPiece.gallery && artPiece.gallery.slice(0, 2).map((image, index) => (
-                        <img 
-                            key={index}
-                            src={image} 
-                            alt={`${artPiece.title} - imagen ${index + 1}`}
-                            className="gallery-preview-image"
-                        />
-                    ))}
-                </div> */}
                 <GalleryPreview 
                     images={artPiece.gallery?.slice(0, 2)} 
                     title={artPiece.title} 
@@ -44,16 +34,6 @@ function IntroArtPiece({ artPiece, t, currentLanguage }) {
                     className='intro-artpiece-texts'
                     dangerouslySetInnerHTML={{ __html: artPiece.textAP2 }}
                 />
-                {/* <div className="gallery-preview">
-                    {artPiece.gallery && artPiece.gallery.slice(2, 3).map((image, index) => (
-                        <img 
-                            key={index}
-                            src={image} 
-                            alt={`${artPiece.title} - imagen ${index + 1}`}
-                            className="gallery-preview-image"
-                        />
-                    ))}
-                </div> */}
                 <GalleryPreview 
                     images={artPiece.gallery?.slice(2, 3)} 
                     title={artPiece.title} 
@@ -64,16 +44,6 @@ function IntroArtPiece({ artPiece, t, currentLanguage }) {
                     className='intro-artpiece-texts'
                     dangerouslySetInnerHTML={{ __html: artPiece.textAP3 }}
                 />
-                {/* <div className="gallery-preview">
-                    {artPiece.gallery && artPiece.gallery.slice(3, 5).map((image, index) => (
-                        <img 
-                            key={index}
-                            src={image} 
-                            alt={`${artPiece.title} - imagen ${index + 1}`}
-                            className="gallery-preview-image"
-                        />
-                    ))}
-                </div> */}
                 <GalleryPreview 
                     images={artPiece.gallery?.slice(3, 5)} 
                     title={artPiece.title} 
