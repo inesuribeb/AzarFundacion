@@ -7,7 +7,6 @@ function Hero3({ t }) {
     return (
         <section className='hero3-section'>
             <div className='bckgrnd-img-hero3'>
-                {/* <img src="/Images/Publications/Publication01/Residencias-1.jpg" alt="" /> */}
                 <Weird
                     t={t}
                 />

@@ -21,7 +21,6 @@ function OpenCall({ t, data }) {
 
     return (
         <section className='OpenCall-section'>
-            {/* <MiniBlue>{residencyData?.title}</MiniBlue> */}
             <BigSerif className='o-title'>{t('openCall')}</BigSerif>
             <BigSerif className='o-subtitle'>{residencyData?.subtitle}</BigSerif>
             <img

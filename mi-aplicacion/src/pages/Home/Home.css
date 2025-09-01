@@ -3,3 +3,26 @@
     flex-direction: column;
     gap: 8rem;
 }
+
+/* Media Queries para .home-content */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .home-content {
+        gap: 5rem;
+    }
+}
+
+/* Móviles (hasta 767px) */
+@media (max-width: 767px) {
+    .home-content {
+        gap: 3rem;
+    }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .home-content {
+        gap: 2rem;
+    }
+}

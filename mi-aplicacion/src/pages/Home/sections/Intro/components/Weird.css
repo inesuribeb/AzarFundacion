@@ -21,6 +21,17 @@
     align-items: flex-end;
     padding-bottom: 2rem;
     justify-content: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.latest-stories {
+    text-transform: uppercase;
+    padding-left: 2rem;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
+    font-family: var(--serif-font);
 }
 
 .weird-navigation {
@@ -80,8 +91,6 @@
 .weird-content.bg-residencias {
     background-position: center;
     background-size: cover;
-    /* background-position: right top;
-    background-size: 40%; */
 }
 .weird-content.bg-residencias::before {
     content: '';
@@ -96,8 +105,6 @@
 
 
 .weird-content.bg-exposiciones {
-    /* background-position: right center;
-    background-size: contain; */
     background-position: 70% 20%;
     background-size: 40%;
 }
@@ -136,4 +143,234 @@
 .weird-content.bg-colaboraciones {
     background-position: 70% 20%;
     background-size: 40%;
+}
+
+
+
+
+
+/* Media Queries para Weird Component */
+
+/* Tablets y pantallas medianas (768px - 1024px) */
+@media (max-width: 1024px) {
+    .weird-overlay {
+        padding-bottom: 1.5rem;
+    }
+    
+    .weird-nav-item {
+        font-size: clamp(0.9rem, 2.5vw, 2.5rem);
+        padding: 0rem 1.5rem;
+    }
+    
+    .circle {
+        width: 10px;
+        height: 10px;
+        margin-right: 0.8rem;
+    }
+    
+    .latest-stories {
+        padding-left: 1.5rem;
+    }
+    
+    .weird-content.bg-exposiciones {
+        background-position: 60% 15%;
+        background-size: 50%;
+    }
+    
+    .weird-content.bg-obras-colectivas {
+        background-size: 130%;
+    }
+    
+    .weird-content.bg-colaboraciones {
+        background-position: 60% 15%;
+        background-size: 50%;
+    }
+}
+
+/* Móviles grandes (481px - 767px) */
+@media (max-width: 767px) {
+
+    .weird-content {
+        min-height: 60vh;
+    }
+    .weird-overlay {
+        padding-bottom: 1rem;
+        align-items: center;
+        text-align: center;
+        min-height: 60vh;
+    }
+    
+    .weird-navigation {
+        align-items: left;
+        gap: 0.5rem;
+        
+    }
+    
+    .weird-nav-item {
+        font-size: clamp(1.2rem, 3.4vw, 2.4rem);
+        padding: 0.2rem 1rem;
+        justify-content: center;
+    }
+    
+    .circle {
+        width: 10px;
+        height: 10px;
+        margin-right: 0.6rem;
+    }
+    
+    .latest-stories {
+        padding-left: 1rem;
+    }
+    
+    /* Ajustar backgrounds para móviles */
+    .weird-content.bg-exposiciones {
+        background-position: center;
+        background-size: 80%;
+        /* height: 50vh; */
+
+    }
+    
+    .weird-content.bg-obras-colectivas {
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .weird-content.bg-colaboraciones {
+        background-position: center;
+        background-size: 80%;
+    }
+}
+
+/* Móviles pequeños (320px - 480px) */
+@media (max-width: 480px) {
+    .weird-overlay {
+        padding-bottom: 0.8rem;
+        min-height: 50vh;
+
+    }
+    
+    .weird-navigation {
+        gap: 0.3rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .weird-nav-item {
+        font-size: clamp(1rem, 5vw, 2.5rem);
+        padding: 0.1rem 0.8rem;
+        letter-spacing: 0.5px;
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    
+    .circle {
+        width: 7px;
+        height: 7px;
+        margin-right: 0.5rem;
+        flex-shrink: 0;
+    }
+    
+    .latest-stories {
+        padding-left: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Simplificar backgrounds para móviles pequeños */
+    .weird-content.bg-exposiciones,
+    .weird-content.bg-colaboraciones {
+        /* background-position: center;
+        background-size: contain; */
+
+        background-position: top 10% right 8%;
+        background-size: 45%;
+    }
+    
+    .weird-content.bg-obras-colectivas {
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+/* Pantallas muy pequeñas (menos de 320px) */
+@media (max-width: 319px) {
+    .weird-overlay {
+        padding-bottom: 0.5rem;
+        
+    }
+    
+    .weird-nav-item {
+        font-size: clamp(0.6rem, 5vw, 1.2rem);
+        padding: 0 0.5rem;
+    }
+    
+    .circle {
+        width: 5px;
+        height: 5px;
+        margin-right: 0.4rem;
+    }
+    
+    .latest-stories {
+        padding-left: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Pantallas muy grandes (más de 1440px) */
+@media (min-width: 1441px) {
+    .weird-overlay {
+        padding-bottom: 3rem;
+    }
+    
+    .weird-nav-item {
+        font-size: clamp(1.2rem, 1.8vw, 3.5rem);
+        padding: 0rem 3rem;
+    }
+    
+    .circle {
+        width: 14px;
+        height: 14px;
+        margin-right: 1.2rem;
+    }
+    
+    .latest-stories {
+        padding-left: 3rem;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .weird-overlay {
+        padding-bottom: 0.5rem;
+        justify-content: center;
+        align-items: flex-end;
+        min-height: 50vh;
+    }
+    
+    .weird-navigation {
+        flex-direction: row;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .weird-nav-item {
+        font-size: clamp(0.7rem, 2vw, 1.2rem);
+        padding: 0.2rem 0.5rem;
+    }
+    
+    .circle {
+        width: 6px;
+        height: 6px;
+        margin-right: 0.3rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .weird-nav-item {
+        transition: none;
+    }
+    
+    .circle {
+        animation: none;
+    }
 }

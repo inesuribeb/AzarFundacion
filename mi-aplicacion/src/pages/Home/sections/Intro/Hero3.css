@@ -21,12 +21,11 @@
     background-color: var(--light-color, #fff);
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-start; */
     justify-content: flex-end;
     padding: 2rem 2rem;
     gap: 6rem;
     padding-left: 5rem;
-    overflow-y: auto; /* Permite scroll natural si el contenido es largo */
+    overflow-y: auto; 
 }
 
 .hero3-intro h2 {
@@ -39,4 +38,234 @@
 .vision-text {
     font-family: var(--futura-font);
     font-weight: var(--futura-book);
+}
+
+/* Media Queries para Hero3 Component */
+
+/* Tablets y pantallas medianas (768px - 1024px) */
+/* @media (max-width: 1024px) {
+    .hero3-intro {
+        padding: 1.5rem 1.5rem;
+        padding-left: 3rem;
+        gap: 4rem;
+    }
+    
+    .hero3-intro h2 {
+        font-size: 2.5rem;
+    }
+} */
+
+/* Tablets pequeñas (768px - 900px) */
+@media (max-width: 900px) {
+    .hero3-intro {
+        padding: 1.5rem;
+        gap: 3rem;
+    }
+    
+    .hero3-intro h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Móviles grandes y tablets en portrait (481px - 767px) */
+@media (max-width: 767px) {
+    .hero3-section {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        height: 100%;
+        margin-bottom: 7rem;
+    }
+    
+    .hero3-intro {
+        order: 1;
+        width: 100%;
+        padding: 2rem 1.5rem;
+        gap: 2.5rem;
+        justify-content: flex-start;
+        padding-top: 3rem;
+        margin-bottom: 2rem;
+        /* min-height: 70vh; */
+    }
+    
+    .bckgrnd-img-hero3 {
+        order: 2;
+        width: 100%;
+        height: 60vh;
+        min-height: 300px;
+    }
+    
+    .hero3-intro h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+}
+
+/* Móviles medianos (481px - 600px) */
+@media (max-width: 600px) {
+
+    .hero3-section {
+        height: 100%;
+    }
+    .hero3-intro {
+        padding: 1.5rem 1.2rem;
+        gap: 2rem;
+        padding-top: 2.5rem;
+    }
+    
+    .hero3-intro h2 {
+        font-size: 1.8rem;
+    }
+    
+    .bckgrnd-img-hero3 {
+        height: 45vh;
+        min-height: 280px;
+    }
+}
+
+/* Móviles pequeños (320px - 480px) */
+@media (max-width: 480px) {
+    .hero3-section {
+        min-height: 100vh;
+        height: 100%;
+    }
+    
+    .hero3-intro {
+        padding: 1.2rem 1rem;
+        gap: 1.5rem;
+        padding-top: 2rem;
+        min-height: 55vh;
+        justify-content: flex-start;
+    }
+    
+    .hero3-intro h2 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+    
+    .vision-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .bckgrnd-img-hero3 {
+        height: 40vh;
+        min-height: 250px;
+    }
+}
+
+/* Móviles muy pequeños (menos de 320px) */
+/* @media (max-width: 319px) {
+    .hero3-intro {
+        padding: 1rem 0.8rem;
+        gap: 1.2rem;
+        padding-top: 1.5rem;
+    }
+    
+    .hero3-intro h2 {
+        font-size: 1.4rem;
+    }
+    
+    .vision-text {
+        font-size: 0.85rem;
+    }
+    
+    .bckgrnd-img-hero3 {
+        height: 35vh;
+        min-height: 220px;
+    }
+} */
+
+/* Pantallas muy grandes (más de 1440px) */
+@media (min-width: 1441px) {
+    .hero3-intro {
+        padding: 3rem 3rem;
+        padding-left: 6rem;
+        gap: 8rem;
+    }
+    
+    .hero3-intro h2 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Orientación landscape en móviles */
+@media (max-height: 600px) and (orientation: landscape) and (max-width: 900px) {
+    .hero3-section {
+        flex-direction: row;
+        min-height: 100vh;
+    }
+    
+    .hero3-intro {
+        order: 1;
+        width: 60%;
+        padding: 1rem 1.5rem;
+        gap: 1.5rem;
+        justify-content: center;
+        min-height: auto;
+    }
+    
+    .bckgrnd-img-hero3 {
+        order: 2;
+        width: 40%;
+        min-height: 100vh;
+        /* min-height: auto; */
+        height: 100%;
+    }
+    
+    .hero3-intro h2 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+    
+    .vision-text {
+        font-size: 0.85rem;
+    }
+}
+
+/* Tablets en landscape */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .hero3-intro {
+        padding: 2rem;
+        padding-left: 3rem;
+        gap: 3rem;
+    }
+    
+    .hero3-intro h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .hero3-intro {
+        overflow-y: auto;
+        scroll-behavior: auto;
+    }
+}
+
+/* Para pantallas con altura muy pequeña */
+@media (max-height: 500px) and (orientation: portrait) {
+    .hero3-intro {
+        min-height: auto;
+        padding-top: 1rem;
+        gap: 1rem;
+    }
+    
+    .bckgrnd-img-hero3 {
+        height: 30vh;
+        min-height: 180px;
+    }
+}
+
+/* Ajustes específicos para iPhone SE y similares */
+@media (max-width: 375px) and (max-height: 667px) {
+    .hero3-intro h2 {
+        font-size: 1.5rem;
+    }
+    
+    .vision-text {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
 }
