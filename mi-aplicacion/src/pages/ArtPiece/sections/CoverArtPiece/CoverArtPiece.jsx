@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useHeader } from '../../../../contexts/HeaderContext';
+import { useMobile } from '../../../../components/Hooks/useMobile';
 import './CoverArtPiece.css';
 
 function CoverArtPiece({ artPiece, lightHeader = {} }) {
@@ -9,6 +10,7 @@ function CoverArtPiece({ artPiece, lightHeader = {} }) {
     const [sectionHeight, setSectionHeight] = useState('200vh');
     const { setUseLightLogo, setUseLightHamburger } = useHeader();
     const [isImageLoaded, setIsImageLoaded] = useState(false);
+    const isMobile = useMobile();
 
     const { logo = false, hamburger = false } = lightHeader;
 
@@ -139,6 +141,9 @@ function CoverArtPiece({ artPiece, lightHeader = {} }) {
         return () => window.removeEventListener('scroll', optimizedScroll);
     }, [sectionHeight]);
 
+    const imageToUse = isMobile ? artPiece.image : artPiece.image2;
+
+
     return (
         <section
             ref={sectionRef}
@@ -147,9 +152,17 @@ function CoverArtPiece({ artPiece, lightHeader = {} }) {
         >
             <div ref={containerRef} className="cover-artpiece-container">
                 <div className="cover-artpiece-background">
-                    <div ref={imageRef} className="image-wrapper-artpiece">
+                    {/* <div ref={imageRef} className="image-wrapper-artpiece">
                         <img
                             src={artPiece.image2}
+                            alt={artPiece.title}
+                            className={isImageLoaded ? 'loaded' : ''}
+                        />
+                    </div> */}
+
+                    <div ref={imageRef} className="image-wrapper-artpiece">
+                        <img
+                            src={imageToUse} // ← Usar la variable condicional
                             alt={artPiece.title}
                             className={isImageLoaded ? 'loaded' : ''}
                         />

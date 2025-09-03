@@ -1,7 +1,7 @@
 .home-content {
     display: flex;
     flex-direction: column;
-    gap: 0rem;
+    gap: 6rem;
 }
 
 /* Media Queries para .home-content */
@@ -16,13 +16,14 @@
 /* Móviles (hasta 767px) */
 @media (max-width: 767px) {
     .home-content {
-        gap: 3rem;
+        gap: 4rem;
     }
 }
 
 /* Móviles pequeños (hasta 480px) */
 @media (max-width: 480px) {
     .home-content {
-        gap: 2rem;
+        gap: 3rem;
+        padding-bottom: 5rem;
     }
 }

@@ -1,6 +1,7 @@
 import Texts from '../../../../components/Texts/Texts';
 import MediumSans from '../../../../components/Titles/MediumSans/MediumSans';
 import NavigationTabs from './components/NavigationTabs'; 
+import PutaSeccion from './components/PutaSeccion';
 import './Intro.css'
 
 function Intro({ t, getRoute }) {
@@ -16,6 +17,11 @@ function Intro({ t, getRoute }) {
                     onHoverStateChange={(isLight) => console.log('Hover:', isLight)}
                 />
             </div> */}
+            <PutaSeccion 
+            t={t}
+            getRoute={getRoute}
+            />
+
         </section>
     )
 }

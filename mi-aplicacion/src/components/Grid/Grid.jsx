@@ -2,25 +2,25 @@ import GenericCard from '../GenericCard/GenericCard';
 import PublicationCard from '../GenericCard/PublicationCard';
 import './Grid.css';
 
-function Grid({ 
-    cards = [], 
+function Grid({
+    cards = [],
     className = '',
-    cardType = 'generic' 
+    cardType = 'generic'
 }) {
     const getGridColumns = (cardCount) => {
         if (cardType === 'publications') return 1
-        
+
         if (cardCount === 1) return 1
         if (cardCount === 2) return 2
         if (cardCount === 3) return 3
-        return 4 
+        return 4
     }
 
     const gridColumns = getGridColumns(cards.length)
 
     const renderCard = (card, index) => {
-        const isSingle = cards.length === 1; 
-        
+        const isSingle = cards.length === 1;
+
         if (cardType === 'publications') {
             return (
                 <PublicationCard
@@ -31,26 +31,28 @@ function Grid({
                     price={card.price}
                     onClick={card.onClick}
                     className={card.className}
-                    isSingle={isSingle} 
+                    isSingle={isSingle}
                 />
             )
         } else {
             return (
                 <GenericCard
                     key={card.id || index}
-                    image={card.images ? card.images[0] : card.image} 
+                    image={card.images ? card.images[0] : card.image}
                     title={card.title}
                     description={card.description}
                     onClick={card.onClick}
                     className={card.className}
-                    isSingle={isSingle} 
+                    isSingle={isSingle}
+                    year={card.year}
+                    showYear={cardType === 'artpieces'}
                 />
             )
         }
     }
 
     return (
-        <div 
+        <div
             className={`grid ${className} ${cardType === 'publications' ? 'publications-grid' : ''}`}
             style={{ '--grid-columns': gridColumns }}
         >

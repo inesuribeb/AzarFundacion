@@ -12,14 +12,14 @@ function NavigationTabs({ t, getRoute, onTabChange, onHoverStateChange }) {
             id: 'residencias', 
             labelKey: 'residencies', 
             route: 'residenciesProgram',
-            bgImage: '/Images/Header/HeaderResidencia.jpg',
+            bgImage: '/Images/Residencies/Residency01/PortadaResi.jpg',
             lightText: true 
         },
         { 
             id: 'exposiciones', 
             labelKey: 'exhibitions', 
             route: 'archive',
-            bgImage: '/Images/Residencies/Residency02/prueba4.PNG',
+            bgImage: '/Images/Exhibitions/Exhibition01/HeaderArchivo.png',
             lightText: true 
         },
         { 
@@ -27,7 +27,7 @@ function NavigationTabs({ t, getRoute, onTabChange, onHoverStateChange }) {
             labelKey: 'collectiveArtPieces', 
             route: 'archive',
             queryParam: 'tab=collectiveArtPieces',
-            bgImage: '/Images/ArtPieces/ArtPiece01/artpiece01-01.png',
+            bgImage: '/Images/ArtPieces/ArtPiece01/obra01-1.jpg',
             lightText: true 
         },
         { 
@@ -35,7 +35,7 @@ function NavigationTabs({ t, getRoute, onTabChange, onHoverStateChange }) {
             labelKey: 'publications', 
             route: 'archive',
             queryParam: 'tab=publications',
-            bgImage: '/Images/Header/HeaderResidencia.jpg',
+            bgImage: '/Images/Publications/Publication01/MencionPubli2.jpg',
             lightText: true 
         },
         { 
@@ -43,7 +43,7 @@ function NavigationTabs({ t, getRoute, onTabChange, onHoverStateChange }) {
             labelKey: 'collaborations', 
             route: 'archive',
             queryParam: 'tab=collaborations',
-            bgImage: '/Images/Header/HeaderResidencia.jpg',
+            bgImage: '/Images/Collaborations/Collab01/Collab01-3.jpg',
             lightText: true 
         },
     ];

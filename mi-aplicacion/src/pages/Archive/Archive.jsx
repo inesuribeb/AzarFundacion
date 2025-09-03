@@ -130,7 +130,9 @@ function Archive() {
                 <Grid
                     cards={getCurrentData()}
                     className={`archive-grid ${activeTab}-grid`}
-                    cardType={activeTab === 'publications' ? 'publications' : 'generic'} // ✅ Nueva prop
+                    // cardType={activeTab === 'publications' ? 'publications' : 'generic'} 
+                    cardType={activeTab === 'publications' ? 'publications' : activeTab === 'collectiveArtPieces' ? 'artpieces' : 'generic'}
+
                 />
             </div>
         </div>

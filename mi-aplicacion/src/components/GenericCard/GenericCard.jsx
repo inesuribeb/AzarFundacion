@@ -6,7 +6,9 @@ function GenericCard({
     description,
     onClick,
     className = '',
-    isSingle = false
+    isSingle = false,
+    year = null,  
+    showYear = false 
 }) {
     return (
         <div
@@ -21,10 +23,19 @@ function GenericCard({
                 />
             </div>
             <div className="card-content">
-                <h3
+                {/* <h3
                     className="card-title"
                     dangerouslySetInnerHTML={{ __html: title }}
-                />
+                /> */}
+                <div className="card-title-container">
+                    <h3
+                        className="card-title"
+                        dangerouslySetInnerHTML={{ __html: title }}
+                    />
+                    {showYear && year && (
+                        <span className="card-year">({year})</span>
+                    )}
+                </div>
                 {description && (
                     <p
                         className="card-subtitle"
