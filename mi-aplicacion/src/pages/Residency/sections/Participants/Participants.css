@@ -464,7 +464,7 @@
     }
 
     .image-column {
-        padding: 5rem 0.75rem 0.75rem 0.75rem;
+        padding: 5rem 1rem 1rem 1rem;
     }
 
     .image-container {
@@ -472,7 +472,7 @@
     }
 
     .info-column {
-        padding: 0.75rem;
+        padding: 1rem;
     }
 
     .resident-name h2 {

@@ -188,7 +188,7 @@
 /* Media Query para móviles pequeños (hasta 480px) */
 @media (max-width: 480px) {
     .cover-artpiece-content {
-        padding: 1.5rem 0.75rem;
+        padding: 1.5rem 1rem;
     }
     
     .cover-artpiece-introduction {

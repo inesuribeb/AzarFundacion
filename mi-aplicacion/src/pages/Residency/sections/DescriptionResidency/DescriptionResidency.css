@@ -59,7 +59,7 @@
 /* Media Query para móviles pequeños (hasta 480px) */
 @media (max-width: 480px) {
     .section-residencyDescription {
-        padding: 1rem 0.75rem;
+        padding: 1rem 1rem;
         padding-top: 0rem;
 width: 100%;
     }

@@ -76,7 +76,7 @@
 /* Media Query para móviles pequeños (hasta 480px) */
 @media (max-width: 480px) {
     .intro-art-piece {
-        padding: 1rem 0.75rem;
+        padding: 1rem 1rem;
     }
 
     .description-info {
