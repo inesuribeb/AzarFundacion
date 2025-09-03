@@ -95,7 +95,9 @@
     font-size: clamp(3rem, 5vw, 7rem);
 }
 
-@media (max-width: 1024px) {
+
+/* Media Query para Tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
     .cover-residency-container {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -112,6 +114,7 @@
     
     .cover-residency-title {
         align-items: flex-start;
+        gap: 4rem;
     }
     
     .cover-residency-title h1 {
@@ -125,43 +128,108 @@
     }
 }
 
+/* Media Query para Móvil */
 @media (max-width: 768px) {
     .cover-residency {
-        height: auto;
+        height: auto !important; /* Sobrescribir el height dinámico */
         min-height: 100vh;
+        position: static; /* Cambiar a static para evitar problemas de scroll */
     }
     
     .cover-residency-container {
-        grid-template-rows: 60vh auto;
-        position: relative;
+        position: static !important; /* Sobrescribir el position fixed del JS */
+        display: flex !important; /* Sobrescribir posibles display: none del JS */
+        flex-direction: column;
+        grid-template-columns: none;
+        grid-template-rows: none;
         height: auto;
         min-height: 100vh;
-    }
-    
-    .cover-residency-image {
-        position: relative;
-        overflow: visible;
-    }
-    
-    .image-wrapper {
-        position: relative;
+        top: auto !important;
+        left: auto !important;
         transform: none !important;
     }
     
-    .image-wrapper img {
+    .cover-residency-image {
+        position: static;
+        order: 1;
+        height: 60vh;
         min-height: 60vh;
+        overflow: hidden;
+    }
+    
+    .image-wrapper {
+        position: static !important; /* Sobrescribir el positioning del JS */
+        height: 100%;
+        transform: none !important; /* Sobrescribir las transformaciones del JS */
+    }
+    
+    .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        min-height: 60vh;
+        object-fit: cover;
+        transform: scale(1) !important; /* Sobrescribir animación de zoom */
+        transition: none; /* Quitar transición en móvil */
     }
     
     .cover-residency-content {
-        padding: 1.5rem;
+        order: 2;
+        position: static;
+        padding: 2rem 1.5rem;
         min-height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--light-color); /* Fondo para separar del contenido siguiente */
+    }
+    
+    .cover-residency-title {
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 0;
     }
     
     .cover-residency-title h1 {
-        font-size: clamp(1.8rem, 7vw, 2.5rem);
+        font-size: clamp(1.5rem, 6vw, 2.2rem);
+        text-align: center;
+        line-height: 1.2;
     }
     
     .cover-residency-title h2 {
         font-size: clamp(1.8rem, 7vw, 2.5rem);
+        text-align: center;
+        line-height: 1.1;
     }
 }
+
+/* Media Query para móviles pequeños */
+@media (max-width: 480px) {
+    .cover-residency-image {
+        height: 60vh;
+        min-height: 50vh;
+    }
+    
+    .image-wrapper img {
+        min-height: 50vh;
+    }
+    
+    .cover-residency-content {
+        padding: 1.5rem 1rem;
+        min-height: 35dvh;
+    }
+    
+    .cover-residency-title {
+        gap: 1.5rem;
+    }
+    
+    .cover-residency-title h1 {
+        font-size: clamp(1rem, 4vw, 1.6rem);
+    }
+    
+    .cover-residency-title h2 {
+        font-size: clamp(1.8rem, 8vw, 3rem);
+    }
+}
+
+

@@ -1,7 +1,7 @@
 .home-content {
     display: flex;
     flex-direction: column;
-    gap: 8rem;
+    gap: 0rem;
 }
 
 /* Media Queries para .home-content */

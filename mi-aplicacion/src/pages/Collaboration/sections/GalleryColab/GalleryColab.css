@@ -17,3 +17,34 @@
     object-fit: contain; /* ← Mantiene imagen completa sin recortar */
     border-radius: 0px;
 }
+
+/* Media Query para Móvil (hasta 768px) */
+@media (max-width: 768px) {
+    .galley-colab-section {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        min-height: auto;
+        margin-top: 2rem;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .colab-image-g {
+        max-width: 90%;
+        width: 100%;
+    }
+}
+
+/* Media Query para móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .galley-colab-section {
+        padding: 1rem 0.75rem;
+        margin-top: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .colab-image-g {
+        max-width: 100%;
+    }
+}

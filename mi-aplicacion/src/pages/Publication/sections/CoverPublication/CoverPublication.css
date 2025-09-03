@@ -140,3 +140,56 @@
 .pub-page-cart-btn:hover {
     opacity: 0.9;
 }
+
+
+
+@media screen and (max-width: 768px) {
+    .cover-pub-page {
+        height: 90vh;
+        display: flex;
+        justify-content: center 10%;
+    }
+    .pub-page-header {
+        padding-top: 6rem;
+    }
+
+    .pub-page-header h1 {
+        font-size: 1.3rem;
+        padding: 0 1rem;
+    }
+
+    .publication-viewer-carousel .image-carousel-image {
+        max-width: 90%;
+        max-height: 80%;
+    }
+
+    .pub-page-purchase-bar {
+        width: calc(100% - 1rem);
+        left: 0.5rem;
+        bottom: 0.5rem;
+        height: 50px;
+    }
+
+    .pub-page-price {
+        width: 130px;
+        font-size: 1rem;
+    }
+
+    .pub-page-spacer {
+        border: transparent;
+    }
+
+    .pub-page-quantity {
+        width: 60px;
+    }
+
+    .pub-page-quantity::after {
+        right: 1rem;
+    }
+
+    .pub-page-cart-btn {
+        min-width: 150px;
+        font-size: 1rem;
+        padding: 0 1.5rem;
+    }
+}

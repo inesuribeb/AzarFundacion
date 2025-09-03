@@ -1,4 +1,4 @@
-.image-carousel {
+/* .image-carousel {
     position: relative;
     width: 100%;
     height: 70vh; 
@@ -198,5 +198,225 @@
     .image-carousel-placeholder {
         height: 40vh;
         min-height: 250px;
+    }
+} */
+
+
+.image-carousel {
+    position: relative;
+    width: 100%;
+    height: 70vh; 
+    max-height: 600px;
+    min-height: 400px;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.image-carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-carousel-container.click-nav {
+    cursor: pointer;
+}
+
+.image-carousel-slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.image-carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.image-carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.image-carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    padding: 0;
+}
+
+.image-carousel-arrow-left {
+    left: 20px;
+}
+
+.image-carousel-arrow-left:hover {
+    transform: translateY(-50%) translateX(-5px);
+}
+
+.image-carousel-arrow-right {
+    right: 20px;
+}
+
+.image-carousel-arrow-right:hover {
+    transform: translateY(-50%) translateX(5px); 
+}
+
+.arrow-icon {
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.arrow-icon-right {
+    transform: rotate(180deg); 
+}
+
+.image-carousel-nav-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 5;
+}
+
+.nav-area {
+    flex: 1;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-prev {
+    cursor: w-resize;
+}
+
+.nav-next {
+    cursor: e-resize;
+}
+
+.nav-counter {
+    background: transparent;
+    color: var(--dark-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: 500;
+    pointer-events: none;
+    position: fixed;
+    z-index: 1000;
+    transform: translate(-50%, -100%);
+    margin-top: -10px;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
+}
+
+.image-carousel-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    max-height: 600px;
+    min-height: 400px;
+    background: #f0f0f0;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Contador móvil estilo slider */
+.mobile-carousel-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
+    font-size: 1.2rem;
+    color: var(--dark-color);
+}
+
+.current-image,
+.total-images {
+    font-weight: var(--futura-book);
+    color: var(--dark-color);
+}
+
+.indicator-separator {
+    margin: 0 0.5rem;
+    color: var(--neutral-color);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .image-carousel {
+        height: 50vh;
+        min-height: 300px;
+    }
+    
+    .image-carousel-placeholder {
+        height: 50vh;
+        min-height: 300px;
+    }
+    
+    /* Ocultar elementos desktop en móvil */
+    .image-carousel-arrow,
+    .image-carousel-nav-overlay,
+    .nav-counter {
+        display: none;
+    }
+    
+    /* Hacer el contenedor touch-friendly */
+    /* .image-carousel-container {
+        touch-action: pan-x;
+        user-select: none;
+    } */
+    
+    .mobile-carousel-indicator {
+        font-size: 1rem;
+        margin-top: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-carousel {
+        height: 40vh;
+        min-height: 250px;
+    }
+    
+    .image-carousel-placeholder {
+        height: 40vh;
+        min-height: 250px;
+    }
+    
+    .mobile-carousel-indicator {
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
     }
 }

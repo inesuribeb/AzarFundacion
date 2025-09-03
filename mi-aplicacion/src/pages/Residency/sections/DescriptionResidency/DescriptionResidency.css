@@ -1,6 +1,5 @@
 .section-residencyDescription {
     width: 100%;
-    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -15,22 +14,58 @@
 }
 
 .residency-description {
-    /* font-size: 2rem; */
-    /* font-style: italic; */
     color: var(--dark-color);
     margin: 0 0 1rem 0;
-    /* font-family: var(--main-font); */
     font-weight: 200;
     line-height: 1.5;
     text-align: center; 
     margin-top: 4rem;
     width: 100%;
     text-align: justify;
-
-    /* font-family: var(--futura-font);
-    font-weight: var(--futura-medium); */
 }
 
 .residency-texts {
     width: 80%;
+}
+
+/* Media Query para Móvil (hasta 768px) */
+@media (max-width: 768px) {
+    .section-residencyDescription {
+        padding: 1rem 1rem;
+        width: 100%;
+        padding-top: 0rem;
+    }
+
+    .description-info {
+        width: 100%;
+        gap: 1.5rem;
+        margin-top: 0rem;
+    }
+
+    .residency-description {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        text-align: left; /* Cambiar de justify a left para mejor legibilidad en móvil */
+        line-height: 1.6;
+    }
+
+    .residency-texts {
+        width: 100%;
+        text-align: left;
+        line-height: 1.6;
+    }
+}
+
+/* Media Query para móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .section-residencyDescription {
+        padding: 1rem 0.75rem;
+        padding-top: 0rem;
+width: 100%;
+    }
+
+    .residency-description {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
 }

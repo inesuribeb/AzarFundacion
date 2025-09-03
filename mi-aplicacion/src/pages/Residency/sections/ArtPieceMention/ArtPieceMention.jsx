@@ -12,7 +12,7 @@ function ArtPieceMention({ residencia, t, currentLanguage }) {
         : null;
 
     if (!artPiece) {
-        return null; // No mostrar nada si no hay artPiece
+        return null; 
     }
 
     return (
@@ -25,11 +25,7 @@ function ArtPieceMention({ residencia, t, currentLanguage }) {
                 />
             </div>
             <div className='artPM-picture'>
-                {/* <img
-                    src={artPiece.image}
-                    alt={artPiece.title[currentLanguage] || artPiece.title.es}
-                    className="artpiece-image"
-                /> */}
+            
 
                 <Link
                     to={getRoute('artPiece', { id: artPiece.id })}
@@ -43,13 +39,7 @@ function ArtPieceMention({ residencia, t, currentLanguage }) {
                     <h3>{artPiece.title[currentLanguage] || artPiece.title.es} ({artPiece.year})</h3>
                 </Link>
 
-                {/* <h3>{artPiece.title[currentLanguage] || artPiece.title.es}</h3> */}
-                {/* <Link
-                    to={getRoute('artPiece', { id: artPiece.id })}
-                    className="artpiece-link"
-                >
-                    <h3>{artPiece.title[currentLanguage] || artPiece.title.es}</h3>
-                </Link> */}
+                
             </div>
         </section>
     )

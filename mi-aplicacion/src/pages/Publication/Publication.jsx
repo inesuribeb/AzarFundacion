@@ -17,7 +17,7 @@ function Publication() {
     if (!publication) {
         return (
             <div className="publication-page">
-                <BackButton variant="floating" />
+                {/* <BackButton variant="floating" /> */}
                 <h1>{t('publicationNotFound') || 'Publicación no encontrada'}</h1>
             </div>
         );
@@ -25,7 +25,7 @@ function Publication() {
 
     return (
         <div className="publication-page">
-            <BackButton variant="floating" />
+            {/* <BackButton variant="floating" /> */}
             <CoverPublication 
                 publication={publication} 
                 t={t}

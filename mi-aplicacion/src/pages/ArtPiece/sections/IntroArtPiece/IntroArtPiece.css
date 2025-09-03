@@ -36,3 +36,63 @@
     width: 80%;
     margin-bottom: 3rem;
 }
+
+
+/* Media Query para Móvil (hasta 768px) */
+@media (max-width: 768px) {
+    .intro-art-piece {
+        padding: 1.5rem 1rem;
+    }
+
+    .description-info {
+        width: 100%;
+        margin-top: 2rem;
+        align-items: flex-start;
+    }
+
+    .artpiece-title-year {
+        font-size: 1.5rem;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+        align-self: flex-start;
+    }
+
+    .authors-ap {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        align-self: flex-start;
+        line-height: 1.4;
+        text-align: left;
+    }
+
+    .intro-artpiece-texts {
+        width: 100%;
+        margin-bottom: 2rem;
+        text-align: left;
+        line-height: 1.6;
+    }
+}
+
+/* Media Query para móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .intro-art-piece {
+        padding: 1rem 0.75rem;
+    }
+
+    .description-info {
+        margin-top: 1.5rem;
+    }
+
+    .artpiece-title-year {
+        font-size: 1.3rem;
+    }
+
+    .authors-ap {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .intro-artpiece-texts {
+        margin-bottom: 1.5rem;
+    }
+}

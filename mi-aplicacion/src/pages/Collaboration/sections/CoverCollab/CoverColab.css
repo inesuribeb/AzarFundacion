@@ -132,64 +132,81 @@
     width: 90%;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+/* Media Query para Móvil (hasta 768px) */
+@media (max-width: 768px) {
+    .section-cover-colab {
+        height: 100vh !important; /* Sobrescribir el height dinámico */
+        position: static;
+    }
+    
     .cover-colab-container {
-        flex-direction: column;
+        position: static !important; /* Sobrescribir el position fixed del JS */
+        display: flex !important; /* Sobrescribir posibles display: none del JS */
+        flex-direction: column; /* Cambiar a columna: título arriba, imagen abajo */
+        height: 100vh;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
     }
     
+    /* Título arriba */
     .cover-colab-content {
-        order: 2;
-        padding: 2rem;
-        align-items: flex-start;
-        justify-content: center;
-    }
-    
-    .cover-colab-image {
         order: 1;
-        flex: 2;
+        flex: 0 0 auto;
+        height: auto;
+        padding: 2rem 1rem 1rem 1rem;
+        align-items: center;
+        justify-content: center;
+        background: var(--light-color);
     }
     
     .cover-colab-content h1 {
-        font-size: clamp(2rem, 6vw, 3rem);
-        text-align: left;
-    }
-}
-
-@media (max-width: 768px) {
-    .section-cover-colab {
-        height: auto;
-        min-height: 100vh;
+        font-size: clamp(1.8rem, 6vw, 3rem);
+        text-align: center;
+        width: 100%;
+        line-height: 1.2;
     }
     
-    .cover-colab-container {
-        position: relative;
-        height: auto;
-        min-height: 100vh;
-    }
-    
+    /* Imagen abajo */
     .cover-colab-image {
-        position: relative;
-        overflow: visible;
+        order: 2;
+        flex: 1;
+        height: auto;
         min-height: 60vh;
     }
     
     .image-wrapper-colab {
-        position: relative;
-        transform: none !important;
-        min-height: 60vh;
+        position: static !important; /* Sobrescribir el positioning del JS */
+        height: 100%;
+        transform: none !important; /* Sobrescribir las transformaciones del JS */
     }
     
     .image-wrapper-colab img {
+        width: 100%;
+        height: 80%;
         min-height: 60vh;
+        padding: 1rem;
+        object-fit: cover;
+        transform: scale(1) !important; /* Sobrescribir animación de zoom */
+        transition: none; /* Quitar transición en móvil */
     }
-    
+}
+
+/* Media Query para móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
     .cover-colab-content {
-        padding: 1.5rem;
-        min-height: 40vh;
+        padding: 8rem 0.75rem 0rem 0.75rem;
     }
     
     .cover-colab-content h1 {
-        font-size: clamp(1.8rem, 7vw, 2.5rem);
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+    
+    .cover-colab-image {
+        height: 30vh;
+    }
+    
+    .image-wrapper-colab img {
+        min-height: 30vh;
     }
 }

@@ -31,3 +31,59 @@
     max-width: 70%;
     /* align-self: flex-start; */
 }
+
+
+/* Media Query para Móvil (hasta 768px) */
+@media (max-width: 768px) {
+    .details-colab-section {
+        flex-direction: column;
+        padding: rem;
+        margin-top: 2rem;
+        min-height: auto;
+    }
+
+    .colab-img {
+        order: 1;
+        margin-top: 0;
+        padding-left: 0;
+        padding-bottom: 1.5rem;
+        align-items: center;
+        justify-content: center;
+        padding: 0rem;
+    }
+
+    .colab-img img {
+        /* max-width: 90%; */
+        width: 100%;
+        height: auto;
+    }
+
+    .colab-info {
+        order: 2;
+        margin-top: 0;
+        padding-left: 0;
+        padding: 0;
+    }
+
+    .intro-artpiece-texts {
+        width: 100%;
+        text-align: left;
+        line-height: 1.6;
+    }
+}
+
+/* Media Query para móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .details-colab-section {
+        padding: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .colab-img {
+        padding-bottom: 1rem;
+    }
+
+    .colab-img img {
+        max-width: 100%;
+    }
+}

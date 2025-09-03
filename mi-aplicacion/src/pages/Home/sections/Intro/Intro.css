@@ -7,12 +7,11 @@
     margin: 0;
     position: relative;
     background-color: transparent;
-    /* padding: 2rem 2rem 3rem 2rem; */
     padding: 2rem;
     background-color: transparent;
-    justify-content: space-between; 
+    justify-content: center; 
     align-items: center;
-
+    gap: 4rem;
 }
 
 .intro-text-home {
@@ -23,5 +22,84 @@
 .intro-text-home2 {
     text-align: center;
 width: 100%;
-/* margin-bottom: -7rem; */
+}
+
+
+/* Media Queries para Tablet (768px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .intro-section {
+        padding: 1.5rem;
+        gap: 3rem;
+        height: 90vh; /* Reducimos ligeramente la altura en tablet */
+    }
+
+    .intro-text-home {
+        width: 70%; /* Aumentamos el ancho del texto en tablet */
+    }
+
+    .intro-text-home2 {
+        width: 90%; /* Reducimos ligeramente para mejor legibilidad */
+    }
+}
+
+/* Media Queries para Tablet pequeña/Portrait (481px - 767px) */
+@media screen and (max-width: 767px) and (min-width: 481px) {
+    .intro-section {
+        padding: 1.25rem;
+        gap: 2.5rem;
+        height: 85vh;
+    }
+
+    .intro-text-home {
+        width: 85%;
+    }
+
+    .intro-text-home2 {
+        width: 95%;
+    }
+}
+
+/* Media Queries para Móvil (320px - 480px) */
+@media screen and (max-width: 480px) {
+    .intro-section {
+        padding: 1rem;
+        gap: 2rem;
+        height: 80vh; /* Altura más pequeña en móvil */
+        min-height: 600px; /* Altura mínima para contenido */
+    }
+
+    .intro-text-home {
+        width: 95%; /* Casi todo el ancho disponible */
+    }
+
+    .intro-text-home2 {
+        width: 100%;
+    }
+}
+
+/* Media Queries para móviles muy pequeños (menos de 320px) */
+@media screen and (max-width: 319px) {
+    .intro-section {
+        padding: 0.75rem;
+        gap: 1.5rem;
+        height: 75vh;
+        min-height: 500px;
+    }
+
+    .intro-text-home {
+        width: 100%;
+    }
+
+    .intro-text-home2 {
+        width: 100%;
+    }
+}
+
+/* Media Query específica para orientación landscape en móvil */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .intro-section {
+        height: 100vh;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
 }

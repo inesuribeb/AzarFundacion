@@ -8,6 +8,7 @@ import Hero2 from './sections/Hero/Hero2';
 import Hero3 from './sections/Intro/Hero3';
 import HeroPhone from './sections/Hero/HeroPhone';
 import Intro2 from './sections/Intro/Intro2';
+import Intro from './sections/Intro/Intro';
 import OpenCall from './sections/OpenCall/OpenCall';
 import NavigationTabs from './sections/Intro/components/NavigationTabs';
 import './Home.css'
@@ -54,17 +55,26 @@ function Home() {
                     lightHeader={{ hamburger: true }}
                 />
             )}
-            <Hero3 t={t} getRoute={getRoute} />
+            {/* <Hero3 t={t} getRoute={getRoute} /> */}
+            <Intro t={t} getRoute={getRoute} />
             <OpenCall
                 t={t}
                 data={localizedNextResidency}
             />
-            <NavigationTabs
+            {/* <NavigationTabs
                 t={t}
                 getRoute={getRoute}
                 onTabChange={(item) => console.log('Tab selected:', item)}
                 onHoverStateChange={(isLight) => console.log('Hover:', isLight)}
-            />
+            /> */}
+            {!isMobile && (
+                <NavigationTabs
+                    t={t}
+                    getRoute={getRoute}
+                    onTabChange={(item) => console.log('Tab selected:', item)}
+                    onHoverStateChange={(isLight) => console.log('Hover:', isLight)}
+                />
+            )}
         </div>
     )
 }

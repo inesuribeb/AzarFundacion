@@ -43,3 +43,58 @@
     color: var(--corporative-color); /* O el color que uses para hover */
     transition: color 0.3s ease;
 }
+
+
+/* Media Query para Móvil (hasta 768px) */
+@media (max-width: 768px) {
+    .section-artPieceDescription {
+        padding: 1.5rem 1rem;
+    }
+
+    .description-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .artPM-picture {
+        margin-top: 3rem;
+        width: 100%;
+    }
+
+    .artpiece-image {
+        width: 100%;
+        /* max-width: 400px; */
+        align-self: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .artPM-picture h3 {
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    .artpiece-link:hover h3 {
+        transition: none; 
+    }
+}
+
+@media (max-width: 480px) {
+    .section-artPieceDescription {
+        padding: 1rem 0.75rem;
+    }
+
+    .artPM-picture {
+        margin-top: 2rem;
+    }
+
+    .artpiece-image {
+        /* max-width: 320px; */
+        margin-bottom: 1rem;
+    }
+
+    .artPM-picture h3 {
+        font-size: 1.1rem;
+        padding: 0 0.5rem;
+    }
+}
