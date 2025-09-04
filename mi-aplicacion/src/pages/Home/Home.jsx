@@ -67,14 +67,14 @@ function Home() {
                 onTabChange={(item) => console.log('Tab selected:', item)}
                 onHoverStateChange={(isLight) => console.log('Hover:', isLight)}
             /> */}
-            {!isMobile && (
+            {/* {!isMobile && (
                 <NavigationTabs
                     t={t}
                     getRoute={getRoute}
                     onTabChange={(item) => console.log('Tab selected:', item)}
                     onHoverStateChange={(isLight) => console.log('Hover:', isLight)}
                 />
-            )}
+            )} */}
         </div>
     )
 }

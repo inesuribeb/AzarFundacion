@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../../../../contexts/LanguageContext';
-import BigSerif from '../../../../components/Titles/BigSerif/BigSerif'
+import BigSerif from '../../../../components/Titles/BigSerif/BigSerif';
+import MediumSans from '../../../../components/Titles/MediumSans/MediumSans';
 import MiniBlue from '../../../../components/Titles/MiniBlue/MiniBlue';
 import './OpenCall.css'
 
@@ -21,8 +22,10 @@ function OpenCall({ t, data }) {
 
     return (
         <section className='OpenCall-section'>
-            <BigSerif className='o-title'>{t('openCall')}</BigSerif>
-            <BigSerif className='o-subtitle'>{residencyData?.subtitle}</BigSerif>
+            {/* <BigSerif className='o-title'>{t('openCall')}</BigSerif>
+            <BigSerif className='o-subtitle'>{residencyData?.subtitle}</BigSerif> */}
+            <MediumSans className='o-title'>{t('openCall')}</MediumSans>
+            <MediumSans className='o-subtitle'>{residencyData?.subtitle}</MediumSans>
             <img
                 src={residencyData?.image}
                 alt={residencyData?.title}

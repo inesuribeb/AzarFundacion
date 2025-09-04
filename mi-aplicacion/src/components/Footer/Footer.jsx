@@ -4,7 +4,7 @@ function Footer() {
     return (
         <div className='footer-content'>
             <div className='footer-anagram'>
-                <img src="/Images/Logo/LogoBlanco2.png" alt="" />
+                <img src="/Images/Logo/LogoSinBordes.jpg" alt="" />
             </div>
             <div className='footer-info'>
                 <div className='footer-info-column'>

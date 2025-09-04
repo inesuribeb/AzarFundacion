@@ -12,11 +12,22 @@
     justify-content: center; 
     align-items: center;
     gap: 4rem;
+
+}
+
+.i-title {
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    width: 60%;
+    text-align: center;
 }
 
 .intro-text-home {
     text-align: center;
     width: 60%;
+    /* font-family: var(--futura-font);
+    font-weight: var(--futura-book); */
 }
 
 .intro-text-home2 {
