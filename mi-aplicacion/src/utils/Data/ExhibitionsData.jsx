@@ -69,6 +69,7 @@ export const mockExhibitionsData = [
                 },
                 images: [
                     "/Images/Exhibitions/Exhibition01/Expo-MariaGallemi-1.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-MariaGallemi-7.jpg",
                     "/Images/Exhibitions/Exhibition01/Expo-MariaGallemi-2.jpg",
                     "/Images/Exhibitions/Exhibition01/Expo-MariaGallemi-3.jpg",
                     "/Images/Exhibitions/Exhibition01/Expo-MariaGallemi-4.jpg",
