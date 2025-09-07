@@ -11,6 +11,7 @@ import { useMobile } from "../components/Hooks/useMobile";
 import Header from '../components/Header/Header';
 import HeaderPhone from "../components/Header/HeaderPhone";
 import BottomNavigation from "../pages/ResidenciesProgram/components/BottomNavigation";
+import BottomNavPhone from "../pages/ResidenciesProgram/components/BottomNavPhone";
 import Footer from "../components/Footer/Footer";
 import './Root.css'
 
@@ -44,13 +45,30 @@ function AppContent() {
           <main className="outlet-desktop" key={location.pathname}>
               <Outlet />
           </main>
-          {showBottomNavigation && (
+          {/* {showBottomNavigation && (
               <BottomNavigation 
                   t={t} 
                   activeSection={activeSection}
                   onNavigate={setActiveSection}
               />
+          )} */}
+
+{showBottomNavigation && (
+              isMobile ? (
+                  <BottomNavPhone 
+                      t={t} 
+                      activeSection={activeSection}
+                      onNavigate={setActiveSection}
+                  />
+              ) : (
+                  <BottomNavigation 
+                      t={t} 
+                      activeSection={activeSection}
+                      onNavigate={setActiveSection}
+                  />
+              )
           )}
+
           <Footer />
       </div>
   );
