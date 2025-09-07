@@ -10,10 +10,10 @@ function ExpoCover({ t, currentLanguage, exhibition }) {
                     src={exhibition?.image}
                     alt={exhibition?.title}
                 />
-                <p>
+                {/* <p>
                     <span>{t('imagesBy')}</span>
                     <span className='ex-img-name'> {exhibition?.imagesAuthor}</span>
-                </p>
+                </p> */}
             </div>
             <h1
                 className="pub-page-title"

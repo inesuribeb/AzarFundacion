@@ -3,6 +3,8 @@ import { mockExhibitionsData } from '../../utils/Data/ExhibitionsData';
 import { useLocalizedData } from '../../components/Hooks/Hooks';
 import { useLanguage } from '../../contexts/LanguageContext';
 import ExpoCover from './sections/ExpoCover/ExpoCover';
+import ExpoDetails from './sections/ExpoDetails/ExpoDetails';
+import ExpoPresentations from './sections/ExpoPresentations/ExpoPresentations';
 import BackButton from '../../components/Button/BackButton';
 
 function Exposition() {
@@ -22,6 +24,16 @@ function Exposition() {
             <p>{exhibition.description}</p> */}
 
             <ExpoCover
+                exhibition={exhibition}
+                t={t}
+                currentLanguage={currentLanguage}
+            />
+            <ExpoDetails
+                exhibition={exhibition}
+                t={t}
+                currentLanguage={currentLanguage}
+            />
+            <ExpoPresentations
                 exhibition={exhibition}
                 t={t}
                 currentLanguage={currentLanguage}

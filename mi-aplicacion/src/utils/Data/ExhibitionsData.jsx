@@ -4,6 +4,8 @@ export const mockExhibitionsData = [
         // image: "/Images/Exhibitions/Exhibition01/HeaderArchivo.png",
         imageRef: "/Images/Residencies/Residency01/Expo1.jpg",
         image: "/Images/Exhibitions/Exhibition01/Cover-expo1.jpg",
+        imageDetail: "/Images/Exhibitions/Exhibition01/expo2025-4.jpg",
+        imageDetail2: "/Images/Exhibitions/Exhibition01/expo2025-1.jpg",
         imagesAuthor: "Nerea Moreno",
         title: {
             es: "Expo Residencia2025",
@@ -46,7 +48,7 @@ export const mockExhibitionsData = [
         },
 
         intro: {
-            es: "Durante la Expo Residencia2025 organizamos una sesión de lecturas muy especial. Los escritores residentes Florencia del Campo («autorelato»), Mireya Hernández (prosa) y Gonzalo Quincoces (guion cinematográfico), tomaron la palabra para compartir fragmentos de los textos que desarrollaron durante su estancia en la residencia.",
+            es: "Durante la Expo Residencia2025 organizamos una sesión de lecturas muy especial. Los escritores residentes Florencia del Campo («autorrelato»), Mireya Hernández (prosa) y Gonzalo Quincoces (guion cinematográfico), tomaron la palabra para compartir fragmentos de los textos que desarrollaron durante su estancia en la residencia.",
             en: "During Expo Residencia2025 we organized a very special reading session. The resident writers Florencia del Campo (autobiographical writing), Mireya Hernández (prose), and Gonzalo Quincoces (screenplay) took the floor to share excerpts from the texts they developed during their stay at the residency.",
             pt: "Durante a Expo Residência2025 organizámos uma sessão de leituras muito especial. Os escritores residentes Florencia del Campo («autorrelato»), Mireya Hernández (prosa) e Gonzalo Quincoces (roteiro cinematográfico) tomaram a palavra para compartilhar trechos dos textos que desenvolveram durante a sua estadia na residência.",
         },
