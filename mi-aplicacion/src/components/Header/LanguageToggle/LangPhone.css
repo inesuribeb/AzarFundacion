@@ -1,4 +1,4 @@
-.lang-toggle-phone {
+/* .lang-toggle-phone {
     display: flex;
 }
 
@@ -26,4 +26,79 @@
     color: var(--dark-color);
     font-weight: 600;
     font-weight: var(--futura-medium);
+} */
+
+
+.lang-toggle-phone {
+    display: flex;
+    opacity: 0; /* Inicialmente invisible */
+    overflow: hidden; /* Crea el horizonte */
+}
+
+/* Animaciones para el contenedor de idiomas */
+.lang-toggle-phone.fade-in {
+    animation: fadeInLang 0.3s ease-out 0.5s forwards;
+}
+
+.lang-toggle-phone.fade-out {
+    animation: fadeOutLang 0.3s ease-out forwards;
+}
+
+.language-option-phone {
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    color: var(--light-neutral-color);
+    min-width: 50px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
+    opacity: 0; /* Inicialmente invisible */
+}
+
+/* Animaciones individuales para cada botón de idioma */
+.language-option-phone.fade-in {
+    animation: fadeInLang 0.6s ease-out forwards;
+}
+
+.language-option-phone.fade-out {
+    animation: fadeOutLang 0.2s ease-out forwards;
+}
+
+.language-option-phone:hover {
+    color: var(--dark-color);
+}
+
+.language-option-phone.active {
+    color: var(--dark-color);
+    font-weight: 600;
+    font-weight: var(--futura-medium);
+}
+
+/* Keyframes específicos para los idiomas */
+@keyframes fadeInLang {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutLang {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(50px);
+    }
 }

@@ -1,4 +1,4 @@
-.navigation-phone {
+/* .navigation-phone {
     display: flex;
     flex-direction: column;
     padding: 2rem 1rem;
@@ -39,4 +39,91 @@
     font-weight: var(--futura-book);
     color: var(--dark-color);
     line-height: 1.1;
+} */
+
+.navigation-phone {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    background-color: transparent;
+    padding-top: 120px;
+    opacity: 0; /* Inicialmente invisible */
+    overflow: hidden;
+}
+
+/* Animaciones para el contenedor de navegación */
+.navigation-phone.fade-in {
+    animation: fadeIn 0.5s ease-out 0.2s forwards;
+}
+
+.navigation-phone.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+.nav-link-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem 0rem;
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: all 0.2s ease;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
+    letter-spacing: 0rem;
+    margin-top: -1rem;
+    opacity: 0; /* Inicialmente invisible */
+}
+
+/* Animaciones individuales para cada link */
+.nav-link-phone.fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.nav-link-phone.fade-out {
+    animation: fadeOut 0.2s ease-out forwards;
+}
+
+.nav-link-phone:last-child {
+    border-bottom: none;
+}
+
+.nav-number-phone {
+    font-size: 2.5rem;
+    color: var(--light-neutral-color);
+    font-family: 'EB Garamond';
+    font-weight: 100;
+    line-height: 1;
+    display: none;
+}
+
+.nav-text-phone {
+    font-size: 3rem;
+    font-weight: var(--futura-book);
+    color: var(--dark-color);
+    line-height: 1.1;
+}
+
+/* Keyframes específicos para navegación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Vienen desde más abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(50px); /* Se van hacia abajo */
+    }
 }
