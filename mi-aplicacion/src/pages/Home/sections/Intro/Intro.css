@@ -62,7 +62,7 @@ width: 100%;
     }
 
     .intro-text-home {
-        width: 85%;
+        width: 100%;
     }
 
     .intro-text-home2 {
@@ -80,7 +80,9 @@ width: 100%;
     }
 
     .intro-text-home {
-        width: 95%; /* Casi todo el ancho disponible */
+        width: 100%; /* Casi todo el ancho disponible */
+        padding-bottom: 1.5rem;
+
     }
 
     .intro-text-home2 {

@@ -106,7 +106,7 @@
 /* Media Query para móviles pequeños */
 @media (max-width: 480px) {
     .puta-seccion-container {
-        padding: 0.75rem;
+        padding: 0rem;
     }
 
     .puta-seccion-grid {

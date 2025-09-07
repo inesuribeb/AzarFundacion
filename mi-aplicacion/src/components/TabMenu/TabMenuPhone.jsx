@@ -138,24 +138,6 @@ function TabMenuPhone({ t, onTabChange, activeTab, lightHeader = {} }) {
             )}
         </div>
 
-        // <div ref={sectionRef} className='tabMenu-phone'>
-        //     <button
-        //         className='selection-dropdown'
-        //         onClick={handleMenuToggle}
-        //     >
-        //         <span className='selected-option'>{getActiveTabLabel()}</span>
-        //         <span className={`dropdown-arrow ${isMenuOpen ? 'open' : ''}`}>▼</span>
-        //     </button>
-
-        //     {isMenuOpen && (
-        //         <MenuOptions
-        //             tabs={tabs}
-        //             activeTab={activeTab}
-        //             onOptionSelect={handleOptionSelect}
-        //             onClose={() => setIsMenuOpen(false)}
-        //         />
-        //     )}
-        // </div>
     );
 }
 

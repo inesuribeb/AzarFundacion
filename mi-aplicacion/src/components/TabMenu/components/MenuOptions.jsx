@@ -6,11 +6,11 @@ function MenuOptions({ tabs, activeTab, onOptionSelect, onClose }) {
             <div className="menu-overlay" onClick={onClose}></div>
             
             <div className="menu-options">
-                <div className="menu-header">
+                {/* <div className="menu-header">
                     <button className="close-button" onClick={onClose}>
                         ✕
                     </button>
-                </div>
+                </div> */}
                 
                 <div className="options-list">
                     {tabs.map((tab) => (

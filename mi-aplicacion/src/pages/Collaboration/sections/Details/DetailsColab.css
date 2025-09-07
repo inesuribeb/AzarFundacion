@@ -76,11 +76,11 @@
 @media (max-width: 480px) {
     .details-colab-section {
         padding: 1rem;
-        margin-top: 1.5rem;
+        margin-top: 0rem;
     }
 
     .colab-img {
-        padding-bottom: 1rem;
+        padding-bottom: 3rem;
     }
 
     .colab-img img {

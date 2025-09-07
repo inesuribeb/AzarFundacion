@@ -60,24 +60,34 @@ function HeroPhone({ lightHeader = {} }) {
             className: 'first-herophone-bg',
         },
         {
-            id: 2,
-            bgPhoto: '/Images/Header/Nuevas/Nav-fundacion.jpg',
-            className: 'second-herophone-bg',
+            id: 4,
+            bgPhoto: '/Images/Header/Nuevas/Nav-actividades.jpg',
+            className: 'fourth-herophone-bg',
         },
+        // {
+        //     id: 2,
+        //     bgPhoto: '/Images/Header/Nuevas/Nav-fundacion.jpg',
+        //     className: 'second-herophone-bg',
+        // },
         {
             id: 3,
             bgPhoto: '/Images/Header/Nuevas/Nav-residencias.jpg',
             className: 'third-herophone-bg',
         },
-        {
-            id: 4,
-            bgPhoto: '/Images/Header/Nuevas/Nav-actividades.jpg',
-            className: 'fourth-herophone-bg',
-        },
+        // {
+        //     id: 4,
+        //     bgPhoto: '/Images/Header/Nuevas/Nav-actividades.jpg',
+        //     className: 'fourth-herophone-bg',
+        // },
         {
             id: 5,
             bgPhoto: '/Images/Header/Nuevas/Nav-tienda.jpg',
             className: 'fifth-herophone-bg',
+        },
+        {
+            id: 2,
+            bgPhoto: '/Images/Header/Nuevas/Nav-fundacion.jpg',
+            className: 'second-herophone-bg',
         },
     ];
 
