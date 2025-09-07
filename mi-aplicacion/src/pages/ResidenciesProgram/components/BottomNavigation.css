@@ -38,7 +38,8 @@
 }
 
 .nav-item.active {
-    background-color: var(--corporative-color);
+    /* background-color: var(--corporative-color); */
+    background-color: var(--dark-blue);
     color: var(--light-color);
 }
 
