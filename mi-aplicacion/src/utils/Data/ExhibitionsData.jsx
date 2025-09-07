@@ -38,118 +38,118 @@ export const mockExhibitionsData = [
         publicaciones: ["pub-1"],
         collectiveArtPiece: ["artPiece-1"]
     },
-    // {
-    //     id: "expo-2", 
-    //     image: "/Images/Residencies/Residency02/prueba4.PNG",
+    {
+        id: "expo-2", 
+        image: "/Images/Residencies/Residency02/prueba4.PNG",
         
-    //     title: {
-    //         es: "Territorios Urbanos",
-    //         en: "Urban Territories",
-    //         pt: "Territórios Urbanos"
-    //     },
-    //     subtitle: {
-    //         es: "Exposición • Abril 2025",
-    //         en: "Exhibition • April 2025",
-    //         pt: "Exposição • Abril 2025"
-    //     },
-    //     venue: {
-    //         es: "Centro de Arte Moderno, Madrid",
-    //         en: "Modern Art Center, Madrid",
-    //         pt: "Centro de Arte Moderno, Madrid"
-    //     },
-    //     curator: {
-    //         es: "Luis Martínez",
-    //         en: "Luis Martínez",
-    //         pt: "Luis Martínez"
-    //     },
-    //     description: {
-    //         es: "Exposición sobre intervenciones artísticas en contexto urbano",
-    //         en: "Exhibition about artistic interventions in urban context",
-    //         pt: "Exposição sobre intervenções artísticas em contexto urbano"
-    //     },
+        title: {
+            es: "Territorios Urbanos",
+            en: "Urban Territories",
+            pt: "Territórios Urbanos"
+        },
+        subtitle: {
+            es: "Exposición • Abril 2025",
+            en: "Exhibition • April 2025",
+            pt: "Exposição • Abril 2025"
+        },
+        venue: {
+            es: "Centro de Arte Moderno, Madrid",
+            en: "Modern Art Center, Madrid",
+            pt: "Centro de Arte Moderno, Madrid"
+        },
+        curator: {
+            es: "Luis Martínez",
+            en: "Luis Martínez",
+            pt: "Luis Martínez"
+        },
+        description: {
+            es: "Exposición sobre intervenciones artísticas en contexto urbano",
+            en: "Exhibition about artistic interventions in urban context",
+            pt: "Exposição sobre intervenções artísticas em contexto urbano"
+        },
         
-    //     className: "exhibition-card",
-    //     year: 2025,
-    //     startDate: "2025-04-10",
-    //     endDate: "2025-06-10",
-    //     residencias: ["residencia-2"],
-    //     publicaciones: ["pub-2"],
-    //     collectiveArtPiece: ["artPiece-2"]
-    // },
-    // {
-    //     id: "expo-3", 
-    //     image: "/Images/Residencies/Residency02/prueba5.PNG",
+        className: "exhibition-card",
+        year: 2025,
+        startDate: "2025-04-10",
+        endDate: "2025-06-10",
+        residencias: ["residencia-2"],
+        publicaciones: ["pub-2"],
+        collectiveArtPiece: ["artPiece-2"]
+    },
+    {
+        id: "expo-3", 
+        image: "/Images/Residencies/Residency02/prueba5.PNG",
         
-    //     title: {
-    //         es: "Territorios Urbanos",
-    //         en: "Urban Territories",
-    //         pt: "Territórios Urbanos"
-    //     },
-    //     subtitle: {
-    //         es: "Exposición • Abril 2025",
-    //         en: "Exhibition • April 2025",
-    //         pt: "Exposição • Abril 2025"
-    //     },
-    //     venue: {
-    //         es: "Centro de Arte Moderno, Madrid",
-    //         en: "Modern Art Center, Madrid",
-    //         pt: "Centro de Arte Moderno, Madrid"
-    //     },
-    //     curator: {
-    //         es: "Luis Martínez",
-    //         en: "Luis Martínez",
-    //         pt: "Luis Martínez"
-    //     },
-    //     description: {
-    //         es: "Exposición sobre intervenciones artísticas en contexto urbano",
-    //         en: "Exhibition about artistic interventions in urban context",
-    //         pt: "Exposição sobre intervenções artísticas em contexto urbano"
-    //     },
+        title: {
+            es: "Territorios Urbanos",
+            en: "Urban Territories",
+            pt: "Territórios Urbanos"
+        },
+        subtitle: {
+            es: "Exposición • Abril 2025",
+            en: "Exhibition • April 2025",
+            pt: "Exposição • Abril 2025"
+        },
+        venue: {
+            es: "Centro de Arte Moderno, Madrid",
+            en: "Modern Art Center, Madrid",
+            pt: "Centro de Arte Moderno, Madrid"
+        },
+        curator: {
+            es: "Luis Martínez",
+            en: "Luis Martínez",
+            pt: "Luis Martínez"
+        },
+        description: {
+            es: "Exposición sobre intervenciones artísticas en contexto urbano",
+            en: "Exhibition about artistic interventions in urban context",
+            pt: "Exposição sobre intervenções artísticas em contexto urbano"
+        },
         
-    //     className: "exhibition-card",
-    //     year: 2025,
-    //     startDate: "2025-04-10",
-    //     endDate: "2025-06-10",
-    //     residencias: ["residencia-2"],
-    //     publicaciones: ["pub-2"],
-    //     collectiveArtPiece: ["artPiece-2"]
-    // },
-    // {
-    //     id: "expo-4", 
-    //     image: "/Images/Residencies/Residency02/prueba6.PNG",
+        className: "exhibition-card",
+        year: 2025,
+        startDate: "2025-04-10",
+        endDate: "2025-06-10",
+        residencias: ["residencia-2"],
+        publicaciones: ["pub-2"],
+        collectiveArtPiece: ["artPiece-2"]
+    },
+    {
+        id: "expo-4", 
+        image: "/Images/Residencies/Residency02/prueba6.PNG",
         
-    //     title: {
-    //         es: "Territorios Urbanos",
-    //         en: "Urban Territories",
-    //         pt: "Territórios Urbanos"
-    //     },
-    //     subtitle: {
-    //         es: "Exposición • Abril 2025",
-    //         en: "Exhibition • April 2025",
-    //         pt: "Exposição • Abril 2025"
-    //     },
-    //     venue: {
-    //         es: "Centro de Arte Moderno, Madrid",
-    //         en: "Modern Art Center, Madrid",
-    //         pt: "Centro de Arte Moderno, Madrid"
-    //     },
-    //     curator: {
-    //         es: "Luis Martínez",
-    //         en: "Luis Martínez",
-    //         pt: "Luis Martínez"
-    //     },
-    //     description: {
-    //         es: "Exposición sobre intervenciones artísticas en contexto urbano",
-    //         en: "Exhibition about artistic interventions in urban context",
-    //         pt: "Exposição sobre intervenções artísticas em contexto urbano"
-    //     },
+        title: {
+            es: "Territorios Urbanos",
+            en: "Urban Territories",
+            pt: "Territórios Urbanos"
+        },
+        subtitle: {
+            es: "Exposición • Abril 2025",
+            en: "Exhibition • April 2025",
+            pt: "Exposição • Abril 2025"
+        },
+        venue: {
+            es: "Centro de Arte Moderno, Madrid",
+            en: "Modern Art Center, Madrid",
+            pt: "Centro de Arte Moderno, Madrid"
+        },
+        curator: {
+            es: "Luis Martínez",
+            en: "Luis Martínez",
+            pt: "Luis Martínez"
+        },
+        description: {
+            es: "Exposición sobre intervenciones artísticas en contexto urbano",
+            en: "Exhibition about artistic interventions in urban context",
+            pt: "Exposição sobre intervenções artísticas em contexto urbano"
+        },
         
-    //     className: "exhibition-card",
-    //     year: 2025,
-    //     startDate: "2025-04-10",
-    //     endDate: "2025-06-10",
-    //     residencias: ["residencia-2"],
-    //     publicaciones: ["pub-2"],
-    //     collectiveArtPiece: ["artPiece-2"]
-    // }
+        className: "exhibition-card",
+        year: 2025,
+        startDate: "2025-04-10",
+        endDate: "2025-06-10",
+        residencias: ["residencia-2"],
+        publicaciones: ["pub-2"],
+        collectiveArtPiece: ["artPiece-2"]
+    }
 ]

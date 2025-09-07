@@ -1,4 +1,4 @@
-.section-hero-phone {
+/* .section-hero-phone {
     width: 100%;
     height: 100vh;
     background-image: url(/Images/Home/HomePage.jpg);
@@ -6,4 +6,49 @@
     background-position: center center; 
     background-position: 29% center;
     background-repeat: no-repeat;
+} */
+
+
+/* Con multiples fondos */
+.section-hero-phone {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-bg-layer.active {
+    opacity: 1;
+}
+
+.hero-bg-layer.first-herophone-bg {
+    background-position: 29% center;
+}
+
+.hero-bg-layer.second-herophone-bg {
+    background-position: center center;
+}
+
+.hero-bg-layer.third-herophone-bg {
+    background-position: center center;
+}
+
+.hero-bg-layer.fourth-herophone-bg {
+    background-position: center center;
+}
+
+.hero-bg-layer.fifth-herophone-bg {
+    background-position: center center;
 }
