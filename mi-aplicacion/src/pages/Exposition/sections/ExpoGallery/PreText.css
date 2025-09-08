@@ -6,3 +6,17 @@
     align-items: center;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .pre-text-section {
+        height: 25vh;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pre-text-section {
+        height: 25vh;
+        padding: 1rem;
+    }
+}

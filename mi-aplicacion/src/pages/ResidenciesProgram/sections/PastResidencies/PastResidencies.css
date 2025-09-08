@@ -12,14 +12,13 @@
 
 @media (max-width: 768px) {
     .past-residencies-section {
-        display: flex;
-        width: 100%;
-        min-height: 100vh;
-        flex-direction: column;
-        padding: 3rem 1rem;
-        margin: 0;
-        position: relative;
-        background-color: transparent;
-        padding-bottom: 0rem;
+        padding: 2rem 1rem 0rem;
+        min-height: auto;
     }
- }
+}
+
+@media (max-width: 480px) {
+    .past-residencies-section {
+        padding: 1rem 1rem 0rem;
+    }
+}

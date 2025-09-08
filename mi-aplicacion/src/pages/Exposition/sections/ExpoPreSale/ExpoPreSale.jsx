@@ -36,7 +36,8 @@ function ExpoPreSale({ t, currentLanguage, exhibition }) {
                         <h1
                             className="tu-clase-aqui"
                             dangerouslySetInnerHTML={{ __html: exhibition.preSaleTitle }}
-                        />                        <Texts
+                        />
+                        <Texts
                             size="medium"
                             // className='intro-expoDetails-texts'
                             dangerouslySetInnerHTML={{ __html: exhibition.preSaleText }}

@@ -1,0 +1,36 @@
+.expo-pres-phone {
+    width: 100%;
+    padding: 2rem 1rem;
+}
+
+/* Lista de nombres */
+.artist-names-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.artist-name-button {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    text-align: left;
+    padding: 0rem 0;
+    /* border-bottom: 1px solid var(--light-neutral-color); */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    /* font-family: var(--futura-font);
+    font-weight: var(--futura-book); */
+    font-family: var(--serif-font);
+}
+
+.artist-name-button:hover {
+    color: var(--accent-color);
+}
+
+.artist-name-button:last-child {
+    border-bottom: none;
+}
+

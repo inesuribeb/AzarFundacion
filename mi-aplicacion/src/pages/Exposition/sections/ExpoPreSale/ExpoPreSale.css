@@ -58,3 +58,68 @@
     font-family: var(--futura-font);
     font-weight: var(--futura-medium);
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .expo-pre-sale {
+        padding: 1rem;
+        padding-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .presale-texts {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .intro-presale-img,
+    .intro-presale-texts {
+        flex: none;
+        width: 100%;
+    }
+    
+    .intro-presale-img img {
+        width: 100%;
+    }
+    
+    .intro-presale-texts {
+        padding-top: 0;
+        gap: 2rem;
+        justify-content: flex-start;
+    }
+    
+    .pre-sale-text {
+        width: 100%;
+    }
+    
+    .intro-presale-texts img {
+        width: 100%;
+        align-self: center;
+    }
+    
+    .tu-clase-aqui {
+        font-size: 1.5rem;
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .expo-pre-sale {
+        padding: 1rem;
+        padding-top: 1.5rem;
+    }
+    
+    .presale-texts {
+        gap: 1.5rem;
+    }
+    
+    .intro-presale-texts {
+        gap: 1.5rem;
+    }
+    
+    .tu-clase-aqui {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+}
