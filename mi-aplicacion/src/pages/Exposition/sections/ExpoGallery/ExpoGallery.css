@@ -1,4 +1,4 @@
-.expo-gallery {
+/* .expo-gallery {
     width: 100%;
     height: 100vh;
     padding: 2rem 0;
@@ -12,11 +12,9 @@
     position: relative;
     width: 100%;
     max-width: 800px;
-    /* height: 500px; */
     height: 90vh;
     overflow: hidden;
     border-radius: 0px;
-    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
 }
 
 .expo-images-track {
@@ -43,7 +41,6 @@
     margin: 0 auto;
 }
 
-/* Navigation arrows */
 .expo-nav-arrow {
     position: absolute;
     top: 50%;
@@ -87,7 +84,6 @@
     transform: translateY(-50%) scale(0.95);
 }
 
-/* Dots indicator */
 .expo-dots-container {
     display: flex;
     gap: 0.5rem;
@@ -98,6 +94,120 @@
 .expo-dot {
     width: 5px;
     height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.expo-dot:hover {
+    background: rgba(0, 0, 0, 0.6);
+    transform: scale(1.2);
+}
+
+.expo-dot.expo-active {
+    background: #000;
+    transform: scale(1.3);
+} */
+
+.expo-gallery {
+    width: 100%;
+    height: 110vh;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.expo-images-container {
+    position: relative;
+    width: 80%;
+    /* max-width: 800px; */
+    /* height: 500px; */
+    height: 95vh;
+    overflow: hidden;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+}
+
+.expo-images-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.expo-image-slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expo-gallery-image {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Eliminadas las flechas - navegación por overlay */
+.expo-nav-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 5;
+}
+
+.expo-nav-area {
+    flex: 1;
+    cursor: pointer;
+    position: relative;
+}
+
+.expo-nav-prev {
+    cursor: w-resize;
+}
+
+.expo-nav-next {
+    cursor: e-resize;
+}
+
+.expo-nav-counter {
+    background: transparent;
+    color: var(--dark-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: 500;
+    pointer-events: none;
+    position: fixed;
+    z-index: 1000;
+    transform: translate(-50%, -100%);
+    margin-top: -10px;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
+}
+
+/* Dots indicator */
+.expo-dots-container {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.expo-dot {
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     border: none;
     background: rgba(0, 0, 0, 0.3);

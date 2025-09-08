@@ -63,8 +63,12 @@ font-family: var(--serif-font);
 
 .right-column-intro img {
     height: auto; 
-    width: 80%;
+    width: 90%;
     max-height: calc(100vh - 9rem);
     object-fit: contain;
     padding-bottom: 3rem;
+}
+
+.intro-text-I {
+    width: 92%;
 }

@@ -6,6 +6,7 @@ import ExpoCover2 from './sections/ExpoCover/ExpoCover2';
 import ExpoDetails from './sections/ExpoDetails/ExpoDetails';
 import ExpoPresentations from './sections/ExpoPresentations/ExpoPresentations';
 import ExpoPreSale from './sections/ExpoPreSale/ExpoPreSale';
+import PreText from './sections/ExpoGallery/PreText';
 import ExpoGallery from './sections/ExpoGallery/ExpoGallery';
 import BackButton from '../../components/Button/BackButton';
 
@@ -42,6 +43,11 @@ function Exposition() {
                 currentLanguage={currentLanguage}
             />
             <ExpoPreSale
+                exhibition={exhibition}
+                t={t}
+                currentLanguage={currentLanguage}
+            />
+            <PreText
                 exhibition={exhibition}
                 t={t}
                 currentLanguage={currentLanguage}

@@ -30,17 +30,18 @@
 }
 
 .intro-expoDetails-texts {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
     justify-content: space-between;
     flex-direction: column;
 }
 
 .texts-intro {
     padding-bottom: 1rem;
+    width: 90%;
 }
 
 .intro-expoDetails-texts img{
-    width: 80%;
+    width: 75%;
     align-self: flex-end;
 }

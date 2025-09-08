@@ -1,6 +1,7 @@
 import Texts from '../../../../components/Texts/Texts';
 import PubCTA from '../../../../components/PubCTA/PubCTA';
 import { mockPublicationsData } from '../../../../utils/Data/PublicationsData';
+import MediumSans from '../../../../components/Titles/MediumSans/MediumSans'
 import './ExpoPreSale.css';
 
 function ExpoPreSale({ t, currentLanguage, exhibition }) {
@@ -9,9 +10,9 @@ function ExpoPreSale({ t, currentLanguage, exhibition }) {
         if (!exhibition?.publicaciones || exhibition.publicaciones.length === 0) {
             return null;
         }
-        
+
         const publicationId = exhibition.publicaciones[0];
-        
+
         return mockPublicationsData.find(pub => pub.id === publicationId);
     };
 
@@ -28,18 +29,35 @@ function ExpoPreSale({ t, currentLanguage, exhibition }) {
                 </div>
 
                 <div className='intro-presale-texts'>
-                    <Texts
-                        size="medium"
-                        // className='intro-expoDetails-texts'
-                        dangerouslySetInnerHTML={{ __html: exhibition.preSaleText }}
+                    <div className='pre-sale-text'>
+                        {/* <MediumSans
+                            dangerouslySetInnerHTML={{ __html: exhibition.preSaleTitle }}
+                        /> */}
+                        <h1
+                            className="tu-clase-aqui"
+                            dangerouslySetInnerHTML={{ __html: exhibition.preSaleTitle }}
+                        />                        <Texts
+                            size="medium"
+                            // className='intro-expoDetails-texts'
+                            dangerouslySetInnerHTML={{ __html: exhibition.preSaleText }}
+                        />
+                        {/* <Texts
+                            size="large"
+                            dangerouslySetInnerHTML={{ __html: exhibition.byeByeText }}
+                        /> */}
+                    </div>
+                    {/* {associatedPublication && (
+                        <PubCTA
+                            className='pub-CTA-presale'
+                            publication={associatedPublication}
+                        />
+                    )} */}
+
+                    <img
+                        src={exhibition?.preSaleImage2}
+                        alt={exhibition?.title}
                     />
 
-                    {associatedPublication && (
-                        <PubCTA 
-                        className='pub-CTA-presale'
-                        publication={associatedPublication} 
-                        />
-                    )}
                 </div>
 
             </div>

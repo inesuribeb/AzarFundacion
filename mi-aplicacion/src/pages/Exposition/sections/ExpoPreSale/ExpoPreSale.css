@@ -14,6 +14,7 @@
     flex-direction: row;
     /* align-items: flex-start; */
     width: 100%;
+    /* gap: 2rem; */
     /* justify-content: flex-start; */
 }
 
@@ -31,13 +32,29 @@
 
 .intro-presale-texts {
     padding-top: 1rem;
-    padding-bottom: 3rem;
-    /* gap: 2rem; */
-    justify-content: space-between;
+    padding-bottom: 1rem;
+    gap: 4rem;
+    justify-content: flex-end;
     flex-direction: column;
+    /* padding-left: 2rem; */
+}
+
+.pre-sale-text {
+    width: 80%;
 }
 
 .intro-presale-texts img{
     width: 80%;
-    align-self: flex-end;
+    align-self: flex-start;
+}
+
+.tu-clase-aqui {
+    font-size: 1.8rem;
+    /* font-weight: 400; */
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+    margin-top: 0rem;
+    width: 95%;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-medium);
 }

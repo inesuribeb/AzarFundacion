@@ -63,7 +63,68 @@ export const mockExhibitionsData = [
         presentations: [
             {
                 id: 1,
-                artist: 'María Gallemí',
+                artist: 'Florencia del Campo',
+                title: {
+                    es: 'Presentación con Florencia del Campo',
+                    en: 'Presentation with Florencia del Campo',
+                    pt: 'Apresentação com Florencia del Campo'
+                },
+                text: {
+                    es: 'Florencia del Campo presentó su proyecto de no ficción <em>Diarios colaterales</em>, un «autorelato» dividido en cinco partes y de las cuales leyó un fragmento durante la exposición.<br/><br/>En el marco de la residencia artística de la Fundación Azar, trabajó sobre este proyecto y descubrió que todas las partes tenían una conexión lógica e intrínseca. No se trató solo de avanzar en la escritura de cada una de ellas, sino de comprender lo que intuía: la unidad del proyecto. Las lecturas de Georges Perec durante la residencia, así como <em>Me acuerdo y otros autorretratos</em> de Joe Brainard, terminaron de decantar el proyecto. Diarios colaterales será publicado próximamente. ',
+                    en: 'Florencia del Campo presented her non-fiction project <em>Collateral Diaries</em>, a “self-narrative” divided into five parts, from which she read an excerpt during the exhibition.<br/><br/>Within the framework of Fundación Azar’s artistic residency, she worked on this project and discovered that all the parts had a logical and intrinsic connection. It was not only about advancing the writing of each one, but about understanding what she already intuited: the unity of the project. The readings of Georges Perec during the residency, as well as <em>I Remember and Other Self-Portraits</em> by Joe Brainard, helped crystallize the project. <em>Collateral Diaries</em> will be published soon.',
+                    pt: 'Florencia del Campo apresentou o seu projeto de não ficção <em>Diários Colaterais</em>, um “autorrelato” dividido em cinco partes, do qual leu um excerto durante a exposição.<br/><br/>No âmbito da residência artística da Fundação Azar, trabalhou neste projeto e descobriu que todas as partes tinham uma ligação lógica e intrínseca. Não se tratava apenas de avançar na escrita de cada uma delas, mas de compreender o que já intuía: a unidade do projeto. As leituras de Georges Perec durante a residência, bem como <em>Eu me lembro e outros autorretratos</em> de Joe Brainard, ajudaram a decantar o projeto. <em>Diários Colaterais</em> será publicado em breve.',
+                },
+                images: [
+                    "/Images/Exhibitions/Exhibition01/Expo-Florencia-1.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-Florencia-1.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-Florencia-1.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-Florencia-1.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-Florencia-1.jpg",
+                ]
+            },
+            {
+                id: 2,
+                artist: 'Mireya Hernández',
+                title: {
+                    es: 'Presentación con Mireya Hernández',
+                    en: 'Presentation with Mireya Hernández',
+                    pt: 'Apresentação com Mireya Hernández'
+                },
+                text: {
+                    es: 'Durante la Residencia 2025, Mireya Hernández continuó trabajando en el proyecto <em>El lenguaje de las moscas</em>, en el que ya venía desarrollando trabajo previo a su estadía. <br/><br/>Lo pulió, lo desbrozó y encontró la puerta que le quedaba por abrir para concluirlo. Aún es un proyecto en proceso, pero en Finca El Azahar estuvo más cerca de convertirse en el <em>collage</em> que se intuía desde el principio: una obra heterogénea que parte de la observación, defiende lo imperfecto y lo incompleto, fomenta combinaciones inesperadas y hace del desvío su piedra angular.<br/><br/>Mireya nos deleitó con dos prosas que recogían inspiración y memorias de dentro y fuera de la residencia.',
+                    en: 'During the 2025 Residency, Mireya Hernández continued working on the project <em>The Language of Flies</em>, which she had already begun developing prior to her stay. <br/><br/>She refined it, cleared it, and found the door that remained to be opened in order to conclude it. It is still a work in progress, but at Finca El Azahar it came closer to becoming the <em>collage</em> that had been intuited from the beginning: a heterogeneous piece that stems from observation, embraces the imperfect and the incomplete, encourages unexpected combinations, and makes deviation its cornerstone.<br/><br/>Mireya delighted us with two prose texts that captured inspiration and memories from both inside and outside the residency.',
+                    pt: 'Durante a Residência 2025, Mireya Hernández continuou a trabalhar no projeto <em>A Linguagem das Moscas</em>, no qual já vinha desenvolvendo trabalho antes da sua estadia. <br/><br/>Poliu-o, desbastou-o e encontrou a porta que ainda faltava abrir para concluí-lo. Continua a ser um projeto em processo, mas na Finca El Azahar esteve mais perto de se transformar no <em>collage</em> que se intuía desde o início: uma obra heterogênea que parte da observação, defende o imperfeito e o incompleto, promove combinações inesperadas e faz do desvio a sua pedra angular.<br/><br/>Mireya encantou-nos com duas prosas que recolhiam inspirações e memórias de dentro e de fora da residência.',
+                },
+                images: [
+                    "/Images/Exhibitions/Exhibition01/Expo-Mireya-1.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-Mireya-1.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-Mireya-1.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-Mireya-1.jpg",
+                ]
+            },
+            {
+                id: 3,
+                artist: 'Gonzalo Quincoces',
+                title: {
+                    es: 'Presentación con Gonzalo Quincoces',
+                    en: 'Presentation with Gonzalo Quincoces',
+                    pt: 'Apresentação com Gonzalo Quincoces'
+                },
+                text: {
+                    es: 'Gonzalo Quincoces presentó el inicio del guión de <em>La noche del coche rojo</em>, su próximo largometraje aún en desarrollo.<br/><br/>Este proyecto tiene como escenario una turbia y grisácea Bizkaia, marcada por los conflictos sociales y el terrorismo de los años 80, un contexto que ya exploró en su anterior cortometraje <em>La caída del vencejo</em>. La residencia le permitió profundizar en la dirección de este guión y afianzar la propuesta de dirección del proyecto.',
+                    en: 'Gonzalo Quincoces presented the beginning of the script for <em>The Night of the Red Car</em>, his upcoming feature film still in development.<br/><br/>This project is set in a murky, grayish Bizkaia, marked by the social conflicts and terrorism of the 1980s, a context he had already explored in his previous short film <em>The Fall of the Swift</em>. The residency allowed him to delve deeper into the direction of this script and to strengthen the directorial approach of the project.',
+                    pt: 'Gonzalo Quincoces apresentou o início do guião de <em>A Noite do Carro Vermelho</em>, a sua próxima longa-metragem ainda em desenvolvimento.<br/><br/>Este projeto tem como cenário uma Bizkaia turva e acinzentada, marcada pelos conflitos sociais e pelo terrorismo dos anos 80, um contexto que já havia explorado na sua curta-metragem anterior <em>A Queda do Andorinhão</em>. A residência permitiu-lhe aprofundar a direção deste guião e consolidar a proposta de realização do projeto.',
+                },
+                images: [
+                    "/Images/Exhibitions/Exhibition01/Expo-Quincoces-1.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-Quincoces-1.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-Quincoces-1.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-Quincoces-1.jpg",
+                ]
+            },
+            {
+                id: 4,
+                artist: 'Maria Gallemí',
                 title: {
                     es: 'Presentación con María Gallemí',
                     en: 'Presentation with María Gallemí',
@@ -85,7 +146,7 @@ export const mockExhibitionsData = [
                 ]
             },
             {
-                id: 2,
+                id: 5,
                 artist: 'María Esteve',
                 title: {
                     es: 'Presentación con María Esteve',
@@ -93,9 +154,9 @@ export const mockExhibitionsData = [
                     pt: 'Apresentação com María Esteve'
                 },
                 text: {
-                    es: 'María Esteve presentó «Donde la tierra habla», un conjunto de obras sobre papel y tela, acompañado de un vídeo que documentaba su proceso.<br/><br/>A través de la técnica del frottage, María registró las texturas del paisaje que rodea Finca El Azahar y las minas a cielo abierto en Las Villuercas.<br/><br/>Su trabajo parte del contacto directo con la tierra, donde el papel y las telas se transforman en cartografías y memoria de esa naturaleza.',
-                    en: 'María Esteve presented «Where the Earth Speaks», a series of works on paper and fabric, accompanied by a video documenting her process.<br/><br/>Through the frottage technique, María captured the textures of the landscape surrounding Finca El Azahar and the open-pit mines in Las Villuercas.<br/><br/>Her work stems from direct contact with the earth, where paper and fabrics are transformed into cartographies and memories of that nature.',
-                    pt: 'María Esteve apresentou «Onde a Terra Fala», um conjunto de obras sobre papel e tecido, acompanhado por um vídeo que documentava o seu processo.<br/><br/>Através da técnica do frottage, María registou as texturas da paisagem que rodeia a Finca El Azahar e as minas a céu aberto em Las Villuercas.<br/><br/>O seu trabalho parte do contacto direto com a terra, onde o papel e os tecidos se transformam em cartografias e memórias dessa natureza.'
+                    es: 'María Esteve presentó <em>Donde la tierra habla</em>, un conjunto de obras sobre papel y tela, acompañado de un vídeo que documentaba su proceso.<br/><br/>Para María, un nuevo territorio despierta estímulos y sensaciones inéditas. La primera mirada, la sorpresa y la exploración de lo desconocido resultan esenciales en esta experiencia. Diversas expediciones y paseos le permitieron conocer y sentir el entorno, adoptando el caminar como una práctica artística guiada por la intuición y la confianza.<br/><br/>A través de la técnica del <em>frottage</em>, María registró las texturas del paisaje que rodea Finca El Azahar y las minas a cielo abierto en Las Villuercas. Su trabajo parte del contacto directo con la tierra, donde el papel y las telas se transforman en cartografías y memoria de esa naturaleza.',
+                    en: 'María Esteve presented <em>Where the Earth Speaks</em>, a series of works on paper and fabric, accompanied by a video documenting her process.<br/><br/>For María, a new territory awakens stimuli and unprecedented sensations. The first gaze, surprise, and the exploration of the unknown are essential to this experience. Various expeditions and walks allowed her to get to know and feel the environment, adopting walking as an artistic practice guided by intuition and trust.<br/><br/>Through the technique of <em>frottage</em>, María captured the textures of the landscape surrounding Finca El Azahar and the open-pit mines in Las Villuercas. Her work stems from direct contact with the earth, where paper and fabrics are transformed into cartographies and memory of that nature.',
+                    pt: 'María Esteve apresentou <em>Onde a Terra Fala</em>, um conjunto de obras sobre papel e tecido, acompanhado de um vídeo que documentava o seu processo.<br/><br/>Para María, um novo território desperta estímulos e sensações inéditas. O primeiro olhar, a surpresa e a exploração do desconhecido são essenciais nesta experiência. Diversas expedições e passeios permitiram-lhe conhecer e sentir o ambiente, adotando a caminhada como prática artística guiada pela intuição e pela confiança.<br/><br/>Através da técnica do <em>frottage</em>, María registou as texturas da paisagem que rodeia a Finca El Azahar e as minas a céu aberto em Las Villuercas. O seu trabalho parte do contacto direto com a terra, onde o papel e os tecidos se transformam em cartografias e memória dessa natureza.',
                 },
                 images: [
                     "/Images/Exhibitions/Exhibition01/Expo-MariaEsteve-1.jpg",
@@ -116,11 +177,12 @@ export const mockExhibitionsData = [
         },
 
         preSaleImage: "/Images/Exhibitions/Exhibition01/expo2025-2.jpg",
+        preSaleImage2: "/Images/Publications/Publication01/pubMas.jpg",
 
         preSaleText: {
-            es: 'También se llevó acabo la preventa de <em>Una residencia narrada por Ivan Floro</em>, la primera publicación de Fundación Azar, que reúne los óleos y dibujos realizados por el artista como cronista visual de la residencia. <br/><br/>Durante la exposición, Ivan dedicó cada ejemplar vendido con dibujos únicos, convirtiendo cada libro en una pieza irrepetible.',
-            en: 'The pre-sale of <em>A Residency Narrated by Ivan Floro</em> also took place, marking the first publication of Fundación Azar. The book brings together the oil paintings and drawings created by the artist as the visual chronicler of the residency. <br/><br/>During the exhibition, Ivan personalized each copy sold with unique drawings, turning every book into a one-of-a-kind piece.',
-            pt: 'Também ocorreu a pré-venda de <em>Uma Residência Narrada por Ivan Floro</em>, a primeira publicação da Fundação Azar, que reúne as pinturas a óleo e os desenhos realizados pelo artista como cronista visual da residência. <br/><br/>Durante a exposição, Ivan dedicou cada exemplar vendido com desenhos únicos, transformando cada livro numa peça irrepetível.',
+            es: 'También se llevó a cabo la preventa de <em>Una residencia narrada por Ivan Floro</em>, la primera publicación de Fundación Azar, que reúne los óleos y dibujos realizados por el artista como cronista visual de la residencia. Durante la exposición, Ivan dedicó cada ejemplar vendido con dibujos únicos, convirtiendo cada libro en una pieza irrepetible.',
+            en: 'The pre-sale of <em>A Residency Narrated by Ivan Floro</em> also took place, marking the first publication of Fundación Azar. The book brings together the oil paintings and drawings created by the artist as the visual chronicler of the residency. During the exhibition, Ivan personalized each copy sold with unique drawings, turning every book into a one-of-a-kind piece.',
+            pt: 'Também ocorreu a pré-venda de <em>Uma Residência Narrada por Ivan Floro</em>, a primeira publicação da Fundação Azar, que reúne as pinturas a óleo e os desenhos realizados pelo artista como cronista visual da residência. Durante a exposição, Ivan dedicou cada exemplar vendido com desenhos únicos, transformando cada livro numa peça irrepetível.',
         },
         publicaciones: ["pub-1"],
         gallery: [
@@ -131,7 +193,12 @@ export const mockExhibitionsData = [
             "/Images/Exhibitions/Exhibition01/Gallery/Gallery-5.jpg",
             "/Images/Exhibitions/Exhibition01/Gallery/Gallery-6.jpg",
             "/Images/Exhibitions/Exhibition01/Gallery/Gallery-7.jpg",
-        ]
+        ],
+        byeByeText: {
+            es: '<br/>El éxito de Expo Residencia2025 no habría sido posible sin vuestra presencia y apoyo.<br/>¡Gracias y nos vemos en la próxima edición!',
+            en: '<br/>The success of Expo Residencia2025 would not have been possible without your presence and support.<br/>Thank you, and see you at the next edition!',
+            pt: '<br/>O sucesso da Expo Residencia2025 não teria sido possível sem a vossa presença e apoio.<br/>Obrigado e até à próxima edição!',
+        }
     },
     // {
     //     id: "expo-2", 
