@@ -1,0 +1,67 @@
+.pub-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 210px;
+}
+
+.pub-cover {
+    width: 100%;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    border-radius: 0px;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+}
+
+.pub-cover-image {
+    width: 100%;
+    height: 100%;
+    /* aspect-ratio: 4/5; */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.pub-cover:hover .pub-cover-image {
+    transform: scale(1.05);
+}
+
+.pub-title {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: left;
+    color: var(--dark-color);
+    margin: 0;
+    line-height: 1.4;
+    font-family: var(--serif-font);
+    font-style: italic;
+}
+
+.add-to-cart-button {
+    background-color: var(--dark-color);
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    min-width: 180px;
+    flex: 1;
+    padding: 0.875rem 1.5rem;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    text-transform: none;
+    border-radius: 0px;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
+}
+
+.add-to-cart-button:hover {
+    background-color: #333;
+}
+
+.add-to-cart-button:active {
+    transform: translateY(1px);
+}

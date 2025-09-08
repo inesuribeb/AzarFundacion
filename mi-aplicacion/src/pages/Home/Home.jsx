@@ -34,6 +34,7 @@ function Home() {
         };
 
         setHideTitle(true);
+        
 
         window.addEventListener('scroll', handleScroll);
         return () => {

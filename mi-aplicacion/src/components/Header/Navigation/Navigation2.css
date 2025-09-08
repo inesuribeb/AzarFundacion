@@ -23,7 +23,8 @@
     align-items: flex-start;
     justify-content: flex-end;
     text-decoration: none;
-    color: var(--dark-color);
+    /* color: var(--dark-color); */
+    color: var(--corporative-color);
     font-weight: 100;
     border-right: 1px solid var(--light-neutral-color);
     font-size: 2rem;

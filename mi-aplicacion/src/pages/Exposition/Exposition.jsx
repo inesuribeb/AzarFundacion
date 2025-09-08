@@ -2,9 +2,11 @@ import { useParams } from 'react-router-dom';
 import { mockExhibitionsData } from '../../utils/Data/ExhibitionsData';
 import { useLocalizedData } from '../../components/Hooks/Hooks';
 import { useLanguage } from '../../contexts/LanguageContext';
-import ExpoCover from './sections/ExpoCover/ExpoCover';
+import ExpoCover2 from './sections/ExpoCover/ExpoCover2';
 import ExpoDetails from './sections/ExpoDetails/ExpoDetails';
 import ExpoPresentations from './sections/ExpoPresentations/ExpoPresentations';
+import ExpoPreSale from './sections/ExpoPreSale/ExpoPreSale';
+import ExpoGallery from './sections/ExpoGallery/ExpoGallery';
 import BackButton from '../../components/Button/BackButton';
 
 function Exposition() {
@@ -23,10 +25,11 @@ function Exposition() {
             {/* <h1>{exhibition.title}</h1>
             <p>{exhibition.description}</p> */}
 
-            <ExpoCover
+            <ExpoCover2
                 exhibition={exhibition}
                 t={t}
                 currentLanguage={currentLanguage}
+                lightHeader={{ logo: true, hamburger: true }} 
             />
             <ExpoDetails
                 exhibition={exhibition}
@@ -34,6 +37,16 @@ function Exposition() {
                 currentLanguage={currentLanguage}
             />
             <ExpoPresentations
+                exhibition={exhibition}
+                t={t}
+                currentLanguage={currentLanguage}
+            />
+            <ExpoPreSale
+                exhibition={exhibition}
+                t={t}
+                currentLanguage={currentLanguage}
+            />
+            <ExpoGallery
                 exhibition={exhibition}
                 t={t}
                 currentLanguage={currentLanguage}

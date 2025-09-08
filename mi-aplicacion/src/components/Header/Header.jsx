@@ -71,7 +71,7 @@ function Header() {
     };
 
     const shouldHideTitle = (hideTitle && !isMenuOpen) || (isScrollingDown && !isMenuOpen);
-
+    // const isInHeroSection = hideTitle && !isScrollingDown; 
     const logoShouldBeLight = (useLightLogo && !isMenuOpen);
 
     const logoSrc = logoShouldBeLight
@@ -86,6 +86,8 @@ function Header() {
         <>
             <div className="header">
                 <div className={`header-logo ${shouldHideTitle ? 'hidden-title' : ''}`}>
+                {/* <div className={`header-logo ${hideTitle ? 'in-hero-section' : ''}`}> */}
+
                     <Link
                         to={getRoute('home')}
                         className="header-home-link"

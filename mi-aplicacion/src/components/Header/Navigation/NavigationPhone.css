@@ -67,7 +67,7 @@
     justify-content: center;
     padding: 1rem 0rem;
     text-decoration: none;
-    color: var(--dark-color);
+    color: var(--corporative-color);
     transition: all 0.2s ease;
     font-family: var(--futura-font);
     font-weight: var(--futura-book);
@@ -101,7 +101,7 @@
 .nav-text-phone {
     font-size: 3rem;
     font-weight: var(--futura-book);
-    color: var(--dark-color);
+    color: var(--corporative-color);
     line-height: 1.1;
 }
 

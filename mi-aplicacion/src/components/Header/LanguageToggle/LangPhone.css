@@ -75,7 +75,7 @@
 }
 
 .language-option-phone.active {
-    color: var(--dark-color);
+    color: var(--corporative-color);
     font-weight: 600;
     font-weight: var(--futura-medium);
 }

@@ -95,7 +95,7 @@
 
 .thumbnail-image {
     /* width: 140px; */
-    width: 210px;
+    width: 220px;
     /* aspect-ratio: 0.85/1; */
     aspect-ratio: 4/3;
     object-fit: cover;

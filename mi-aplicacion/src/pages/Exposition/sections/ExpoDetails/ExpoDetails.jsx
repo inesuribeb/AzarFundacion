@@ -15,12 +15,18 @@ function ExpoDetails({ t, currentLanguage, exhibition }) {
                 </div>
 
                 <div className='intro-expoDetails-texts'>
-                    <Texts
-                        size="large"
-                        // className='intro-expoDetails-texts'
-                        dangerouslySetInnerHTML={{ __html: exhibition.intro }}
-                    />
-
+                    <div>
+                        <Texts
+                            size="medium"
+                            className='texts-intro'
+                            dangerouslySetInnerHTML={{ __html: exhibition.intro }}
+                        />
+                        <Texts
+                            size="medium"
+                            className='texts-intro'
+                            dangerouslySetInnerHTML={{ __html: exhibition.intro2 }}
+                        />
+                    </div>
                     <img
                         src={exhibition?.imageDetail2}
                         alt={exhibition?.title}

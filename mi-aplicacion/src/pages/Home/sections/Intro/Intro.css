@@ -9,7 +9,7 @@
     background-color: transparent;
     padding: 2rem;
     background-color: transparent;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     gap: 4rem;
 
@@ -28,11 +28,14 @@
     width: 60%;
     /* font-family: var(--futura-font);
     font-weight: var(--futura-book); */
+    /* color: var(--corporative-color); */
+
 }
 
 .intro-text-home2 {
     text-align: center;
-width: 100%;
+    width: 100%;
+    /* color: var(--corporative-color); */
 }
 
 
@@ -41,15 +44,18 @@ width: 100%;
     .intro-section {
         padding: 1.5rem;
         gap: 3rem;
-        min-height: 90vh; /* Reducimos ligeramente la altura en tablet */
+        min-height: 90vh;
+        /* Reducimos ligeramente la altura en tablet */
     }
 
     .intro-text-home {
-        width: 70%; /* Aumentamos el ancho del texto en tablet */
+        width: 70%;
+        /* Aumentamos el ancho del texto en tablet */
     }
 
     .intro-text-home2 {
-        width: 90%; /* Reducimos ligeramente para mejor legibilidad */
+        width: 90%;
+        /* Reducimos ligeramente para mejor legibilidad */
     }
 }
 
@@ -76,11 +82,13 @@ width: 100%;
         padding: 1rem;
         gap: 2rem;
         /* height:  */
-        min-height: 100vh; /* Altura mínima para contenido */
+        min-height: 100vh;
+        /* Altura mínima para contenido */
     }
 
     .intro-text-home {
-        width: 100%; /* Casi todo el ancho disponible */
+        width: 100%;
+        /* Casi todo el ancho disponible */
         padding-bottom: 1.5rem;
 
     }

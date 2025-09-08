@@ -7,7 +7,7 @@ export const archiveTranslations = {
         collaborations: 'Colaboraciones',
         otherActivities: 'Otras actividades',
 
-        azarArchive: 'Actividades Azar',
+        azarArchive: 'Proyectos Azar',
     },
     en: {
         residencies: 'Residencies',
@@ -17,7 +17,7 @@ export const archiveTranslations = {
         collaborations: 'Collaborations',
         otherActivities: 'Other activities',
 
-        azarArchive: 'Azar Activities',
+        azarArchive: 'Azar Projects',
     },
     pt: {
         residencies: 'Residencias',
@@ -27,6 +27,6 @@ export const archiveTranslations = {
         collaborations: 'Colaborações',
         otherActivities: 'Outras atividades',
 
-        azarArchive: 'Atividades Azar',
+        azarArchive: 'Projetos Azar',
     }
 };

@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { useHeader } from '../../../../contexts/HeaderContext';
 import { useMobile } from '../../../../components/Hooks/useMobile';
-import './CoverArtPiece.css';
+import './ExpoCover2.css';
 
-function CoverArtPiece({ artPiece, lightHeader = {} }) {
+function ExpoCover2({ t, currentLanguage, exhibition, lightHeader = {} }) {
     const sectionRef = useRef(null);
     const imageRef = useRef(null);
     const containerRef = useRef(null);
@@ -14,7 +14,7 @@ function CoverArtPiece({ artPiece, lightHeader = {} }) {
 
     const { logo = false, hamburger = false } = lightHeader;
 
-    if (!artPiece) return null;
+    if (!exhibition) return null;
 
     useEffect(() => {
         const calculateHeight = () => {
@@ -40,7 +40,7 @@ function CoverArtPiece({ artPiece, lightHeader = {} }) {
             clearTimeout(timer);
             window.removeEventListener('resize', calculateHeight);
         };
-    }, [artPiece]);
+    }, [exhibition]);
 
     // Efecto para activar la animación de zoom-out
     useEffect(() => {
@@ -141,39 +141,31 @@ function CoverArtPiece({ artPiece, lightHeader = {} }) {
         return () => window.removeEventListener('scroll', optimizedScroll);
     }, [sectionHeight]);
 
-    const imageToUse = isMobile ? artPiece.image : artPiece.image2;
-
-
     return (
         <section
             ref={sectionRef}
-            className='cover-artpiece'
+            className='expo-cover2'
             style={{ height: sectionHeight }}
         >
-            <div ref={containerRef} className="cover-artpiece-container">
-                <div className="cover-artpiece-background">
-
-                    <div ref={imageRef} className="image-wrapper-artpiece">
+            <div ref={containerRef} className="expo-cover2-container">
+                <div className="expo-cover2-background">
+                    <div ref={imageRef} className="image-wrapper-expo">
                         <img
-                            src={imageToUse} // ← Usar la variable condicional
-                            alt={artPiece.title}
+                            src={exhibition.bgImage}
+                            alt={exhibition.title}
                             className={isImageLoaded ? 'loaded' : ''}
                         />
                     </div>
                 </div>
-                <div className="cover-artpiece-content">
-                    {artPiece.introduction && (
-                        <div className="cover-artpiece-introduction">
-                            {artPiece.introduction}
-                        </div>
-                    )}
-                    <div className="cover-artpiece-title">
-                        <h1>{artPiece.title}</h1>
-                    </div>
+                <div className="expo-cover2-content">
+                    <h1
+                        className="expo-cover2-title"
+                        dangerouslySetInnerHTML={{ __html: exhibition.title }}
+                    />
                 </div>
             </div>
         </section>
     );
 }
 
-export default CoverArtPiece;
+export default ExpoCover2;

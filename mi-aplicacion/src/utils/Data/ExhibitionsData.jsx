@@ -6,6 +6,7 @@ export const mockExhibitionsData = [
         image: "/Images/Exhibitions/Exhibition01/Cover-expo1.jpg",
         imageDetail: "/Images/Exhibitions/Exhibition01/expo2025-4.jpg",
         imageDetail2: "/Images/Exhibitions/Exhibition01/expo2025-1.jpg",
+        bgImage: "/Images/Exhibitions/Exhibition01/bgExpo2025.jpg",
         imagesAuthor: "Nerea Moreno",
         title: {
             es: "Expo Residencia2025",
@@ -48,6 +49,12 @@ export const mockExhibitionsData = [
         },
 
         intro: {
+            es: 'Con motivo de recoger todo lo ocurrido durante la residencia y dar a conocer el trabajo de Fundación Azar y de sus residentes, en junio de 2025 se celebró en Madrid la Expo Residencia2025, que reunió a más de 400 visitantes. <br/><br/>Durante dos jornadas, una antigua cristalería de 300 m² en el centro de Madrid acogió un programa que incluyó lecturas, presentaciones de investigaciones y obras individuales, la muestra de la obra colectiva y la preventa del libro <em>Una residencia narrada por Ivan Floro.</em> ',
+            en: 'In order to showcase everything that took place during the residency and to present the work of Fundación Azar and its residents, the Expo Residencia2025 was held in Madrid in June 2025, bringing together more than 400 visitors. <br/><br/>Over the course of two days, a former 300 m² glass factory in the center of Madrid hosted a program that included readings, research presentations, individual works, the exhibition of the collective piece, and the pre-sale of the book <em>A residency narrated by Ivan Floro.</em>',
+            pt: 'Com o objetivo de reunir tudo o que aconteceu durante a residência e divulgar o trabalho da Fundação Azar e dos seus residentes, em junho de 2025 realizou-se em Madrid a Expo Residencia2025, que reuniu mais de 400 visitantes. <br/><br/>Ao longo de dois dias, uma antiga cristaleira de 300 m² no centro de Madrid acolheu um programa que incluiu leituras, apresentações de pesquisas e obras individuais, a exposição da obra coletiva e a pré-venda do livro <em>Uma residência narrada por Ivan Floro.</em>',
+        },
+
+        intro2: {
             es: "Durante la Expo Residencia2025 organizamos una sesión de lecturas muy especial. Los escritores residentes Florencia del Campo («autorrelato»), Mireya Hernández (prosa) y Gonzalo Quincoces (guion cinematográfico), tomaron la palabra para compartir fragmentos de los textos que desarrollaron durante su estancia en la residencia.",
             en: "During Expo Residencia2025 we organized a very special reading session. The resident writers Florencia del Campo (autobiographical writing), Mireya Hernández (prose), and Gonzalo Quincoces (screenplay) took the floor to share excerpts from the texts they developed during their stay at the residency.",
             pt: "Durante a Expo Residência2025 organizámos uma sessão de leituras muito especial. Os escritores residentes Florencia del Campo («autorrelato»), Mireya Hernández (prosa) e Gonzalo Quincoces (roteiro cinematográfico) tomaram a palavra para compartilhar trechos dos textos que desenvolveram durante a sua estadia na residência.",
@@ -93,9 +100,11 @@ export const mockExhibitionsData = [
                 images: [
                     "/Images/Exhibitions/Exhibition01/Expo-MariaEsteve-1.jpg",
                     "/Images/Exhibitions/Exhibition01/Expo-MariaEsteve-2.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-MariaEsteve-7.jpg",
                     "/Images/Exhibitions/Exhibition01/Expo-MariaEsteve-3.jpg",
                     "/Images/Exhibitions/Exhibition01/Expo-MariaEsteve-4.jpg",
                     "/Images/Exhibitions/Exhibition01/Expo-MariaEsteve-5.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-MariaEsteve-6.jpg",
                 ]
             },
         ],
@@ -106,11 +115,23 @@ export const mockExhibitionsData = [
             pt: 'Pré-venda <em>Uma Residência Narrada por: Iván Floro</em>',
         },
 
+        preSaleImage: "/Images/Exhibitions/Exhibition01/expo2025-2.jpg",
+
         preSaleText: {
-            es: 'También se expuso «Una residencia narrada por Ivan Floro» inaugura nuestra serie editorial, en la que cada año invitamos a un artista a convertirse en testigo y cronista de la residencia. En este libro encontraréis todos los óleos realizados por Ivan durante su estancia, cada uno pintado del natural: desde retratos y bodegones, hasta atmósferas y paisajes. Disponible para su compra online a partir de septiembre.',
-            en: 'Also presented, «A Residency Narrated by Ivan Floro» inaugurates our editorial series, in which each year we invite an artist to become both witness and chronicler of the residency. In this book you will find all the oil paintings created by Ivan during his stay, each painted from life: from portraits and still lifes to atmospheres and landscapes. Available for online purchase starting in September.',
-            pt: 'Também foi apresentado «Uma Residência Narrada por Ivan Floro», que inaugura a nossa série editorial, na qual todos os anos convidamos um artista a tornar-se testemunha e cronista da residência. Neste livro encontram-se todas as pinturas a óleo realizadas por Ivan durante a sua estadia, cada uma pintada ao natural: desde retratos e naturezas-mortas até atmosferas e paisagens. Disponível para compra online a partir de setembro.'
+            es: 'También se llevó acabo la preventa de <em>Una residencia narrada por Ivan Floro</em>, la primera publicación de Fundación Azar, que reúne los óleos y dibujos realizados por el artista como cronista visual de la residencia. <br/><br/>Durante la exposición, Ivan dedicó cada ejemplar vendido con dibujos únicos, convirtiendo cada libro en una pieza irrepetible.',
+            en: 'The pre-sale of <em>A Residency Narrated by Ivan Floro</em> also took place, marking the first publication of Fundación Azar. The book brings together the oil paintings and drawings created by the artist as the visual chronicler of the residency. <br/><br/>During the exhibition, Ivan personalized each copy sold with unique drawings, turning every book into a one-of-a-kind piece.',
+            pt: 'Também ocorreu a pré-venda de <em>Uma Residência Narrada por Ivan Floro</em>, a primeira publicação da Fundação Azar, que reúne as pinturas a óleo e os desenhos realizados pelo artista como cronista visual da residência. <br/><br/>Durante a exposição, Ivan dedicou cada exemplar vendido com desenhos únicos, transformando cada livro numa peça irrepetível.',
         },
+        publicaciones: ["pub-1"],
+        gallery: [
+            "/Images/Exhibitions/Exhibition01/Gallery/Gallery-1.jpg",
+            "/Images/Exhibitions/Exhibition01/Gallery/Gallery-2.jpg",
+            "/Images/Exhibitions/Exhibition01/Gallery/Gallery-3.jpg",
+            "/Images/Exhibitions/Exhibition01/Gallery/Gallery-4.jpg",
+            "/Images/Exhibitions/Exhibition01/Gallery/Gallery-5.jpg",
+            "/Images/Exhibitions/Exhibition01/Gallery/Gallery-6.jpg",
+            "/Images/Exhibitions/Exhibition01/Gallery/Gallery-7.jpg",
+        ]
     },
     // {
     //     id: "expo-2", 
