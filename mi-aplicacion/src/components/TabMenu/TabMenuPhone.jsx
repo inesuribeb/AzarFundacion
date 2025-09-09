@@ -7,6 +7,7 @@
 //     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 //     const tabs = [
+// { id: 'all', label: t('all') },
 //         { id: 'exhibitions', label: t('exhibitions') },
 //         { id: 'collectiveArtPieces', label: t('collectiveArtPieces') },
 //         { id: 'publications', label: t('publications') },
@@ -68,37 +69,38 @@ function TabMenuPhone({ t, onTabChange, activeTab, lightHeader = {} }) {
     const { logo = false, hamburger = false } = lightHeader;
 
     const tabs = [
+        { id: 'all', label: t('all') },
         { id: 'exhibitions', label: t('exhibitions') },
         { id: 'collectiveArtPieces', label: t('collectiveArtPieces') },
         { id: 'publications', label: t('publications') },
         { id: 'collaborations', label: t('collaborations') }
     ];
 
-    useEffect(() => {
-        if (!logo && !hamburger) return;
+    // useEffect(() => {
+    //     if (!logo && !hamburger) return;
 
-        const handleScroll = () => {
-            if (!sectionRef.current) return;
+    //     const handleScroll = () => {
+    //         if (!sectionRef.current) return;
 
-            const section = sectionRef.current;
-            const rect = section.getBoundingClientRect();
-            const isInSection = rect.top <= 0 && rect.bottom > 0;
+    //         const section = sectionRef.current;
+    //         const rect = section.getBoundingClientRect();
+    //         const isInSection = rect.top <= 0 && rect.bottom > 0;
 
-            if (logo) setUseLightLogo(isInSection);
-            if (hamburger) setUseLightHamburger(isInSection);
-        };
+    //         if (logo) setUseLightLogo(isInSection);
+    //         if (hamburger) setUseLightHamburger(isInSection);
+    //     };
 
-        if (logo) setUseLightLogo(true);
-        if (hamburger) setUseLightHamburger(true);
+    //     if (logo) setUseLightLogo(true);
+    //     if (hamburger) setUseLightHamburger(true);
 
-        window.addEventListener('scroll', handleScroll, { passive: true });
+    //     window.addEventListener('scroll', handleScroll, { passive: true });
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-            if (logo) setUseLightLogo(false);
-            if (hamburger) setUseLightHamburger(false);
-        };
-    }, [logo, hamburger, setUseLightLogo, setUseLightHamburger]);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //         if (logo) setUseLightLogo(false);
+    //         if (hamburger) setUseLightHamburger(false);
+    //     };
+    // }, [logo, hamburger, setUseLightLogo, setUseLightHamburger]);
 
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -116,7 +118,7 @@ function TabMenuPhone({ t, onTabChange, activeTab, lightHeader = {} }) {
 
     return (
         <div ref={sectionRef} className='tabMenu-phone'>
-            <button 
+            <button
                 className='hamburger-archive'
                 onClick={handleMenuToggle}
             >

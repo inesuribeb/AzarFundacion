@@ -20,7 +20,8 @@ function ExpoPresPhone({ t, exhibition }) {
                         className="artist-name-button"
                         onClick={() => openModal(presentation)}
                     >
-                        {presentation.artist}
+                        {presentation.artist} 
+                        <span className="arrow-icon">→</span>
                     </button>
                 ))}
             </div>

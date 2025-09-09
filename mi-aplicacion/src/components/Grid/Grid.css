@@ -17,7 +17,7 @@
     justify-items: stretch; 
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .grid {
         gap: 25px;
     }
@@ -78,4 +78,91 @@
 .grid.extra-loose {
     gap: 30px;
 }
+} */
+
+/* Estilos base */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 3rem;
+    padding-top: 5rem;
+    border-top: 1.5px solid var(--dark-color);
+    justify-items: center; 
+}
+
+.grid.publications-grid {
+    grid-template-columns: 1fr; 
+    gap: 5rem;
+    justify-items: stretch; 
+}
+
+/* Clases modificadoras */
+.grid.tight {
+    gap: 20px;
+}
+
+.grid.loose {
+    gap: 40px;
+}
+
+.grid.extra-loose {
+    gap: 50px;
+}
+
+/* Tablet grande */
+@media (max-width: 1024px) {
+    .grid {
+        gap: 25px;
+        grid-template-columns: repeat(min(var(--grid-columns), 2), 1fr);
+    }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+    .grid {
+        gap: 1rem;
+        margin-top: 0rem;
+        border-top: none;
+        padding: 3rem 0rem;
+        grid-template-columns: 1fr; /* Una columna en móvil */
+    }
+
+    .grid.publications-grid {
+        gap: 3rem;
+    }
+
+    .grid.tight {
+        gap: 10px;
+    }
+
+    .grid.loose {
+        gap: 20px;
+    }
+
+    .grid.extra-loose {
+        gap: 30px;
+    }
+}
+
+/* Móvil pequeño */
+@media (max-width: 480px) {
+    .grid {
+        gap: 15px;
+    }
+
+    .grid.tight {
+        gap: 10px;
+    }
+
+    .grid.loose {
+        gap: 15px;
+    }
+
+    .grid.extra-loose {
+        gap: 20px;
+    }
 }
