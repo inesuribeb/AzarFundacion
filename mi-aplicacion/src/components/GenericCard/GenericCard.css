@@ -84,7 +84,7 @@
         font-family: var(--futura-font);
         font-weight: var(--futura-book);
     }
-    
+
     .card-title {
         font-size: 1.6rem;
         padding-bottom: 0.5rem;
@@ -94,7 +94,7 @@
         font-weight: var(--futura-medium);
         color: var(--corporative-color);
     }
-    
+
     .card-subtitle {
         padding-top: 0.5rem;
         font-size: 1.15rem;
@@ -124,7 +124,7 @@
 
 .generic-card.single-card .card-title,
 .generic-card.single-card .card-year {
-    font-size: 2.4rem; 
+    font-size: 2.4rem;
     width: 100%;
     margin: 0;
 }
@@ -138,29 +138,30 @@
 @media (max-width: 768px) {
     .generic-card.single-card {
         flex-direction: column;
-        gap: 1rem; 
-        width: 100%; 
+        gap: 1rem;
+        width: 100%;
     }
- 
+
     .generic-card.single-card .card-image-container {
-        flex: none; 
+        flex: none;
     }
-    
+
     .generic-card.single-card .card-content {
-        flex: none; 
+        flex: none;
         justify-content: flex-start;
     }
 
     .generic-card.single-card .card-image {
         width: 100%;
-        aspect-ratio: 3/4; 
+        aspect-ratio: 3/4;
     }
- 
-    .generic-card.single-card .card-title {
+
+    .generic-card.single-card .card-title,
+    .generic-card.single-card .card-year {
         font-size: 1.6rem;
         margin: 0;
     }
- 
+
     .generic-card.single-card .card-subtitle {
         /* border-top: 1px solid var(--dark-color); */
         border-top: none !important;
