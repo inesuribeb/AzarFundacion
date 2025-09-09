@@ -122,8 +122,9 @@
     justify-content: space-between;
 }
 
-.generic-card.single-card .card-title {
-    font-size: 2.6rem; 
+.generic-card.single-card .card-title,
+.generic-card.single-card .card-year {
+    font-size: 2.4rem; 
     width: 100%;
     margin: 0;
 }
@@ -161,9 +162,10 @@
     }
  
     .generic-card.single-card .card-subtitle {
-        border-top: 1px solid var(--dark-color);
+        /* border-top: 1px solid var(--dark-color); */
+        border-top: none !important;
         margin-top: 1rem;
-        padding-top: 0.5rem;
+        padding-top: 0rem;
         font-size: 1.1rem;
     }
 }

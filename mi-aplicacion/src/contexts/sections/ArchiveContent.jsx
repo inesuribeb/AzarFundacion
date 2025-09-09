@@ -8,6 +8,8 @@ export const archiveTranslations = {
         otherActivities: 'Otras actividades',
 
         azarArchive: 'Proyectos Azar',
+
+        readOn: "¡Sigue leyendo!",
     },
     en: {
         residencies: 'Residencies',
@@ -18,6 +20,8 @@ export const archiveTranslations = {
         otherActivities: 'Other activities',
 
         azarArchive: 'Azar Projects',
+
+        readOn: "Read On!",
     },
     pt: {
         residencies: 'Residencias',
@@ -28,5 +32,7 @@ export const archiveTranslations = {
         otherActivities: 'Outras atividades',
 
         azarArchive: 'Projetos Azar',
+
+        readOn: "Saiba mais!",
     }
 };
