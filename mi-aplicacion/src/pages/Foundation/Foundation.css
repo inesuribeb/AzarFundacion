@@ -1,4 +1,4 @@
-.foundation-container {
+/* .foundation-container {
     position: relative;
     width: 100%;
 
@@ -32,8 +32,6 @@
 
 .team-container {
     background-color: white;
-    /* border-top: 2px solid var(--dark-color); */
-    /* border-radius: 10px; */
 }
 
 @media (max-width: 768px) {
@@ -68,6 +66,22 @@
  
     .team-container {
         background-color: white;
-        /* border-top: 2px solid var(--dark-color); */
     }
- }
+ } */
+
+ .foundation-container {
+    position: relative;
+    width: 100%;
+}
+
+.team-container {
+    background-color: white;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .team-container {
+        padding: 1rem;
+    }
+}

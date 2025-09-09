@@ -6,6 +6,7 @@ export const mockPublicationsData = [
         cover: "/Images/Publications/Publication01/portadalibro.jpg",
         images: [
             // "/Images/Publications/Publication01/pub01-01.jpg",
+            "/Images/Publications/Publication01/Publicaciones-1.jpg",
             "/Images/Publications/Publication01/portadalibro.jpg",
             "/Images/Publications/Publication01/pubMas1.jpg",
         ],
@@ -31,9 +32,9 @@ export const mockPublicationsData = [
             pt: "Catálogo"
         },
         description: {
-            es: "Documentación completa de la residencia de enero en Finca El Azahar",
-            en: "Complete documentation of the January residency at Finca El Azahar",
-            pt: "Documentação completa da residência de janeiro na Finca El Azahar"
+            es: "Documentación completa de la residencia de enero 2025 en Finca El Azahar",
+            en: "Complete documentation of the January 2025 residency at Finca El Azahar",
+            pt: "Documentação completa da residência de janeiro 2025 na Finca El Azahar"
         },
         info: {
             es: 'Con el comienzo del programa de residencias de Fundación Azar, surge también el deseo de contarlas desde dentro. Para ello, Fundación Azar lanza la serie editorial <em>Una residencia narrada por</em>, en la que cada año, un artista es invitado a convivir con los residentes y convertir su mirada en relato. <br/><br/>Ivan Floro fue elegido para ser testigo y cronista visual de esta primera edición. Durante tres semanas, se confundió con los residentes, adentrándose en sus días y procesos creativos, compartiendo sobremesas y silencios, observando los rincones y paisajes. Con sus bártulos siempre a cuestas, se propuso pintar todo del natural: “sin recurrir a la fotografía como punto de partida y, así, devolverle al óleo su antiguo cometido: capturar el momento”. <br/><br/>Las obras que conforman esta serie, ahora también recogidas en el libro <em>Una residencia narrada por Ivan Floro</em>, son el testimonio pictórico de esta convivencia. <br/><br/> Pintor autodidacta y de talento polivalente, Ivan Floro (1993, Mataró) revitaliza el uso del óleo como medio expresivo para construir una visión tan personal como generacional. Su obra ha sido presentada en espacios expositivos tanto a nivel nacional como internacional. Entre sus proyectos más recientes destacan la muestra permanente en Flamenco de Leones (2023, Madrid) y su participación en <em>Nouvelle Scène Impressionniste Espagnole</em> en el Spacejunk Art Center en 2023 (Grenoble y Lyon, Francia) y en Realism Now en el Museo Europeo de Arte Moderno en 2024 (Barcelona). Su práctica se extiende también al muralismo, con intervenciones en el paisaje urbano de España, Estados Unidos, Italia y Egipto. Las obras de Ivan Floro también han protagonizado la dirección visual de <em>El Madrileño</em>, álbum y serie de lanzamientos de C. Tangana en colaboración con Sony en 2021.',

@@ -20,6 +20,8 @@ export const foundationTranslations = {
             denisRole: 'Co-fundador',
             denisBio: 'Denis Curty, nacido en París, ha trabajado durante más de cuarenta años como director de escena y director técnico en una amplia variedad de eventos culturales, entre ellos el festival Montpellier Danse, el festival Paris Quartier d’Été y en importantes teatros parisinos como Le Châtelet y el Théâtre de la Ville (ahora Théâtre Sarah Bernhardt). A lo largo de su carrera, ha colaborado con algunos de los más grandes artistas de la escena internacional, como Bob Wilson, Robert Carsen, Trisha Brown, Dominique Bagouet, Pina Bausch, Bouvier Obadia y Thomas Ostermeier.<br/><br/>También ha desarrollado una segunda carrera en el mundo de los museos, desempeñándose como director técnico de exposiciones, talleres y programas para el público joven en el Centro Pompidou y el Museo de Arte Moderno de la Ville de Paris.<br/><br/>Desde 2024, es el director técnico del evento La Nuit Blanche en París.<br/><br/>Toda esta vasta experiencia en el vibrante entorno cultural francés ha despertado en él el deseo de poner sus conocimientos al servicio de un proyecto personal: Fundación Azar, en España, un país que ama profundamente y que sigue descubriendo.',
             denisQuote: "",
+
+            clickThis: "Haz click!",
         
     },
     en: {
@@ -44,6 +46,8 @@ export const foundationTranslations = {
             denisBio: "Born in Paris, Denis Curty has worked for over forty years as a stage manager and technical director for a wide variety of cultural events, including the Montpellier Danse Festival, the Paris Quartier d'Été Festival, and major Parisian theaters such as Le Châtelet and the Théâtre de la Ville (now Théâtre Sarah Bernhardt). Throughout his career, he has collaborated with some of the greatest artists on the international stage, including Bob Wilson, Robert Carsen, Trisha Brown, Dominique Bagouet, Pina Bausch, Bouvier Obadia, and Thomas Ostermeier.<br/><br/>He has also developed a second career in the museum world, serving as technical director of exhibitions, workshops, and programs for young audiences at the Centre Pompidou and the Musée d'Art Moderne de la Ville de Paris. <br/><br/>Since 2024, he has been the technical director of the La Nuit Blanche event in Paris.<br/><br/>All this vast experience in the vibrant French cultural environment has awakened in him the desire to put his knowledge to work for a personal project: the Azar Foundation, in Spain, a country he deeply loves and continues to explore.",
             denisQuote: "",
 
+            clickThis: "Click here!",
+
     },
     pt: {
         visionTitle: 'Nossa Visão',
@@ -66,5 +70,7 @@ export const foundationTranslations = {
             denisRole: 'Cofundador',
             denisBio: 'Denis Curty, nascido em Paris, trabalhou durante mais de quarenta anos como diretor de cena e diretor técnico em uma ampla variedade de eventos culturais, entre eles o festival Montpellier Danse, o festival Paris Quartier d’Été e importantes teatros parisienses como Le Châtelet e o Théâtre de la Ville (atualmente Théâtre Sarah Bernhardt). Ao longo de sua carreira, colaborou com alguns dos maiores artistas da cena internacional, como Bob Wilson, Robert Carsen, Trisha Brown, Dominique Bagouet, Pina Bausch, Bouvier Obadia e Thomas Ostermeier.<br/><br/>Também desenvolveu uma segunda carreira no mundo dos museus, atuando como diretor técnico de exposições, oficinas e programas para o público jovem no Centro Pompidou e no Museu de Arte Moderna da Ville de Paris.<br/><br/>Desde 2024, é diretor técnico do evento La Nuit Blanche em Paris.<br/><br/>Toda essa vasta experiência no vibrante ambiente cultural francês despertou nele o desejo de colocar seus conhecimentos a serviço de um projeto pessoal: a Fundação Azar, na Espanha, um país que ama profundamente e continua descobrindo.',
             denisQuote: "",
+
+            clickThis: "Clique!",
     }
 };

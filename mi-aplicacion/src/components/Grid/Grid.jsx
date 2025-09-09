@@ -46,6 +46,9 @@ function Grid({
                     isSingle={isSingle}
                     year={card.year}
                     showYear={cardType === 'artpieces'}
+
+                    category={card.category}
+                    showCategory={card.showCategory}
                 />
             )
         }

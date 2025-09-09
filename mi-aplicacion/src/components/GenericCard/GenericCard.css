@@ -36,25 +36,33 @@
 }
 
 .card-content {
-    padding-top: 1rem;
+    padding-top: 0.3rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.card-title,
-.card-year {
-    font-size: 1.7rem;
-    color: var(--dark-color);
-    margin: 0 0 8px 0;
-    line-height: 1.3;
+.category-label {
+    font-size: 1rem;
+    color: var(--neutral-color);
     font-family: var(--futura-font);
     font-weight: var(--futura-book);
 }
 
-.card-subtitle {
+.card-title,
+.card-year {
     font-size: 1.2rem;
+    color: var(--dark-color);
+    margin: 5px 0 3px 0;
+    line-height: 1.3;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
+    text-transform: uppercase;
+}
+
+.card-subtitle {
+    font-size: 1.05rem;
     font-weight: 300;
     color: var(--dark-color);
     margin: 0;

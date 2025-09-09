@@ -19,8 +19,8 @@
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
     justify-content: center; 
     flex-wrap: wrap;
 }
@@ -29,8 +29,8 @@
     cursor: pointer;
     transition: all 0.4s ease;
     flex: 1;
-    min-width: 200px; 
-    max-width: 300px; 
+    min-width: 150px; 
+    max-width: 240px; 
     aspect-ratio: 3/4; 
     object-fit: cover;
     opacity: 1;
@@ -76,17 +76,19 @@
     font-weight: 300;
     line-height: 1.4;
     margin: 0;
+    color: var(--corporative-color);
 }
 
 .team-bio,
 .team-intro {
     min-height: 100px; 
-    max-width: 800px;
+    /* max-width: 800px; */
+    width: 800px; 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 4rem;
+    margin-top: 0rem;
 
 }
 .member-name {
@@ -94,7 +96,10 @@
     align-self: flex-start;
     width: 100%;
     text-align: left;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    padding-bottom: 0.5rem;
+    color: var(--corporative-color);
+    border-bottom: 1.5px solid var(--corporative-color);
 }
 .member-role {
     text-transform:initial;
@@ -103,6 +108,7 @@
     text-align: left;
     font-size: 1.3rem;
     margin-top: 1rem;
+    color: var(--corporative-color);
 }
 
 .team-bio blockquote {
@@ -138,4 +144,22 @@
     padding-top: 1rem;
     margin-top: 2rem;
     text-align: center;
+}
+
+/* Texto hover que sigue al mouse */
+.hover-click-text {
+    background: transparent;
+    color: var(--corporative-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    pointer-events: none;
+    position: fixed;
+    z-index: 1000;
+    transform: translate(-50%, -100%);
+    margin-top: -10px;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
+    white-space: nowrap;
 }

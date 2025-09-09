@@ -1,6 +1,6 @@
 .tab-menu {
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.8rem;
+    margin-bottom: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,23 +15,24 @@
     padding: 0;
     border: none;
     background: transparent;
-    color: var(--neutral-color); 
+    color: var(--dark-color); 
     cursor: pointer;
     transition: all 0.3s ease;
     letter-spacing: 0.04rem;
     position: relative;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     font-family: var(--futura-font);
     font-weight: var(--futura-book);
+    /* font-family: var(--serif-font); */
 }
 
 .tab-item:hover {
-    color: var(--dark-color);
+    color: var(--neutral-color);
 }
 
 .tab-item.active {
     background: transparent;
-    color: var(--dark-color); 
+    color: var(--neutral-color); 
 }
 
 .tab-item:not(:last-child)::after {

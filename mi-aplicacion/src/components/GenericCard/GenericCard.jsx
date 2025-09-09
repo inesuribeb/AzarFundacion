@@ -7,8 +7,10 @@ function GenericCard({
     onClick,
     className = '',
     isSingle = false,
-    year = null,  
-    showYear = false 
+    year = null,
+    showYear = false,
+    category = null,      // ← Nueva prop
+    showCategory = false  // ← Nueva prop
 }) {
     return (
         <div
@@ -22,11 +24,20 @@ function GenericCard({
                     className="card-image"
                 />
             </div>
+
+            {/* aqui */}
+            {/* {showCategory && category && (
+                <div className="card-category">
+                    <span className="category-label">{category}</span>
+                </div>
+            )} */}
+
             <div className="card-content">
-                {/* <h3
-                    className="card-title"
-                    dangerouslySetInnerHTML={{ __html: title }}
-                /> */}
+                {showCategory && category && (
+                    <div className="card-category">
+                        <span className="category-label">{category}</span>
+                    </div>
+                )}
                 <div className="card-title-container">
                     <h3
                         className="card-title"

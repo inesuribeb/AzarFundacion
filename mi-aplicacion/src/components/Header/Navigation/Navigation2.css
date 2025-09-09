@@ -38,7 +38,7 @@
     pointer-events: auto;
 
     font-family: var(--futura-font);
-    font-weight: var(--futura-medium);
+    font-weight: var(--futura-book);
 }
 
 @keyframes slideDownNavLink {

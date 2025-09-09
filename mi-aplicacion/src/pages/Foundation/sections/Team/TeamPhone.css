@@ -1,5 +1,5 @@
 .team-phone {
-    padding: 0rem 0rem;
+    padding: 4rem 0rem;
     background-color: var(--light-color);
 }
 
@@ -12,7 +12,7 @@
 
 .team-phone-intro p {
     font-size: 1.4rem;
-    color: var(--dark-color);
+    color: var(--corporative-color);
     line-height: 1.4;
     margin: 0;
     padding: 0 0rem;

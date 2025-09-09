@@ -44,9 +44,9 @@ function TeamPhone({ t }) {
 
     return (
         <div className="team-phone">
-            <MediumSans                >
+            {/* <MediumSans                >
                 {t('teamTitle')}
-            </MediumSans>
+            </MediumSans> */}
 
             <div className="team-phone-intro">
                 <p dangerouslySetInnerHTML={{ __html: t('knowUs') }}></p>

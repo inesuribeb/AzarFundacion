@@ -38,7 +38,7 @@
 
 .carrusel-name {
     font-size: 1.4rem;
-    color: var(--dark-color);
+    color: var(--corporative-color);
     margin: 0 0 0.1rem 0;
     font-family: var(--futura-font);
     font-weight: var(--futura-medium);
@@ -46,7 +46,7 @@
 
 .carrusel-role {
     font-size: 1.1rem;
-    color: var(--dark-color);
+    color: var(--corporative-color);
     margin: 0;
     font-family: var(--futura-font);
     font-weight: var(--futura-book);

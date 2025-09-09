@@ -50,15 +50,19 @@
 //         setHoveredMember(null);
 //     };
 
-//     const activeMember = hoveredMember || selectedMember;
+//     const getDisplayMember = () => {
+//         if (selectedMember) {
+//             return hoveredMember || selectedMember;
+//         } else {
+//             return hoveredMember;
+//         }
+//     };
+
+//     const displayMember = getDisplayMember();
+//     const showFullBio = selectedMember !== null;
 
 //     return (
 //         <section className='section-team'>
-//             <MediumSans
-//                 className="team-title">
-//                 {t('teamTitle')}
-//             </MediumSans>
-
 //             <div className='team-pictures'>
 //                 {teamMembers.map((member) => (
 //                     <img
@@ -68,44 +72,49 @@
 //                         onClick={() => handleMemberClick(member)}
 //                         onMouseEnter={() => handleMouseEnter(member)}
 //                         onMouseLeave={handleMouseLeave}
-//                         className={`team-member ${activeMember
-//                             ? activeMember.id === member.id
-//                                 ? 'selected'
-//                                 : 'not-selected'
-//                             : ''
-//                             }`}
+//                         className={`team-member ${
+//                             displayMember
+//                                 ? displayMember.id === member.id
+//                                     ? 'selected'
+//                                     : 'not-selected'
+//                                 : ''
+//                         } ${selectedMember?.id === member.id ? 'clicked' : ''}`}
 //                     />
 //                 ))}
 //             </div>
 
-//             {!activeMember && (
+//             {!displayMember && (
 //                 <div className='team-intro'>
 //                     <p dangerouslySetInnerHTML={{ __html: t('knowUs') }}></p>
 //                 </div>
 //             )}
 
-//             {activeMember && (
-//                 <div className='team-bio'>
+//             {displayMember && (
+//                 <div className={`team-bio ${showFullBio ? 'full-bio' : 'hover-info'}`}>
 //                     <MediumSans
 //                         className="member-name"
-//                         dangerouslySetInnerHTML={{ __html: activeMember.name }}
+//                         dangerouslySetInnerHTML={{ __html: displayMember.name }}
 //                     />
 //                     <MediumSans
 //                         className="member-role"
-//                         dangerouslySetInnerHTML={{ __html: activeMember.role }}
+//                         dangerouslySetInnerHTML={{ __html: displayMember.role }}
 //                     />
 
-//                     {activeMember.quote &&
-//                         activeMember.quote.trim() !== '' &&
-//                         !activeMember.quote.endsWith('Quote') && (
-//                             <blockquote dangerouslySetInnerHTML={{ __html: activeMember.quote }}></blockquote>
-//                         )}
+//                     {showFullBio && (
+//                         <>
+//                             {displayMember.quote &&
+//                                 displayMember.quote.trim() !== '' &&
+//                                 !displayMember.quote.endsWith('Quote') && (
+//                                     <blockquote dangerouslySetInnerHTML={{ __html: displayMember.quote }}></blockquote>
+//                                 )}
 
-//                     <Texts size="medium" className='member-bio'>
-//                         {activeMember.bio}
-//                     </Texts>
+//                             <Texts size="medium" className='member-bio'>
+//                                 {displayMember.bio}
+//                             </Texts>
 
-//                     <cite dangerouslySetInnerHTML={{ __html: activeMember.name }}></cite>
+//                             <cite dangerouslySetInnerHTML={{ __html: displayMember.name }}></cite>
+//                         </>
+//                     )}
 //                 </div>
 //             )}
 //         </section>
@@ -122,6 +131,7 @@ import './Team.css';
 function Team({ t }) {
     const [selectedMember, setSelectedMember] = useState(null);
     const [hoveredMember, setHoveredMember] = useState(null);
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
     if (!t || typeof t !== 'function') {
         return <div>Cargando información del equipo...</div>;
@@ -159,26 +169,37 @@ function Team({ t }) {
     };
 
     const handleMouseEnter = (member) => {
-        // Solo permitir hover si ya hay un miembro seleccionado
-        if (selectedMember) {
-            setHoveredMember(member);
+        setHoveredMember(member);
+    };
+
+    const handleMouseMove = (e) => {
+        // Solo mostrar el texto si no hay miembro seleccionado
+        if (!selectedMember) {
+            setMousePosition({ x: e.clientX, y: e.clientY });
         }
     };
 
     const handleMouseLeave = () => {
         setHoveredMember(null);
+        setMousePosition({ x: 0, y: 0 });
     };
 
-    // Si hay hover y ya hay selección, mostrar hover. Si no, mostrar selección
-    const activeMember = (selectedMember && hoveredMember) ? hoveredMember : selectedMember;
+    // Determinar qué mostrar según el estado
+    const getDisplayMember = () => {
+        if (selectedMember) {
+            // Si hay miembro seleccionado, el hover solo cambia dentro del miembro seleccionado
+            return hoveredMember || selectedMember;
+        } else {
+            // Si no hay selección, solo mostrar en hover
+            return hoveredMember;
+        }
+    };
+
+    const displayMember = getDisplayMember();
+    const showFullBio = selectedMember !== null;
 
     return (
         <section className='section-team'>
-            <MediumSans
-                className="team-title">
-                {t('teamTitle')}
-            </MediumSans>
-
             <div className='team-pictures'>
                 {teamMembers.map((member) => (
                     <img
@@ -187,45 +208,67 @@ function Team({ t }) {
                         alt={member.name}
                         onClick={() => handleMemberClick(member)}
                         onMouseEnter={() => handleMouseEnter(member)}
+                        onMouseMove={handleMouseMove}
                         onMouseLeave={handleMouseLeave}
-                        className={`team-member ${activeMember
-                            ? activeMember.id === member.id
-                                ? 'selected'
-                                : 'not-selected'
-                            : ''
-                            }`}
+                        className={`team-member ${
+                            displayMember
+                                ? displayMember.id === member.id
+                                    ? 'selected'
+                                    : 'not-selected'
+                                : ''
+                        } ${selectedMember?.id === member.id ? 'clicked' : ''}`}
                     />
                 ))}
             </div>
 
-            {!activeMember && (
+            {/* Texto que sigue al mouse - solo cuando hay hover y NO hay selección */}
+            {hoveredMember && !selectedMember && mousePosition.x > 0 && (
+                <span 
+                    className="hover-click-text"
+                    style={{
+                        left: mousePosition.x,
+                        top: mousePosition.y,
+                    }}
+                >
+                    {t('clickThis')}
+                </span>
+            )}
+
+            {/* Texto inicial cuando no hay hover ni selección */}
+            {!displayMember && (
                 <div className='team-intro'>
                     <p dangerouslySetInnerHTML={{ __html: t('knowUs') }}></p>
                 </div>
             )}
 
-            {activeMember && (
-                <div className='team-bio'>
+            {/* Mostrar info del miembro */}
+            {displayMember && (
+                <div className={`team-bio ${showFullBio ? 'full-bio' : 'hover-info'}`}>
                     <MediumSans
                         className="member-name"
-                        dangerouslySetInnerHTML={{ __html: activeMember.name }}
+                        dangerouslySetInnerHTML={{ __html: displayMember.name }}
                     />
                     <MediumSans
                         className="member-role"
-                        dangerouslySetInnerHTML={{ __html: activeMember.role }}
+                        dangerouslySetInnerHTML={{ __html: displayMember.role }}
                     />
 
-                    {activeMember.quote &&
-                        activeMember.quote.trim() !== '' &&
-                        !activeMember.quote.endsWith('Quote') && (
-                            <blockquote dangerouslySetInnerHTML={{ __html: activeMember.quote }}></blockquote>
-                        )}
+                    {/* Solo mostrar quote, bio y cite si está seleccionado (clicked) */}
+                    {showFullBio && (
+                        <>
+                            {displayMember.quote &&
+                                displayMember.quote.trim() !== '' &&
+                                !displayMember.quote.endsWith('Quote') && (
+                                    <blockquote dangerouslySetInnerHTML={{ __html: displayMember.quote }}></blockquote>
+                                )}
 
-                    <Texts size="medium" className='member-bio'>
-                        {activeMember.bio}
-                    </Texts>
+                            <Texts size="medium" className='member-bio'>
+                                {displayMember.bio}
+                            </Texts>
 
-                    <cite dangerouslySetInnerHTML={{ __html: activeMember.name }}></cite>
+                            <cite dangerouslySetInnerHTML={{ __html: displayMember.name }}></cite>
+                        </>
+                    )}
                 </div>
             )}
         </section>

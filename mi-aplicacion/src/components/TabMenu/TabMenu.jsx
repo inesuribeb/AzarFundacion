@@ -3,6 +3,7 @@ import './TabMenu.css';
 
 function TabMenu({ t, onTabChange, activeTab }) {
     const tabs = [
+        { id: 'all', label: t('all') },
         { id: 'exhibitions', label: t('exhibitions') },
         { id: 'collectiveArtPieces', label: t('collectiveArtPieces') },
         { id: 'publications', label: t('publications') },

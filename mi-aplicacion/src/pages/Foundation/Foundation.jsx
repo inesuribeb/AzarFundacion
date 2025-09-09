@@ -10,10 +10,20 @@ function Foundation() {
     const isMobile = useMobile();
 
     return (
+        // <div className='foundation-container'>
+        //     <section className="vision-section">
+        //         <Vision t={t} />
+        //     </section>
+        //     <section className="team-container">
+        //         {isMobile ? (
+        //             <TeamPhone t={t} />
+        //         ) : (
+        //             <Team t={t} />
+        //         )}
+        //     </section>
+        // </div>
+
         <div className='foundation-container'>
-            <section className="vision-section">
-                <Vision t={t} />
-            </section>
             <section className="team-container">
                 {isMobile ? (
                     <TeamPhone t={t} />
