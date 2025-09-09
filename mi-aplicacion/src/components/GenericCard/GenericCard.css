@@ -74,16 +74,31 @@
 @media (max-width: 768px) {
     .card-content {
         padding: 0px;
-        padding-top: 1rem;
-        margin-bottom: 2rem;
+        padding-top: 0.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .category-label {
+        font-size: 1rem;
+        color: var(--neutral-color);
+        font-family: var(--futura-font);
+        font-weight: var(--futura-book);
     }
     
     .card-title {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1.5px solid var(--corporative-color);
+        margin-top: 0.1rem;
+        text-transform: none;
+        font-weight: var(--futura-medium);
+        color: var(--corporative-color);
     }
     
     .card-subtitle {
-        font-size: 1rem;
+        padding-top: 0.5rem;
+        font-size: 1.15rem;
+        color: var(--dark-color);
     }
 }
 

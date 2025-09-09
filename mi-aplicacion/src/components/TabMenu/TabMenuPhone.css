@@ -15,7 +15,7 @@
     padding-bottom: 1rem;
     margin-right: 1rem;
     margin-left: 1rem;
-    border-bottom: 1px solid var(--corporative-color);
+    border-bottom: 1.5px solid var(--corporative-color);
 }
 
 .hamburger-archive {
@@ -29,7 +29,7 @@
     cursor: pointer;
     color: var(--corporative-color);
     font-family: var(--futura-font);
-    font-weight: var(--futura-book, 400);
+    font-weight: var(--futura-book);
 }
 
 .hamburger-icon {
@@ -43,7 +43,7 @@
 
 .current-selection {
     font-family: var(--futura-font, Arial, sans-serif);
-    font-weight: var(--futura-book, 400);
+    font-weight: var(--futura-medium, 400);
     color: var(--corporative-color);
     font-size: 1.6rem;
     text-transform: capitalize;
