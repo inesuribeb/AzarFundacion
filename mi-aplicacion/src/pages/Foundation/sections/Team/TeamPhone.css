@@ -175,14 +175,21 @@
     }
 }
 
-.modal-text strong {
-    font-size: 1.3rem;
-    color: var(--corporative-color);
-    font-family: var(--futura-font);
+.modal-member-role {
     font-weight: var(--futura-book);
-    display: block;
-    margin-bottom: 0rem;
-    padding: 0;
+    color: var(--corporative-color);
+    font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    font-family: var(--futura-font);
+}
+
+.modal-member-quote {
+    font-style: italic;
+    color: var(--corporative-color);
+    font-size: 1.2rem;
+    display: block;
+    margin: 1rem 0;
+    text-align: center;
+    font-family: var(--main-font);
 }

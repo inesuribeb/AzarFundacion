@@ -115,7 +115,6 @@ function TeamPhone({ t }) {
     ];
 
     const handleMemberClick = (member) => {
-        // Adaptar el formato para el modal
         const memberForModal = {
             id: member.id,
             images: [member.image],
@@ -125,9 +124,9 @@ function TeamPhone({ t }) {
                 pt: member.name
             },
             text: {
-                es: `<strong>${member.role}</strong><br><br>${member.quote ? `"${member.quote}"<br><br>` : ''}${member.bio}`,
-                en: `<strong>${member.role}</strong><br><br>${member.quote ? `"${member.quote}"<br><br>` : ''}${member.bio}`,
-                pt: `<strong>${member.role}</strong><br><br>${member.quote ? `"${member.quote}"<br><br>` : ''}${member.bio}`
+                es: `<span class="modal-member-role">${member.role}</span><br><br>${member.quote && member.quote.trim() !== '' && !member.quote.endsWith('Quote') ? `<span class="modal-member-quote">"${member.quote}"</span><br><br>` : ''}${member.bio}`,
+                en: `<span class="modal-member-role">${member.role}</span><br><br>${member.quote && member.quote.trim() !== '' && !member.quote.endsWith('Quote') ? `<span class="modal-member-quote">"${member.quote}"</span><br><br>` : ''}${member.bio}`,
+                pt: `<span class="modal-member-role">${member.role}</span><br><br>${member.quote && member.quote.trim() !== '' && !member.quote.endsWith('Quote') ? `<span class="modal-member-quote">"${member.quote}"</span><br><br>` : ''}${member.bio}`
             }
         };
 
