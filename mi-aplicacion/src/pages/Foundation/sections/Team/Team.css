@@ -100,7 +100,7 @@
     padding-bottom: 0.5rem;
     color: var(--corporative-color);
     border-bottom: 1.5px solid var(--corporative-color);
-    font-weight: var(--futura-medium);
+    font-weight: var(--futura-book);
 }
 .member-role {
     text-transform:initial;
