@@ -33,9 +33,9 @@
     border-right: none;
 }
 
-.nav-item:hover {
+/* .nav-item:hover {
     background-color: var(--light-neutral-color);
-}
+} */
 
 .nav-item.active {
     /* background-color: var(--corporative-color); */
