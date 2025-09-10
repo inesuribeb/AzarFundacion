@@ -8,11 +8,11 @@ function BottomNavigation({ t, activeSection, onNavigate }) {
             label: t('theEspace'),
             ref: 'finca-section' 
         },
-        { 
-            id: 'opencall', 
-            label: t('openCall'),
-            ref: 'opencall-section' 
-        },
+        // { 
+        //     id: 'opencall', 
+        //     label: t('openCall'),
+        //     ref: 'opencall-section' 
+        // },
         { 
             id: 'pastresidencies', 
             label: t('previousResidencies'),

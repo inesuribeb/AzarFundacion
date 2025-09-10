@@ -14,7 +14,7 @@
 .modal-shop-sidebar {
     width: 530px;
     max-width: 90vw;
-    height: 100vh;
+    height: 100dvh;
     /* background: var(--accent-color); */
     background-color: var(--light-header-color);
     display: flex;

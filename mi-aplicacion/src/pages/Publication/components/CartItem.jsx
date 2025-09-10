@@ -1,7 +1,6 @@
 import './CartItem.css';
 
 function CartItem({ item, onUpdateQuantity, onRemove, t }) {
-    // console.log('🛍️ CartItem props:', { onUpdateQuantity, onRemove, isFunction: typeof onRemove === 'function' });
 
     const handleQuantityChange = (newQuantity) => {
         if (newQuantity >= 1 && newQuantity <= 5) {

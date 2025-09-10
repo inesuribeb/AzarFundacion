@@ -41,7 +41,7 @@
     flex: 1;
     padding: 0.875rem 1.5rem;
     border: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 400;
     cursor: pointer;
     letter-spacing: 0.5px;
@@ -55,33 +55,103 @@
 
 .cart-footer-btn-view {
     background: transparent;
-    border: 1.5px solid var(--dark-color);
-    color: var(--dark-color);
+    border: 1.5px solid var(--dark-blue);
+    color: var(--dark-blue);
 }
 
 .cart-footer-btn-view:hover {
-    background: var(--dark-color);
+    background: var(--dark-blue);
     color: var(--light-color);
 }
 
 .cart-footer-btn-checkout {
-    background: var(--dark-color);
+    background: var(--dark-blue);
     color: var(--light-color);
-    border: 1.5px solid var(--dark-color);
+    border: 1.5px solid var(--blue-color);
 }
 
 .cart-footer-btn-checkout:hover {
     opacity: 0.9;
 }
 
-/* Responsive */
-/* @media (max-width: 768px) {
+/* Large mobile devices (landscape phones, 576px and up) */
+@media (max-width: 767.98px) {
     .cart-footer {
-        padding: 1rem 1.5rem;
+        padding: 1.25rem 1.5rem;
     }
-    
+
+    .cart-footer-total-label {
+        font-size: 1.1rem;
+    }
+
+    .cart-footer-total-price {
+        font-size: 1.3rem;
+    }
+
+    .cart-footer-btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+        letter-spacing: 0.3px;
+    }
+}
+
+/* Small mobile devices (portrait phones, 576px and down) */
+@media (max-width: 575.98px) {
+    .cart-footer {
+        padding: 1rem 1rem;
+    }
+
+    .cart-footer-total {
+        margin-bottom: 0.875rem;
+        padding-bottom: 0.875rem;
+    }
+
+    .cart-footer-total-label {
+        font-size: 1rem;
+    }
+
+    .cart-footer-total-price {
+        font-size: 1.2rem;
+    }
+
+    .cart-footer-actions {
+        flex-direction: row;
+        gap: 0.625rem;
+    }
+
     .cart-footer-btn {
         padding: 0.75rem 1rem;
-        font-size: 0.85rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.2px;
     }
-} */
+}
+
+/* Extra small devices (very small phones, 375px and down) */
+@media (max-width: 375px) {
+    .cart-footer {
+        padding: 0.875rem 0.75rem;
+    }
+
+    .cart-footer-total {
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .cart-footer-total-label {
+        font-size: 0.95rem;
+    }
+
+    .cart-footer-total-price {
+        font-size: 1.1rem;
+    }
+
+    .cart-footer-actions {
+        gap: 0.5rem;
+    }
+
+    .cart-footer-btn {
+        padding: 0.65rem 0.875rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.1px;
+    }
+}

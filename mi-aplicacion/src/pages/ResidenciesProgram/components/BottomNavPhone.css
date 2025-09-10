@@ -7,7 +7,26 @@
     /* background-color: var(--corporative-color);
     opacity: 0.75; */
     transition: all 0.3s ease;
+    /* position: fixed; */
+    width: calc(100% - 1rem);
+    bottom: 0.5rem;
+    left: 0.5rem;
+
 }
+
+/* .pub-page-purchase-bar {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 4rem);
+    border: 1px solid var(--dark-color);
+    background: var(--light-color);
+    height: 45px;
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 100;
+} */
+
 
 .nav-main-button {
     width: 100%;

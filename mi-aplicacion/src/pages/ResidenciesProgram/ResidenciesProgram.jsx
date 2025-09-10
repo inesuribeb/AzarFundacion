@@ -88,9 +88,9 @@ function ResidenciesProgram() {
                     )}
                 </div>
 
-                <div ref={openCallRef} id="opencall-section">
+                {/* <div ref={openCallRef} id="opencall-section">
                     <OpenCallR t={t} />
-                </div>
+                </div> */}
 
                 <div ref={pastResidenciesRef} id="pastresidencies-section">
                     <PastResidencies t={t} />

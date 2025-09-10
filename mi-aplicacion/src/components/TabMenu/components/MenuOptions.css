@@ -46,9 +46,9 @@
     transition: background-color 0.2s ease;
 }
 
-.close-button:hover {
+/* .close-button:hover {
     background-color: rgba(0, 0, 0, 0.1);
-}
+} */
 
 .options-list {
     padding: 0 0rem 1.5rem 0rem;

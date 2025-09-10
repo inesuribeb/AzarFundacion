@@ -41,15 +41,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
+    border-radius: none;
+    /* transition: background-color 0.3s ease; */
     font-family: var(--serif-font);
     font-style: italic;
 }
 
-/* .modal-close-button:hover {
-    background: var(--light-neutral-color);
-} */
+.modal-close-button:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important; /* Por si hay sombra */
+    border: none !important; /* Por si hay borde */
+    outline: none !important; /* Por si hay outline */
+}
+
 
 .modal-title {
     font-size: 1.6rem;

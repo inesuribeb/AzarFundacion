@@ -131,6 +131,7 @@ border-top: 1.5px solid var(--corporative-color);
         font-size: 1.3rem;
         border: none;
         padding-left: 0;
+        color: var(--corporative-color);
         /* text-align: left;
         justify-content: flex-start; */
         /* border-bottom: 1.5px solid var(--corporative-color); */
