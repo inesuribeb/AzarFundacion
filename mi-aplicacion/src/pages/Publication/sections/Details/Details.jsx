@@ -11,7 +11,6 @@ function Details({ publication, t }) {
     return (
         <section className='publication-details'>
             <div className="details-content">
-                {/* Texto superior y accordions */}
                 <div className='empty-column'></div>
                 <div className="details-info">
                     <div className="details-text">
@@ -39,9 +38,6 @@ function Details({ publication, t }) {
                             </button>
                             {openAccordion === 'details' && (
                                 <div className="accordion-content">
-                                    {/* {publication.pages && (
-                                        <p><strong>{t('pages')}:</strong> {publication.pages}</p>
-                                    )} */}
                                     {publication.pages && (
                                         <p><strong>{t('designBy')}:</strong> {publication.designBy}</p>
                                     )}
@@ -54,14 +50,10 @@ function Details({ publication, t }) {
                                     {publication.type && (
                                         <p><strong>{t('type')}:</strong> {publication.type}</p>
                                     )}
-                                    {/* {publication.subtitle && (
-                                        <p><strong>Subtítulo:</strong> {publication.subtitle}</p>
-                                    )} */}
                                 </div>
                             )}
                         </div>
 
-                        {/* Accordion Envíos */}
                         <div className="accordion-item">
                             <button
                                 className={`accordion-header ${openAccordion === 'shipping' ? 'open' : ''}`}

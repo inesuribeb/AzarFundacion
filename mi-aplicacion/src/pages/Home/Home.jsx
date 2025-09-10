@@ -56,26 +56,11 @@ function Home() {
                     lightHeader={{ hamburger: true }}
                 />
             )}
-            {/* <Hero3 t={t} getRoute={getRoute} /> */}
             <Intro t={t} getRoute={getRoute} />
             {/* <OpenCall
                 t={t}
                 data={localizedNextResidency}
             /> */}
-            {/* <NavigationTabs
-                t={t}
-                getRoute={getRoute}
-                onTabChange={(item) => console.log('Tab selected:', item)}
-                onHoverStateChange={(isLight) => console.log('Hover:', isLight)}
-            /> */}
-            {/* {!isMobile && (
-                <NavigationTabs
-                    t={t}
-                    getRoute={getRoute}
-                    onTabChange={(item) => console.log('Tab selected:', item)}
-                    onHoverStateChange={(isLight) => console.log('Hover:', isLight)}
-                />
-            )} */}
         </div>
     )
 }

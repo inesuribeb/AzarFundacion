@@ -406,7 +406,7 @@
 
 @media (max-width: 480px) {
     .image-carousel {
-        height: 40vh;
+        height: 50vh;
         min-height: 250px;
     }
     /* .image-carousel-image {

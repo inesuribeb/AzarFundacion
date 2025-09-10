@@ -35,11 +35,6 @@
     text-align: justify;
 }
 
-/* .artist-bio-content {
-    margin-top: 3rem;
-    border-top: 1px solid var(--dark-color);
-} */
-
 .artist-bio-content {
     margin-top: 3rem;
     position: relative;
@@ -50,23 +45,19 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 15%; /* Ajusta el porcentaje que quieras */
+    width: 15%;
     height: 1.5px;
     background-color: var(--dark-color);
 }
-
-/* Accordions */
+/* aqui */
 .details-accordions {
     margin-top: 2rem;
     margin-bottom: 0rem;
     display: flex;
     flex-direction: column;
     gap: 0rem;
-    height: 100px; /* Altura fija para contener los accordions */
-    /* overflow: hidden;  */
-    position: relative;
-
-    
+    height: 100px; 
+    position: relative;  
 }
 
 .accordion-item {
@@ -99,8 +90,6 @@
 .accordion-icon {
     font-size: 1.3rem;
     font-weight: 300;
-    /* font-family: var(--futura-font);
-    font-weight: var(--futura-book); */
 }
 
 .accordion-content {
@@ -142,7 +131,6 @@
     color: var(--dark-color);
 }
 
-/* Grid de imágenes - Layout específico como en la imagen */
 .details-images {
     flex-direction: column; 
     gap: 10rem;
@@ -180,7 +168,6 @@
 
 
 
-/* Media Query para Móvil (hasta 768px) */
 @media screen and (max-width: 768px) {
     .publication-details {
         padding: 1rem;
@@ -192,7 +179,6 @@
         gap: 2rem;
     }
 
-    /* Ocultar columna vacía en móvil */
     .empty-column {
         display: none;
     }
@@ -213,7 +199,7 @@
 
     .details-accordions {
         margin-top: 1.5rem;
-        height: auto; /* Permitir altura automática en móvil */
+        height: auto; 
     }
 
     .accordion-header {
@@ -233,7 +219,6 @@
         font-size: 0.9rem;
     }
 
-    /* Galería de imágenes en móvil */
     .details-images {
         gap: 2rem;
         margin-top: 2rem;
@@ -255,4 +240,23 @@
         width: 100%;
         max-width: 300px;
     }
+}
+
+
+.accordion-header,
+.accordion-header span,
+.accordion-icon {
+    color: var(--dark-color) !important;
+    text-decoration: none;
+}
+
+.accordion-header:hover,
+.accordion-header:focus {
+    outline: none;
+    color: var(--dark-color);
+}
+
+.accordion-header:hover span,
+.accordion-header:focus span {
+    color: var(--dark-color);
 }

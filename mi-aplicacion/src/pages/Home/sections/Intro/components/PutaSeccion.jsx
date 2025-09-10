@@ -17,6 +17,7 @@ function PutaSeccion({ t, getRoute }) {
             id: 'exposiciones', 
             labelKey: 'exhibitions', 
             route: 'archive',
+            queryParam: 'tab=exhibitions', 
             image: '/Images/Home/PutaSeccion/PutaSeccion-exp.jpg',
             lightText: true 
         },

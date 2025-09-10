@@ -74,7 +74,17 @@
     color: #333;
     z-index: 10;
     letter-spacing: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
+    font-size: 1rem;
+    color: var(--dark-color);
 }
+
 
 .current-slide {
     font-weight: normal;

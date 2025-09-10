@@ -39,10 +39,6 @@
     transition: transform 0.3s ease;
 }
 
-/* .puta-seccion-item:hover .puta-seccion-image img {
-    transform: scale(1.05);
-} */
-
 .puta-seccion-overlay {
     position: absolute;
     top: 0;
@@ -64,16 +60,13 @@
     color: var(--light-color);
     font-size: 2rem;
     font-weight: 300;
-    /* text-transform: uppercase; */
     text-align: center;
     margin: 0;
     font-family: var(--futura-font);
     font-weight: var(--futura-book);
     letter-spacing: 1px;
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
 }
 
-/* Media Query para Móvil */
 @media (max-width: 768px) {
     .puta-seccion-container {
         padding: 1rem;
@@ -104,7 +97,6 @@
     }
 }
 
-/* Media Query para móviles pequeños */
 @media (max-width: 480px) {
     .puta-seccion-container {
         padding: 0rem;
@@ -122,3 +114,80 @@
         font-size: 1.3rem;
     }
 }
+
+/* Media Query para Móvil */
+/* @media (max-width: 768px) {
+    .puta-seccion-container {
+        padding: 1rem;
+    }
+
+    .puta-seccion-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        height: auto;
+        min-height: auto;
+        gap: 0.75rem;
+    }
+
+    .puta-seccion-item {
+        height: auto; 
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+
+    .puta-seccion-overlay {
+        position: static; 
+        background: transparent; 
+        height: auto;
+        padding: 1rem 0 0.5rem 0;
+        justify-content: flex-start;
+    }
+
+    .puta-seccion-title {
+        color: var(--dark-color); 
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .puta-seccion-image {
+        height: 220px; 
+    }
+
+    .puta-seccion-item:hover {
+        transform: none;
+    }
+
+    .puta-seccion-item:hover .puta-seccion-overlay {
+        background: transparent; 
+    }
+
+    .puta-seccion-item:hover .puta-seccion-image img {
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .puta-seccion-container {
+        padding: 0rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .puta-seccion-grid {
+        gap: 3.5rem;
+    }
+
+    .puta-seccion-image {
+        height: 230px; 
+        width: 100%;
+    }
+
+    .puta-seccion-title {
+        border-top: 1.5px solid var(--corporative-color);
+        font-size: 1.3rem;
+        width: 100%;
+        color: var(--corporative-color);
+        padding-top: 0.7rem;
+        padding-bottom: 0.5rem;
+    }
+} */

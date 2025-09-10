@@ -38,7 +38,9 @@ function Grid({
             return (
                 <GenericCard
                     key={card.id || index}
-                    image={card.images ? card.images[0] : card.image}
+                    // image={card.images ? card.images[0] : card.image}
+                    image={card.image}
+
                     title={card.title}
                     description={card.description}
                     onClick={card.onClick}

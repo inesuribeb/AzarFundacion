@@ -47,9 +47,9 @@
     font-style: italic;
 }
 
-.modal-close-button:hover {
+/* .modal-close-button:hover {
     background: var(--light-neutral-color);
-}
+} */
 
 .modal-title {
     font-size: 1.6rem;
