@@ -75,7 +75,7 @@
 }
 
 .team-container {
-    background-color: white;
+    background-color: var(--light-color);
     min-height: 100vh;
     padding: 2rem;
 }

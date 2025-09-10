@@ -3,11 +3,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--light-header-color);
+    background-color: var(--light-color);
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 0rem;
-        /* border-bottom: 1px solid var(--corporative-color); */
+    border-top: 1.5px solid var(--corporative-color);
 
 }
 
@@ -17,119 +17,122 @@
     align-items: center;
     padding-top: 2rem;
     padding-bottom: 1rem;
-    /* border-bottom: 1px solid var(--corporative-color); */
 }
 
 .footer-anagram img {
-    width: 8%;
+    width: 7%;
 }
+
 
 .footer-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100%;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-medium);
+    color: var(--corporative-color);
+    font-size: 1.2rem;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footer-menu {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.3rem;
+}
+
+.footer-info-column:first-child {
+    justify-self: start; 
+}
+
+.footer-menu {
+    justify-self: center;
+}
+
+.footer-info-column:last-child {
+    justify-self: end; 
+}
+
+.footer-menu a,
+.footer-info-column a {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+
+.footer-menu a:hover,
+.footer-info-column a:hover {
+    text-decoration: none; /* Asegurar que no aparezca el subrayado normal */
+}
+
+.footer-menu a:hover::after,
+.footer-info-column a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* Ajusta este valor para bajar más el subrayado */
     width: 100%;
-    margin-top: 2rem;
-    padding-left: 10rem;
-    padding-right: 10rem;
-    margin-bottom: 1rem;
-    padding-bottom: 3rem;
-    /* border-bottom: 1px solid var(--corporative-color); */
-
+    height: 1.5px;
+    background-color: var(--corporative-color);
+    animation: underlineAppear 0.2s ease-out;
 }
 
-.footer-info-column {
-    flex: 1;
-    display: flex;
-    padding-left: 4rem;
-    flex-direction: column;
-    font-family: var(--futura-font);
-    color: var(--corporative-color);
-    gap: 0rem;
-}
-
-.footer-info-column h3 {
-    font-size: 1.2rem;
-    font-weight: var(--futura-book);
-    text-transform: uppercase;
-    font-family: var(--serif-font);
-
-}
-
-.footer-info-column p {
-    font-size: 1rem;
-    font-weight: var(--futura-loght);
-    margin: 0.1rem;
-    text-transform: uppercase;
-    /* text-transform: none;
-    font-family: var(--serif-font); */
+@keyframes underlineAppear {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 
 
 
-/* Media Queries */
+/* Media Queries Minimalistas para Footer */
+
+/* Solo para móvil */
 @media (max-width: 768px) {
     .footer-content {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 0 1rem;
     }
-    
-    .footer-anagram img {
-        width: 15%;
-    }
-    
-    .footer-info {
-        flex-direction: column;
-        padding-left: 0;
-        padding-right: 0;
-        margin-top: 1rem;
-        padding-bottom: 2rem;
-        gap: 2rem;
-    }
-    
-    .footer-info-column {
-        padding-left: 0;
-        align-items: center;
-        text-align: center;
-        gap: 0.5rem;
-    }
-    
-    .footer-info-column h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    .footer-info-column p {
-        font-size: 0.9rem;
-        margin: 0.05rem;
-    }
-}
 
-@media (max-width: 480px) {
-    .footer-content {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
-    
-    .footer-anagram {
-        padding-top: 1.5rem;
-        padding-bottom: 0.5rem;
-    }
-    
     .footer-anagram img {
-        width: 20%;
+        width: 12%;
     }
-    
+
     .footer-info {
-        gap: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
-    
-    .footer-info-column h3 {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1.5rem 0;
+        align-items: center;
         font-size: 1rem;
     }
-    
-    .footer-info-column p {
-        font-size: 0.8rem;
+
+    /* Línea 1: Menú horizontal centrado */
+    .footer-menu {
+        order: 1;
+        gap: 1rem;
+        font-size: 1rem;
+    }
+
+    /* Línea 2: Email */
+    .footer-info-column:first-child {
+        order: 2;
+        justify-self: auto;
+    }
+
+    /* Línea 3: Instagram */
+    .footer-info-column:last-child {
+        order: 3;
+        justify-self: auto;
     }
 }
