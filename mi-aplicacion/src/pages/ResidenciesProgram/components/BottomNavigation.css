@@ -9,7 +9,7 @@
     padding: 0;
     margin: 0;
     /* height: 60px; */
-    border: 1px solid var(--dark-color);
+    border: 1px solid var(--dark-blue);
 
 }
 
@@ -17,7 +17,7 @@
     flex: 1;
     border: none;
     background-color: var(--light-color);
-    color: var(--dark-color);
+    color: var(--dark-blue);
     /* padding: 15px 20px; */
     padding: 12px 20px;
     cursor: pointer;
@@ -25,7 +25,7 @@
     font-size: 1rem;
     letter-spacing: 0.05rem;
     font-weight: 500;
-    border-right: 1px solid var(--dark-color);
+    border-right: 1px solid var(--dark-blue);
     position: relative;
 }
 

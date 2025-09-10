@@ -35,6 +35,26 @@
     text-align: justify;
 }
 
+/* .artist-bio-content {
+    margin-top: 3rem;
+    border-top: 1px solid var(--dark-color);
+} */
+
+.artist-bio-content {
+    margin-top: 3rem;
+    position: relative;
+}
+
+.artist-bio-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%; /* Ajusta el porcentaje que quieras */
+    height: 1.5px;
+    background-color: var(--dark-color);
+}
+
 /* Accordions */
 .details-accordions {
     margin-top: 2rem;

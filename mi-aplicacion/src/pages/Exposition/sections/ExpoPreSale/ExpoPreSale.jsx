@@ -30,30 +30,15 @@ function ExpoPreSale({ t, currentLanguage, exhibition }) {
 
                 <div className='intro-presale-texts'>
                     <div className='pre-sale-text'>
-                        {/* <MediumSans
-                            dangerouslySetInnerHTML={{ __html: exhibition.preSaleTitle }}
-                        /> */}
                         <h1
                             className="tu-clase-aqui"
                             dangerouslySetInnerHTML={{ __html: exhibition.preSaleTitle }}
                         />
                         <Texts
                             size="medium"
-                            // className='intro-expoDetails-texts'
                             dangerouslySetInnerHTML={{ __html: exhibition.preSaleText }}
                         />
-                        {/* <Texts
-                            size="large"
-                            dangerouslySetInnerHTML={{ __html: exhibition.byeByeText }}
-                        /> */}
                     </div>
-                    {/* {associatedPublication && (
-                        <PubCTA
-                            className='pub-CTA-presale'
-                            publication={associatedPublication}
-                        />
-                    )} */}
-
                     <img
                         src={exhibition?.preSaleImage2}
                         alt={exhibition?.title}

@@ -58,10 +58,10 @@ function Home() {
             )}
             {/* <Hero3 t={t} getRoute={getRoute} /> */}
             <Intro t={t} getRoute={getRoute} />
-            <OpenCall
+            {/* <OpenCall
                 t={t}
                 data={localizedNextResidency}
-            />
+            /> */}
             {/* <NavigationTabs
                 t={t}
                 getRoute={getRoute}

@@ -21,11 +21,11 @@ function ExpoDetails({ t, currentLanguage, exhibition }) {
                             className='texts-intro'
                             dangerouslySetInnerHTML={{ __html: exhibition.intro }}
                         />
-                        <Texts
+                        {/* <Texts
                             size="medium"
                             className='texts-intro'
                             dangerouslySetInnerHTML={{ __html: exhibition.intro2 }}
-                        />
+                        /> */}
                     </div>
                     <img
                         src={exhibition?.imageDetail2}

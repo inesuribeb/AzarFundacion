@@ -29,9 +29,9 @@ export const mockExhibitionsData = [
             pt: "Ana García"
         },
         description: {
-            es: "Muestra resultado de la residencia en Finca El Azahar",
-            en: "Exhibition showcasing the results of the residency at Finca El Azahar",
-            pt: "Mostra dos resultados da residência na Finca El Azahar"
+            es: "Muestra resultado de la Residencia2025 en Madrid",
+            en: "Exhibition presenting the results of Residency2025 in Madrid",
+            pt: "Exposição dos resultados da Residência2025 em Madrid"
         },
 
         className: "exhibition-card",
@@ -65,9 +65,9 @@ export const mockExhibitionsData = [
                 id: 1,
                 artist: 'Florencia del Campo',
                 title: {
-                    es: 'Presentación con Florencia del Campo',
-                    en: 'Presentation with Florencia del Campo',
-                    pt: 'Apresentação com Florencia del Campo'
+                    es: 'Lectura por Florencia del Campo',
+                    en: 'Reading by Florencia del Campo',
+                    pt: 'Leitura de Florencia del Campo'
                 },
                 text: {
                     es: 'Florencia del Campo presentó su proyecto de no ficción <em>Diarios colaterales</em>, un «autorelato» dividido en cinco partes y de las cuales leyó un fragmento durante la exposición.<br/><br/>En el marco de la residencia artística de la Fundación Azar, trabajó sobre este proyecto y descubrió que todas las partes tenían una conexión lógica e intrínseca. No se trató solo de avanzar en la escritura de cada una de ellas, sino de comprender lo que intuía: la unidad del proyecto. Las lecturas de Georges Perec durante la residencia, así como <em>Me acuerdo y otros autorretratos</em> de Joe Brainard, terminaron de decantar el proyecto. Diarios colaterales será publicado próximamente. ',
@@ -76,19 +76,19 @@ export const mockExhibitionsData = [
                 },
                 images: [
                     "/Images/Exhibitions/Exhibition01/Expo-Florencia-1.jpg",
-                    "/Images/Exhibitions/Exhibition01/Expo-Florencia-1.jpg",
-                    "/Images/Exhibitions/Exhibition01/Expo-Florencia-1.jpg",
-                    "/Images/Exhibitions/Exhibition01/Expo-Florencia-1.jpg",
-                    "/Images/Exhibitions/Exhibition01/Expo-Florencia-1.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-Florencia-2.jpg",
+                    // "/Images/Exhibitions/Exhibition01/Expo-Florencia-1.jpg",
+                    // "/Images/Exhibitions/Exhibition01/Expo-Florencia-1.jpg",
+                    // "/Images/Exhibitions/Exhibition01/Expo-Florencia-1.jpg",
                 ]
             },
             {
                 id: 2,
                 artist: 'Mireya Hernández',
                 title: {
-                    es: 'Presentación con Mireya Hernández',
-                    en: 'Presentation with Mireya Hernández',
-                    pt: 'Apresentação com Mireya Hernández'
+                    es: 'Lectura por Mireya Hernández',
+                    en: 'Reading by Mireya Hernández',
+                    pt: 'Leitura de Mireya Hernández'
                 },
                 text: {
                     es: 'Durante la Residencia 2025, Mireya Hernández continuó trabajando en el proyecto <em>El lenguaje de las moscas</em>, en el que ya venía desarrollando trabajo previo a su estadía. <br/><br/>Lo pulió, lo desbrozó y encontró la puerta que le quedaba por abrir para concluirlo. Aún es un proyecto en proceso, pero en Finca El Azahar estuvo más cerca de convertirse en el <em>collage</em> que se intuía desde el principio: una obra heterogénea que parte de la observación, defiende lo imperfecto y lo incompleto, fomenta combinaciones inesperadas y hace del desvío su piedra angular.<br/><br/>Mireya nos deleitó con dos prosas que recogían inspiración y memorias de dentro y fuera de la residencia.',
@@ -97,18 +97,17 @@ export const mockExhibitionsData = [
                 },
                 images: [
                     "/Images/Exhibitions/Exhibition01/Expo-Mireya-1.jpg",
-                    "/Images/Exhibitions/Exhibition01/Expo-Mireya-1.jpg",
-                    "/Images/Exhibitions/Exhibition01/Expo-Mireya-1.jpg",
-                    "/Images/Exhibitions/Exhibition01/Expo-Mireya-1.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-Mireya-2.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-Mireya-3.jpg",
                 ]
             },
             {
                 id: 3,
                 artist: 'Gonzalo Quincoces',
                 title: {
-                    es: 'Presentación con Gonzalo Quincoces',
-                    en: 'Presentation with Gonzalo Quincoces',
-                    pt: 'Apresentação com Gonzalo Quincoces'
+                    es: 'Lectura por Gonzalo Quincoces',
+                    en: 'Reading by Gonzalo Quincoces',
+                    pt: 'Leitura de Gonzalo Quincoces'
                 },
                 text: {
                     es: 'Gonzalo Quincoces presentó el inicio del guión de <em>La noche del coche rojo</em>, su próximo largometraje aún en desarrollo.<br/><br/>Este proyecto tiene como escenario una turbia y grisácea Bizkaia, marcada por los conflictos sociales y el terrorismo de los años 80, un contexto que ya exploró en su anterior cortometraje <em>La caída del vencejo</em>. La residencia le permitió profundizar en la dirección de este guión y afianzar la propuesta de dirección del proyecto.',
@@ -117,9 +116,8 @@ export const mockExhibitionsData = [
                 },
                 images: [
                     "/Images/Exhibitions/Exhibition01/Expo-Quincoces-1.jpg",
-                    "/Images/Exhibitions/Exhibition01/Expo-Quincoces-1.jpg",
-                    "/Images/Exhibitions/Exhibition01/Expo-Quincoces-1.jpg",
-                    "/Images/Exhibitions/Exhibition01/Expo-Quincoces-1.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-Quincoces-2.jpg",
+                    "/Images/Exhibitions/Exhibition01/Expo-Quincoces-3.jpg",
                 ]
             },
             {
@@ -176,8 +174,9 @@ export const mockExhibitionsData = [
             pt: 'Pré-venda <em>Uma Residência Narrada por: Iván Floro</em>',
         },
 
-        preSaleImage: "/Images/Exhibitions/Exhibition01/expo2025-2.jpg",
-        preSaleImage2: "/Images/Publications/Publication01/pubMas.jpg",
+        preSaleImage: "/Images/Exhibitions/Exhibition01/Gallery/Gallery-1.jpg",
+
+        preSaleImage2: "/Images/Publications/Publication01/Pub-Cuadros.jpg",
 
         preSaleText: {
             es: 'También se llevó a cabo la preventa de <em>Una residencia narrada por Ivan Floro</em>, la primera publicación de Fundación Azar, que reúne los óleos y dibujos realizados por el artista como cronista visual de la residencia. Durante la exposición, Ivan dedicó cada ejemplar vendido con dibujos únicos, convirtiendo cada libro en una pieza irrepetible.',
@@ -186,7 +185,7 @@ export const mockExhibitionsData = [
         },
         publicaciones: ["pub-1"],
         gallery: [
-            "/Images/Exhibitions/Exhibition01/Gallery/Gallery-1.jpg",
+            "/Images/Exhibitions/Exhibition01/expo2025-2.jpg",
             "/Images/Exhibitions/Exhibition01/Gallery/Gallery-2.jpg",
             "/Images/Exhibitions/Exhibition01/Gallery/Gallery-3.jpg",
             "/Images/Exhibitions/Exhibition01/Gallery/Gallery-4.jpg",

@@ -7,6 +7,7 @@ export const publicationTranslations = {
         format: 'Formato',
         year: 'Año',
         type: 'Tipo',
+        designBy: 'Diseño y maquetación',
 
         shipping: 'Envíos',
         spain: 'España',
@@ -24,6 +25,7 @@ export const publicationTranslations = {
         delete: 'Borrar',
         emptyCart: 'Tu cesta está vacía',
 
+
     },
     en: {
         addToCart: 'Add to cart',
@@ -33,6 +35,7 @@ export const publicationTranslations = {
         format: 'Format',
         year: 'Year',
         type: 'Type',
+        designBy: 'Design and Layout',
 
         shipping: 'Shipping',
         spain: 'Spain',
@@ -59,6 +62,7 @@ export const publicationTranslations = {
         format: 'Formato',
         year: 'Ano',
         type: 'Tipo',
+        designBy: 'Design e Diagramação',
 
         shipping: 'Envio',
         spain: 'Espanha',

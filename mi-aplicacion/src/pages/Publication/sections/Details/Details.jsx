@@ -19,6 +19,12 @@ function Details({ publication, t }) {
                             dangerouslySetInnerHTML={{ __html: publication.info }}
                         />
                     </div>
+                    <div className="details-text">
+                        <div
+                            className="artist-bio-content"
+                            dangerouslySetInnerHTML={{ __html: publication.artistBio }}
+                        />
+                    </div>
 
                     <div className="details-accordions">
                         <div className="accordion-item">
@@ -33,8 +39,11 @@ function Details({ publication, t }) {
                             </button>
                             {openAccordion === 'details' && (
                                 <div className="accordion-content">
-                                    {publication.pages && (
+                                    {/* {publication.pages && (
                                         <p><strong>{t('pages')}:</strong> {publication.pages}</p>
+                                    )} */}
+                                    {publication.pages && (
+                                        <p><strong>{t('designBy')}:</strong> {publication.designBy}</p>
                                     )}
                                     {publication.format && (
                                         <p><strong>{t('format')}:</strong> {publication.format}</p>

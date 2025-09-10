@@ -35,13 +35,14 @@
 }
 
 .column-right-finca {
-    padding-top: 3rem;
+    padding-top: 0rem;
     background-color: transparent;
     display: flex;
     flex-direction: column;
     align-items: flex-end; 
-    justify-content: space-between; 
+    justify-content: flex-start; 
     flex: 1; 
+    gap: 5rem;
 }
 .finca-section-title {
     text-align: right;
