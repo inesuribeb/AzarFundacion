@@ -51,7 +51,7 @@
 //     };
 
 //     const shouldHideLogo = isScrollingDown && !isMenuOpen;
-    
+
 //     const logoShouldBeLight = useLightLogo && !isMenuOpen;
 //     const logoSrc = logoShouldBeLight
 //         ? "/Images/Logo/LogoBlanco2.png"
@@ -98,6 +98,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import { useHeader } from '../../contexts/HeaderContext';
 import NavigationPhone from './Navigation/NavigationPhone';
 import LangPhone from './LanguageToggle/LangPhone';
+import ShoppingBasket from './ShoppingBasket/ShoppingBasket';
 import './HeaderPhone.css';
 
 function HeaderPhone() {
@@ -143,7 +144,7 @@ function HeaderPhone() {
             // Cerrar menú
             setIsClosing(true);
             setShowContent(false);
-            
+
             setTimeout(() => {
                 setIsMenuOpen(false);
                 setIsClosing(false);
@@ -152,7 +153,7 @@ function HeaderPhone() {
             // Abrir menú
             setIsMenuOpen(true);
             setIsClosing(false);
-            
+
             // Mostrar contenido después de que el overlay aparezca
             setTimeout(() => {
                 setShowContent(true);
@@ -163,7 +164,7 @@ function HeaderPhone() {
     const closeMenu = () => {
         setIsClosing(true);
         setShowContent(false);
-        
+
         setTimeout(() => {
             setIsMenuOpen(false);
             setIsClosing(false);
@@ -171,13 +172,14 @@ function HeaderPhone() {
     };
 
     const shouldHideLogo = isScrollingDown && !isMenuOpen;
-    
+
     const logoShouldBeLight = useLightLogo && !isMenuOpen;
     const logoSrc = logoShouldBeLight
         ? "/Images/Logo/LogoBlanco2.png"
         : "/Images/Logo/LogoAzul2.png";
 
     const hamburgerShouldBeLight = useLightHamburger && !isMenuOpen;
+    const shoppingBasketShouldBeLight = logoShouldBeLight || hamburgerShouldBeLight;
 
     return (
         <>
@@ -189,6 +191,10 @@ function HeaderPhone() {
                 >
                     <img src={logoSrc} alt="Fundación Azar" />
                 </Link>
+
+                <ShoppingBasket
+                    shouldUseLightColor={shoppingBasketShouldBeLight}
+                />
 
                 <button
                     className={`menu-toggle-phone ${isMenuOpen ? 'open' : ''} ${hamburgerShouldBeLight ? 'light' : ''}`}
@@ -204,11 +210,11 @@ function HeaderPhone() {
                 <div className={`menu-phone-overlay ${isClosing ? 'slide-up' : 'slide-down'}`}>
                     {showContent && (
                         <>
-                            <NavigationPhone 
-                                closeMenu={closeMenu} 
-                                isClosing={isClosing} 
+                            <NavigationPhone
+                                closeMenu={closeMenu}
+                                isClosing={isClosing}
                             />
-                            <LangPhone 
+                            <LangPhone
                                 closeMenu={closeMenu}
                                 isClosing={isClosing}
                             />

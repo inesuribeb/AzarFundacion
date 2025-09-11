@@ -109,3 +109,22 @@
         right: -1px;
     }
 }
+
+@media (max-width: 480px) {
+    .shopping-basket {
+        padding: 0.3rem;
+        top: -6px;
+    }
+    
+    .shopping-basket-icon {
+        font-size: 1.4rem !important;
+    }
+    
+    .shopping-basket-badge {
+        min-width: 0.9rem;
+        height: 0.9rem;
+        font-size: 0.65rem;
+        top: -1px;
+        right: -1px;
+    }
+}

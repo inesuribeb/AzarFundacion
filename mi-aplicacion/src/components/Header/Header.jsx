@@ -81,6 +81,7 @@ function Header() {
 
     const hamburgerShouldBeLight = (useLightHamburger && !isMenuOpen) || shouldUseLightColor;
 
+    const shoppingBasketShouldBeLight = logoShouldBeLight || hamburgerShouldBeLight || shouldUseLightColor;
 
     return (
         <>
@@ -99,7 +100,9 @@ function Header() {
 
                 <div className="header-right">
                     <ShoppingBasket
-                        shouldUseLightColor={shouldUseLightColor}
+                        // shouldUseLightColor={shouldUseLightColor}
+                        shouldUseLightColor={shoppingBasketShouldBeLight}
+
                     />
                     <button
                         className={`sandwich-toggle ${isMenuOpen ? 'active' : ''} ${hamburgerShouldBeLight ? 'light' : ''}`}
