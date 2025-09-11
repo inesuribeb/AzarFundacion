@@ -1,42 +1,4 @@
-.cover-pub-page {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.pub-page-header {
-    display: flex; 
-    align-items: center;
-    justify-content: center; 
-    padding-top: 4rem; 
-    text-align: center; 
-}
-.pub-page-header h1 {
-    font-family: var(--serif-font);
-    font-weight: 100;
-    text-transform: uppercase;
-    /* margin-top: 1.5rem; */
-    font-family: var(--futura-font);
-    font-weight: var(--futura-book);
-    letter-spacing: 0.1rem;
-/* color: var(--dark-blue); */
-}
-
-
-.publication-viewer-carousel .image-carousel-image {
-    width: auto;
-    height: auto;
-    max-width: 70%; /* O el porcentaje que quieras */
-    max-height: 70%;
-    object-fit: contain;
-    margin-bottom: 1.5rem;
-}
-
-/* Barra inferior */
-/* .pub-page-purchase-bar {
+.pub-page-purchase-bar {
     display: flex;
     align-items: center;
     width: calc(100% - 4rem);
@@ -141,32 +103,10 @@
 
 .pub-page-cart-btn:hover {
     opacity: 0.9;
-} */
-
-
+}
 
 @media screen and (max-width: 768px) {
-    .cover-pub-page {
-        height: 100vh;
-        display: flex;
-        justify-content: center 10%;
-        align-items: center;
-    }
-    .pub-page-header {
-        padding-top: 6rem;
-    }
-
-    .pub-page-header h1 {
-        font-size: 1.3rem;
-        padding: 0 1rem;
-    }
-
-    .publication-viewer-carousel .image-carousel-image {
-        max-width: 90%;
-        max-height: 80%;
-    }
-
-    /* .pub-page-purchase-bar {
+    .pub-page-purchase-bar {
         width: calc(100% - 1rem);
         left: 0.5rem;
         bottom: 0.5rem;
@@ -194,5 +134,5 @@
         min-width: 150px;
         font-size: 1rem;
         padding: 0 1.5rem;
-    } */
+    }
 }

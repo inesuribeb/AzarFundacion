@@ -47,7 +47,7 @@ function CoverPublication({ publication, t }) {
                 />
             </div>
 
-            <div className="pub-page-purchase-bar">
+            {/* <div className="pub-page-purchase-bar">
                 <div className="pub-page-price">
                     {publication.price}
                 </div>
@@ -74,7 +74,7 @@ function CoverPublication({ publication, t }) {
                 >
                     {t('addToCart')}
                 </button>
-            </div>
+            </div> */}
         </section>
     );
 }
