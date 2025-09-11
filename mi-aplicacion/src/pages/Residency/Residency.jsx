@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import { mockResidencias } from '../../utils/Data/ResidenciesData';
 import { useLocalizedData } from '../../components/Hooks/Hooks';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { useMobile } from '../../components/Hooks/useMobile'
 import BackButton from '../../components/Button/BackButton';
 import CoverResidency from './sections/CoverResidency/CoverResidency';
 import DescriptionResidency from './sections/DescriptionResidency/DescriptionResidency';
@@ -15,6 +16,7 @@ import './Residency.css';
 function Residency() {
     const { id } = useParams();
     const { t, currentLanguage } = useLanguage();
+    const isMobile = useMobile();
     const localizedResidencias = useLocalizedData(mockResidencias);
     const [isParticipantsActive, setIsParticipantsActive] = useState(false);
     const [isAutoScrolling, setIsAutoScrolling] = useState(false); // ← AQUÍ, no dentro del useEffect
@@ -78,7 +80,10 @@ function Residency() {
                 residencia={residencia}
                 t={t}
                 currentLanguage={currentLanguage}
-                lightHeader={{ logo: true }}
+                lightHeader={{ 
+                    logo: true, 
+                    hamburger: isMobile 
+                }}
             />
             <DescriptionResidency
                 residencia={residencia}
