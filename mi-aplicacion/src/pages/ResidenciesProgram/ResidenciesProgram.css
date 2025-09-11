@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 .RP-sections {
@@ -22,7 +22,7 @@
 
 @media (max-width: 768px) {
     .residencies-program-content {
-        padding-bottom: 50px;
+        margin-bottom: 0rem;
     }
     
     .RP-sections > div {

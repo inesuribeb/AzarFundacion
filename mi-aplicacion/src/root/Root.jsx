@@ -129,28 +129,28 @@ function AppContent() {
 
     const showBottomNavigation = isResidenciesPage();
 
-    useEffect(() => {
-        if (!showBottomNavigation) return;
+    // useEffect(() => {
+    //     if (!showBottomNavigation) return;
 
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsFooterVisible(entry.isIntersecting);
-            },
-            {
-                threshold: 0,
-                rootMargin: '0px 0px -50px 0px' // Se activa 50px antes
-            }
-        );
+    //     const observer = new IntersectionObserver(
+    //         ([entry]) => {
+    //             setIsFooterVisible(entry.isIntersecting);
+    //         },
+    //         {
+    //             threshold: 0,
+    //             rootMargin: '0px 0px -50px 0px' 
+    //         }
+    //     );
 
-        const footer = document.querySelector('.footer-content');
-        if (footer) {
-            observer.observe(footer);
-        }
+    //     const footer = document.querySelector('.footer-content');
+    //     if (footer) {
+    //         observer.observe(footer);
+    //     }
 
-        return () => {
-            if (footer) observer.unobserve(footer);
-        };
-    }, [showBottomNavigation, location.pathname]);
+    //     return () => {
+    //         if (footer) observer.unobserve(footer);
+    //     };
+    // }, [showBottomNavigation, location.pathname]);
 
     return (
         <div className="app">
@@ -175,23 +175,7 @@ function AppContent() {
                     />
                 )
             )} */}
-            {showBottomNavigation && (
-                isMobile ? (
-                    <BottomNavPhone
-                        t={t}
-                        activeSection={activeSection}
-                        onNavigate={setActiveSection}
-                        isFooterVisible={isFooterVisible}
-                    />
-                ) : (
-                    <BottomNavigation
-                        t={t}
-                        activeSection={activeSection}
-                        onNavigate={setActiveSection}
-                        isFooterVisible={isFooterVisible}
-                    />
-                )
-            )}
+            
 
             <Footer />
         </div>
