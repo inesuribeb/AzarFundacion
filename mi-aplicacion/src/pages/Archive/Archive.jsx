@@ -309,6 +309,8 @@ function Archive() {
         <div className='archive-container'>
             <div className='filter-archive'>
                 <MiniBlue className='azar-archive'>{t('azarArchive')}</MiniBlue>
+                {/* <MiniBlue className='azar-archive'>{t('azarArchive')}</MiniBlue> */}
+                {/* <span className='hamburger-icon'>▼</span> */}
                 {isMobile ? (
                     <TabMenuPhone
                         t={t}

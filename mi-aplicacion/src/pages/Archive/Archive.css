@@ -8,6 +8,12 @@
     text-align: center;
 }
 
+/* .azar-archive::after {
+    content: '▼';
+    margin-left: 0.4rem;
+    font-size: 0.8em;
+} */
+
 @media (max-width: 768px) {
     .archive-container {
         padding: 0rem 1rem;

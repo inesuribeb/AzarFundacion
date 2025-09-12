@@ -39,19 +39,19 @@ function GenericCard({
                     </div>
                 )}
                 <div className="card-title-container">
-                    {/* <h3
+                    <h3
                         className="card-title"
                         dangerouslySetInnerHTML={{ __html: title }}
-                    /> */}
-                    <h3
+                    />
+                    {/* <h3
                         className="card-title"
                         dangerouslySetInnerHTML={{
                             __html: showYear && year ? `${title} (${year})` : title
                         }}
-                    />
-                    {/* {showYear && year && (
+                    /> */}
+                    {showYear && year && (
                         <span className="card-year">({year})</span>
-                    )} */}
+                    )}
                 </div>
                 {description && (
                     <p

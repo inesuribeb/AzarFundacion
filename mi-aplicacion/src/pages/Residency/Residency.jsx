@@ -46,7 +46,7 @@ function Residency() {
                 }
 
                 setIsParticipantsActive(isFullyVisible);
-                console.log('Participants active:', isFullyVisible, 'ratio:', ratio);
+                // console.log('Participants active:', isFullyVisible, 'ratio:', ratio);
             },
             {
                 threshold: [0, 0.5, 0.9, 0.95, 1.0],

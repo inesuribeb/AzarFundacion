@@ -185,13 +185,19 @@ export const mockExhibitionsData = [
         },
         publicaciones: ["pub-1"],
         gallery: [
-            "/Images/Exhibitions/Exhibition01/expo2025-2.jpg",
-            "/Images/Exhibitions/Exhibition01/Gallery/Gallery-2.jpg",
             "/Images/Exhibitions/Exhibition01/Gallery/Gallery-3.jpg",
+            
+            "/Images/Exhibitions/Exhibition01/Gallery/Gallery-2.jpg",
+            "/Images/Exhibitions/Exhibition01/Gallery/Gallery-9.jpg",
+            "/Images/Exhibitions/Exhibition01/Gallery/Gallery-10.jpg",
             "/Images/Exhibitions/Exhibition01/Gallery/Gallery-4.jpg",
-            "/Images/Exhibitions/Exhibition01/Gallery/Gallery-5.jpg",
+            "/Images/Exhibitions/Exhibition01/expo2025-2.jpg",
             "/Images/Exhibitions/Exhibition01/Gallery/Gallery-6.jpg",
             "/Images/Exhibitions/Exhibition01/Gallery/Gallery-7.jpg",
+            "/Images/Exhibitions/Exhibition01/Gallery/Gallery-8.jpg",
+            // "/Images/Exhibitions/Exhibition01/Gallery/Gallery-9.jpg",
+            // "/Images/Exhibitions/Exhibition01/Gallery/Gallery-10.jpg",
+            "/Images/Exhibitions/Exhibition01/Gallery/Gallery-5.jpg",
         ],
         byeByeText: {
             es: '<br/>El éxito de Expo Residencia2025 no habría sido posible sin vuestra presencia y apoyo.<br/>¡Gracias y nos vemos en la próxima edición!',

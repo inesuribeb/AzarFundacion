@@ -50,9 +50,29 @@
     font-weight: var(--futura-book);
 }
 
-.card-title,
+/* .card-title,
 .card-year {
     font-size: 1.2rem;
+    color: var(--dark-color);
+    margin: 6px 0 2px 0;
+    line-height: 1.3;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
+    text-transform: uppercase;
+} */
+
+.card-title {
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    margin: 6px 0 2px 0;
+    line-height: 1.3;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
+    text-transform: uppercase;
+}
+
+.card-year {
+    font-size: 1rem;
     color: var(--dark-color);
     margin: 6px 0 2px 0;
     line-height: 1.3;
@@ -87,8 +107,8 @@
 
     .card-title {
         font-size: 1.6rem;
-        padding-bottom: 0.5rem;
-        border-bottom: 1.5px solid var(--corporative-color);
+        padding-bottom: 0.3rem;
+        /* border-bottom: 1.5px solid var(--corporative-color); */
         margin-top: 0.4rem;
         text-transform: none;
         font-weight: var(--futura-medium);
@@ -96,7 +116,9 @@
     }
 
     .card-subtitle {
-        padding-top: 0.3rem;
+        border-top: 1.5px solid var(--corporative-color);
+
+        padding-top: 0.5rem;
         font-size: 1.15rem;
         color: var(--dark-color);
     }
@@ -129,6 +151,12 @@
     margin: 0;
 }
 
+.generic-card.single-card .card-year {
+    font-size: 1.5rem;
+    width: 100%;
+    margin: 0;
+}
+
 .generic-card.single-card .card-subtitle {
     border-top: 1px solid var(--dark-color);
     padding-top: 0.5rem;
@@ -156,17 +184,23 @@
         aspect-ratio: 3/4;
     }
 
-    .generic-card.single-card .card-title,
-    .generic-card.single-card .card-year {
+    .generic-card.single-card .card-title{
         font-size: 1.6rem;
         margin: 0;
     }
 
+    
+    .generic-card.single-card .card-year {
+        font-size: 1.3rem;
+        margin: 0;
+        color: var(--corporative-color);
+    }
+
     .generic-card.single-card .card-subtitle {
-        /* border-top: 1px solid var(--dark-color); */
-        border-top: none !important;
-        margin-top: 0.4rem;
-        padding-top: 0rem;
+        border-top: 1.5px solid var(--corporative-color);
+        /* border-top: none !important; */
+        margin-top: 0.3rem;
+        padding-top: 0.5rem;
         font-size: 1.1rem;
     }
 }
