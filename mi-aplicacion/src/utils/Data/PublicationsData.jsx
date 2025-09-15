@@ -2,6 +2,7 @@ export const mockPublicationsData = [
     {
         id: "pub-1",
         number: "01",
+        availability: true, 
         cover: "/Images/Publications/Publication01/portadalibro.jpg",
         image: "/Images/Publications/Publication01/Publicaciones-1.jpg",
         images: [

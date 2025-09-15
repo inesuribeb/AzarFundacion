@@ -1,6 +1,7 @@
 export const publicationTranslations = {
     es: {
         addToCart: 'Añadir a la cesta',
+        soldOut: 'Agotado',
 
         details: 'Detalles',
         pages: 'Páginas',
@@ -29,6 +30,7 @@ export const publicationTranslations = {
     },
     en: {
         addToCart: 'Add to cart',
+        soldOut: 'Sold Out',
 
         details: 'Details',
         pages: 'Pages',
@@ -56,6 +58,7 @@ export const publicationTranslations = {
     },
     pt: {
         addToCart: 'Adicionar ao carrinho',
+        soldOut: 'Esgotado',
 
         details: 'Detalhes',
         pages: 'Páginas',

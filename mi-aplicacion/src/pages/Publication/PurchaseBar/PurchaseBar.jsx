@@ -9,16 +9,32 @@ function PurchaseBar({ publication, t }) {
     const { addToCart } = useCart();
     const { openModal } = useCartModal();
 
+    // Ojo: si tu API devuelve "true"/"false" como strings, esta comparación lo maneja.
+    // Adáptalo si tu backend usa 1/0 u otro formato.
+    const isAvailable = publication?.availability === true || publication?.availability === 'true';
+
     const handleAddToCart = () => {
+        if (!isAvailable) return; // no hacer nada si está agotado
         addToCart({
             id: publication.id,
             title: publication.title,
             price: publication.price,
             cover: publication.cover
         }, selectedQuantity);
-        
+
         openModal();
     };
+
+    // const handleAddToCart = () => {
+    //     addToCart({
+    //         id: publication.id,
+    //         title: publication.title,
+    //         price: publication.price,
+    //         cover: publication.cover
+    //     }, selectedQuantity);
+
+    //     openModal();
+    // };
 
     const handleQuantityChange = (e) => {
         setSelectedQuantity(parseInt(e.target.value));
@@ -33,7 +49,7 @@ function PurchaseBar({ publication, t }) {
             <div className="pub-page-spacer"></div>
 
             <div className="pub-page-quantity">
-                <select 
+                <select
                     className="pub-quantity-selector"
                     value={selectedQuantity}
                     onChange={handleQuantityChange}
@@ -46,11 +62,20 @@ function PurchaseBar({ publication, t }) {
                 </select>
             </div>
 
-            <button 
+            {/* <button 
                 className="pub-page-cart-btn"
                 onClick={handleAddToCart}
             >
                 {t('addToCart')}
+            </button> */}
+
+            <button
+                className={`pub-page-cart-btn ${isAvailable ? '' : 'is-sold-out'}`}
+                onClick={handleAddToCart}
+                disabled={!isAvailable}
+                aria-disabled={!isAvailable}
+            >
+                {isAvailable ? t('addToCart') : t('soldOut')}
             </button>
         </div>
     );
