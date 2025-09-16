@@ -23,11 +23,12 @@
 .hero2-background {
     width: 100%;
     height: 100vh;
-    background-image: url(/Images/Home/HomePage.jpg);
+    /* background-image: url(/Images/Home/HomePage.jpg); */
     /* background-image: url(/Images/Home/PutaSeccion/PutaSeccion-res.jpg); */
     /* background-image: url(/Images/Exhibitions/Exhibition01/Expo-MariaEsteve-2.jpg); */
     /* background-image: url(/Images/Exhibitions/Exhibition01/Expo-MariaEsteve-4.jpg); */
     /* background-image: url(/Images/Home/Pruebas/1.JPG); */
+    background-image: url(/Images/Home/NewBg.jpg);
     background-size: cover;  
     background-position: center center; 
     background-repeat: no-repeat;

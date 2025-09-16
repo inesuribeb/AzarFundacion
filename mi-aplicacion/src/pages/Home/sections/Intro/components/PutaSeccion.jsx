@@ -10,7 +10,8 @@ function PutaSeccion({ t, getRoute }) {
             id: 'residencias', 
             labelKey: 'residencies', 
             route: 'residenciesProgram',
-            image: '/Images/Home/PutaSeccion/PutaSeccion-res.jpg',
+            // image: '/Images/Home/PutaSeccion/PutaSeccion-res.jpg',
+            image: '/Images/Home/Pruebas/1.JPG',
             lightText: true 
         },
         { 
