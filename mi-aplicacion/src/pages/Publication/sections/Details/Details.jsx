@@ -69,7 +69,7 @@ function Details({ publication, t }) {
                                     <p><strong>{t('spain')}:</strong> {t('spainDetails')}</p>
                                     <p><strong>{t('europe')}:</strong> {t('europeDetails')}</p>
                                     <p><strong>{t('international')}:</strong> {t('internationalDetails')}</p>
-                                    <p><strong>{t('freeShipping')}:</strong> {t('freeDetails')}</p>
+                                    {/* <p><strong>{t('freeShipping')}:</strong> {t('freeDetails')}</p> */}
                                 </div>
                             )}
                         </div>

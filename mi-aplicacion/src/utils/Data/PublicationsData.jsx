@@ -63,6 +63,9 @@ export const mockPublicationsData = [
             "/Images/Publications/Publication01/pubMas.jpg",
             "/Images/Publications/Publication01/Pub-Cuadros-Calidad.jpg",
         ],
+        shippingSpain: '8€',
+        shippingEurope: '15€',
+        shippingInternational: '25€',
     },
     // {
     //     id: "pub-2",

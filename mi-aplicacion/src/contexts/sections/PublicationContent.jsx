@@ -14,9 +14,9 @@ export const publicationTranslations = {
         spain: 'España',
         spainDetails: '3-5 días laborables',
         europe: 'Europa',
-        europeDetails: '7-10 días laborables',
+        europeDetails: '5-10 días laborables',
         international: 'Internacional',
-        internationalDetails: '15-20 días laborables',
+        internationalDetails: '7-21 días laborables',
         freeShipping: 'Envío gratuito',
         freeDetails: 'en pedidos superiores a €50',
 
@@ -25,6 +25,15 @@ export const publicationTranslations = {
         yourCart: 'Tu Cesta',
         delete: 'Borrar',
         emptyCart: 'Tu cesta está vacía',
+
+        shippingZone: "Zona de envío",
+        spain: "España",
+        europe: "Europa",
+        international: "Internacional",
+        shippingNote: "Los gastos de envío se añadirán al total",
+        subtotal: "Subtotal:",
+        shipping: "Envío:",
+        total: "Total:",
 
 
     },
@@ -43,9 +52,9 @@ export const publicationTranslations = {
         spain: 'Spain',
         spainDetails: '3-5 business days',
         europe: 'Europe',
-        europeDetails: '7-10 business days',
+        europeDetails: '5-10 business days',
         international: 'International',
-        internationalDetails: '15-20 business days',
+        internationalDetails: '7-21 business days',
         freeShipping: 'Free Shipping',
         freeDetails: 'on orders over €50',
 
@@ -54,6 +63,15 @@ export const publicationTranslations = {
         yourCart: 'Your Cart',
         delete: 'Delete',
         emptyCart: 'Your cart is empty',
+
+        shippingZone: "Shipping Zone",
+        spain: "Spain",
+        europe: "Europe",
+        international: "International",
+        shippingNote: "Shipping costs will be added to the total",
+        subtotal: "Subtotal:",
+        shipping: "Shipping:",
+        total: "Total:",
 
     },
     pt: {
@@ -71,9 +89,9 @@ export const publicationTranslations = {
         spain: 'Espanha',
         spainDetails: '3-5 dias úteis',
         europe: 'Europa',
-        europeDetails: '7-10 dias úteis',
+        europeDetails: '5-10 dias úteis',
         international: 'Internacional',
-        internationalDetails: '15-20 dias úteis',
+        internationalDetails: '7-21 dias úteis',
         freeShipping: 'Envio grátis',
         freeDetails: 'em encomendas superiores a €50',
 
@@ -82,5 +100,14 @@ export const publicationTranslations = {
         yourCart: 'Teu carrinho',
         delete: 'Excluir',
         emptyCart: 'Seu carrinho está vazio',
+
+        shippingZone: "Zona de Envio",
+        spain: "Espanha",
+        europe: "Europa",
+        international: "Internacional",
+        shippingNote: "Os custos de envio serão adicionados ao total",
+        subtotal: "Subtotal:",
+        shipping: "Envio:",
+        total: "Total:",
     }
 };

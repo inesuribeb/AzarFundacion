@@ -1,8 +1,8 @@
 /* CartItemsList.css */
 
 .cart-items-list {
-    flex: 1;
-    overflow-y: auto;
+    /* flex: 1;
+    overflow-y: auto; */
     padding: 0rem 0;
     display: flex;
     flex-direction: column;
@@ -29,9 +29,9 @@
 }
 
 /* Scroll personalizado */
-.cart-items-list::-webkit-scrollbar {
+/* .cart-items-list::-webkit-scrollbar {
     width: 6px;
-}
+} */
 
 .cart-items-list::-webkit-scrollbar-track {
     background: #f1f1f1;

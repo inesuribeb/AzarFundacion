@@ -2,7 +2,6 @@
 
 .cart-footer {
     background: transparent;
-    /* border-top: 1px solid var(--light-neutral-color); */
     padding: 1.5rem 2rem;
     flex-shrink: 0;
 }
@@ -16,7 +15,6 @@
 
     font-family: var(--futura-font);
     font-weight: var(--futura-book);
-    /* border-bottom: 1px solid var(--light-neutral-color); */
 }
 
 .cart-footer-total-label {
@@ -39,9 +37,9 @@
 
 .cart-footer-btn {
     flex: 1;
-    padding: 0.875rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     border: none;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 400;
     cursor: pointer;
     letter-spacing: 0.5px;
@@ -74,7 +72,6 @@
     opacity: 0.9;
 }
 
-/* Large mobile devices (landscape phones, 576px and up) */
 @media (max-width: 767.98px) {
     .cart-footer {
         padding: 1.25rem 1.5rem;
@@ -95,7 +92,6 @@
     }
 }
 
-/* Small mobile devices (portrait phones, 576px and down) */
 @media (max-width: 575.98px) {
     .cart-footer {
         padding: 1rem 1rem;
@@ -126,7 +122,6 @@
     }
 }
 
-/* Extra small devices (very small phones, 375px and down) */
 @media (max-width: 375px) {
     .cart-footer {
         padding: 0.875rem 0.75rem;
@@ -154,4 +149,39 @@
         font-size: 0.9rem;
         letter-spacing: 0.1px;
     }
+}
+
+
+
+.cart-footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 0;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
+    /* border-bottom: 1px solid var(--light-neutral-color); */
+}
+
+.cart-footer-label {
+    font-size: 0.8rem;
+    color: var(--dark-color);
+}
+
+.cart-footer-price {
+    font-size: 0.85rem;
+    color: var(--dark-color);
+    font-weight: 400;
+}
+
+/* Añadir al CartFooter.css */
+.cart-footer-btn-checkout:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.cart-footer-btn-checkout:disabled:hover {
+    opacity: 0.5;
+    background: var(--dark-blue);
 }
