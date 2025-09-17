@@ -86,3 +86,59 @@
     margin: 0;
     font-style: italic;
 }
+
+
+/* Tablet */
+@media (max-width: 768px) {
+    .shipping-zone {
+        padding: 0rem 1.5rem;
+        margin: 16px 0;
+    }
+
+    .shipping-zone-options {
+        gap: 8px;
+    }
+
+    .shipping-zone-option {
+        padding: 0.3rem 0.5rem;
+    }
+
+    .shipping-zone-label {
+        font-size: 0.85rem;
+    }
+
+    .shipping-zone-separator {
+        font-size: 12px;
+    }
+
+    .shipping-zone-price {
+        font-size: 0.85rem;
+    }
+}
+
+/* Móvil */
+@media (max-width: 576px) {
+    .shipping-zone {
+        padding: 0rem 1rem;
+    }
+
+    .shipping-zone-options {
+        gap: 6px;
+    }
+
+    .shipping-zone-option {
+        padding: 0.25rem 0.4rem;
+    }
+
+    .shipping-zone-label {
+        font-size: 1rem;
+    }
+
+    .shipping-zone-separator {
+        font-size: 11px;
+    }
+
+    .shipping-zone-price {
+        font-size: 0.8rem;
+    }
+}
