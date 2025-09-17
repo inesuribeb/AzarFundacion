@@ -7,11 +7,11 @@ export const mockPublicationsData = [
         image: "/Images/Publications/Publication01/Publicaciones-1.jpg",
         images: [
             "/Images/Publications/Publication01/ImagesCarru/pub-1.jpg",
-            "/Images/Publications/Publication01/Pub-Cuadros.jpg",
+            // "/Images/Publications/Publication01/Pub-Cuadros.jpg",
             "/Images/Publications/Publication01/ImagesCarru/pub-3.jpg",
-            "/Images/Publications/Publication01/ImagesCarru/pub-4.jpg",
-            "/Images/Publications/Publication01/ImagesCarru/pub-5.jpg",
-            "/Images/Publications/Publication01/ImagesCarru/pub-6.jpg",
+            // "/Images/Publications/Publication01/ImagesCarru/pub-4.jpg",
+            // "/Images/Publications/Publication01/ImagesCarru/pub-5.jpg",
+            // "/Images/Publications/Publication01/ImagesCarru/pub-6.jpg",
         ],
         imageRef: [
             "/Images/Publications/Publication01/MencionPubli1.jpg",

@@ -29,9 +29,9 @@ export const mockExhibitionsData = [
             pt: "Ana García"
         },
         description: {
-            es: "Muestra resultado de la Residencia2025 en Madrid",
-            en: "Exhibition presenting the results of Residency2025 in Madrid",
-            pt: "Exposição dos resultados da Residência2025 em Madrid"
+            es: "Muestra de la Residencia2025 en Madrid",
+            en: "Sample of Residencia2025 in Madrid",
+            pt: "Exposição da Residência2025 em Madrid"
         },
 
         className: "exhibition-card",

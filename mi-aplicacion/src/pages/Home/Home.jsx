@@ -57,10 +57,10 @@ function Home() {
                 />
             )}
             <Intro t={t} getRoute={getRoute} />
-            {/* <OpenCall
+            <OpenCall
                 t={t}
                 data={localizedNextResidency}
-            /> */}
+            />
         </div>
     )
 }
