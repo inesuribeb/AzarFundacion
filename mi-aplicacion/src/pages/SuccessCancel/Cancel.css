@@ -4,7 +4,8 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background-color: #f9fafb;
+    padding-top: 6rem;
+    background-color: var(--light-color);
 }
 
 .cancel-container {
@@ -13,8 +14,10 @@
     width: 100%;
     padding: 3rem;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
     text-align: center;
+    border: 1.5px solid var(--dark-blue);
+
 }
 
 .cancel-icon {
@@ -25,7 +28,7 @@
 
 .cancel-icon svg {
     color: #ef4444;
-    background: #fef2f2;
+    background: var(--light-color);
     border-radius: 50%;
     padding: 1rem;
     width: 80px;
@@ -34,17 +37,20 @@
 
 .cancel-title {
     font-size: 2rem;
-    font-weight: 700;
-    color: #1f2937;
+    color: var(--dark-color);
+    font-family: var(--futura-font);
+    font-weight: var(--futura-medium);
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
 .cancel-message {
-    font-size: 1.125rem;
+    font-size: 1.4rem;
     color: #6b7280;
     margin-bottom: 2rem;
-    line-height: 1.6;
+    line-height: 1.4;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
 }
 
 .cancel-reasons {
@@ -53,13 +59,17 @@
     border-radius: 8px;
     margin-bottom: 1.5rem;
     text-align: left;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
 }
 
 .cancel-reasons h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1rem;
+    color: var(--dark-color);
+    margin-bottom: 0.75rem;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-medium);
 }
 
 .cancel-reason-list {
@@ -92,12 +102,15 @@
 .cancel-contact p {
     color: #6b7280;
     margin: 0;
+    font-size: 1.3rem;
+    font-family: var(--futura-font);
+    font-weight: var(--futura-book);
 }
 
 .cancel-contact a {
-    color: #3b82f6;
+    color: var(--corporative-color);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .cancel-contact a:hover {
@@ -113,7 +126,7 @@
 
 .cancel-btn {
     padding: 0.75rem 1.5rem;
-    border-radius: 8px;
+    border-radius: 0px;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.2s ease;
@@ -131,20 +144,19 @@
 }
 
 .cancel-btn-primary:hover {
-    background-color: #dc2626;
-    transform: translateY(-1px);
+    opacity: 0.8;
 }
 
 .cancel-btn-secondary {
     background-color: transparent;
-    color: #6b7280;
-    border: 2px solid #d1d5db;
+    color: var(--dark-blue);
+    border: 1.5px solid var(--dark-blue);
 }
 
 .cancel-btn-secondary:hover {
-    background-color: #f3f4f6;
-    border-color: #9ca3af;
-    transform: translateY(-1px);
+    background-color: var(--dark-blue);
+    color: var(--light-color);
+    /* transform: translateY(-1px); */
 }
 
 @media (max-width: 640px) {
@@ -152,15 +164,15 @@
         padding: 2rem;
         margin: 1rem;
     }
-    
+
     .cancel-title {
         font-size: 1.5rem;
     }
-    
+
     .cancel-actions {
         flex-direction: column;
     }
-    
+
     .cancel-btn {
         width: 100%;
     }

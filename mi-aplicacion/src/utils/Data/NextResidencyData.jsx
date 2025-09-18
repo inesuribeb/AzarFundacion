@@ -4,9 +4,9 @@ export const mockNextResidencia = [
         image: "/Images/Residencies/NextResidency/CartelResi2026.png",
         title: "Residencia2026",
         subtitle: {
-            es: 'Vive, crea y conecta: súmate a nuestra Residencia2026 y empieza tu próximo capítulo creativo.',
-            en: 'Live, create, and connect: join our Residency2026 and start your next creative chapter.',
-            pt: 'Vive, cria e conecta-te: junta-te à nossa Residência2026 e começa o teu próximo capítulo criativo.',        
+            es: 'Danza, matemática y naturaleza',
+            en: 'Dance, mathematics, and nature',
+            pt: 'Dança, matemática e natureza',
         },
 
         // subtitle: {

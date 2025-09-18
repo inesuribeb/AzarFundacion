@@ -5,7 +5,7 @@ export const successCancelTranslations = {
         successMessage: "Gracias por tu pedido. Hemos recibido tu pago correctamente.",
         successOrderDetails: "Detalles del pedido",
         successNextSteps: "Próximos pasos",
-        successShippingInfo: "Te enviaremos un email de confirmación con los detalles del envío. El libro se procesará y enviará en un plazo de 3-5 días laborables.",
+        successShippingInfo: "Te enviaremos un email de confirmación con los detalles del envío.",
         successContactInfo: "Si tienes alguna pregunta, puedes contactarnos en",
         successBackHome: "Volver al inicio",
         successViewCatalog: "Ver catálogo",
@@ -20,7 +20,7 @@ export const successCancelTranslations = {
         cancelContactSupport: "Si sigues teniendo problemas, contáctanos en",
         
         // Common
-        email: "email@inesuribe.es",
+        email: "residencia@fundacionazar.com",
         loading: "Cargando...",
         error: "Error al cargar los datos del pedido"
     },
@@ -30,7 +30,7 @@ export const successCancelTranslations = {
         successMessage: "Thank you for your order. We have received your payment correctly.",
         successOrderDetails: "Order details",
         successNextSteps: "Next steps",
-        successShippingInfo: "We will send you a confirmation email with shipping details. The book will be processed and shipped within 3-5 business days.",
+        successShippingInfo: "We will send you a confirmation email with shipping details.",
         successContactInfo: "If you have any questions, you can contact us at",
         successBackHome: "Back to home",
         successViewCatalog: "View catalog",
@@ -45,7 +45,7 @@ export const successCancelTranslations = {
         cancelContactSupport: "If you continue to have problems, contact us at",
         
         // Common
-        email: "email@inesuribe.es",
+        email: "esidencia@fundacionazar.com",
         loading: "Loading...",
         error: "Error loading order data"
     },
@@ -55,7 +55,7 @@ export const successCancelTranslations = {
         successMessage: "Obrigado pelo seu pedido. Recebemos seu pagamento corretamente.",
         successOrderDetails: "Detalhes do pedido",
         successNextSteps: "Próximos passos",
-        successShippingInfo: "Enviaremos um email de confirmação com os detalhes do envio. O livro será processado e enviado dentro de 3-5 dias úteis.",
+        successShippingInfo: "Enviaremos um email de confirmação com os detalhes do envio.",
         successContactInfo: "Se você tiver alguma pergunta, pode nos contatar em",
         successBackHome: "Voltar ao início",
         successViewCatalog: "Ver catálogo",
@@ -70,7 +70,7 @@ export const successCancelTranslations = {
         cancelContactSupport: "Se continuar tendo problemas, entre em contato conosco em",
         
         // Common
-        email: "email@inesuribe.es",
+        email: "esidencia@fundacionazar.com",
         loading: "Carregando...",
         error: "Erro ao carregar dados do pedido"
     }
