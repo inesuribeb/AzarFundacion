@@ -4,5 +4,6 @@
     "description": "Primera edición de la serie editorial Una residencia narrada por que recoge los óleos realizados por el pintor Iván Floro",
     "price": "55€",
     "availability": true,
-    "image": "https://estudio.inesuribe.es/Images/Publications/Publication01/portadalibro.jpg"
+    "image": "https://estudio.inesuribe.es/Images/Publications/Publication01/portadalibro.jpg",
+    "stock": "100"
 }

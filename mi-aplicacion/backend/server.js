@@ -27,6 +27,10 @@ app.post('/api/create-checkout', async (req, res) => {
     try {
         const { items, shippingCost } = req.body;
 
+        // Debug: mostrar lo que recibimos
+        console.log('Items recibidos:', items);
+        console.log('Shipping cost:', shippingCost);
+
         // Leer producto del JSON para verificar availability y precio
         const producto = JSON.parse(fs.readFileSync('./publication.json', 'utf8'));
 
@@ -34,12 +38,21 @@ app.post('/api/create-checkout', async (req, res) => {
             return res.status(400).json({ error: 'Producto no disponible' });
         }
 
-        // Calcular total
+        // Calcular precio del producto y cantidad total
         const productPrice = parseFloat(producto.price.replace('€', '').replace(',', '.'));
+        const totalQuantity = items.reduce((total, item) => total + item.quantity, 0);
+
+        console.log('Precio por unidad:', productPrice);
+        console.log('Cantidad total:', totalQuantity);
 
         // Crear sesión de checkout
         const session = await stripe.checkout.sessions.create({
-            payment_method_types: ['card'],
+            // payment_method_types: ['card'],
+            payment_method_types: [
+                'card',           // Universal - funciona en todo el mundo
+                'sepa_debit',     // Domiciliación bancaria Europa - muy popular
+                'sofort'          // Transferencia bancaria instantánea Alemania/Austria
+            ],
             shipping_address_collection: {
                 allowed_countries: [
                     // España
@@ -63,7 +76,7 @@ app.post('/api/create-checkout', async (req, res) => {
                         },
                         unit_amount: productPrice * 100,
                     },
-                    quantity: 1,
+                    quantity: totalQuantity,
                 },
                 // Añadir envío como línea separada si es mayor a 0
                 ...(shippingCost > 0 ? [{
@@ -79,16 +92,17 @@ app.post('/api/create-checkout', async (req, res) => {
                 }] : []),
             ],
             mode: 'payment',
-            //   success_url: 'https://estudio.inesuribe.es/success?session_id={CHECKOUT_SESSION_ID}',
-            //   cancel_url: 'https://estudio.inesuribe.es/cancel',
-            success_url: 'https://azar.inesuribe.es/success?session_id={CHECKOUT_SESSION_ID}',
-            cancel_url: 'https://azar.inesuribe.es/cancel',
+            //   success_url: 'https://azar.inesuribe.es/success?session_id={CHECKOUT_SESSION_ID}',
+            //   cancel_url: 'https://azar.inesuribe.es/cancel',
+            success_url: 'http://localhost:5173/success?session_id={CHECKOUT_SESSION_ID}',
+            cancel_url: 'http://localhost:5173/cancel',
             automatic_tax: {
                 enabled: false,
             },
             metadata: {
                 productId: producto.id,
                 shippingCost: shippingCost.toString(),
+                totalQuantity: totalQuantity.toString(),
             },
         });
 
