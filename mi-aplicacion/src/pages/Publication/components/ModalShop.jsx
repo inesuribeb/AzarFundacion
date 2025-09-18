@@ -169,15 +169,45 @@ function ModalShop({ isOpen, onClose, cartItems = [], onUpdateCart, onRemoveItem
         onClose();
     };
 
-    const handleCheckout = () => {
+    // const handleCheckout = () => {
+    //     if (!hasShippingSelected) {
+    //         return; 
+    //     }
+    //     console.log('Iniciar proceso de checkout');
+    //     console.log('Subtotal:', subtotalPrice.toFixed(2));
+    //     console.log('Shipping:', shippingCost);
+    //     console.log('Total:', totalPrice);
+    //     onClose();
+    // };
+    const handleCheckout = async () => {
         if (!hasShippingSelected) {
-            return; // No hacer nada si no hay shipping seleccionado
+            return;
         }
-        console.log('Iniciar proceso de checkout');
-        console.log('Subtotal:', subtotalPrice.toFixed(2));
-        console.log('Shipping:', shippingCost);
-        console.log('Total:', totalPrice);
-        onClose();
+        
+        try {
+            // Llamar a tu backend para crear la sesión de Stripe
+            const response = await fetch('http://localhost:3001/api/create-checkout', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    items: cartItems,
+                    shippingCost: shippingCost
+                })
+            });
+            
+            const data = await response.json();
+            
+            if (data.url) {
+                // Redirigir a Stripe Checkout
+                window.location.href = data.url;
+            } else {
+                console.error('Error:', data.error);
+            }
+        } catch (error) {
+            console.error('Error al procesar checkout:', error);
+        }
     };
 
     const handleShippingChange = (cost) => {

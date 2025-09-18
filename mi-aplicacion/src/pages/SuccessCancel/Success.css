@@ -1,0 +1,150 @@
+.success-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f9fafb;
+}
+
+.success-container {
+    background: white;
+    max-width: 600px;
+    width: 100%;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.success-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.success-icon svg {
+    color: #10b981;
+    background: #ecfdf5;
+    border-radius: 50%;
+    padding: 1rem;
+    width: 80px;
+    height: 80px;
+}
+
+.success-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.success-message {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.success-next-steps {
+    background: #f3f4f6;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.success-next-steps h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.success-next-steps p {
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.success-contact {
+    margin-bottom: 2rem;
+}
+
+.success-contact p {
+    color: #6b7280;
+    margin: 0;
+}
+
+.success-contact a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.success-contact a:hover {
+    text-decoration: underline;
+}
+
+.success-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.success-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    display: inline-block;
+    text-align: center;
+    min-width: 140px;
+}
+
+.success-btn-primary {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.success-btn-primary:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.success-btn-secondary {
+    background-color: transparent;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
+}
+
+.success-btn-secondary:hover {
+    background-color: #3b82f6;
+    color: white;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+    .success-container {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    
+    .success-title {
+        font-size: 1.5rem;
+    }
+    
+    .success-actions {
+        flex-direction: column;
+    }
+    
+    .success-btn {
+        width: 100%;
+    }
+}

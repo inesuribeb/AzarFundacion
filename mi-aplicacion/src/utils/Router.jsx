@@ -8,6 +8,8 @@ import Exposition from '../pages/Exposition/Exposition';
 import ArtPiece from '../pages/ArtPiece/ArtPiece';
 import Publication from '../pages/Publication/Publication';
 import Collaboration from "../pages/Collaboration/Collaboration";
+import Success from "../pages/SuccessCancel/Success";
+import Cancel from "../pages/SuccessCancel/Cancel"
 import Root from "../root/Root";
 
 const router = createBrowserRouter([
@@ -55,6 +57,14 @@ const router = createBrowserRouter([
                 path: "/colaboracion/:id", 
                 element: <Collaboration />
             },
+            {
+                path: "/success",
+                element: <Success />
+            },
+            {
+                path: "/cancel", 
+                element: <Cancel />
+            },
 
 
             {
@@ -93,6 +103,14 @@ const router = createBrowserRouter([
                 path: "/collaboration/:id", 
                 element: <Collaboration />
             },
+            {
+                path: "/success",
+                element: <Success />
+            },
+            {
+                path: "/cancel", 
+                element: <Cancel />
+            },
 
 
             {
@@ -130,6 +148,14 @@ const router = createBrowserRouter([
             {
                 path: "/pt/colaboracao/:id",
                 element: <Collaboration />
+            },
+            {
+                path: "/success",
+                element: <Success />
+            },
+            {
+                path: "/cancel", 
+                element: <Cancel />
             },
         ]
     }])
