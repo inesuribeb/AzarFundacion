@@ -3,9 +3,9 @@ import './Requirements.css'
 
 function Requirements({ t }) {
     return (
-        <div className='requirements-section'>
+        <div className='requirements-section-of'>
             {/* <MediumSans className='finca-section-title'>{t('requirements')}</MediumSans> */}
-            <MediumSans>{t('requirements')}</MediumSans>
+            {/* <MediumSans>{t('requirements')}</MediumSans> */}
         </div>
     )
 }

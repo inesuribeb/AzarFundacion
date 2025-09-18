@@ -1,0 +1,73 @@
+.selection-process-content {
+    background-color: var(--dark-blue);
+    color: var(--light-color);
+    padding: 2rem;
+    padding-top: 0.7rem;
+    height: 100vh;
+    width: 330px;
+    box-sizing: border-box;
+    font-family: var(--futura-font);
+}
+
+.selection-process-content h2 {
+    font-size: 2.1rem;
+    font-weight: 300;
+    margin: 0 0 2rem 0;
+    line-height: 1.2;
+}
+
+.requirements-section,
+.documentation-section,
+.jury-section {
+    margin-bottom: 2.5rem;
+}
+
+.requirements-title,
+.documentation-title,
+.jury-title {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+}
+
+.requirements-list,
+.documentation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.requirements-list li {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0rem;
+    font-weight: var(--futura-book);
+}
+
+.documentation-list {
+    counter-reset: doc-counter;
+}
+
+.documentation-list li {
+    counter-increment: doc-counter;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 2rem;
+    font-weight: var(--futura-book);
+}
+
+.documentation-list li::before {
+    content: counter(doc-counter) ".";
+    position: absolute;
+    left: 0;
+    font-weight: 600;
+}
+
+.jury-description {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0 0 0.5rem 0;
+}
