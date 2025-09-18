@@ -7,11 +7,9 @@ const cors = require('cors');
 
 const app = express();
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Endpoint para obtener el producto
 app.get('/api/producto', (req, res) => {
     try {
         const producto = JSON.parse(fs.readFileSync('./publication.json', 'utf8'));
