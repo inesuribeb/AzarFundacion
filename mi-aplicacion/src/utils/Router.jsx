@@ -34,7 +34,7 @@ const router = createBrowserRouter([
                 element: <ResidenciesProgram />
             },
             {
-                path: "/archivo",
+                path: "/proyectos",
                 element: <Archive />
             },
             {
@@ -80,7 +80,7 @@ const router = createBrowserRouter([
                 element: <ResidenciesProgram />
             },
             {
-                path: "/archive",
+                path: "/projects",
                 element: <Archive />
             },
             {
@@ -126,7 +126,7 @@ const router = createBrowserRouter([
                 element: <ResidenciesProgram />
             },
             {
-                path: "/pt/arquivo",
+                path: "/pt/projetos",
                 element: <Archive />
             },
             {

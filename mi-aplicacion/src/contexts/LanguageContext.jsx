@@ -8,6 +8,7 @@ import { detailsTranslations } from './sections/DetailsContent';
 import { publicationTranslations } from './sections/PublicationContent';
 import { exhibitionTranslations } from './sections/ExpositionContent';
 import { successCancelTranslations } from './sections/SuccesCancelContent';
+import { nextResidencyTranslations } from './sections/NextResidencyContent';
 
 const translations = {
   es: {
@@ -30,6 +31,7 @@ const translations = {
     ...publicationTranslations.es,
     ...exhibitionTranslations.es,
     ...successCancelTranslations.es,
+    ...nextResidencyTranslations.es,
   },
   en: {
     home: "Home",
@@ -51,6 +53,7 @@ const translations = {
     ...publicationTranslations.en,
     ...exhibitionTranslations.en,
     ...successCancelTranslations.en,
+    ...nextResidencyTranslations.en,
   },
   pt: {
     home: "Início",
@@ -72,6 +75,7 @@ const translations = {
     ...publicationTranslations.pt,
     ...exhibitionTranslations.pt,
     ...successCancelTranslations.pt,
+    ...nextResidencyTranslations.pt,
   }
 };
 
@@ -80,7 +84,7 @@ const routes = {
     home: "/inicio",
     foundation: "/fundacion-azar",
     residenciesProgram: "/programa-residencias",
-    archive: "/archivo",
+    archive: "/proyectos",
     residency: "/residencia",
     exposition: "/exposicion",
     artPiece: "/obra-colectiva",
@@ -91,7 +95,7 @@ const routes = {
     home: "/home",
     foundation: "/azar-foundation",
     residenciesProgram: "/residencies-program",
-    archive: "/archive",
+    archive: "/projects",
     residency: "/residency",
     exposition: "/exhibition",
     artPiece: "/collective-art-piece",
@@ -102,7 +106,7 @@ const routes = {
     home: "/pt/inicio",
     foundation: "/pt/azar-fundacao",
     residenciesProgram: "/pt/programa-residencias",
-    archive: "/pt/arquivo",
+    archive: "/pt/projetos",
     residency: "/pt/residencia",
     exposition: "/pt/exposicao",
     artPiece: "/pt/obra-coletiva",
@@ -116,7 +120,7 @@ const routeMap = {
   "/inicio": { es: "/inicio", en: "/home", pt: "/pt/inicio" },
   "/fundacion-azar": { es: "/fundacion-azar", en: "/azar-foundation", pt: "/pt/azar-fundacao" },
   "/programa-residencias": { es: "/programa-residencias", en: "/residencies-program", pt: "/pt/programa-residencias" },
-  "/archivo": { es: "/archivo", en: "/archive", pt: "/pt/arquivo" },
+  "/proyectos": { es: "/proyectos", en: "/projects", pt: "/pt/projetos" },
   "/residencia": { es: "/residencia", en: "/residency", pt: "/pt/residencia" },
   "/exposicion": { es: "/exposicion", en: "/exhibition", pt: "/pt/exposicao" },
   "/obra-colectiva": { es: "/obra-colectiva", en: "/collective-art-piece", pt: "/pt/obra-coletiva" },
@@ -127,7 +131,7 @@ const routeMap = {
   "/home": { es: "/inicio", en: "/home", pt: "/pt/inicio" },
   "/azar-foundation": { es: "/fundacion-azar", en: "/azar-foundation", pt: "/pt/azar-fundacao" },
   "/residencies-program": { es: "/programa-residencias", en: "/residencies-program", pt: "/pt/programa-residencias" },
-  "/archive": { es: "/archivo", en: "/archive", pt: "/pt/arquivo" },
+  "/projects": { es: "/proyectos", en: "/projects", pt: "/pt/projetos" },
   "/residency": { es: "/residencia", en: "/residency", pt: "/pt/residencia" },
   "/exhibition": { es: "/exposicion", en: "/exhibition", pt: "/pt/exposicao" },
   "/collective-art-piece": { es: "/obra-colectiva", en: "/collective-art-piece", pt: "/pt/obra-coletiva" },
@@ -138,7 +142,7 @@ const routeMap = {
   "/pt/inicio": { es: "/inicio", en: "/home", pt: "/pt/inicio" },
   "/pt/azar-fundacao": { es: "/fundacion-azar", en: "/azar-foundation", pt: "/pt/azar-fundacao" },
   "/pt/programa-residencias": { es: "/programa-residencias", en: "/residencies-program", pt: "/pt/programa-residencias" },
-  "/pt/arquivo": { es: "/archivo", en: "/archive", pt: "/pt/arquivo" },
+  "/pt/projetos": { es: "/proyectos", en: "/projects", pt: "/pt/projetos" },
   "/pt/residencia": { es: "/residencia", en: "/residency", pt: "/pt/residencia" },
   "/pt/exposicao": { es: "/exposicion", en: "/exhibition", pt: "/pt/exposicao" },
   "/pt/obra-coletiva": { es: "/obra-colectiva", en: "/collective-art-piece", pt: "/pt/obra-coletiva" },

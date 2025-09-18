@@ -4,31 +4,31 @@ import './SelectionProcess.css';
 function SelectionProcess({ t }) {
     return (
         <div className="selection-process-content">
-            <h2>Proceso de selección</h2>
+            <h2>{t('selectionProcessTitle')}</h2>
             
             <div className="requirements-section">
-                <div className="requirements-title">REQUISITOS</div>
+                <div className="requirements-title">{t('requirements')}</div>
                 <ul className="requirements-list">
-                    <li>Mayores de 18 años</li>
-                    <li>Residentes en España o Portugal</li>
+                    <li>{t('ageRequirement')}</li>
+                    <li>{t('residencyRequirement')}</li>
                 </ul>
             </div>
             
             <div className="documentation-section">
-                <div className="documentation-title">DOCUMENTACIÓN A PRESENTAR</div>
+                <div className="documentation-title">{t('documentation')}</div>
                 <ul className="documentation-list">
-                    <li>Breve portafolio o descripción de trabajos anteriores</li>
-                    <li>Carta de candidatura, que incluya una presentación lo más personal posible y que exponga su interés en formar parte de la Residencia2026. Puede enviarse en formato texto o video breve.</li>
+                    <li>{t('portfolioRequirement')}</li>
+                    <li>{t('applicationLetter')}</li>
                 </ul>
             </div>
             
             <div className="jury-section">
-                <div className="jury-title">JURADO Y SELECCIÓN</div>
+                <div className="jury-title">{t('juryAndSelection')}</div>
                 <p className="jury-description">
-                    Las candidaturas serán evaluadas por un jurado vinculado a las disciplinas convocadas.
+                    {t('juryEvaluation')}
                 </p>
                 <p className="jury-description">
-                    Del proceso de elección resultarán cuatro artistas seleccionados
+                    {t('selectedArtists')}
                 </p>
             </div>
         </div>

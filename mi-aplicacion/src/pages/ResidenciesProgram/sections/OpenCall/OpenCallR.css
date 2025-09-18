@@ -2,6 +2,7 @@
     position: relative;
     min-height: 100vh;
     padding-left: 330px; /* Espacio para el sidebar */
+    /* margin-top: 3rem; */
 }
 
 .main-content {

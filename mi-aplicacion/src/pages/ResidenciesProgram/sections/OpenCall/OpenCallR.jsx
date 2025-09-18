@@ -21,7 +21,7 @@ import Jurado from './Jurado';
 import SelectionProcess from './components/SelectionProcess';
 import './OpenCallR.css'
 
-function OpenCallR({ t }) {
+function OpenCallR({ t, residency }) {
     const sectionRef = useRef(null);
     const sidebarRef = useRef(null);
 
@@ -65,8 +65,8 @@ function OpenCallR({ t }) {
     return (
         <section className='open-call-section' ref={sectionRef}>
             <div className='main-content'>
-                <Requirements t={t} />
-                <Jurado t={t} />
+                <Requirements t={t} residency={residency}  />
+                <Jurado t={t} residency={residency}  />
             </div>
             
             <div className='selection-process-sidebar' ref={sidebarRef}>

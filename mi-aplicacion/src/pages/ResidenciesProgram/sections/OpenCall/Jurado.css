@@ -1,13 +1,70 @@
 .jurado-section {
     display: flex;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
     padding: 0;
     margin: 0;
     position: relative;
-    padding: 2rem 2rem;
+    padding: 0rem 0rem;
     background-color: transparent;
-    border-top: 1px solid var(--dark-color);
+    padding-top: 1rem;
+
+    /* border-top: 1px solid var(--dark-color); */
     border-bottom: 1px solid var(--dark-color);
 }
+
+.opencall-large,
+.jury-desplegado {
+    display: flex;
+}
+
+.opencall-large {
+    flex-direction: column;
+}
+
+.openCalltitle {
+    padding-left: 2rem;
+    font-size: 2.1rem;
+    font-weight: 400;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+    text-transform: none;
+} 
+
+.description-large {
+    /* font-style: italic; */
+    width:65%;
+    padding-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* .convocatoria-abierta,
+.jury-desplegado {
+    display: flex;
+}
+
+.convocatoria-abierta {
+    flex-direction: row;
+    border-bottom: 1px solid var(--dark-blue);
+}
+
+.columnJ-left,
+.columnJ-right {
+    flex: 1;
+    display: flex;
+}
+
+.columnJ-left{
+    border-right: 1px solid var(--dark-blue);
+    
+}
+
+.columnJ-right {
+    flex-direction: column;
+}
+
+.openCalltitle {
+    padding-left: 2rem;
+} */
