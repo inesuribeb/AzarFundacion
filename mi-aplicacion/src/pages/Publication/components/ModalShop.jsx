@@ -1,113 +1,3 @@
-
-// import { useEffect, useState } from 'react';
-// import { useLanguage } from '../../../contexts/LanguageContext';
-// import CartHeader from './CartHeader';
-// import CartItemsList from './CartItemsList';
-// import ShippingZone from './ShippingZone';
-// import CartFooter from './CartFooter';
-// import './ModalShop.css';
-
-// function ModalShop({ isOpen, onClose, cartItems = [], onUpdateCart, onRemoveItem }) {
-//     const { t } = useLanguage();
-//     const [shippingCost, setShippingCost] = useState(0);
-
-//     useEffect(() => {
-//         const handleEscape = (e) => {
-//             if (e.key === 'Escape') {
-//                 onClose();
-//             }
-//         };
-
-//         if (isOpen) {
-//             document.addEventListener('keydown', handleEscape);
-//             document.body.style.overflow = 'hidden';
-//         }
-
-//         return () => {
-//             document.removeEventListener('keydown', handleEscape);
-//             document.body.style.overflow = 'auto';
-//         };
-//     }, [isOpen, onClose]);
-
-//     useEffect(() => {
-//         if (!isOpen) {
-//             setShippingCost(0);
-//         }
-//     }, [isOpen]);
-
-//     if (!isOpen) return null;
-
-//     const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
-//     const subtotalPrice = cartItems.reduce((total, item) => {
-//         const price = parseFloat(item.price.replace('€', '').replace(',', '.'));
-//         return total + (price * item.quantity);
-//     }, 0);
-
-//     const totalPrice = (subtotalPrice + shippingCost).toFixed(2);
-
-//     const handleBackdropClick = (e) => {
-//         if (e.target === e.currentTarget) {
-//             onClose();
-//         }
-//     };
-
-//     const handleViewCart = () => {
-//         console.log('Ver cesta completa');
-//         onClose();
-//     };
-
-//     const handleCheckout = () => {
-//         console.log('Iniciar proceso de checkout');
-//         console.log('Subtotal:', subtotalPrice.toFixed(2));
-//         console.log('Shipping:', shippingCost);
-//         console.log('Total:', totalPrice);
-//         onClose();
-//     };
-
-//     const handleShippingChange = (cost) => {
-//         setShippingCost(cost);
-//     };
-
-//     return (
-//         <div className="modal-shop-overlay" onClick={handleBackdropClick}>
-//             <div className="modal-shop-sidebar">
-//                 <CartHeader
-//                     totalItems={totalItems}
-//                     onClose={onClose}
-//                     t={t}
-//                 />
-
-
-//                 <div className="cart-scrollable-content">
-//                     <CartItemsList
-//                         cartItems={cartItems}
-//                         onUpdateCart={onUpdateCart}
-//                         onRemoveItem={onRemoveItem}
-//                         t={t}
-//                     />
-
-//                     {cartItems.length > 0 && (
-//                         <ShippingZone onShippingChange={handleShippingChange} />
-//                     )}
-//                 </div>
-
-//                 {cartItems.length > 0 && (
-//                     <CartFooter
-//                         subtotalPrice={subtotalPrice.toFixed(2)}
-//                         shippingCost={shippingCost}
-//                         totalPrice={totalPrice}
-//                         onViewCart={handleViewCart}
-//                         onCheckout={handleCheckout}
-//                         t={t}
-//                     />
-//                 )}
-//             </div>
-//         </div>
-//     );
-// }
-
-// export default ModalShop;
-
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import CartHeader from './CartHeader';
@@ -139,7 +29,6 @@ function ModalShop({ isOpen, onClose, cartItems = [], onUpdateCart, onRemoveItem
         };
     }, [isOpen, onClose]);
 
-    // Reset shipping cost when modal closes
     useEffect(() => {
         if (!isOpen) {
             setShippingCost(0);
@@ -149,7 +38,6 @@ function ModalShop({ isOpen, onClose, cartItems = [], onUpdateCart, onRemoveItem
 
     if (!isOpen) return null;
 
-    // Calcular totales
     const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
     const subtotalPrice = cartItems.reduce((total, item) => {
         const price = parseFloat(item.price.replace('€', '').replace(',', '.'));
@@ -169,23 +57,13 @@ function ModalShop({ isOpen, onClose, cartItems = [], onUpdateCart, onRemoveItem
         onClose();
     };
 
-    // const handleCheckout = () => {
-    //     if (!hasShippingSelected) {
-    //         return; 
-    //     }
-    //     console.log('Iniciar proceso de checkout');
-    //     console.log('Subtotal:', subtotalPrice.toFixed(2));
-    //     console.log('Shipping:', shippingCost);
-    //     console.log('Total:', totalPrice);
-    //     onClose();
-    // };
+
     const handleCheckout = async () => {
         if (!hasShippingSelected) {
             return;
         }
         
         try {
-            // Llamar a tu backend para crear la sesión de Stripe
             const response = await fetch('http://localhost:3001/api/create-checkout', {
                 method: 'POST',
                 headers: {
@@ -200,7 +78,6 @@ function ModalShop({ isOpen, onClose, cartItems = [], onUpdateCart, onRemoveItem
             const data = await response.json();
             
             if (data.url) {
-                // Redirigir a Stripe Checkout
                 window.location.href = data.url;
             } else {
                 console.error('Error:', data.error);
