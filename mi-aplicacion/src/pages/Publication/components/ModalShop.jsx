@@ -118,8 +118,10 @@ import './ModalShop.css';
 
 function ModalShop({ isOpen, onClose, cartItems = [], onUpdateCart, onRemoveItem }) {
     const { t } = useLanguage();
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
     const [shippingCost, setShippingCost] = useState(0);
     const [hasShippingSelected, setHasShippingSelected] = useState(false);
+
 
     useEffect(() => {
         const handleEscape = (e) => {
@@ -183,10 +185,12 @@ function ModalShop({ isOpen, onClose, cartItems = [], onUpdateCart, onRemoveItem
         if (!hasShippingSelected) {
             return;
         }
-        
+
         try {
             // Llamar a tu backend para crear la sesión de Stripe
-            const response = await fetch('http://localhost:3001/api/create-checkout', {
+            // const response = await fetch('http://localhost:3001/api/create-checkout', {
+            const response = await fetch(`${API_BASE_URL}/api/create-checkout`, {
+
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -196,9 +200,9 @@ function ModalShop({ isOpen, onClose, cartItems = [], onUpdateCart, onRemoveItem
                     shippingCost: shippingCost
                 })
             });
-            
+
             const data = await response.json();
-            
+
             if (data.url) {
                 // Redirigir a Stripe Checkout
                 window.location.href = data.url;
@@ -218,14 +222,14 @@ function ModalShop({ isOpen, onClose, cartItems = [], onUpdateCart, onRemoveItem
     return (
         <div className="modal-shop-overlay" onClick={handleBackdropClick}>
             <div className="modal-shop-sidebar">
-                <CartHeader 
+                <CartHeader
                     totalItems={totalItems}
                     onClose={onClose}
                     t={t}
                 />
-                
+
                 <div className="cart-scrollable-content">
-                    <CartItemsList 
+                    <CartItemsList
                         cartItems={cartItems}
                         onUpdateCart={onUpdateCart}
                         onRemoveItem={onRemoveItem}
@@ -236,9 +240,9 @@ function ModalShop({ isOpen, onClose, cartItems = [], onUpdateCart, onRemoveItem
                         <ShippingZone onShippingChange={handleShippingChange} />
                     )}
                 </div>
-                
+
                 {cartItems.length > 0 && (
-                    <CartFooter 
+                    <CartFooter
                         subtotalPrice={subtotalPrice.toFixed(2)}
                         shippingCost={shippingCost}
                         totalPrice={totalPrice}

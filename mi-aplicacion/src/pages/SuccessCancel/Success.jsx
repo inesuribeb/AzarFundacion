@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Link, useSearchParams } from 'react-router-dom';
+import { useCart } from '../../contexts/CartContext';
 import './Success.css';
 
 function Success() {
@@ -9,17 +10,24 @@ function Success() {
     const [orderData, setOrderData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
+    const { clearCart } = useCart();
+
 
     useEffect(() => {
         const sessionId = searchParams.get('session_id');
         
+        if (sessionId && sessionId !== 'mock') {
+            clearCart(); // Limpiar carrito al llegar a Success
+        }
+
         if (sessionId) {
             fetchOrderData(sessionId);
         } else {
             setLoading(false);
             setError('No se encontró información del pedido');
         }
-    }, [searchParams]);
+    }, [searchParams, clearCart]);
 
     // const fetchOrderData = async (sessionId) => {
     //     try {
@@ -64,7 +72,7 @@ function Success() {
                 return;
             }
 
-            const response = await fetch(`/api/checkout-session/${sessionId}`);
+            const response = await fetch(`${API_BASE_URL}/api/checkout-session/${sessionId}`);
             
             if (response.ok) {
                 const data = await response.json();

@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+const BASE_URL = process.env.BASE_URL
 const express = require('express');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const fs = require('fs');
@@ -90,10 +91,8 @@ app.post('/api/create-checkout', async (req, res) => {
                 }] : []),
             ],
             mode: 'payment',
-            //   success_url: 'https://azar.inesuribe.es/success?session_id={CHECKOUT_SESSION_ID}',
-            //   cancel_url: 'https://azar.inesuribe.es/cancel',
-            success_url: 'http://localhost:5173/success?session_id={CHECKOUT_SESSION_ID}',
-            cancel_url: 'http://localhost:5173/cancel',
+            success_url: `${BASE_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
+            cancel_url: `${BASE_URL}/cancel`,
             automatic_tax: {
                 enabled: false,
             },
