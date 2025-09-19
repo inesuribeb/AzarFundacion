@@ -21,27 +21,9 @@ function Success() {
         }
     }, [searchParams]);
 
-    // const fetchOrderData = async (sessionId) => {
-    //     try {
-    //         const response = await fetch(`/api/checkout-session/${sessionId}`);
-            
-    //         if (response.ok) {
-    //             const data = await response.json();
-    //             setOrderData(data);
-    //         } else {
-    //             setError('Error al obtener los datos del pedido');
-    //         }
-    //     } catch (err) {
-    //         console.error('Error fetching order data:', err);
-    //         setError('Error de conexión');
-    //     } finally {
-    //         setLoading(false);
-    //     }
-    // };
 
     const fetchOrderData = async (sessionId) => {
         try {
-            // Si es mock, usar datos de prueba
             if (sessionId === 'mock') {
                 const mockData = {
                     customer_email: "cliente@ejemplo.com",
@@ -177,12 +159,7 @@ function Success() {
                     >
                         {t('successBackHome')}
                     </Link>
-                    {/* <Link 
-                        to={getRoute('archive')} 
-                        className="success-btn success-btn-secondary"
-                    >
-                        {t('successViewCatalog')}
-                    </Link> */}
+        
                     <Link 
                         to={`${getRoute('archive')}?tab=publications`}
                         className="success-btn success-btn-secondary"
